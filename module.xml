@@ -1,7 +1,7 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<type>tool</type>
 	<category>Maintenance</category>
 	<menuitems>
