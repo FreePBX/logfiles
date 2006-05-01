@@ -7,7 +7,7 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/javassh</location>
+	<location>release/logfiles-1.0.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-LogFiles</info>
-	<md5sum>9f2aedfbf117551454c1ab348f920ed9</md5sum>
+	<md5sum>14b85ba1730618f49a53969f790cfceb</md5sum>
 </module>
