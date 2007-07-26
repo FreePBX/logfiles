@@ -1,7 +1,9 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
+	<changelog>
+		*1.0.2* #2070 fix proper use of script tags
 	<type>tool</type>
 	<category>Support</category>
 	<menuitems>

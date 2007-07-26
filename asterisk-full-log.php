@@ -9,7 +9,7 @@
 <b>/var/log/asterisk/full - last 2000 lines</b>
 <hr>
 <br>
-<?
+<?php
 echo system ('tail --line=2000 /var/log/asterisk/full | sed -e "s/$/<br>/"'); 
 ?>
 
