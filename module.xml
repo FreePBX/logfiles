@@ -1,9 +1,11 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>1.0.2</version>
+	<version>1.1.0</version>
 	<changelog>
+		*1.1.0* #1442 remove access problem and have log display in same window
 		*1.0.2* #2070 fix proper use of script tags
+	</changelog>
 	<type>tool</type>
 	<category>Support</category>
 	<menuitems>
