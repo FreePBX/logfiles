@@ -11,7 +11,7 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/2.3/logfiles-1.0.2.tgz</location>
+	<location>release/2.3/logfiles-1.1.0.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-LogFiles</info>
-	<md5sum>d590b685eb6b0a16915801427e46cdcc</md5sum>
+	<md5sum>bbfef694584fff2037fad03370fd684f</md5sum>
 </module>
