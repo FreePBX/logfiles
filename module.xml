@@ -1,8 +1,9 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<changelog>
+		*1.1.1* bump for rc1
 		*1.1.0* #1442 remove access problem and have log display in same window
 		*1.0.2* #2070 fix proper use of script tags
 	</changelog>
@@ -12,6 +13,5 @@
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
 	<location>release/2.3/logfiles-1.1.0.tgz</location>
-	<info>http://aussievoip.com.au/wiki/freePBX-LogFiles</info>
 	<md5sum>bbfef694584fff2037fad03370fd684f</md5sum>
 </module>
