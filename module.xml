@@ -1,8 +1,9 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>1.1.1</version>
+	<version>2.4.0</version>
 	<changelog>
+		*2.4.0* bumped for 2.4
 		*1.1.1* bump for rc1
 		*1.1.0* #1442 remove access problem and have log display in same window
 		*1.0.2* #2070 fix proper use of script tags
@@ -12,6 +13,6 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/2.3/logfiles-1.1.1.tgz</location>
-	<md5sum>095088bda1045e40c18c249163b7e6ca</md5sum>
+	<location>release/2.4/logfiles-2.4.0.tgz</location>
+	<md5sum>7ede13052f1f4e3d2f6d7e4e24df45eb</md5sum>
 </module>
