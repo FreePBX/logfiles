@@ -1,8 +1,9 @@
 <module>
 	<rawname>logfiles</rawname>
 	<name>Asterisk Logfiles</name>
-	<version>2.4.0</version>
+	<version>2.5.0</version>
 	<changelog>
+		*2.5.0* #2776: filter out potentially bad html tags from log file
 		*2.4.0* bumped for 2.4
 		*1.1.1* bump for rc1
 		*1.1.0* #1442 remove access problem and have log display in same window
