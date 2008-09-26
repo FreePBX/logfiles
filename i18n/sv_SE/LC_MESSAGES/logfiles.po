@@ -24,16 +24,16 @@ msgstr "%s - sista 2000 raderna"
 
 #: page.logfiles.php:18
 msgid "Redisplay Asterisk Full debug log (last 2000 lines)"
-msgstr "Visa om Asterisk logfil (sista 2000 raderna)"
+msgstr "Visa om Asterisk loggfil (sista 2000 raderna)"
 
 #: page.logfiles.php:25
 msgid "Asterisk Log Files"
-msgstr "Asterisk logfil"
+msgstr "Asterisk loggfil"
 
 #: page.logfiles.php:27
 msgid "Display Asterisk Full debug log (last 2000 lines)"
-msgstr "Visa Asterisk logfil (sista 2000 raderna)"
+msgstr "Visa Asterisk loggfil (sista 2000 raderna)"
 
 #: module.xml
 msgid "Asterisk Logfiles"
-msgstr "Asterisk logfil"
+msgstr "Asterisk loggfil"
