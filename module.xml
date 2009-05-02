@@ -3,6 +3,7 @@
 	<name>Asterisk Logfiles</name>
 	<version>2.5.0</version>
 	<changelog>
+		*2.5.0.1* #3645
 		*2.5.0* #2776: filter out potentially bad html tags from log file
 		*2.4.0* bumped for 2.4
 		*1.1.1* bump for rc1

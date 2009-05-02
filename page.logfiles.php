@@ -18,7 +18,7 @@ switch($action) {
 		<a href="config.php?<?php echo "display=$display&type=$type&action=showlog"?>"><?php echo _("Redisplay Asterisk Full debug log (last 2000 lines)") ?></a><br>
 		<hr><br>
 		<?php
-		system ('tail --line=2000 '.$amp_conf['ASTLOGDIR'].'/full | sed -e "s,<,\&lt;,g;s,>,\&gt;,g;s/$/<br>/"'); 
+		system ('tail -n2000 '.$amp_conf['ASTLOGDIR'].'/full | sed -e "s,<,\&lt;,g;s,>,\&gt;,g;s/$/<br>/"'); 
 		break;
 
 	default:
