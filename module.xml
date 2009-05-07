@@ -3,7 +3,8 @@
 	<name>Asterisk Logfiles</name>
 	<version>2.5.0</version>
 	<changelog>
-		*2.5.0.1* #3645
+		*2.5.0.2* #3645
+		*2.5.0.1* localization updates
 		*2.5.0* #2776: filter out potentially bad html tags from log file
 		*2.4.0* bumped for 2.4
 		*1.1.1* bump for rc1
@@ -15,6 +16,6 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/2.5/logfiles-2.5.0.tgz</location>
-	<md5sum>d3cad415656bef2a65543aa22a21836c</md5sum>
+	<location>release/2.6/logfiles-2.5.0.tgz</location>
+	<md5sum>9b15c2871d110a5ea8370056b6206f07</md5sum>
 </module>
