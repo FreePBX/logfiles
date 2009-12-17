@@ -55,10 +55,10 @@ switch($action) {
 			exec('tail -n'.$lines.' '.$amp_conf['ASTLOGDIR'].'/full | sed -e "s,<,\&lt;,g;s,>,\&gt;,g;s/$/<br>/"',$log);
 			echo '<div class="pre">';
 			foreach($log as $l){
-				if(strpos($l, 'WARNING')){$l='<span class="red">'.$l.'</span>';}
+				if(strpos($l, 'WARNING')){$l='<span class="orange">'.$l.'</span>';}
 				if(strpos($l, 'DEBUG')){$l='<span class="green">'.$l.'</span>';}
 				if(strpos($l, 'NOTICE')){$l='<span class="blue">'.$l.'</span>';}
-				if(strpos($l, 'ERROR')){$l='<span class="orange">'.$l.'</span>';}
+				if(strpos($l, 'ERROR')){$l='<span class="red">'.$l.'</span>';}
 				$l=str_ireplace(array_keys($color), $color, $l);
 				echo $l;
 			}
