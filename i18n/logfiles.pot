@@ -1,14 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is part of FreePBX.
+#
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# FreePBX language template for logfiles
+# Copyright (C) 2009 Bandwith.com
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-16 15:17+0200\n"
+"POT-Creation-Date: 2009-12-17 19:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,21 +29,27 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.logfiles.php:16
+#: page.logfiles.php:50
 #, php-format
-msgid "%s - last 2000 lines"
+msgid "%s - last %s lines"
 msgstr ""
 
-#: page.logfiles.php:18
-msgid "Redisplay Asterisk Full debug log (last 2000 lines)"
+#: page.logfiles.php:52
+#, php-format
+msgid "Redisplay Asterisk Full debug log (last %s lines)"
 msgstr ""
 
-#: page.logfiles.php:25
+#: page.logfiles.php:69
 msgid "Asterisk Log Files"
 msgstr ""
 
-#: page.logfiles.php:27
-msgid "Display Asterisk Full debug log (last 2000 lines)"
+#: page.logfiles.php:72
+msgid ""
+"Display Asterisk Full debug log. How many lines would you like to display?"
+msgstr ""
+
+#: page.logfiles.php:74
+msgid "View log"
 msgstr ""
 
 #: module.xml

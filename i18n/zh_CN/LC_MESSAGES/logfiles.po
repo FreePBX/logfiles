@@ -1,13 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is part of FreePBX.
+#
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Copyright (C) 2009 FreePBX
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-16 15:17+0200\n"
+"POT-Creation-Date: 2009-12-17 19:43+0100\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,22 +30,28 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: page.logfiles.php:16
+#: page.logfiles.php:50
 #, php-format
-msgid "%s - last 2000 lines"
-msgstr "%s - 最后2000行"
+msgid "%s - last %s lines"
+msgstr "%s - 最后%s行"
 
-#: page.logfiles.php:18
-msgid "Redisplay Asterisk Full debug log (last 2000 lines)"
-msgstr "重新显示Asterisk全部的调试日志（仅最后2000行）"
+#: page.logfiles.php:52
+#, php-format
+msgid "Redisplay Asterisk Full debug log (last %s lines)"
+msgstr "重新显示Asterisk全部的调试日志（仅最后%s行）"
 
-#: page.logfiles.php:25
+#: page.logfiles.php:69
 msgid "Asterisk Log Files"
 msgstr "Asterisk日志文件"
 
-#: page.logfiles.php:27
-msgid "Display Asterisk Full debug log (last 2000 lines)"
-msgstr "显示Asterisk全部的调试日志（仅最后2000行）"
+#: page.logfiles.php:72
+msgid ""
+"Display Asterisk Full debug log. How many lines would you like to display?"
+msgstr ""
+
+#: page.logfiles.php:74
+msgid "View log"
+msgstr ""
 
 #: module.xml
 msgid "Asterisk Logfiles"

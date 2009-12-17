@@ -1,8 +1,25 @@
+# This file is part of FreePBX.
+#
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Copyright (C) 2008, 2009 Bandwith.com
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-16 15:17+0200\n"
+"POT-Creation-Date: 2009-12-17 19:43+0100\n"
 "PO-Revision-Date: 2009-01-22 01:35+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -13,22 +30,28 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: page.logfiles.php:16
+#: page.logfiles.php:50
 #, php-format
-msgid "%s - last 2000 lines"
-msgstr "%s - Últimas 2000 líneas"
+msgid "%s - last %s lines"
+msgstr "%s - Últimas %s líneas"
 
-#: page.logfiles.php:18
-msgid "Redisplay Asterisk Full debug log (last 2000 lines)"
-msgstr "Actualizar bitácora completa de depuración de Asterisk (últimas 2000 líneas)"
+#: page.logfiles.php:52
+#, php-format
+msgid "Redisplay Asterisk Full debug log (last %s lines)"
+msgstr "Actualizar bitácora completa de depuración de Asterisk (últimas %s líneas)"
 
-#: page.logfiles.php:25
+#: page.logfiles.php:69
 msgid "Asterisk Log Files"
 msgstr "Archivos de bitácora de Asterisk"
 
-#: page.logfiles.php:27
-msgid "Display Asterisk Full debug log (last 2000 lines)"
-msgstr "Mostrar bitácora completa de depuración de Asterisk (últimas 2000 líneas)"
+#: page.logfiles.php:72
+msgid ""
+"Display Asterisk Full debug log. How many lines would you like to display?"
+msgstr ""
+
+#: page.logfiles.php:74
+msgid "View log"
+msgstr ""
 
 #: module.xml
 msgid "Asterisk Logfiles"
