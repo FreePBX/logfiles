@@ -46,7 +46,7 @@ msgstr "Asterisk loggfil"
 #: page.logfiles.php:72
 msgid ""
 "Display Asterisk Full debug log. How many lines would you like to display?"
-msgstr "Visa Asterisk loggfile. Hur många rader vill du visa?"
+msgstr "Visa Asterisk loggfil. Hur många rader vill du visa?"
 
 #: page.logfiles.php:74
 msgid "View log"
