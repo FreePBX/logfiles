@@ -22,7 +22,7 @@ switch($action) {
   chr(27).'[1;34;40m' => '<span class="blue">',
   chr(27).'[1;35;40m' => '<span class="magenta">',
   chr(27).'[1;36;40m' => '<span class="cyan">',
-  chr(27).'[0;37;40m' => '<span class="black">',//this should really be white - but that would leave text unreadable on the screen
+  chr(27).'[0;37;40m' => '<span class="black">',//this should really be white - but that would leave text unreadable on the white background of the page
   
 	chr(27).'[1;40m' => '<span class="bold">',
 	chr(27).'[4;40m' => '<span class="underline">',
@@ -44,7 +44,7 @@ switch($action) {
 	  .white{color:white;}
 	  .bold{font-weight: bold;}
 	  .underline{text-decoration:underline;}
-	  .pre{;font-family:"Courier New", Courier, monospace;font-size:0.85em}
+	  .pre{font-family:"Courier New", Courier, monospace;font-size:0.85em}
 		</style>
 		<h2>
 			<?php echo sprintf(_('%s - last %s lines'),$amp_conf['ASTLOGDIR']."/full",$lines) ?>
