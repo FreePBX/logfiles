@@ -59,7 +59,7 @@ switch($action) {
 				if(strpos($l, 'DEBUG')){$l='<span class="green">'.$l.'</span>';}
 				if(strpos($l, 'NOTICE')){$l='<span class="blue">'.$l.'</span>';}
 				if(strpos($l, 'ERROR')){$l='<span class="red">'.$l.'</span>';}
-				$l=str_ireplace(array_keys($color), $color, $l);
+				$l=str_replace(array_keys($color), $color, $l);
 				echo $l;
 			}
 echo '</div>';
