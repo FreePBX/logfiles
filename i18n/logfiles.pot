@@ -14,14 +14,13 @@
 #    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
 #
 # FreePBX language template for logfiles
-# Copyright (C) 2009 Bandwith.com
+# Copyright (C) 2008, 2009, 2010 Bandwith.com
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 19:43+0100\n"
+"POT-Creation-Date: 2010-02-18 22:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,29 +28,33 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.logfiles.php:50
+#: logfiles/logfiles.i18n.php:5 logfiles/logfiles.i18n.php:9
+msgid "Asterisk Logfiles"
+msgstr ""
+
+#: logfiles/logfiles.i18n.php:7
+msgid "Support"
+msgstr ""
+
+#: logfiles/page.logfiles.php:50
 #, php-format
 msgid "%s - last %s lines"
 msgstr ""
 
-#: page.logfiles.php:52
+#: logfiles/page.logfiles.php:52
 #, php-format
 msgid "Redisplay Asterisk Full debug log (last %s lines)"
 msgstr ""
 
-#: page.logfiles.php:69
+#: logfiles/page.logfiles.php:69
 msgid "Asterisk Log Files"
 msgstr ""
 
-#: page.logfiles.php:72
+#: logfiles/page.logfiles.php:72
 msgid ""
 "Display Asterisk Full debug log. How many lines would you like to display?"
 msgstr ""
 
-#: page.logfiles.php:74
+#: logfiles/page.logfiles.php:74
 msgid "View log"
-msgstr ""
-
-#: module.xml
-msgid "Asterisk Logfiles"
 msgstr ""
