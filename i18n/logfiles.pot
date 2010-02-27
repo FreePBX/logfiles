@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,33 +28,26 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: logfiles/logfiles.i18n.php:5 logfiles/logfiles.i18n.php:9
 msgid "Asterisk Logfiles"
 msgstr ""
 
-#: logfiles/logfiles.i18n.php:7
 msgid "Support"
 msgstr ""
 
-#: logfiles/page.logfiles.php:50
 #, php-format
 msgid "%s - last %s lines"
 msgstr ""
 
-#: logfiles/page.logfiles.php:52
 #, php-format
 msgid "Redisplay Asterisk Full debug log (last %s lines)"
 msgstr ""
 
-#: logfiles/page.logfiles.php:69
 msgid "Asterisk Log Files"
 msgstr ""
 
-#: logfiles/page.logfiles.php:72
 msgid ""
 "Display Asterisk Full debug log. How many lines would you like to display?"
 msgstr ""
 
-#: logfiles/page.logfiles.php:74
 msgid "View log"
 msgstr ""
