@@ -78,4 +78,3 @@ echo '</div>';
     break;
 }
 ?>
-</div>
