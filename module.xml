@@ -23,6 +23,6 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/2.8/logfiles-2.8.0.1.tgz</location>
-	<md5sum>9c21e419a297dbeab6ffce81814daea1</md5sum>
+	<location>release/2.9/logfiles-2.8.0.1.tgz</location>
+	<md5sum>8ac60e27d8bb86396d5d261d4e4fef48</md5sum>
 </module>
