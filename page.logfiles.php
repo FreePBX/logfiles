@@ -3,7 +3,7 @@
 $display = $_REQUEST['display'];
 $type = isset($_REQUEST['type']) ? $_REQUEST['type'] : 'tool';
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-$lines=isset($_REQUEST['lines'])?ereg_replace("[^0-9]", "",$_REQUEST['lines']):'';
+$lines=isset($_REQUEST['lines'])?preg_replace("/[^0-9]/", "",$_REQUEST['lines']):'';
 
 ?>
 </div>
