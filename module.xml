@@ -2,10 +2,11 @@
 	<rawname>logfiles</rawname>
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
-	<version>2.9.0.0</version>
+	<version>2.9.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		*2.9.0.1* #4001
 		*2.9.0.0* 2.9 Update
 		*2.8.0.1* #3978
 		*2.8.0.0* #4309
@@ -25,6 +26,6 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
-	<location>release/2.9/logfiles-2.9.0.0.tgz</location>
-	<md5sum>70b3272270b16ae95a9f0f06f19a82bb</md5sum>
+	<location>release/2.9/logfiles-2.9.0.1.tgz</location>
+	<md5sum>a3b1a3f894c9660a09899a538768363b</md5sum>
 </module>
