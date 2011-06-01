@@ -1,0 +1,17 @@
+.brown{color:brown;}
+.cyan{color:cyan;}
+.black{color:black;}
+.red{color:red;}
+.orange{color:orange;}
+.green{color:green;}
+.yellow{color:yellow;}
+.blue{color:blue;}
+.magenta{color:magenta;}
+.cyan{color:cyan;}
+.white{color:white;}
+.bold{font-weight: bold;}
+.underline{text-decoration:underline;}
+.pre{font-family:"Courier New", Courier, monospace;font-size:0.85em}
+.app{color:cyan;}
+.appargs{color:magenta;}
+.context{color:blue;}
