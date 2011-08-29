@@ -8,21 +8,8 @@
 	<changelog>
 		*2.9.0.1* #4001
 		*2.9.0.0* 2.9 Update
-		*2.8.0.1* #3978
-		*2.8.0.0* #4309
-		*2.7.0.0* localizations
-		*2.6.1* #3763, #3978
-		*2.6.0.0* localizations, misc
-		*2.5.0.2* #3645
-		*2.5.0.1* localization updates
-		*2.5.0* #2776: filter out potentially bad html tags from log file
-		*2.4.0* bumped for 2.4
-		*1.1.1* bump for rc1
-		*1.1.0* #1442 remove access problem and have log display in same window
-		*1.0.2* #2070 fix proper use of script tags
 	</changelog>
-	<type>tool</type>
-	<category>Support</category>
+	<category>Reports</category>
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
