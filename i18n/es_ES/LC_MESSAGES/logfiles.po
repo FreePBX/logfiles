@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 19:43+0100\n"
+"POT-Creation-Date: 2011-09-23 09:52+0000\n"
 "PO-Revision-Date: 2009-01-22 01:35+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -30,30 +30,18 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: page.logfiles.php:50
-#, php-format
-msgid "%s - last %s lines"
-msgstr "%s - Últimas %s líneas"
-
-#: page.logfiles.php:52
-#, php-format
-msgid "Redisplay Asterisk Full debug log (last %s lines)"
-msgstr "Actualizar bitácora completa de depuración de Asterisk (últimas %s líneas)"
-
-#: page.logfiles.php:69
-msgid "Asterisk Log Files"
-msgstr "Archivos de bitácora de Asterisk"
-
-#: page.logfiles.php:72
-msgid ""
-"Display Asterisk Full debug log. How many lines would you like to display?"
-msgstr ""
-
-#: page.logfiles.php:74
-msgid "View log"
-msgstr ""
-
-#: module.xml
 msgid "Asterisk Logfiles"
 msgstr "Archivos de bitácora de Asterisk"
 
+msgid "Reports"
+msgstr ""
+
+#~ msgid "%s - last %s lines"
+#~ msgstr "%s - Últimas %s líneas"
+
+#~ msgid "Redisplay Asterisk Full debug log (last %s lines)"
+#~ msgstr ""
+#~ "Actualizar bitácora completa de depuración de Asterisk (últimas %s líneas)"
+
+#~ msgid "Asterisk Log Files"
+#~ msgstr "Archivos de bitácora de Asterisk"

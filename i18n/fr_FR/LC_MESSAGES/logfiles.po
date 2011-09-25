@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 19:43+0100\n"
+"POT-Creation-Date: 2011-09-23 09:52+0000\n"
 "PO-Revision-Date: 2009-04-20 21:48+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -28,29 +28,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.logfiles.php:50
-#, php-format
-msgid "%s - last %s lines"
-msgstr "%s - dernières %s lignes"
-
-#: page.logfiles.php:52
-#, php-format
-msgid "Redisplay Asterisk Full debug log (last %s lines)"
-msgstr "Réafficher le debug log Complet d'Asterisk (%s dernières lignes)"
-
-#: page.logfiles.php:69
-msgid "Asterisk Log Files"
-msgstr "Fichiers de Log d'Asterisk"
-
-#: page.logfiles.php:72
-msgid ""
-"Display Asterisk Full debug log. How many lines would you like to display?"
-msgstr ""
-
-#: page.logfiles.php:74
-msgid "View log"
-msgstr ""
-
-#: module.xml
 msgid "Asterisk Logfiles"
 msgstr "Logs d'Asterisk"
+
+msgid "Reports"
+msgstr ""
+
+#~ msgid "%s - last %s lines"
+#~ msgstr "%s - dernières %s lignes"
+
+#~ msgid "Redisplay Asterisk Full debug log (last %s lines)"
+#~ msgstr "Réafficher le debug log Complet d'Asterisk (%s dernières lignes)"
+
+#~ msgid "Asterisk Log Files"
+#~ msgstr "Fichiers de Log d'Asterisk"
