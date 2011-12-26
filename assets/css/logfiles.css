@@ -15,3 +15,14 @@
 .app{color:cyan;}
 .appargs{color:magenta;}
 .context{color:blue;}
+
+#logfiles_header{
+	position: fixed;
+	width: 100%;
+	background: white;
+	z-index: 100;
+}
+.rnav{
+	z-index: 101;
+	position: fixed;
+}
