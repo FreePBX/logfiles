@@ -2,19 +2,21 @@
 	<rawname>logfiles</rawname>
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
-	<version>2.10.0.1</version>
-	<publisher>FreePBX</publisher>
+	<version>2.10.0.13</version>
+	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
-		*2.10.0.1* CSS tweaks
-		*2.10.0.0* new version changes
-		*2.9.0.1* #4001
-		*2.9.0.0* 2.9 Update
+		2.10.0.13 re #1317 - remove debug 
+		2.10.0.12 re #1317 - move settings page to settings catagory; fix opts saving/display inconsistancies 
+		2.10.0.11 Packaging of ver 2.10.0.11
+		2.10.0.10 re #1143, #1122 - 
+		2.10.0.9 re #1122 -
 	</changelog>
 	<category>Reports</category>
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
+		<logfiles_settings category="Settings" href="?display=logfiles&amp;view=opts">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
-	<location>release/2.11/logfiles-2.10.0.1.tgz</location>
-	<md5sum>8e3b67b4bd2677894a59a3a4b81b3843</md5sum>
+	<location>release/2.10/logfiles-2.10.0.13.tgz</location>
+	<md5sum>24ad9296e15cda28c7649daa3922619f</md5sum>
 </module>
