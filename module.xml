@@ -6,7 +6,7 @@
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
-		2.11.0.0 added ability to control all logfiles aswell as view
+		2.11.0.0 added ability to view all logfiles
 		2.10.0.13 re #1317 - remove debug 
 		2.10.0.12 re #1317 - move settings page to settings catagory; fix opts saving/display inconsistancies 
 		2.10.0.11 Packaging of ver 2.10.0.11
