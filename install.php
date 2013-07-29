@@ -1,4 +1,6 @@
 <?php
+global $amp_conf;
+
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed');}
 
 $sql[] = 'CREATE TABLE IF NOT EXISTS `logfile_settings` (
@@ -33,4 +35,21 @@ if (!$first_install) { //zero count (aka false) is a new install
 	$db->query($sql, array('full', 'on', 'off', 'on', 'off', 'on', 'on', 'on'));
 	$db->query($sql, array('console', 'on', 'off', 'on', 'off', 'on', 'on', 'on'));
 }
-?>
+
+// logger.conf used to be in core so let's make sure if their's a linked file it points to
+// us and if not remove the link, retrieve_conf will deal with putting it back.
+//
+$lf = $amp_conf['ASTETCDIR'] . '/logger.conf';
+if (file_exists($lf) && is_link($lf)) {
+	$l = readlink($lf);
+	if ($l != $amp_conf['AMPWEBROOT'] . "/admin/modules/logfiles/logger.conf") {
+		out(_("logger.conf symlinked to incorrect file:"));
+		out($l);
+		outn(_("removing.."));
+		if (unlink($lf)) {
+			out(_('ok'));
+		} else {
+			out(_('failed'));
+		}
+	}
+}
