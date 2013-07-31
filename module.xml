@@ -21,6 +21,6 @@
 		<logfiles>Asterisk Logfiles</logfiles>
 		<logfiles_settings category="Settings" href="?display=logfiles&amp;view=opts">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
-	<location>release/2.11/logfiles-2.11.0.1.tgz</location>
-	<md5sum>5eba39f49c28862092b9856dbf94f97c</md5sum>
+	<location>release/2.11/logfiles-2.11.0.2.tgz</location>
+	<md5sum>21a01fd9b926b6796a78f697903becea</md5sum>
 </module>
