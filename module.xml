@@ -3,10 +3,11 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>2.11.0.2</version>
+	<version>2.11.0.3</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		2.11.0.3 #6548 Fix highlighting links in navigation
 		2.11.0.2 #6675 checked against incorrect link
 		2.11.0.1 #6675
 		2.11.0.0 added ability to view all logfiles
@@ -19,7 +20,7 @@
 	<category>Reports</category>
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
-		<logfiles_settings category="Settings" href="?display=logfiles&amp;view=opts">Asterisk Logfile Settings</logfiles_settings>
+		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
 	<location>release/2.11/logfiles-2.11.0.2.tgz</location>
 	<md5sum>21a01fd9b926b6796a78f697903becea</md5sum>
