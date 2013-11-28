@@ -16,4 +16,4 @@
 	</menuitems>
 	<location>release/2.10/logfiles-2.10.0.0.tgz</location>
 	<md5sum>dbaf4979ef5a5cd7443b63a17ed458f0</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
