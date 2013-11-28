@@ -20,4 +20,4 @@
 	</menuitems>
 	<location>release/2.11/logfiles-2.11.0.0.tgz</location>
 	<md5sum>557f9b662a608bcff6993584254a6b9d</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
