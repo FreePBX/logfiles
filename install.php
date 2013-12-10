@@ -18,6 +18,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `logfile_logfiles` (
   `notice` varchar(25) default NULL,
   `verbose` varchar(25) default NULL,
   `warning` varchar(25) default NULL,
+  `security` varchar(25) default NULL,
   PRIMARY KEY  (`name`)
 )';
 
@@ -26,14 +27,22 @@ foreach($sql as $s) {
 }
 unset($sql);
 
+// upgrade table if necessary
+foreach (sql('select count(1) as `column_exists` from information_schema.COLUMNS where TABLE_SCHEMA=database() and TABLE_NAME="logfile_logfiles" and COLUMN_NAME="security"', "getAll", DB_FETCHMODE_ASSOC) as $row) {
+	if ($result['column_exists'] == 0) {
+		sql('alter table logfile_logfiles add column security varchar(25) null default NULL');
+		sql('update logfile_logfiles set security="off"');
+	}
+}
+
 //set some defualts
 $first_install = $db->getOne('SELECT COUNT(*) FROM logfile_settings');
 
 if (!$first_install) { //zero count (aka false) is a new install
-	$sql = 'INSERT INTO logfile_logfiles (name, debug, dtmf, error, fax, notice, verbose, warning)
+	$sql = 'INSERT INTO logfile_logfiles (name, debug, dtmf, error, fax, notice, verbose, warning, security)
 			VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-	$db->query($sql, array('full', 'on', 'off', 'on', 'off', 'on', 'on', 'on'));
-	$db->query($sql, array('console', 'on', 'off', 'on', 'off', 'on', 'on', 'on'));
+	$db->query($sql, array('full', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
+	$db->query($sql, array('console', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
 }
 
 // logger.conf used to be in core so let's make sure if their's a linked file it points to

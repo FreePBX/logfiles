@@ -10,7 +10,8 @@ $opts['logfiles'][] = 	//always add a blank row, will work as default when nothi
 						'fax'		=> 'off', 
 						'notice'	=> '', 
 						'verbose'	=> '', 
-						'warning'	=> ''
+						'warning'	=> '',
+						'security'	=> 'off'
 			);
 $var = array_merge($var, $opts);
 //dbug('passing to view', $var);

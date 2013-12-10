@@ -114,7 +114,8 @@ function logfiles_get_logfile($lines = 500, $file) {
  * Generate astierks configs
  */
 function logfiles_get_config($engine) {
-	global $ext, $logfiles_conf;
+	global $ext, $logfiles_conf, $amp_conf;
+	$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 	switch ($engine) {
 		case 'asterisk':
 			$opts = logfiles_get_opts();
@@ -145,7 +146,9 @@ function logfiles_get_config($engine) {
 				unset($v['name']);
 				foreach ($v as $opt => $set) {
 					if ($set == 'on') {
-						$name_opt[] = $opt;
+						if ($has_security_option || $opt != 'security') { 
+							$name_opt[] = $opt; 
+						}
 					}
 				}
 				//dbug($name, $name_opt);
@@ -240,8 +243,8 @@ function logfiles_list() {
  * Saves logfile related settings
  */
 function logfiles_put_opts($opts) {
-	global $db;
-	
+	global $db, $amp_conf;
+	$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 	//save options
 	foreach ($opts as $k => $v) {
 		switch ($k) {
@@ -262,11 +265,14 @@ function logfiles_put_opts($opts) {
 	db_e($ret);
 
 	unset($data);
-	
+
 	//save log files
 	foreach ($opts['logfiles'] as $item => $values) {
 		foreach ($values as $index => $v) {
 			$logs[$index][$item] = $v;
+			if (!$has_security_option) { 
+				$logs[$index]['security'] = 'off'; 
+			}
 		}
 	}
 	
@@ -277,8 +283,8 @@ function logfiles_put_opts($opts) {
 	sql('TRUNCATE logfile_logfiles');
 	
 	$sql = $db->prepare('INSERT INTO logfile_logfiles 
-						(name, debug, dtmf, error, fax, notice, verbose, warning) 	
-						VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+						(name, debug, dtmf, error, fax, notice, verbose, warning, security) 	
+						VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$ret = $db->executeMultiple($sql, $logs);
 	db_e($ret);
 	

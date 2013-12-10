@@ -1,5 +1,7 @@
 <?php
 
+global $amp_conf;
+
 $html = '';
 $html .= heading(_('Log File Settings'), 2);
 $html .= form_open($_SERVER['REQUEST_URI'], '', array('action' => 'save'));
@@ -109,6 +111,7 @@ $table = new CI_Table;
 $table->set_template(array('table_open' => '<table class="alt_table" id="logfile_entries">'));
 
 //draw table header with help on every option
+$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 $heading = array(
 			fpbx_label(_('File Name'), _('Name of file, relative to TODO!!!!. Use absolute path for a different location')),
 			fpbx_label(_('Debug'), 'debug: ' . _('Messages used for debuging. '
@@ -117,14 +120,19 @@ $heading = array(
 									. 'Also note that Debug messages are also very verbose '
 									. 'and can and do fill up logfiles (and disk storage) quickly.')),
 			fpbx_label(_('DTMF'), 'dtmf: ' . _('Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues.')),
-			fpbx_label(_('Error'), 'error: ' . _('Possible issues with dialplan syntaxt or call flow, but not critical.')),
+			fpbx_label(_('Error'), 'error: ' . _('Critical errors and issues')),
 			fpbx_label(_('Fax'), 'fax: ' . _('Transmition and receiving of faxes')),
 			fpbx_label(_('Notice'), 'notice: ' . _('Messages of specific actions, such as a phone registration or call completion')),
 			fpbx_label(_('Verbose'), 'verbose: ' . _('Step-by-step messages of every step of a call flow. '
 										. 'Always enable and review if calls dont flow as expected')),
-			fpbx_label(_('Warning'), 'warning: ' . _('Critical errors and issues')),
-			fpbx_label(_('Delete')),
-);
+			fpbx_label(_('Warning'), 'warning: ' . _('Possible issues with dialplan syntaxt or call flow, but not critical.'))
+		);
+
+if ($has_security_option) { 
+	$heading[] = fpbx_label(_('Security'), 'security: ' . _('Notification of security related events such as authentication attempts.')); 
+}
+
+$heading[] = fpbx_label(_('Delete'));
 $table->set_heading($heading);
 
 
@@ -154,6 +162,9 @@ foreach ($logfiles as $l) {
 	$row[] = form_dropdown('logfiles[notice][]', $onoff, $l['notice']);
 	$row[] = form_dropdown('logfiles[verbose][]', $onoff, $l['verbose']);
 	$row[] = form_dropdown('logfiles[warning][]', $onoff, $l['warning']);
+	if ($has_security_option) { 
+		$row[] = form_dropdown('logfiles[security][]', $onoff, $l['security']); 
+	}
 	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="' 
 			. _('Delete this entry. Click Submit to save changes') 
 			. '" class="delete_entry">';
