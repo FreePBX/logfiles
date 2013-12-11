@@ -3,10 +3,11 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>2.11.0.5</version>
+	<version>2.11.0.6</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		2.11.0.6 Fix fatal error on install because of improperly set variables
 		2.11.0.5 #6982 Add security message and fix tooltips, courtesy of Xorcom
 		2.11.0.4 Missing Files fix
 		2.11.0.3 #6548 Fix highlighting links in navigation

@@ -28,11 +28,9 @@ foreach($sql as $s) {
 unset($sql);
 
 // upgrade table if necessary
-foreach (sql('select count(1) as `column_exists` from information_schema.COLUMNS where TABLE_SCHEMA=database() and TABLE_NAME="logfile_logfiles" and COLUMN_NAME="security"', "getAll", DB_FETCHMODE_ASSOC) as $row) {
-	if ($result['column_exists'] == 0) {
-		sql('alter table logfile_logfiles add column security varchar(25) null default NULL');
-		sql('update logfile_logfiles set security="off"');
-	}
+if (!$db->getAll('SHOW COLUMNS FROM logfile_logfiles WHERE FIELD = "security"')) {
+	sql('ALTER TABLE logfile_logfiles ADD COLUMN security varchar(25) null default NULL');
+	sql('UPDATE logfile_logfiles SET security="off"');
 }
 
 //set some defualts
@@ -45,7 +43,7 @@ if (!$first_install) { //zero count (aka false) is a new install
 	$db->query($sql, array('console', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
 }
 
-// logger.conf used to be in core so let's make sure if their's a linked file it points to
+// logger.conf used to be in core so let's make sure if there is a linked file it points to
 // us and if not remove the link, retrieve_conf will deal with putting it back.
 //
 $lf = $amp_conf['ASTETCDIR'] . '/logger.conf';
