@@ -275,17 +275,27 @@ function logfiles_put_opts($opts) {
 			}
 		}
 	}
-	
-	foreach ($logs as $l) {
-		$data[] = array_values($l);
+
+	//ensure the order of our array is correct	
+	foreach ($logs as $k => $l) {
+		$data = array('name' => $l['name'],
+			'debug' => $l['debug'],
+			'dtmf' => $l['dtmf'],
+			'error' => $l['error'],
+			'fax' => $l['fax'],
+			'notice' => $l['notice'],
+			'verbose' => $l['verbose'],
+			'warning' => $l['warning'],
+			'security' => $l['security']);
+		$logData[] = array_values($data);
 	}
-	//dbug('l', $data);
+	
 	sql('TRUNCATE logfile_logfiles');
 	
 	$sql = $db->prepare('INSERT INTO logfile_logfiles 
 						(name, debug, dtmf, error, fax, notice, verbose, warning, security) 	
 						VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
-	$ret = $db->executeMultiple($sql, $logs);
+	$ret = $db->executeMultiple($sql, $logData);
 	db_e($ret);
 	
 	needreload();
