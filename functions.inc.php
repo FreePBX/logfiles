@@ -5,6 +5,16 @@ class logfiles_conf {
 	var $_loggergeneral  = array();
 	var $_loggerlogfiles = array();
 
+	private static $obj;
+
+	// FreePBX magic ::create() call
+	public static function create() {
+		if (!isset(self::$obj))
+			self::$obj = new logfiles_conf();
+
+		return self::$obj;
+	}
+
 	// return an array of filenames to write
 	function get_filename() {
 		return array(
@@ -114,7 +124,9 @@ function logfiles_get_logfile($lines = 500, $file) {
  * Generate astierks configs
  */
 function logfiles_get_config($engine) {
-	global $ext, $logfiles_conf, $amp_conf;
+	global $ext, $amp_conf;
+	$logfiles_conf = logfiles_conf::create();
+
 	$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 	switch ($engine) {
 	case 'asterisk':
