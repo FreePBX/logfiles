@@ -12,18 +12,18 @@ class logfiles_conf {
 			'logger_logfiles_additional.conf',
 		);
 	}
-	
+
 	// return the output that goes in each of the files
 	function generateConf($file) {
 		global $version, $amp_conf;
 
 		switch ($file) {
-			case 'logger_general_additional.conf':
-				return $this->generate_loggergeneral_additional($version);
-				break;
-			case 'logger_logfiles_additional.conf':
-				return $this->generate_loggerlogfiles_additional($version);
-				break;
+		case 'logger_general_additional.conf':
+			return $this->generate_loggergeneral_additional($version);
+			break;
+		case 'logger_logfiles_additional.conf':
+			return $this->generate_loggerlogfiles_additional($version);
+			break;
 		}
 	}
 
@@ -40,7 +40,7 @@ class logfiles_conf {
 				$output .= $values['key'] . '=' . $values['value'] . "\n";
 			}
 		}
-		
+
 		return $output;
 	}
 
@@ -65,7 +65,7 @@ class logfiles_conf {
 function logfiles_highlight_asterisk($line) {
 	//for i in `asterisk -rx 'core show applications'|awk '{print $1}'|grep -v -|sed 's/://g'`; do echo -n $i'|'; done
 	static $apps = 'AddQueueMember|ADSIProg|AELSub|AGI|Answer|Authenticate|BackGround|BackgroundDetect|Bridge|Busy|CallCompletionCancel|CallCompletionRequest|CELGenUserEvent|ChangeMonitor|ChanIsAvail|ChannelRedirect|ChanSpy|ClearHash|ConfBridge|Congestion|ContinueWhile|ControlPlayback|DAHDIAcceptR2Call|DAHDIBarge|DAHDIRAS|DAHDIScan|DAHDISendKeypadFacility|DateTime|DBdel|DBdeltree|DeadAGI|Dial|Dictate|Directory|DISA|DumpChan|EAGI|Echo|EndWhile|Exec|ExecIf|ExecIfTime|ExitWhile|ExtenSpy|ExternalIVR|Flash|Flite|ForkCDR|GetCPEID|Gosub|GosubIf|Goto|GotoIf|GotoIfTime|Hangup|IAX2Provision|ICES|ImportVar|Incomplete|Log|Macro|MacroExclusive|MacroExit|MacroIf|MailboxExists|MeetMe|MeetMeAdmin|MeetMeChannelAdmin|MeetMeCount|Milliwatt|MinivmAccMess|MinivmDelete|MinivmGreet|MinivmMWI|MinivmNotify|MinivmRecord|MixMonitor|Monitor|Morsecode|MP3Player|MSet|MusicOnHold|MYSQL|NBScat|NoCDR|NoOp|Originate|Page|Park|ParkAndAnnounce|ParkedCall|PauseMonitor|PauseQueueMember|Pickup|PickupChan|Playback|PlayTones|PrivacyManager|Proceeding|Progress|Queue|QueueLog|RaiseException|Read|ReadExten|ReadFile|ReceiveFAX|Record|RemoveQueueMember|ResetCDR|RetryDial|Return|Ringing|SayAlpha|SayCountPL|SayDigits|SayNumber|SayPhonetic|SayUnixTime|SendDTMF|SendFAX|SendImage|SendText|SendURL|Set|SetAMAFlags|SetCallerPres|SetMusicOnHold|SIPAddHeader|SIPDtmfMode|SIPRemoveHeader|SLAStation|SLATrunk|SMS|SoftHangup|SpeechActivateGrammar|SpeechBackground|SpeechCreate|SpeechDeactivateGrammar|SpeechDestroy|SpeechLoadGrammar|SpeechProcessingSound|SpeechStart|SpeechUnloadGrammar|StackPop|StartMusicOnHold|StopMixMonitor|StopMonitor|StopMusicOnHold|StopPlayTones|System|TestClient|TestServer|Transfer|TryExec|TrySystem|UnpauseMonitor|UnpauseQueueMember|UserEvent|Verbose|VMAuthenticate|VMSayName|VoiceMail|VoiceMailMain|Wait|WaitExten|WaitForNoise|WaitForRing|WaitForSilence|WaitMusicOnHold|WaitUntil|While|Zapateller';
-	
+
 	//match any app
 	$line = preg_replace('/(?:' . $apps . ')(?=\()/', '<span class="app">$0</span>', $line, 1);
 	//match arguments
@@ -86,25 +86,25 @@ function logfiles_get_logfile($lines = 500, $file) {
 		echo _('Error parsing log file or file not found!');
 		return;
 	}
-	
+
 	exec(fpbx_which('tail') . ' -n' . $lines . ' ' . $logfile, $log);
 	foreach($log as $l){
 		switch (true) {
-			case strpos($l, 'WARNING'):
-				$l = '<span class="orange">' . htmlentities($l) . '</span>';
-				break;
-			case strpos($l, 'DEBUG'):
-				$l = '<span class="green">' . htmlentities($l) . '</span>';
-				break;
-			case strpos($l, 'NOTICE'):
-				$l = '<span class="blue">' . htmlentities($l) . '</span>';
-				break;
-			case strpos($l, 'ERROR'):
-				$l = '<span class="red">' . htmlentities($l) . '</span>';
-				break;
-			default:
-				$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES));
-				break;
+		case strpos($l, 'WARNING'):
+			$l = '<span class="orange">' . htmlentities($l) . '</span>';
+			break;
+		case strpos($l, 'DEBUG'):
+			$l = '<span class="green">' . htmlentities($l) . '</span>';
+			break;
+		case strpos($l, 'NOTICE'):
+			$l = '<span class="blue">' . htmlentities($l) . '</span>';
+			break;
+		case strpos($l, 'ERROR'):
+			$l = '<span class="red">' . htmlentities($l) . '</span>';
+			break;
+		default:
+			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES));
+			break;
 		}
 		echo $l . '<br />';
 	}
@@ -117,48 +117,48 @@ function logfiles_get_config($engine) {
 	global $ext, $logfiles_conf, $amp_conf;
 	$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 	switch ($engine) {
-		case 'asterisk':
-			$opts = logfiles_get_opts();
-			//set logfile data to be generated
-			//dbug('here', (isset($logfiles_conf) && ($logfiles_conf instanceof logfiles_conf)), 1);
-			if (!isset($logfiles_conf) || !($logfiles_conf instanceof logfiles_conf)) {
-				dbug('NOT GENERATING LOGGER CONFIGS AS $logfiles_conf IS NOT SET!');
-				return false;
-			}
-			
-			foreach ($opts as $k => $v) {
-				switch ($k) {
-					case 'appendhostname':
-					case 'dateformat':
+	case 'asterisk':
+		$opts = logfiles_get_opts();
+		//set logfile data to be generated
+		//dbug('here', (isset($logfiles_conf) && ($logfiles_conf instanceof logfiles_conf)), 1);
+		if (!isset($logfiles_conf) || !($logfiles_conf instanceof logfiles_conf)) {
+			dbug('NOT GENERATING LOGGER CONFIGS AS $logfiles_conf IS NOT SET!');
+			return false;
+		}
+
+		foreach ($opts as $k => $v) {
+			switch ($k) {
+			case 'appendhostname':
+				case 'dateformat':
 					case 'queue_log':
-					case 'rotatestrategy':
-						if ($v) {
-							$logfiles_conf->addLoggerGeneral($k, $v);
-						}
-						break;
-					default:
-						break;
-				}
+						case 'rotatestrategy':
+							if ($v) {
+								$logfiles_conf->addLoggerGeneral($k, $v);
+							}
+							break;
+						default:
+							break;
 			}
-			
-			foreach ($opts['logfiles'] as $k => $v) {
-				$name = $v['name'];
-				unset($v['name']);
-				foreach ($v as $opt => $set) {
-					if ($set == 'on') {
-						if ($has_security_option || $opt != 'security') { 
-							$name_opt[] = $opt; 
-						}
+		}
+
+		foreach ($opts['logfiles'] as $k => $v) {
+			$name = $v['name'];
+			unset($v['name']);
+			foreach ($v as $opt => $set) {
+				if ($set == 'on') {
+					if ($has_security_option || $opt != 'security') { 
+						$name_opt[] = $opt; 
 					}
 				}
-				//dbug($name, $name_opt);
-				$logfiles_conf->addLoggerLogfiles($name, implode(',', $name_opt));
-				if (isset($name_opt)) {
-					unset($name_opt);
-				}
-				
 			}
-			break;
+			//dbug($name, $name_opt);
+			$logfiles_conf->addLoggerLogfiles($name, implode(',', $name_opt));
+			if (isset($name_opt)) {
+				unset($name_opt);
+			}
+
+		}
+		break;
 	}
 }
 
@@ -170,48 +170,48 @@ function logfiles_get_opts() {
 	$settings = array();
 	$setting = $db->getAll('SELECT * FROM logfile_settings', DB_FETCHMODE_ASSOC);
 	db_e($setting);
-	
+
 	if ($setting) {
 		foreach ($setting as $s) {
 			$settings[$s['key']] = $s['value'];
 		}
 	}
-	
+
 	//add defaults if none are set
 	$settings['dateformat']	= isset($settings['dateformat'])
-								? $settings['dateformat'] : '';
+		? $settings['dateformat'] : '';
 	$settings['appendhostname']	= isset($settings['appendhostname'])
-								? $settings['appendhostname'] : '';
+		? $settings['appendhostname'] : '';
 	$settings['queue_log'] 		= isset($settings['queue_log'])
-								? $settings['queue_log'] : '';
+		? $settings['queue_log'] : '';
 	$settings['rotatestrategy']	= isset($settings['rotatestrategy'])
-								? $settings['rotatestrategy'] : '';
+		? $settings['rotatestrategy'] : '';
 	foreach ($settings as $k => $v) {
 		switch ($k) {
-			case 'dateformat':
-				if (!$v) {
-					$settings[$k] = '%F %T';
-				}
-				break;
-			case 'rotatestrategy':
-				if (!$v) {
-					$settings[$k] = 'rotate';
-				}
-				break;
-			case 'queue_log':
-				if (!$v) {
-					$settings[$k] = 'yes';
-				}
-				break;
-			case 'appendhostname':
-				if (!$v) {
-					$settings[$k] = 'no';
-				}
-				break;
+		case 'dateformat':
+			if (!$v) {
+				$settings[$k] = '%F %T';
+			}
+			break;
+		case 'rotatestrategy':
+			if (!$v) {
+				$settings[$k] = 'rotate';
+			}
+			break;
+		case 'queue_log':
+			if (!$v) {
+				$settings[$k] = 'yes';
+			}
+			break;
+		case 'appendhostname':
+			if (!$v) {
+				$settings[$k] = 'no';
+			}
+			break;
 		}
 	}
-	
-	
+
+
 	$settings['logfiles'] = $db->getAll('SELECT * FROM logfile_logfiles', DB_FETCHMODE_ASSOC);
 	db_e($settings['logfiles']);
 
@@ -223,9 +223,9 @@ function logfiles_get_opts() {
  */
 function logfiles_list() {
 	global $amp_conf;
-	
+
 	$dir = scandirr($amp_conf['ASTLOGDIR'], true);
-	
+
 	//only show files, relative to $amp_conf['ASTLOGDIR']
 	foreach ($dir as $k => $v) {
 		if (!is_file($v)) {
@@ -248,17 +248,17 @@ function logfiles_put_opts($opts) {
 	//save options
 	foreach ($opts as $k => $v) {
 		switch ($k) {
-			case 'appendhostname':
+		case 'appendhostname':
 			case 'dateformat':
-			case 'queue_log':
-			case 'rotatestrategy':
-				$data[] = array($k, $v);
-				break;
-			default:
-				break; //do nothing
+				case 'queue_log':
+					case 'rotatestrategy':
+						$data[] = array($k, $v);
+						break;
+					default:
+						break; //do nothing
 		}
 	}
-	
+
 	//dbug('save settings', $data);
 	$sql = $db->prepare('REPLACE INTO logfile_settings (`key`, value) VALUES (?, ?)');
 	$ret = $db->executeMultiple($sql, $data);
@@ -289,15 +289,15 @@ function logfiles_put_opts($opts) {
 			'security' => $l['security']);
 		$logData[] = array_values($data);
 	}
-	
+
 	sql('TRUNCATE logfile_logfiles');
-	
+
 	$sql = $db->prepare('INSERT INTO logfile_logfiles 
-						(name, debug, dtmf, error, fax, notice, verbose, warning, security) 	
-						VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+		(name, debug, dtmf, error, fax, notice, verbose, warning, security) 	
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$ret = $db->executeMultiple($sql, $logData);
 	db_e($ret);
-	
+
 	needreload();
 	return true;
 }
@@ -311,7 +311,7 @@ function logfiles_rnav() {
 	$html .= '<li><a href="config.php?display=logfiles">'._('View Logs').'</a></li>';
 	$html .= '<li><a href="config.php?display=logfiles&view=opts">'._('Log file settings').'</a></li>';
 	$html .= "</ul><br /></div>";
-	
+
 	return $html;
 }
 ?>
