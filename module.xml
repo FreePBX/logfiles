@@ -15,6 +15,9 @@
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
 	</menuitems>
+	<supported>
+		<version>2.10</version>
+	</supported>
 	<location>release/2.10/logfiles-2.10.0.1.tgz</location>
 	<md5sum>e117a9b377f63967fac4e33b70a10b9c</md5sum>
 </module>
