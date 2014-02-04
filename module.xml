@@ -3,10 +3,11 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>2.11.0.7</version>
+	<version>2.11.0.8</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		2.11.0.8 Use create function
 		2.11.0.7 #7014 fixes back array population
 		2.11.0.6 Fix fatal error on install because of improperly set variables
 		2.11.0.5 #6982 Add security message and fix tooltips, courtesy of Xorcom
