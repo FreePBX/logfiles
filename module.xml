@@ -7,7 +7,7 @@
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
-		*12.0.1* FreePBX12/BMO Update
+		*12.0.1* FreePBX12 Update
 		2.11.0.7 #7014 fixes back array population
 		2.11.0.6 Fix fatal error on install because of improperly set variables
 		2.11.0.5 #6982 Add security message and fix tooltips, courtesy of Xorcom
