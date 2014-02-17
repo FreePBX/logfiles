@@ -3,10 +3,11 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>2.11.0.7</version>
+	<version>12.0.1</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv2+</license>
 	<changelog>
+		*12.0.1* FreePBX12/BMO Update
 		2.11.0.7 #7014 fixes back array population
 		2.11.0.6 Fix fatal error on install because of improperly set variables
 		2.11.0.5 #6982 Add security message and fix tooltips, courtesy of Xorcom
@@ -27,8 +28,8 @@
 		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
 	<supported>
-		<version>2.10</version>
+		<version>12</version>
 	</supported>
-	<location>release/2.11/logfiles-2.11.0.7.tgz</location>
-	<md5sum>a9bc280fb4235aa6127f9699cc34656b</md5sum>
+	<location></location>
+	<md5sum></md5sum>
 </module>
