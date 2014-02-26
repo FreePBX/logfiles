@@ -28,7 +28,7 @@
 		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
 	<supported>
-		<version>2.10</version>
+		<version>2.11</version>
 	</supported>
 	<location>release/2.11/logfiles-2.11.0.7.tgz</location>
 	<md5sum>a9bc280fb4235aa6127f9699cc34656b</md5sum>
