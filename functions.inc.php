@@ -15,6 +15,10 @@ class logfiles_conf {
 		return self::$obj;
 	}
 
+	public function __construct() {
+		self::$obj = $this;
+	}
+
 	// return an array of filenames to write
 	function get_filename() {
 		return array(
