@@ -3,10 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>2.11.0.9</version>
-	<publisher>Schmooze Com. Inc.</publisher>
-	<license>GPLv2+</license>
+	<version>2.11.0.10</version>
+	<publisher>Schmooze Com Inc</publisher>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		2.11.0.10 Add license info
 		*2.11.0.9* #7200 Solve The case of the missing logfiles.
 		2.11.0.7 #7014 fixes back array population
 		2.11.0.6 Fix fatal error on install because of improperly set variables
