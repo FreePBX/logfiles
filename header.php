@@ -31,7 +31,7 @@ if ($var['lines']) {
 	}
 	echo logfiles_get_logfile($var['lines'], $var['logfile']);
 	exit();
-	
+
 }
 
 switch ($var['action']) {
