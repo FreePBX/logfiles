@@ -3,20 +3,24 @@ $(document).ready(function(){
 	if (!$.urlParam('view')) {
 		get_lines(500);
 	}
-	
+
 	$('#show').click(function(){
 		get_lines($('#lines').val());
 	});
-	
+
 	$('select[name=logfile], #lines').change(function(){
 		get_lines($('#lines').val());
 	});
+
+	$('#log_view.pre').css('max-height',($(window).height() - $('#footer').height() - $('#logfiles_header').height() - 60));
+
+	$(window).resize(function() {
+		$('#log_view.pre').css('max-height',($(window).height() - $('#footer').height() - $('#logfiles_header').height() - 60));
+	})
 });
 
 function get_lines(lines) {
-	//hacky way to "position" #log_view below #logfiles_header
-	space = '<br /><br /><br /><br /><br /><br /><br />';
 	$.get(window.location.href, {'lines': lines, 'logfile': $('select[name=logfile]').val()}, function(data){
-		$('#log_view').html(space + data);
+		$('#log_view').html(data);
 	})
 }

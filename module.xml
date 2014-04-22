@@ -3,25 +3,29 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>12.0.2</version>
+	<version>12.1.0</version>
 	<publisher>Schmooze Com. Inc.</publisher>
-	<license>GPLv2+</license>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*12.1.0* FREEPBX-7250 Completely re design how log files looks.
 		*12.0.2* Realign labels. They need to be AFTER the element to work with what we are doing
 		*12.0.1* FreePBX12 Update
-		2.11.0.7 #7014 fixes back array population
-		2.11.0.6 Fix fatal error on install because of improperly set variables
-		2.11.0.5 #6982 Add security message and fix tooltips, courtesy of Xorcom
-		2.11.0.4 Missing Files fix
-		2.11.0.3 #6548 Fix highlighting links in navigation
-		2.11.0.2 #6675 checked against incorrect link
-		2.11.0.1 #6675
-		2.11.0.0 added ability to view all logfiles
-		2.10.0.13 re #1317 - remove debug
-		2.10.0.12 re #1317 - move settings page to settings catagory; fix opts saving/display inconsistancies
-		2.10.0.11 Packaging of ver 2.10.0.11
-		2.10.0.10 re #1143, #1122 -
-		2.10.0.9 re #1122 -
+		*2.11.0.10* Add license info
+		*2.11.0.9* #7200 Solve The case of the missing logfiles.
+		*2.11.0.7* #7014 fixes back array population
+		*2.11.0.6* Fix fatal error on install because of improperly set variables
+		*2.11.0.5* #6982 Add security message and fix tooltips, courtesy of Xorcom
+		*2.11.0.4* Missing Files fix
+		*2.11.0.3* #6548 Fix highlighting links in navigation
+		*2.11.0.2* #6675 checked against incorrect link
+		*2.11.0.1* #6675
+		*2.11.0.0* added ability to view all logfiles
+		*2.10.0.13* re #1317 - remove debug
+		*2.10.0.12* re #1317 - move settings page to settings catagory; fix opts saving/display inconsistancies
+		*2.10.0.11* Packaging of ver 2.10.0.11
+		*2.10.0.10* re #1143, #1122 -
+		*2.10.0.9* re #1122 -
 	</changelog>
 	<category>Reports</category>
 	<menuitems>

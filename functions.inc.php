@@ -1,5 +1,8 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
+//	License for all code of this FreePBX module can be found in the license file inside the module directory
+//	Copyright 2013 Schmooze Com Inc.
+//
 
 class logfiles_conf {
 	var $_loggergeneral  = array();
@@ -76,9 +79,18 @@ class logfiles_conf {
 /*
  * Highlight asterisk applications
  */
-function logfiles_highlight_asterisk($line) {
+function logfiles_highlight_asterisk($line,$channels) {
 	//for i in `asterisk -rx 'core show applications'|awk '{print $1}'|grep -v -|sed 's/://g'`; do echo -n $i'|'; done
 	static $apps = 'AddQueueMember|ADSIProg|AELSub|AGI|Answer|Authenticate|BackGround|BackgroundDetect|Bridge|Busy|CallCompletionCancel|CallCompletionRequest|CELGenUserEvent|ChangeMonitor|ChanIsAvail|ChannelRedirect|ChanSpy|ClearHash|ConfBridge|Congestion|ContinueWhile|ControlPlayback|DAHDIAcceptR2Call|DAHDIBarge|DAHDIRAS|DAHDIScan|DAHDISendKeypadFacility|DateTime|DBdel|DBdeltree|DeadAGI|Dial|Dictate|Directory|DISA|DumpChan|EAGI|Echo|EndWhile|Exec|ExecIf|ExecIfTime|ExitWhile|ExtenSpy|ExternalIVR|Flash|Flite|ForkCDR|GetCPEID|Gosub|GosubIf|Goto|GotoIf|GotoIfTime|Hangup|IAX2Provision|ICES|ImportVar|Incomplete|Log|Macro|MacroExclusive|MacroExit|MacroIf|MailboxExists|MeetMe|MeetMeAdmin|MeetMeChannelAdmin|MeetMeCount|Milliwatt|MinivmAccMess|MinivmDelete|MinivmGreet|MinivmMWI|MinivmNotify|MinivmRecord|MixMonitor|Monitor|Morsecode|MP3Player|MSet|MusicOnHold|MYSQL|NBScat|NoCDR|NoOp|Originate|Page|Park|ParkAndAnnounce|ParkedCall|PauseMonitor|PauseQueueMember|Pickup|PickupChan|Playback|PlayTones|PrivacyManager|Proceeding|Progress|Queue|QueueLog|RaiseException|Read|ReadExten|ReadFile|ReceiveFAX|Record|RemoveQueueMember|ResetCDR|RetryDial|Return|Ringing|SayAlpha|SayCountPL|SayDigits|SayNumber|SayPhonetic|SayUnixTime|SendDTMF|SendFAX|SendImage|SendText|SendURL|Set|SetAMAFlags|SetCallerPres|SetMusicOnHold|SIPAddHeader|SIPDtmfMode|SIPRemoveHeader|SLAStation|SLATrunk|SMS|SoftHangup|SpeechActivateGrammar|SpeechBackground|SpeechCreate|SpeechDeactivateGrammar|SpeechDestroy|SpeechLoadGrammar|SpeechProcessingSound|SpeechStart|SpeechUnloadGrammar|StackPop|StartMusicOnHold|StopMixMonitor|StopMonitor|StopMusicOnHold|StopPlayTones|System|TestClient|TestServer|Transfer|TryExec|TrySystem|UnpauseMonitor|UnpauseQueueMember|UserEvent|Verbose|VMAuthenticate|VMSayName|VoiceMail|VoiceMailMain|Wait|WaitExten|WaitForNoise|WaitForRing|WaitForSilence|WaitMusicOnHold|WaitUntil|While|Zapateller';
+
+	//Match Channel ID
+	$colors = array("cyan", "red","orange","green","yellow","magenta","pink");
+	if(preg_match('/\[(\d*)\]/',$line,$matches)) {
+		if(!isset($channels[$matches[1]])) {
+			$channels[$matches[1]] = $colors[rand(0,count($colors)-1)];
+		}
+		$line = str_replace('['.$matches[1].']','[<span class="'.$channels[$matches[1]].'">'.$matches[1].'</span>]',$line);
+	}
 
 	//match any app
 	$line = preg_replace('/(?:' . $apps . ')(?=\()/', '<span class="app">$0</span>', $line, 1);
@@ -101,6 +113,7 @@ function logfiles_get_logfile($lines = 500, $file) {
 		return;
 	}
 
+	$channels = array();
 	exec(fpbx_which('tail') . ' -n' . $lines . ' ' . $logfile, $log);
 	foreach($log as $l){
 		switch (true) {
@@ -117,7 +130,7 @@ function logfiles_get_logfile($lines = 500, $file) {
 			$l = '<span class="red">' . htmlentities($l) . '</span>';
 			break;
 		default:
-			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES));
+			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES),&$channels);
 			break;
 		}
 		echo $l . '<br />';
@@ -162,8 +175,8 @@ function logfiles_get_config($engine) {
 			unset($v['name']);
 			foreach ($v as $opt => $set) {
 				if ($set == 'on') {
-					if ($has_security_option || $opt != 'security') { 
-						$name_opt[] = $opt; 
+					if ($has_security_option || $opt != 'security') {
+						$name_opt[] = $opt;
 					}
 				}
 			}
@@ -286,13 +299,13 @@ function logfiles_put_opts($opts) {
 	foreach ($opts['logfiles'] as $item => $values) {
 		foreach ($values as $index => $v) {
 			$logs[$index][$item] = $v;
-			if (!$has_security_option) { 
-				$logs[$index]['security'] = 'off'; 
+			if (!$has_security_option) {
+				$logs[$index]['security'] = 'off';
 			}
 		}
 	}
 
-	//ensure the order of our array is correct	
+	//ensure the order of our array is correct
 	foreach ($logs as $k => $l) {
 		$data = array('name' => $l['name'],
 			'debug' => $l['debug'],
@@ -308,8 +321,8 @@ function logfiles_put_opts($opts) {
 
 	sql('TRUNCATE logfile_logfiles');
 
-	$sql = $db->prepare('INSERT INTO logfile_logfiles 
-		(name, debug, dtmf, error, fax, notice, verbose, warning, security) 	
+	$sql = $db->prepare('INSERT INTO logfile_logfiles
+		(name, debug, dtmf, error, fax, notice, verbose, warning, security)
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$ret = $db->executeMultiple($sql, $logData);
 	db_e($ret);
