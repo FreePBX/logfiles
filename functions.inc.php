@@ -84,7 +84,7 @@ function logfiles_highlight_asterisk($line,&$channels) {
 	static $apps = 'AddQueueMember|ADSIProg|AELSub|AGI|Answer|Authenticate|BackGround|BackgroundDetect|Bridge|Busy|CallCompletionCancel|CallCompletionRequest|CELGenUserEvent|ChangeMonitor|ChanIsAvail|ChannelRedirect|ChanSpy|ClearHash|ConfBridge|Congestion|ContinueWhile|ControlPlayback|DAHDIAcceptR2Call|DAHDIBarge|DAHDIRAS|DAHDIScan|DAHDISendKeypadFacility|DateTime|DBdel|DBdeltree|DeadAGI|Dial|Dictate|Directory|DISA|DumpChan|EAGI|Echo|EndWhile|Exec|ExecIf|ExecIfTime|ExitWhile|ExtenSpy|ExternalIVR|Flash|Flite|ForkCDR|GetCPEID|Gosub|GosubIf|Goto|GotoIf|GotoIfTime|Hangup|IAX2Provision|ICES|ImportVar|Incomplete|Log|Macro|MacroExclusive|MacroExit|MacroIf|MailboxExists|MeetMe|MeetMeAdmin|MeetMeChannelAdmin|MeetMeCount|Milliwatt|MinivmAccMess|MinivmDelete|MinivmGreet|MinivmMWI|MinivmNotify|MinivmRecord|MixMonitor|Monitor|Morsecode|MP3Player|MSet|MusicOnHold|MYSQL|NBScat|NoCDR|NoOp|Originate|Page|Park|ParkAndAnnounce|ParkedCall|PauseMonitor|PauseQueueMember|Pickup|PickupChan|Playback|PlayTones|PrivacyManager|Proceeding|Progress|Queue|QueueLog|RaiseException|Read|ReadExten|ReadFile|ReceiveFAX|Record|RemoveQueueMember|ResetCDR|RetryDial|Return|Ringing|SayAlpha|SayCountPL|SayDigits|SayNumber|SayPhonetic|SayUnixTime|SendDTMF|SendFAX|SendImage|SendText|SendURL|Set|SetAMAFlags|SetCallerPres|SetMusicOnHold|SIPAddHeader|SIPDtmfMode|SIPRemoveHeader|SLAStation|SLATrunk|SMS|SoftHangup|SpeechActivateGrammar|SpeechBackground|SpeechCreate|SpeechDeactivateGrammar|SpeechDestroy|SpeechLoadGrammar|SpeechProcessingSound|SpeechStart|SpeechUnloadGrammar|StackPop|StartMusicOnHold|StopMixMonitor|StopMonitor|StopMusicOnHold|StopPlayTones|System|TestClient|TestServer|Transfer|TryExec|TrySystem|UnpauseMonitor|UnpauseQueueMember|UserEvent|Verbose|VMAuthenticate|VMSayName|VoiceMail|VoiceMailMain|Wait|WaitExten|WaitForNoise|WaitForRing|WaitForSilence|WaitMusicOnHold|WaitUntil|While|Zapateller';
 
 	//Match Channel ID
-	$colors = array("cyan", "red","orange","green","yellow","magenta","pink");
+	$colors = array("silver","seagreen","lime","red","orange","green","yellow","magenta","pink");
 	if(preg_match('/\[(\d*)\]/',$line,$matches)) {
 		if(!isset($channels[$matches[1]])) {
 			$channels[$matches[1]] = $colors[rand(0,count($colors)-1)];
@@ -117,15 +117,21 @@ function logfiles_get_logfile($lines = 500, $file) {
 	exec(fpbx_which('tail') . ' -n' . $lines . ' ' . $logfile, $log);
 	foreach($log as $l){
 		switch (true) {
+		case strpos($l, 'INFO'):
+			$l = '<span class="beige">' . htmlentities($l) . '</span>';
+			break;
 		case strpos($l, 'WARNING'):
 			$l = '<span class="orange">' . htmlentities($l) . '</span>';
 			break;
 		case strpos($l, 'DEBUG'):
 			$l = '<span class="green">' . htmlentities($l) . '</span>';
 			break;
+		case strpos($l, 'UPDATE'):
 		case strpos($l, 'NOTICE'):
-			$l = '<span class="blue">' . htmlentities($l) . '</span>';
+			$l = '<span class="cyan">' . htmlentities($l) . '</span>';
 			break;
+		case strpos($l, 'FATAL'):
+		case strpos($l, 'CRITICAL'):
 		case strpos($l, 'ERROR'):
 			$l = '<span class="red">' . htmlentities($l) . '</span>';
 			break;
