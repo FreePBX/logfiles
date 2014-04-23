@@ -130,7 +130,7 @@ function logfiles_get_logfile($lines = 500, $file) {
 			$l = '<span class="red">' . htmlentities($l) . '</span>';
 			break;
 		default:
-			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES),&$channels);
+			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES),$channels);
 			break;
 		}
 		echo $l . '<br />';
