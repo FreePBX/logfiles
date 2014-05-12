@@ -38,8 +38,8 @@ $first_install = $db->getOne('SELECT COUNT(*) FROM logfile_settings');
 
 if (!$first_install) { //zero count (aka false) is a new install
 	$sql = 'INSERT INTO logfile_logfiles (name, debug, dtmf, error, fax, notice, verbose, warning, security)
-			VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-	$db->query($sql, array('full', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+	$s = $db->query($sql, array('full', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
 	$db->query($sql, array('console', 'on', 'off', 'on', 'off', 'on', 'on', 'on', 'off'));
 }
 

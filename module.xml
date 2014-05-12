@@ -3,17 +3,17 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>12.0.5</version>
+	<version>12.0.6</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*12.0.6* FREEPBX-7375 missing ? on insert
 		*12.0.5* More tweaks to color
 		*12.0.4* FREEPBX-7339 For the ampersand
 		*12.0.3* FREEPBX-7250 Completely re design how log files looks.
 		*12.0.2* Realign labels. They need to be AFTER the element to work with what we are doing
 		*12.0.1* FreePBX12 Update
-		*2.11.0.10* Add license info
 		*2.11.0.9* #7200 Solve The case of the missing logfiles.
 		*2.11.0.7* #7014 fixes back array population
 		*2.11.0.6* Fix fatal error on install because of improperly set variables
