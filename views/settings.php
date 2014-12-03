@@ -32,7 +32,7 @@ $rotateseq = array(
 			'value'		=> 'sequential',
 			'checked'	=> ($rotatestrategy == 'sequential'),
 );
-$rotateseq = form_label(_('Sequential'), 'rotateseq') . form_radio($rotateseq);
+$rotateseq = form_radio($rotateseq) . form_label(_('Sequential'), 'rotateseq');
 
 $rotaterot = array(
 			'name'		=> 'rotatestrategy',
@@ -40,7 +40,7 @@ $rotaterot = array(
 			'value'		=> 'rotate',
 			'checked'	=> ($rotatestrategy == 'rotate'),
 );
-$rotaterot = form_label(_('Rotate'), 'rotaterot') . form_radio($rotaterot);
+$rotaterot = form_radio($rotaterot) . form_label(_('Rotate'), 'rotaterot');
 
 $rotatetime = array(
 			'name'		=> 'rotatestrategy',
@@ -48,7 +48,7 @@ $rotatetime = array(
 			'value'		=> 'timestamp',
 			'checked'	=> ($rotatestrategy == 'timestamp'),
 );
-$rotatetime = form_label(_('Timestamp'), 'rotatetime') . form_radio($rotatetime);
+$rotatetime = form_radio($rotatetime) . form_label(_('Timestamp'), 'rotatetime');
 
 $help_li[] = _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number');
 $help_li[] = _('Rotate: Rotate all the old files, such that the oldest has the highest sequence '
@@ -65,7 +65,7 @@ $hostnameyes = array(
 			'value'		=> 'yes',
 			'checked'	=> ($appendhostname == 'yes'),
 );
-$hostnameyes = form_label(_('Yes'), 'hostnameyes') . form_radio($hostnameyes);
+$hostnameyes = form_radio($hostnameyes) . form_label(_('Yes'), 'hostnameyes');
 
 $hostnameno = array(
 			'name'		=> 'appendhostname',
@@ -73,7 +73,7 @@ $hostnameno = array(
 			'value'		=> 'no',
 			'checked'	=> ($appendhostname == 'no'),
 );
-$hostnameno = form_label(_('No'), 'hostnameno') . form_radio($hostnameno);
+$hostnameno = form_radio($hostnameno) . form_label(_('No'), 'hostnameno');
 
 $label = fpbx_label(_('Append Hostname'), _('Appends the hostname to the name of the log files'));
 $table->add_row($label, '<span class="radioset">' . $hostnameyes . $hostnameno . '</radioset>');
@@ -86,7 +86,7 @@ $queuelogyes = array(
 			'value'		=> 'yes',
 			'checked'	=> ($queue_log == 'yes'),
 );
-$queuelogyes = form_label(_('Yes'), 'queuelogyes') . form_radio($queuelogyes);
+$queuelogyes = form_radio($queuelogyes) . form_label(_('Yes'), 'queuelogyes');
 
 $queuelogno = array(
 			'name'		=> 'queue_log',
@@ -94,7 +94,7 @@ $queuelogno = array(
 			'value'		=> 'no',
 			'checked'	=> ($queue_log == 'no'),
 );
-$queuelogno = form_label(_('No'), 'queuelogno') . form_radio($queuelogno);
+$queuelogno = form_radio($queuelogno) . form_label(_('No'), 'queuelogno');
 
 $label = fpbx_label(_('Log Queues'), _('Log queue events to a file'));
 $table->add_row($label, '<span class="radioset">' . $queuelogyes . $queuelogno . '</radioset>');
@@ -128,8 +128,8 @@ $heading = array(
 			fpbx_label(_('Warning'), 'warning: ' . _('Possible issues with dialplan syntaxt or call flow, but not critical.'))
 		);
 
-if ($has_security_option) { 
-	$heading[] = fpbx_label(_('Security'), 'security: ' . _('Notification of security related events such as authentication attempts.')); 
+if ($has_security_option) {
+	$heading[] = fpbx_label(_('Security'), 'security: ' . _('Notification of security related events such as authentication attempts.'));
 }
 
 $heading[] = fpbx_label(_('Delete'));
@@ -149,12 +149,12 @@ foreach ($logfiles as $l) {
 					'required'		=> ''
 				)
 			);
-	
+
 	$onoff = array(
 			'on'	=> _('On'),
 			'off'	=> _('Off')
 	);
-	
+
 	$row[] = form_dropdown('logfiles[debug][]', $onoff, $l['debug']);
 	$row[] = form_dropdown('logfiles[dtmf][]', $onoff, $l['dtmf']);
 	$row[] = form_dropdown('logfiles[error][]', $onoff, $l['error']);
@@ -162,18 +162,18 @@ foreach ($logfiles as $l) {
 	$row[] = form_dropdown('logfiles[notice][]', $onoff, $l['notice']);
 	$row[] = form_dropdown('logfiles[verbose][]', $onoff, $l['verbose']);
 	$row[] = form_dropdown('logfiles[warning][]', $onoff, $l['warning']);
-	if ($has_security_option) { 
-		$row[] = form_dropdown('logfiles[security][]', $onoff, $l['security']); 
+	if ($has_security_option) {
+		$row[] = form_dropdown('logfiles[security][]', $onoff, $l['security']);
 	}
-	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="' 
-			. _('Delete this entry. Click Submit to save changes') 
+	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="'
+			. _('Delete this entry. Click Submit to save changes')
 			. '" class="delete_entry">';
 	$table->add_row(array_values($row));
 	unset($row);
 }
 
 $html .= $table->generate() . br();
-$html .= '<img class="IVREntries" src="modules/logfiles/assets/images/add.png" style="cursor:pointer" title="' . _('New Log File') 
+$html .= '<img class="IVREntries" src="modules/logfiles/assets/images/add.png" style="cursor:pointer" title="' . _('New Log File')
 		. '" id="add_entry">';
 
 $html .= br(4) . form_submit('save', _('Save'));
