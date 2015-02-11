@@ -2,7 +2,7 @@
 # ================================
 # Current translation & maintenance: QLOOG, Inc. (Kobe, Japan)
 # Inquiries: info@qloog.com / www.qloog.com
-# 
+#
 # This translation is a culmination of the hard work of
 # several outstanding individuals, which started in 2009 with the 
 # first-ever Japanese localization of FreePBX by Kenichi Fukaumi 
@@ -14,7 +14,7 @@
 # of course, released under the same GPLv2 license as FreePBX. 
 # We only ask that you kindly retain these credits in honor of 
 # the time and effort that all of us have contributed. Enjoy!
-# 
+#
 # This file is part of FreePBX.
 #
 #    FreePBX is free software: you can redistribute it and/or modify
@@ -37,211 +37,291 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-05 19:32+0900\n"
+"POT-Creation-Date: 2015-02-11 17:59-0500\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
-"Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/>\n"
-"Language: ja\n"
+"Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
+">\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-msgid "logger.conf symlinked to incorrect file:"
-msgstr "logger.confは違うファイルにsymlinkされました:"
+#: /usr/src/freepbx/logfiles/views/settings.php:78
+msgid "Append Hostname"
+msgstr "ネーム名を付け加える"
 
-msgid "removing.."
-msgstr "削除中.."
+#: /usr/src/freepbx/logfiles/views/settings.php:78
+msgid "Appends the hostname to the name of the log files"
+msgstr "ホストネームをログのファイル名に付け加えます"
 
-msgid "ok"
-msgstr "ok"
+#: /usr/src/freepbx/logfiles/views/logs.php:4
+msgid "Asterisk Log Files"
+msgstr "Asteriskログファイル"
 
-msgid "failed"
-msgstr "失敗"
+#: /usr/src/freepbx/logfiles/views/settings.php:123
+msgid "Critical errors and issues"
+msgstr "重大なエラーや問題"
 
-msgid "Log File Settings"
-msgstr "ログファイル設定"
-
-msgid "General Settings"
-msgstr "一般設定"
-
-msgid "Date Format"
-msgstr "日付形式"
-
+#: /usr/src/freepbx/logfiles/views/settings.php:19
 msgid ""
 "Customize the display of debug message time stamps. See strftime(3) Linux "
 "manual for format specifiers. Note that there is also a fractional second "
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
-"デバッグメッセージのタイムスタンプの表示方法をカスタマイズできます。詳しくは、Linuxのマニュアル "
-"strftime(3)をご覧下さい。このフィールドを利用する事で少数のパラメーターも使用できます 。 10分の1は「%1q」、100分の1は「%"
-"2q」、など。"
+"デバッグメッセージのタイムスタンプの表示方法をカスタマイズできます。詳しく"
+"は、Linuxのマニュアル strftime(3)をご覧下さい。このフィールドを利用する事で少"
+"数のパラメーターも使用できます 。 10分の1は「%1q」、100分の1は「%2q」、など。"
 
+#: /usr/src/freepbx/logfiles/views/settings.php:122
+msgid "DTMF"
+msgstr "DTMF"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:19
+msgid "Date Format"
+msgstr "日付形式"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:117
+msgid "Debug"
+msgstr "デバッグ"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:135
+msgid "Delete"
+msgstr "削除"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:169
+msgid "Delete this entry. Click Submit to save changes"
+msgstr "このエントリーを削除します。変更適用をクリックしてください。"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:123
+msgid "Error"
+msgstr "エラー"
+
+#: /usr/src/freepbx/logfiles/functions.inc.php:112
+msgid "Error parsing log file or file not found!"
+msgstr ""
+"ログファイルを解析中にエラーが発生、若しくはファイルが見つかりませんでした。"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:124
+msgid "Fax"
+msgstr "Fax"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:116
+msgid "File Name"
+msgstr "ファイル名"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:9
+msgid "General Settings"
+msgstr "一般設定"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:122
+msgid ""
+"Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
+msgstr ""
+"Asteriskが理解可能なキー入力。IVRやボイスメールの問題をデバッグする際に役立ち"
+"ます。"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:24
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 "デフォルトのISO 8601形式（yyyy-mm-dd HH:MM:SS （%F %T））を使用するには空にし"
 "てください。"
 
-msgid "Sequential"
-msgstr "順次"
+#: /usr/src/freepbx/logfiles/views/settings.php:6
+msgid "Log File Settings"
+msgstr "ログファイル設定"
 
-msgid "Rotate"
-msgstr "循環"
-
-msgid "Timestamp"
-msgstr "タイムスタンプ"
-
-msgid ""
-"Sequential: Rename archived logs in order, such that the newest has the "
-"highest sequence number"
-msgstr "順次: アーカイブされたログファイルの名前を変更し、最新の物が、最も高い順序になる様にします"
-
-msgid ""
-"Rotate: Rotate all the old files, such that the oldest has the highest "
-"sequence number (expected behavior for Unix administrators)."
-msgstr "循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにします(Unixの管理者はこのような動作を期待するでしょう)。"
-
-msgid ""
-"Timestamp: Rename the logfiles using a timestamp instead of a sequence "
-"number when \"logger rotate\" is executed."
-msgstr "タイムスタンプ: \"logger rotate\"が実行された場合、連番ではなく、タイムスタンプを使ってログファイルの名前を変更します。"
-
-msgid "Log rotation"
-msgstr "ログ循環"
-
-msgid "Log rotation strategy: "
-msgstr "ログ循環ルール： "
-
-msgid "Yes"
-msgstr "はい"
-
-msgid "No"
-msgstr "いいえ"
-
-msgid "Append Hostname"
-msgstr "ネーム名を付け加える"
-
-msgid "Appends the hostname to the name of the log files"
-msgstr "ホストネームをログのファイル名に付け加えます"
-
-msgid "Log Queues"
-msgstr "ログキュー"
-
-msgid "Log queue events to a file"
-msgstr "ファイルにキューのイベントを書き込みます"
-
+#: /usr/src/freepbx/logfiles/views/settings.php:108
 msgid "Log Files"
 msgstr "ログファイル"
 
-msgid "File Name"
-msgstr "ファイル名"
+#: /usr/src/freepbx/logfiles/views/settings.php:99
+msgid "Log Queues"
+msgstr "ログキュー"
 
+#: /usr/src/freepbx/logfiles/functions.inc.php:347
+msgid "Log file settings"
+msgstr "ログファイル設定"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:99
+msgid "Log queue events to a file"
+msgstr "ファイルにキューのイベントを書き込みます"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:57
+msgid "Log rotation"
+msgstr "ログ循環"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:57
+msgid "Log rotation strategy: "
+msgstr "ログ循環ルール： "
+
+#: /usr/src/freepbx/logfiles/views/settings.php:125
 msgid ""
-"Name of file, relative to TODO!!!!. Use absolute path for a different "
-"location"
-msgstr "ファイル名、TODOを基準に！！！！違う場所を利用する場合には場合は絶対パスを使用してください"
+"Messages of specific actions, such as a phone registration or call completion"
+msgstr "特定操作のメッセージ。例：電話機の登録、通話終了など"
 
-msgid "Debug"
-msgstr "デバッグ"
-
+#: /usr/src/freepbx/logfiles/views/settings.php:117
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
 "messages are also very verbose and can and do fill up logfiles (and disk "
 "storage) quickly."
 msgstr ""
-"デバッグに使用するメッセージ。特定の問題をデバッグするとき以外は、これらをエラーとして報告しないでください。デバッグメッセージは長くなる恐れがあるため、"
-"すぐにログファイルのサイズ（およびディスク容量）が膨大になりますで注意してください。"
+"デバッグに使用するメッセージ。特定の問題をデバッグするとき以外は、これらをエ"
+"ラーとして報告しないでください。デバッグメッセージは長くなる恐れがあるため、"
+"すぐにログファイルのサイズ（およびディスク容量）が膨大になりますで注意してく"
+"ださい。"
 
-msgid "DTMF"
-msgstr "DTMF"
-
+#: /usr/src/freepbx/logfiles/views/settings.php:116
 msgid ""
-"Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
-msgstr "Asteriskが理解可能なキー入力。IVRやボイスメールの問題をデバッグする際に役立ちます。"
+"Name of file, relative to TODO!!!!. Use absolute path for a different "
+"location"
+msgstr ""
+"ファイル名、TODOを基準に！！！！違う場所を利用する場合には場合は絶対パスを使"
+"用してください"
 
-msgid "Error"
-msgstr "エラー"
+#: /usr/src/freepbx/logfiles/views/settings.php:176
+msgid "New Log File"
+msgstr "新規ログファイル"
 
-msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
-msgstr "ダイヤルプランの構文やコールフローにおいて、重大ではありませんが、問題が発生している可能性があります。"
+#: /usr/src/freepbx/logfiles/views/settings.php:76
+#: /usr/src/freepbx/logfiles/views/settings.php:97
+msgid "No"
+msgstr "いいえ"
 
-msgid "Fax"
-msgstr "Fax"
-
-msgid "Transmition and receiving of faxes"
-msgstr "FAXの受信・送信"
-
+#: /usr/src/freepbx/logfiles/views/settings.php:125
 msgid "Notice"
 msgstr "通知"
 
+#: /usr/src/freepbx/logfiles/views/settings.php:132
 msgid ""
-"Messages of specific actions, such as a phone registration or call completion"
-msgstr "特定操作のメッセージ。例：電話機の登録、通話終了など"
+"Notification of security related events such as authentication attempts."
+msgstr ""
 
-msgid "Verbose"
-msgstr "詳細レポート"
+#: /usr/src/freepbx/logfiles/views/settings.php:155
+msgid "Off"
+msgstr "オフ"
 
+#: /usr/src/freepbx/logfiles/views/settings.php:154
+msgid "On"
+msgstr "オン"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:128
+msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
+msgstr ""
+"ダイヤルプランの構文やコールフローにおいて、重大ではありませんが、問題が発生"
+"している可能性があります。"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:43
+msgid "Rotate"
+msgstr "循環"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:54
+msgid ""
+"Rotate: Rotate all the old files, such that the oldest has the highest "
+"sequence number (expected behavior for Unix administrators)."
+msgstr ""
+"循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにし"
+"ます(Unixの管理者はこのような動作を期待するでしょう)。"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:179
+msgid "Save"
+msgstr "保存"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:132
+msgid "Security"
+msgstr ""
+
+#: /usr/src/freepbx/logfiles/views/settings.php:35
+msgid "Sequential"
+msgstr "順次"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:53
+msgid ""
+"Sequential: Rename archived logs in order, such that the newest has the "
+"highest sequence number"
+msgstr ""
+"順次: アーカイブされたログファイルの名前を変更し、最新の物が、最も高い順序に"
+"なる様にします"
+
+#: /usr/src/freepbx/logfiles/views/logs.php:19
+msgid "Show"
+msgstr "表示"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:126
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
 msgstr ""
-"コールフローの各ステップごとに、段階的にメッセージが出力されます。常に有効にしておき、通話のフローが予想通り進まない場合は、内容を確認してください"
+"コールフローの各ステップごとに、段階的にメッセージが出力されます。常に有効に"
+"しておき、通話のフローが予想通り進まない場合は、内容を確認してください"
 
-msgid "Warning"
-msgstr "警告"
+#: /usr/src/freepbx/logfiles/views/settings.php:51
+msgid "Timestamp"
+msgstr "タイムスタンプ"
 
-msgid "Critical errors and issues"
-msgstr "重大なエラーや問題"
-
-msgid "Delete"
-msgstr "削除"
-
-msgid "file path/name"
-msgstr "ファイルのパス・名前"
-
-msgid "On"
-msgstr "オン"
-
-msgid "Off"
-msgstr "オフ"
-
-msgid "Delete this entry. Click Submit to save changes"
-msgstr "このエントリーを削除します。変更適用をクリックしてください。"
-
-msgid "New Log File"
-msgstr "新規ログファイル"
-
-msgid "Save"
-msgstr "保存"
-
-msgid "Asterisk Log Files"
-msgstr "Asteriskログファイル"
-
-msgid "lines"
-msgstr "ライン"
-
-msgid "Show"
-msgstr "表示"
-
-msgid "Error parsing log file or file not found!"
+#: /usr/src/freepbx/logfiles/views/settings.php:56
+msgid ""
+"Timestamp: Rename the logfiles using a timestamp instead of a sequence "
+"number when \"logger rotate\" is executed."
 msgstr ""
-"ログファイルを解析中にエラーが発生、若しくはファイルが見つかりませんでした。"
+"タイムスタンプ: \"logger rotate\"が実行された場合、連番ではなく、タイムスタン"
+"プを使ってログファイルの名前を変更します。"
 
+#: /usr/src/freepbx/logfiles/views/settings.php:124
+msgid "Transmition and receiving of faxes"
+msgstr "FAXの受信・送信"
+
+#: /usr/src/freepbx/logfiles/views/settings.php:126
+msgid "Verbose"
+msgstr "詳細レポート"
+
+#: /usr/src/freepbx/logfiles/functions.inc.php:346
 msgid "View Logs"
 msgstr "ログを表示する"
 
-msgid "Log file settings"
-msgstr "ログファイル設定"
+#: /usr/src/freepbx/logfiles/views/settings.php:128
+msgid "Warning"
+msgstr "警告"
 
-msgid "Asterisk Logfiles"
-msgstr "Asteriskログファイル"
+#: /usr/src/freepbx/logfiles/views/settings.php:68
+#: /usr/src/freepbx/logfiles/views/settings.php:89
+msgid "Yes"
+msgstr "はい"
 
-msgid "Reports"
-msgstr "レポート"
+#: /usr/src/freepbx/logfiles/install.php:59
+msgid "failed"
+msgstr "失敗"
 
-msgid "Asterisk Logfile Settings"
-msgstr "Asteriskログファイル設定"
+#: /usr/src/freepbx/logfiles/views/settings.php:148
+msgid "file path/name"
+msgstr "ファイルのパス・名前"
+
+#: /usr/src/freepbx/logfiles/views/logs.php:13
+msgid "lines"
+msgstr "ライン"
+
+#: /usr/src/freepbx/logfiles/install.php:53
+msgid "logger.conf symlinked to incorrect file:"
+msgstr "logger.confは違うファイルにsymlinkされました:"
+
+#: /usr/src/freepbx/logfiles/install.php:57
+msgid "ok"
+msgstr "ok"
+
+#: /usr/src/freepbx/logfiles/install.php:55
+msgid "removing.."
+msgstr "削除中.."
+
+#~ msgid "Asterisk Logfiles"
+#~ msgstr "Asteriskログファイル"
+
+#~ msgid "Reports"
+#~ msgstr "レポート"
+
+#~ msgid "Asterisk Logfile Settings"
+#~ msgstr "Asteriskログファイル設定"
