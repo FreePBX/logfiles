@@ -142,25 +142,31 @@ $count = 0;
 
 foreach ($logfiles as $l) {
 	$row[] = form_input(
-				array(
-					'name'			=> 'logfiles[name][]',
-					'value'			=> $l['name'],
-					'placeholder'	=> _('file path/name'),
-					'required'		=> ''
-				)
-			);
+		array(
+			'name'			=> 'logfiles[name][]',
+			'value'			=> $l['name'],
+			'placeholder'	=> _('file path/name'),
+			'required'		=> ''
+		)
+	);
 
 	$onoff = array(
 			'on'	=> _('On'),
 			'off'	=> _('Off')
 	);
 
+	$verbose = $onoff;
+	$verbose['*'] = _('*');
+	for($i = 0; $i <= 20; $i++) {
+		$verbose[$i] = $i;
+	}
+
 	$row[] = form_dropdown('logfiles[debug][]', $onoff, $l['debug']);
 	$row[] = form_dropdown('logfiles[dtmf][]', $onoff, $l['dtmf']);
 	$row[] = form_dropdown('logfiles[error][]', $onoff, $l['error']);
 	$row[] = form_dropdown('logfiles[fax][]', $onoff, $l['fax']);
 	$row[] = form_dropdown('logfiles[notice][]', $onoff, $l['notice']);
-	$row[] = form_dropdown('logfiles[verbose][]', $onoff, $l['verbose']);
+	$row[] = form_dropdown('logfiles[verbose][]', $verbose, $l['verbose']);
 	$row[] = form_dropdown('logfiles[warning][]', $onoff, $l['warning']);
 	if ($has_security_option) {
 		$row[] = form_dropdown('logfiles[security][]', $onoff, $l['security']);
