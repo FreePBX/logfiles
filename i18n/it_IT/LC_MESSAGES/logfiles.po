@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:59-0500\n"
+"POT-Creation-Date: 2015-02-20 19:40-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -30,23 +30,31 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: /usr/src/freepbx/logfiles/views/settings.php:78
+#: views/settings.php:78
 msgid "Append Hostname"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:78
+#: views/settings.php:78
 msgid "Appends the hostname to the name of the log files"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/logs.php:4
+#: views/logs.php:4
 msgid "Asterisk Log Files"
 msgstr "File log di Asterisk"
 
-#: /usr/src/freepbx/logfiles/views/settings.php:123
+#: logfiles.i18n.php:6
+msgid "Asterisk Logfile Settings"
+msgstr ""
+
+#: logfiles.i18n.php:3 logfiles.i18n.php:5
+msgid "Asterisk Logfiles"
+msgstr "File log di Asterisk"
+
+#: views/settings.php:123
 msgid "Critical errors and issues"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:19
+#: views/settings.php:19
 msgid ""
 "Customize the display of debug message time stamps. See strftime(3) Linux "
 "manual for format specifiers. Note that there is also a fractional second "
@@ -54,90 +62,90 @@ msgid ""
 "hundredths, etc."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:122
+#: views/settings.php:122
 msgid "DTMF"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:19
+#: views/settings.php:19
 msgid "Date Format"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:117
+#: views/settings.php:117
 msgid "Debug"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:135
+#: views/settings.php:135
 msgid "Delete"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:169
+#: views/settings.php:169
 msgid "Delete this entry. Click Submit to save changes"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:123
+#: views/settings.php:123
 msgid "Error"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/functions.inc.php:112
+#: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:124
+#: views/settings.php:124
 msgid "Fax"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:116
+#: views/settings.php:116
 msgid "File Name"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:9
+#: views/settings.php:9
 msgid "General Settings"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:122
+#: views/settings.php:122
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:24
+#: views/settings.php:24
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:6
+#: views/settings.php:6
 msgid "Log File Settings"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:108
+#: views/settings.php:108
 msgid "Log Files"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:99
+#: views/settings.php:99
 msgid "Log Queues"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/functions.inc.php:347
+#: functions.inc.php:347
 msgid "Log file settings"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:99
+#: views/settings.php:99
 msgid "Log queue events to a file"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:57
+#: views/settings.php:57
 msgid "Log rotation"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:57
+#: views/settings.php:57
 msgid "Log rotation strategy: "
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:125
+#: views/settings.php:125
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:117
+#: views/settings.php:117
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -145,137 +153,136 @@ msgid ""
 "storage) quickly."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:116
+#: views/settings.php:116
 msgid ""
 "Name of file, relative to TODO!!!!. Use absolute path for a different "
 "location"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:176
+#: views/settings.php:176
 msgid "New Log File"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:76
-#: /usr/src/freepbx/logfiles/views/settings.php:97
+#: views/settings.php:76 views/settings.php:97
 msgid "No"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:125
+#: views/settings.php:125
 msgid "Notice"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:132
+#: views/settings.php:132
 msgid ""
 "Notification of security related events such as authentication attempts."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:155
+#: views/settings.php:155
 msgid "Off"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:154
+#: views/settings.php:154
 msgid "On"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:128
+#: views/settings.php:128
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:43
+#: logfiles.i18n.php:4
+msgid "Reports"
+msgstr ""
+
+#: views/settings.php:43
 msgid "Rotate"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:54
+#: views/settings.php:54
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:179
+#: views/settings.php:179
 msgid "Save"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:132
+#: views/settings.php:132
 msgid "Security"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:35
+#: views/settings.php:35
 msgid "Sequential"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:53
+#: views/settings.php:53
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/logs.php:19
+#: views/logs.php:19
 msgid "Show"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:126
+#: views/settings.php:126
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:51
+#: views/settings.php:51
 msgid "Timestamp"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:56
+#: views/settings.php:56
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:124
+#: views/settings.php:124
 msgid "Transmition and receiving of faxes"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:126
+#: views/settings.php:126
 msgid "Verbose"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/functions.inc.php:346
+#: functions.inc.php:346
 msgid "View Logs"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:128
+#: views/settings.php:128
 msgid "Warning"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:68
-#: /usr/src/freepbx/logfiles/views/settings.php:89
+#: views/settings.php:68 views/settings.php:89
 msgid "Yes"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/install.php:59
+#: install.php:59
 msgid "failed"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/settings.php:148
+#: views/settings.php:148
 msgid "file path/name"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/views/logs.php:13
+#: views/logs.php:13
 msgid "lines"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/install.php:53
+#: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/install.php:57
+#: install.php:57
 msgid "ok"
 msgstr ""
 
-#: /usr/src/freepbx/logfiles/install.php:55
+#: install.php:55
 msgid "removing.."
 msgstr ""
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "File log di Asterisk"
 
 #~ msgid "%s - last %s lines"
 #~ msgstr "%s - ultime %s linee"
