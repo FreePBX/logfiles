@@ -32,7 +32,7 @@ msgstr ""
 
 #: views/settings.php:78
 msgid "Append Hostname"
-msgstr ""
+msgstr "附带主机名"
 
 #: views/settings.php:78
 msgid "Appends the hostname to the name of the log files"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: views/settings.php:19
 msgid "Date Format"
-msgstr ""
+msgstr "日期格式"
 
 #: views/settings.php:117
 msgid "Debug"
@@ -100,7 +100,7 @@ msgstr ""
 
 #: views/settings.php:9
 msgid "General Settings"
-msgstr ""
+msgstr "基本设置"
 
 #: views/settings.php:122
 msgid ""
@@ -114,15 +114,15 @@ msgstr ""
 
 #: views/settings.php:6
 msgid "Log File Settings"
-msgstr ""
+msgstr "日志文件设置"
 
 #: views/settings.php:108
 msgid "Log Files"
-msgstr ""
+msgstr "日志文件"
 
 #: views/settings.php:99
 msgid "Log Queues"
-msgstr ""
+msgstr "队列日志"
 
 #: functions.inc.php:347
 msgid "Log file settings"
@@ -134,7 +134,7 @@ msgstr ""
 
 #: views/settings.php:57
 msgid "Log rotation"
-msgstr ""
+msgstr "日志管理方式"
 
 #: views/settings.php:57
 msgid "Log rotation strategy: "
@@ -165,7 +165,7 @@ msgstr ""
 
 #: views/settings.php:76 views/settings.php:97
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: views/settings.php:125
 msgid "Notice"
@@ -194,7 +194,7 @@ msgstr ""
 
 #: views/settings.php:43
 msgid "Rotate"
-msgstr ""
+msgstr "循环"
 
 #: views/settings.php:54
 msgid ""
@@ -212,7 +212,7 @@ msgstr ""
 
 #: views/settings.php:35
 msgid "Sequential"
-msgstr ""
+msgstr "依次"
 
 #: views/settings.php:53
 msgid ""
@@ -232,7 +232,7 @@ msgstr ""
 
 #: views/settings.php:51
 msgid "Timestamp"
-msgstr ""
+msgstr "时间戳"
 
 #: views/settings.php:56
 msgid ""
@@ -258,7 +258,7 @@ msgstr ""
 
 #: views/settings.php:68 views/settings.php:89
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: install.php:59
 msgid "failed"
