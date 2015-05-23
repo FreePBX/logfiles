@@ -1,183 +1,209 @@
 <?php
-
 global $amp_conf;
-
-$html = '';
-$html .= heading(_('Log File Settings'), 2);
-$html .= form_open($_SERVER['REQUEST_URI'], '', array('action' => 'save'));
-//general settings
-$html .= heading(_('General Settings'), 5) . '<hr style="width:50%: margin-left: 0; margin-right: 50%">';
-$table = new CI_Table;
-
-//date format
-$data = array(
-			'name'			=> 'dateformat',
-			//'id'			=> 'username',
-			'value'			=> $dateformat,
-			'placeholder'	=> 'Date Format'
-            );
-$label = fpbx_label(_('Date Format'), _('Customize the display of debug message time stamps. '
+$datehelp = _('Customize the display of debug message time stamps. '
 									. 'See strftime(3) Linux manual for format specifiers. '
 									. 'Note that there is also a fractional second parameter '
 									. 'which may be used in this field.  Use %1q for tenths, '
 									. '%2q for hundredths, etc.')
-									. br() . _('Leave blank for default: ISO 8601 date format '
-									. 'yyyy-mm-dd HH:MM:SS (%F %T)'));
-$table->add_row($label, form_input($data));
-
-//rotate
-$rotateseq = array(
-			'name'		=> 'rotatestrategy',
-			'id'		=> 'rotateseq',
-			'value'		=> 'sequential',
-			'checked'	=> ($rotatestrategy == 'sequential'),
-);
-$rotateseq = form_radio($rotateseq) . form_label(_('Sequential'), 'rotateseq');
-
-$rotaterot = array(
-			'name'		=> 'rotatestrategy',
-			'id'		=> 'rotaterot',
-			'value'		=> 'rotate',
-			'checked'	=> ($rotatestrategy == 'rotate'),
-);
-$rotaterot = form_radio($rotaterot) . form_label(_('Rotate'), 'rotaterot');
-
-$rotatetime = array(
-			'name'		=> 'rotatestrategy',
-			'id'		=> 'rotatetime',
-			'value'		=> 'timestamp',
-			'checked'	=> ($rotatestrategy == 'timestamp'),
-);
-$rotatetime = form_radio($rotatetime) . form_label(_('Timestamp'), 'rotatetime');
-
-$help_li[] = _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number');
-$help_li[] = _('Rotate: Rotate all the old files, such that the oldest has the highest sequence '
-			. 'number (expected behavior for Unix administrators).');
-$help_li[] = _('Timestamp: Rename the logfiles using a timestamp instead of a sequence number when "logger rotate" is executed.');
-$label = fpbx_label(_('Log rotation'), _('Log rotation strategy: ' . ul($help_li)));
-$table->add_row($label, '<span class="radioset">' . $rotateseq . $rotaterot . $rotatetime . '</radioset>');
-
-
-//append hostname
-$hostnameyes = array(
-			'name'		=> 'appendhostname',
-			'id'		=> 'hostnameyes',
-			'value'		=> 'yes',
-			'checked'	=> ($appendhostname == 'yes'),
-);
-$hostnameyes = form_radio($hostnameyes) . form_label(_('Yes'), 'hostnameyes');
-
-$hostnameno = array(
-			'name'		=> 'appendhostname',
-			'id'		=> 'hostnameno',
-			'value'		=> 'no',
-			'checked'	=> ($appendhostname == 'no'),
-);
-$hostnameno = form_radio($hostnameno) . form_label(_('No'), 'hostnameno');
-
-$label = fpbx_label(_('Append Hostname'), _('Appends the hostname to the name of the log files'));
-$table->add_row($label, '<span class="radioset">' . $hostnameyes . $hostnameno . '</radioset>');
-
-
-//queue log
-$queuelogyes = array(
-			'name'		=> 'queue_log',
-			'id'		=> 'queuelogyes',
-			'value'		=> 'yes',
-			'checked'	=> ($queue_log == 'yes'),
-);
-$queuelogyes = form_radio($queuelogyes) . form_label(_('Yes'), 'queuelogyes');
-
-$queuelogno = array(
-			'name'		=> 'queue_log',
-			'id'		=> 'queuelogno',
-			'value'		=> 'no',
-			'checked'	=> ($queue_log == 'no'),
-);
-$queuelogno = form_radio($queuelogno) . form_label(_('No'), 'queuelogno');
-
-$label = fpbx_label(_('Log Queues'), _('Log queue events to a file'));
-$table->add_row($label, '<span class="radioset">' . $queuelogyes . $queuelogno . '</radioset>');
-
-$html .= $table->generate();
-$html .= br(2);
-
-
-
-//log files
-$html .= heading(_('Log Files'), 5) . '<hr style="width:50%: margin-left: 0; margin-right: 50%">';
-
-$table = new CI_Table;
-$table->set_template(array('table_open' => '<table class="alt_table" id="logfile_entries">'));
-
-//draw table header with help on every option
-$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
-$heading = array(
-			fpbx_label(_('File Name'), _('Name of file, relative to TODO!!!!. Use absolute path for a different location')),
-			fpbx_label(_('Debug'), 'debug: ' . _('Messages used for debuging. '
-									. 'Do not report these as error\'s unless you have a '
-									. 'specific issue that you are attempting to debug. '
-									. 'Also note that Debug messages are also very verbose '
-									. 'and can and do fill up logfiles (and disk storage) quickly.')),
-			fpbx_label(_('DTMF'), 'dtmf: ' . _('Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues.')),
-			fpbx_label(_('Error'), 'error: ' . _('Critical errors and issues')),
-			fpbx_label(_('Fax'), 'fax: ' . _('Transmition and receiving of faxes')),
-			fpbx_label(_('Notice'), 'notice: ' . _('Messages of specific actions, such as a phone registration or call completion')),
-			fpbx_label(_('Verbose'), 'verbose: ' . _('Step-by-step messages of every step of a call flow. '
-										. 'Always enable and review if calls dont flow as expected')),
-			fpbx_label(_('Warning'), 'warning: ' . _('Possible issues with dialplan syntaxt or call flow, but not critical.'))
-		);
-
-if ($has_security_option) {
-	$heading[] = fpbx_label(_('Security'), 'security: ' . _('Notification of security related events such as authentication attempts.'));
+									. _('Leave blank for default: ISO 8601 date format '
+									. 'yyyy-mm-dd HH:MM:SS (%F %T)');
+$rotatehelp = _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number').'<br/>';
+$rotatehelp .= _('Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators).').'<br/>';
+$rotatehelp .= _('Timestamp: Rename the logfiles using a timestamp instead of a sequence number when "logger rotate" is executed.').'<br/>';
+function log_dropdown($name,$value,$i){
+		$ret = '<select class="form-control" name="logfiles['.$name.']['.$i.']">';
+		$ret .= '<option value="on" '.(($value == 'on')?"SELECTED":"").'>'._("On").'</option>';
+		$ret .= '<option value="off" '.(($value == 'off')?"SELECTED":"").'>'._("Off").'</option>';
+		$ret .=	'</select>';
+	return $ret;
 }
 
-$heading[] = fpbx_label(_('Delete'));
-$table->set_heading($heading);
-
-
-//actual log files
-$count = 0;
-//$logfiles[] = array('name' => 'test', 'debug' => 'off', 'dtmf' => 'off', 'error' => 'on', 'fax' => 'off', 'notice' => 'on', 'verbose' => 'on', 'warning' => 'on');
-
-foreach ($logfiles as $l) {
-	$row[] = form_input(
-				array(
-					'name'			=> 'logfiles[name][]',
-					'value'			=> $l['name'],
-					'placeholder'	=> _('file path/name'),
-					'required'		=> ''
-				)
-			);
-
-	$onoff = array(
-			'on'	=> _('On'),
-			'off'	=> _('Off')
-	);
-
-	$row[] = form_dropdown('logfiles[debug][]', $onoff, $l['debug']);
-	$row[] = form_dropdown('logfiles[dtmf][]', $onoff, $l['dtmf']);
-	$row[] = form_dropdown('logfiles[error][]', $onoff, $l['error']);
-	$row[] = form_dropdown('logfiles[fax][]', $onoff, $l['fax']);
-	$row[] = form_dropdown('logfiles[notice][]', $onoff, $l['notice']);
-	$row[] = form_dropdown('logfiles[verbose][]', $onoff, $l['verbose']);
-	$row[] = form_dropdown('logfiles[warning][]', $onoff, $l['warning']);
-	if ($has_security_option) {
-		$row[] = form_dropdown('logfiles[security][]', $onoff, $l['security']);
-	}
-	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="'
-			. _('Delete this entry. Click Submit to save changes')
-			. '" class="delete_entry">';
-	$table->add_row(array_values($row));
-	unset($row);
-}
-
-$html .= $table->generate() . br();
-$html .= '<img class="IVREntries" src="modules/logfiles/assets/images/add.png" style="cursor:pointer" title="' . _('New Log File')
-		. '" id="add_entry">';
-
-$html .= br(4) . form_submit('save', _('Save'));
-$html .= form_close();
-$html .= '<script type="text/javascript" src="modules/logfiles/assets/js/views/settings.js"></script>';
-echo $html;
 ?>
+<div class="container-fluid">
+	<h1><?php echo _('Log File Settings')?></h1>
+	<div class = "display full-border">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fpbx-container">
+					<div class="display full-border">
+						<ul class="nav nav-tabs" role="tablist">
+							<li data-name="logfiles_general" class="change-tab active"><a href="#logfiles_general" aria-controls="logfiles_general" role="tab" data-toggle="tab"><?php echo _("General Settings")?></a></li>
+							<li data-name="logfiles_logfiles" class="change-tab"><a href="#logfiles_logfiles" aria-controls="logfiles_logfiles" role="tab" data-toggle="tab"><?php echo _("Log Files")?></a></li>
+						</ul>
+						<div class="tab-content display">
+							<form class="fpbx-submit" action="" method="post" id="logfiles-settings">
+								<input type="hidden" name="action" value="save">
+								<div id="logfiles_general" class="tab-pane active">
+									<!--Date Format-->
+									<div class="element-container">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-md-3">
+															<label class="control-label" for="dateformat"><?php echo _("Date Format") ?></label>
+															<i class="fa fa-question-circle fpbx-help-icon" data-for="dateformat"></i>
+														</div>
+														<div class="col-md-9">
+															<input type="text" class="form-control" id="dateformat" name="dateformat" value="<?php echo isset($dateformat)?$dateformat:''?>">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span id="dateformat-help" class="help-block fpbx-help-block"> <?php echo $datehelp?></span>
+											</div>
+										</div>
+									</div>
+									<!--END Date Format-->
+									<!--Log rotation-->
+									<div class="element-container">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-md-3">
+															<label class="control-label" for="rotatestrategy"><?php echo _("Log Rotation") ?></label>
+															<i class="fa fa-question-circle fpbx-help-icon" data-for="rotatestrategy"></i>
+														</div>
+														<div class="col-md-9 radioset">
+									            <input type="radio" name="rotatestrategy" id="rotatestrategysequential" value="sequential" <?php echo ($rotatestrategy == "sequential"?"CHECKED":"") ?>>
+									            <label for="rotatestrategysequential"><?php echo _("Sequential");?></label>
+									            <input type="radio" name="rotatestrategy" id="rotatestrategyrotate" value="rotate" <?php echo ($rotatestrategy == "rotate"?"CHECKED":"") ?>>
+									            <label for="rotatestrategyrotate"><?php echo _("Rotate");?></label>
+									            <input type="radio" name="rotatestrategy" id="rotatestrategytimestamp" value="timestamp" <?php echo ($rotatestrategy == "timestamp"?"CHECKED":"") ?>>
+									            <label for="rotatestrategytimestamp"><?php echo _("Timestamp");?></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span id="rotatestrategy-help" class="help-block fpbx-help-block"> <?php echo $rotatehelp ?></span>
+											</div>
+										</div>
+									</div>
+									<!--END Log rotation-->
+									<!--Append Hostname-->
+									<div class="element-container">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-md-3">
+															<label class="control-label" for="appendhostname"><?php echo _("Append Hostname") ?></label>
+															<i class="fa fa-question-circle fpbx-help-icon" data-for="appendhostname"></i>
+														</div>
+														<div class="col-md-9 radioset">
+									            <input type="radio" name="appendhostname" id="appendhostnameyes" value="yes" <?php echo ($appendhostname == "yes"?"CHECKED":"") ?>>
+									            <label for="appendhostnameyes"><?php echo _("Yes");?></label>
+									            <input type="radio" name="appendhostname" id="appendhostnameno" value="no" <?php echo ($appendhostname == "yes"?"":"CHECKED") ?>>
+									            <label for="appendhostnameno"><?php echo _("No");?></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span id="appendhostname-help" class="help-block fpbx-help-block"><?php echo _("Appends the hostname to the name of the log files")?></span>
+											</div>
+										</div>
+									</div>
+									<!--END Append Hostname-->
+									<!--Log Queues-->
+									<div class="element-container">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-md-3">
+															<label class="control-label" for="queue_log"><?php echo _("Log Queues") ?></label>
+															<i class="fa fa-question-circle fpbx-help-icon" data-for="queue_log"></i>
+														</div>
+														<div class="col-md-9 radioset">
+									            <input type="radio" name="queue_log" id="queue_logyes" value="yes" <?php echo ($queue_log == "yes"?"CHECKED":"") ?>>
+									            <label for="queue_logyes"><?php echo _("Yes");?></label>
+									            <input type="radio" name="queue_log" id="queue_logno" value="no" <?php echo ($queue_log == "yes"?"":"CHECKED") ?>>
+									            <label for="queue_logno"><?php echo _("No");?></label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<span id="queue_log-help" class="help-block fpbx-help-block"><?php echo _("Log queue events to a file")?></span>
+											</div>
+										</div>
+									</div>
+									<!--END Log Queues-->
+								</div>
+								<div id="logfiles_logfiles" class="tab-pane">
+									<table id="loggrid" class="table table-striped">
+										<thead>
+											<tr>
+												<th> <?php echo _("File Name")?></th>
+												<th> <?php echo _("Debug")?></th>
+												<th> <?php echo _("DTMF")?></th>
+												<th> <?php echo _("Error")?></th>
+												<th> <?php echo _("Fax")?></th>
+												<th> <?php echo _("Notice")?></th>
+												<th> <?php echo _("Verbose")?></th>
+												<th> <?php echo _("Warning")?></th>
+												<th> <?php echo _("Security")?></th>
+												<th> <?php echo _("Delete")?></th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+											$i = 0;
+												foreach ($logfiles as $log) {;
+													echo '<tr>';
+													echo '<td>';
+													echo '<input type="text" class="form-control" name="logfiles[name][]" value="'.$log['name'].'">';
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("debug",$log['debug'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("dtmf",$log['dtmf'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("error",$log['error'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("fax",$log['fax'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("notice",$log['notice'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("verbose",$log['verbose'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("warning",$log['warning'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo log_dropdown("security",$log['security'],$i);
+													echo '</td>';
+													echo '<td>';
+													echo '<i class="fa fa-trash"></i>';
+													echo '</td>';
+												$i++;
+												}
+											?>
+										</tbody>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
