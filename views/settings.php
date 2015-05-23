@@ -23,15 +23,15 @@ function log_dropdown($name,$value,$i){
 	<h1><?php echo _('Log File Settings')?></h1>
 	<div class = "display full-border">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-md-11">
 				<div class="fpbx-container">
 					<div class="display full-border">
 						<ul class="nav nav-tabs" role="tablist">
 							<li data-name="logfiles_general" class="change-tab active"><a href="#logfiles_general" aria-controls="logfiles_general" role="tab" data-toggle="tab"><?php echo _("General Settings")?></a></li>
 							<li data-name="logfiles_logfiles" class="change-tab"><a href="#logfiles_logfiles" aria-controls="logfiles_logfiles" role="tab" data-toggle="tab"><?php echo _("Log Files")?></a></li>
 						</ul>
-						<div class="tab-content display">
-							<form class="fpbx-submit" action="" method="post" id="logfiles-settings">
+						<form class="fpbx-submit" action="" method="post" id="logfiles-settings">
+						<div class="tab-content display"
 								<input type="hidden" name="action" value="save">
 								<div id="logfiles_general" class="tab-pane active">
 									<!--Date Format-->
@@ -143,7 +143,26 @@ function log_dropdown($name,$value,$i){
 									<!--END Log Queues-->
 								</div>
 								<div id="logfiles_logfiles" class="tab-pane">
-									<table id="loggrid" class="table table-striped">
+									<div class="well well-info">
+										<h2><?php echo _("Logfile Help")?> </h2>
+									<table>
+									<tr><th><?php echo _("Field")?></th><th><?php echo _("Information")?></th></tr>
+									<tr><td><?php echo _('File Name') ?></td><td><?php echo _('Name of file, relative to Asterisk logpath. Use absolute path for a different location') ?></td></tr>
+									<tr><td><?php echo _('Debug')?></td><td><?php echo _('Messages used for debuging. '
+									            . 'Do not report these as error\'s unless you have a '
+									            . 'specific issue that you are attempting to debug. '
+									            . 'Also note that Debug messages are also very verbose '
+									            . 'and can and do fill up logfiles (and disk storage) quickly.')?></td></tr>
+									<tr><td><?php echo _('DTMF')?></td><td><?php echo _('Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues.')?></td></tr>
+									<tr><td><?php echo _('Error')?></td><td><?php echo _('Critical errors and issues')?></td></tr>
+									<tr><td><?php echo _('Fax')?></td><td><?php echo _('Transmition and receiving of faxes')?></td></tr>
+									<tr><td><?php echo _('Notice')?></td><td><?php echo _('Messages of specific actions, such as a phone registration or call completion')?></td></tr>
+									<tr><td><?php echo _('Verbose')?></td><td><?php echo ('Step-by-step messages of every step of a call flow. '
+									              . 'Always enable and review if calls dont flow as expected')?></td></tr>
+									<tr><td><?php echo _('Warning')?></td><td><?php echo _('Possible issues with dialplan syntaxt or call flow, but not critical.')?></td></tr>
+									</table>
+								</div>
+									<table id="logfile_entries" class="table table-striped">
 										<thead>
 											<tr>
 												<th> <?php echo _("File Name")?></th>
@@ -191,19 +210,22 @@ function log_dropdown($name,$value,$i){
 													echo log_dropdown("security",$log['security'],$i);
 													echo '</td>';
 													echo '<td>';
-													echo '<i class="fa fa-trash"></i>';
+													echo '<a href="#" class="delAction delete_entry"><i class="fa fa-trash"></i></a>';
 													echo '</td>';
+													echo '</tr>';
 												$i++;
 												}
 											?>
 										</tbody>
 									</table>
+									<a href="#" class="btn btn-default" id="add_entry"><i class="fa fa-plus"></i> <?php echo _("Add Log")?></a>
 								</div>
-							</form>
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="modules/logfiles/assets/js/views/settings.js"></script>
