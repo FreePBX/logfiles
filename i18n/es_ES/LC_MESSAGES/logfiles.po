@@ -20,23 +20,27 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:40-0500\n"
-"PO-Revision-Date: 2009-01-22 01:35+0100\n"
-"Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
-"Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
+"PO-Revision-Date: 2015-03-25 08:37+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: views/settings.php:78
 msgid "Append Hostname"
-msgstr ""
+msgstr "Agrega al final el Hostname"
 
 #: views/settings.php:78
 msgid "Appends the hostname to the name of the log files"
-msgstr ""
+msgstr "Agrega el hostname al final del nombre de los archivos de log"
 
 #: views/logs.php:4
 msgid "Asterisk Log Files"
@@ -44,7 +48,7 @@ msgstr "Archivos de bitácora de Asterisk"
 
 #: logfiles.i18n.php:6
 msgid "Asterisk Logfile Settings"
-msgstr ""
+msgstr "Configuración del Logfile de Asterisk"
 
 #: logfiles.i18n.php:3 logfiles.i18n.php:5
 msgid "Asterisk Logfiles"
@@ -52,7 +56,7 @@ msgstr "Archivos de bitácora de Asterisk"
 
 #: views/settings.php:123
 msgid "Critical errors and issues"
-msgstr ""
+msgstr "Errores críticos y problemas"
 
 #: views/settings.php:19
 msgid ""
@@ -61,89 +65,100 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
+"Personalización de la visualización de las marcas de tiempo de mensajes de "
+"depuración. Ver strftime(3) en el manual de Linux para las especificaciones "
+"de formato. Tenga en cuenta que también hay un segundo parámetro fraccional "
+"que puede ser utilizado en este campo. Use% 1q para décimas,% 2q para "
+"centésimas, etc."
 
 #: views/settings.php:122
 msgid "DTMF"
-msgstr ""
+msgstr "DTMF"
 
 #: views/settings.php:19
 msgid "Date Format"
-msgstr ""
+msgstr "Formato de Fecha"
 
 #: views/settings.php:117
 msgid "Debug"
-msgstr ""
+msgstr "Depurar"
 
 #: views/settings.php:135
 msgid "Delete"
-msgstr ""
+msgstr "Borrar"
 
 #: views/settings.php:169
 msgid "Delete this entry. Click Submit to save changes"
-msgstr ""
+msgstr "Borrar esta entrada. Oprima Enviar para salvar los cambiios"
 
 #: views/settings.php:123
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
-msgstr ""
+msgstr "Error archivo de log  o no se encontró el archivo!"
 
 #: views/settings.php:124
 msgid "Fax"
-msgstr ""
+msgstr "Fax"
 
 #: views/settings.php:116
 msgid "File Name"
-msgstr ""
+msgstr "Nombre de Archivo"
 
 #: views/settings.php:9
 msgid "General Settings"
-msgstr ""
+msgstr "Configuración General"
 
 #: views/settings.php:122
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
+"Pulsaciones de teclas como se entiende por Asterisk. Útil para depurar "
+"problemas de IVR y VM."
 
 #: views/settings.php:24
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
+"Déjelo en Blanco por defecto. Formato de fecha ISO 8601 yyyy-mm-dd HH:MM:SS "
+"(%F %T)"
 
 #: views/settings.php:6
 msgid "Log File Settings"
-msgstr ""
+msgstr "Configuración de Archivo de Log"
 
 #: views/settings.php:108
 msgid "Log Files"
-msgstr ""
+msgstr "Archivos de Log"
 
 #: views/settings.php:99
 msgid "Log Queues"
-msgstr ""
+msgstr "Colas de Log"
 
 #: functions.inc.php:347
 msgid "Log file settings"
-msgstr ""
+msgstr "Configuración de Archivos de Log"
 
 #: views/settings.php:99
 msgid "Log queue events to a file"
-msgstr ""
+msgstr "Registre eventos de colas en un archivo"
 
 #: views/settings.php:57
 msgid "Log rotation"
-msgstr ""
+msgstr "Rotación de Log"
 
 #: views/settings.php:57
 msgid "Log rotation strategy: "
-msgstr ""
+msgstr "Estrategia de rotación de Log "
 
 #: views/settings.php:125
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
+"Mensajes de acciones específicas, tal como registro de un teléfono o "
+"compleción de una llamada"
 
 #: views/settings.php:117
 msgid ""
@@ -152,137 +167,157 @@ msgid ""
 "messages are also very verbose and can and do fill up logfiles (and disk "
 "storage) quickly."
 msgstr ""
+"Los mensajes utilizados para depuración(debugging). No informe de esto como "
+"un error a menos que tenga un problema específico que está intentando "
+"depurar. También tenga en cuenta que los mensajes de depuración son también "
+"muy detallados y pueden y deben llenar los archivos de registro (y el "
+"almacenamiento en disco) rápidamente."
 
 #: views/settings.php:116
 msgid ""
 "Name of file, relative to TODO!!!!. Use absolute path for a different "
 "location"
 msgstr ""
+"Nombre del archivo, relativo a TODO!!!!. Use un camino absoluto para una "
+"localidad distinta"
 
 #: views/settings.php:176
 msgid "New Log File"
-msgstr ""
+msgstr "Nuevo archivo de Log"
 
 #: views/settings.php:76 views/settings.php:97
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: views/settings.php:125
 msgid "Notice"
-msgstr ""
+msgstr "Noticia"
 
 #: views/settings.php:132
 msgid ""
 "Notification of security related events such as authentication attempts."
 msgstr ""
+"Notificación de seguridad relacionada a eventos tales como intentos de "
+"autenticación."
 
 #: views/settings.php:155
 msgid "Off"
-msgstr ""
+msgstr "Apagado"
 
 #: views/settings.php:154
 msgid "On"
-msgstr ""
+msgstr "Encendido"
 
 #: views/settings.php:128
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
+"Posible problema con sintaxis en el dialplan o flujo de llamada, pero no es "
+"critico."
 
 #: logfiles.i18n.php:4
 msgid "Reports"
-msgstr ""
+msgstr "Reportes"
 
 #: views/settings.php:43
 msgid "Rotate"
-msgstr ""
+msgstr "Rotar"
 
 #: views/settings.php:54
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
+"Rotar: Rotar todos los archivos viejos, como tal los mas viejos tienen el "
+"mayor numero de secuencia (comportamiento esperado para administradores "
+"Unix)."
 
 #: views/settings.php:179
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: views/settings.php:132
 msgid "Security"
-msgstr ""
+msgstr "Seguridad"
 
 #: views/settings.php:35
 msgid "Sequential"
-msgstr ""
+msgstr "Secuencial"
 
 #: views/settings.php:53
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
+"Secuencial. renombra los Logs archivados en orden, como tal el mas nuevo "
+"tiene el numero de secuencia mas alto"
 
 #: views/logs.php:19
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: views/settings.php:126
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
 msgstr ""
+"Mensajes paso-a-paso de cada paso en el flujo de una llamada. Habilítelo y "
+"revise siempre que el flujo de llamada no sea como se espera"
 
 #: views/settings.php:51
 msgid "Timestamp"
-msgstr ""
+msgstr "Marca de tiempo"
 
 #: views/settings.php:56
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
+"Marca de Tiempo. Renombra los logfiles usando una marca de tiempo en lugar "
+"de una secuencia cuando la \"rotación\" es ejecutada."
 
 #: views/settings.php:124
 msgid "Transmition and receiving of faxes"
-msgstr ""
+msgstr "Transmisión y recepción de faxes"
 
 #: views/settings.php:126
 msgid "Verbose"
-msgstr ""
+msgstr "Verboso"
 
 #: functions.inc.php:346
 msgid "View Logs"
-msgstr ""
+msgstr "Ver Logs"
 
 #: views/settings.php:128
 msgid "Warning"
-msgstr ""
+msgstr "Advertencia"
 
 #: views/settings.php:68 views/settings.php:89
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: install.php:59
 msgid "failed"
-msgstr ""
+msgstr "Fallo"
 
 #: views/settings.php:148
 msgid "file path/name"
-msgstr ""
+msgstr "Archivo path/name"
 
 #: views/logs.php:13
 msgid "lines"
-msgstr ""
+msgstr "lineas"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
-msgstr ""
+msgstr "logger.conf symlinked a archivo incorrecto:"
 
 #: install.php:57
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
-msgstr ""
+msgstr "removiendo.."
 
 #~ msgid "%s - last %s lines"
 #~ msgstr "%s - Últimas %s líneas"
