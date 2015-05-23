@@ -16,11 +16,17 @@ $(document).ready(function(){
 
 	$(window).resize(function() {
 		$('#log_view.pre').css('max-height',($(window).height() - $('#footer').height() - $('#logfiles_header').height() - 60));
-	})
+	});
 });
 
 function get_lines(lines) {
+	$('#show').prop("disabled",true);
+	var txt = _("Loading...");
+	$('#show').text(txt);
+	$('#log_view').html(txt);
 	$.get(window.location.href, {'lines': lines, 'logfile': $('select[name=logfile]').val()}, function(data){
 		$('#log_view').html(data);
+		$('#show').prop("disabled",false);
+		$('#show').text(_("Show"));
 	})
 }

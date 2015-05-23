@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>12.0.6</version>
+	<version>13.0.1alpha1</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.1alpha1* Visual fixes and styling changes
 		*12.0.6* FREEPBX-7375 missing ? on insert
 		*12.0.5* More tweaks to color
 		*12.0.4* FREEPBX-7339 For the ampersand
@@ -35,7 +36,7 @@
 		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
 	<supported>
-		<version>12.0</version>
+		<version>13.0</version>
 	</supported>
 	<location></location>
 	<md5sum></md5sum>
