@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:40-0500\n"
+"POT-Creation-Date: 2015-05-23 11:26-0400\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -30,31 +30,31 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: views/settings.php:78
+#: views/settings.php:221
+msgid "Add Log"
+msgstr ""
+
+#: views/settings.php:97
 msgid "Append Hostname"
 msgstr "附带主机名"
 
-#: views/settings.php:78
+#: views/settings.php:112
 msgid "Appends the hostname to the name of the log files"
 msgstr ""
 
-#: views/logs.php:4
+#: views/logs.php:5
 msgid "Asterisk Log Files"
 msgstr "Asterisk日志文件"
 
-#: logfiles.i18n.php:6
-msgid "Asterisk Logfile Settings"
+#: views/logs.php:40
+msgid "Choose a log file"
 msgstr ""
 
-#: logfiles.i18n.php:3 logfiles.i18n.php:5
-msgid "Asterisk Logfiles"
-msgstr "Asterisk日志文件"
-
-#: views/settings.php:123
+#: views/settings.php:157
 msgid "Critical errors and issues"
 msgstr ""
 
-#: views/settings.php:19
+#: views/settings.php:3
 msgid ""
 "Customize the display of debug message time stamps. See strftime(3) Linux "
 "manual for format specifiers. Note that there is also a fractional second "
@@ -62,27 +62,23 @@ msgid ""
 "hundredths, etc."
 msgstr ""
 
-#: views/settings.php:122
+#: views/settings.php:156 views/settings.php:170
 msgid "DTMF"
 msgstr ""
 
-#: views/settings.php:19
+#: views/settings.php:44
 msgid "Date Format"
 msgstr "日期格式"
 
-#: views/settings.php:117
+#: views/settings.php:151 views/settings.php:169
 msgid "Debug"
 msgstr ""
 
-#: views/settings.php:135
+#: views/settings.php:177
 msgid "Delete"
 msgstr ""
 
-#: views/settings.php:169
-msgid "Delete this entry. Click Submit to save changes"
-msgstr ""
-
-#: views/settings.php:123
+#: views/settings.php:157 views/settings.php:171
 msgid "Error"
 msgstr ""
 
@@ -90,62 +86,86 @@ msgstr ""
 msgid "Error parsing log file or file not found!"
 msgstr ""
 
-#: views/settings.php:124
+#: views/settings.php:158 views/settings.php:172
 msgid "Fax"
 msgstr ""
 
-#: views/settings.php:116
+#: views/settings.php:149
+msgid "Field"
+msgstr ""
+
+#: views/settings.php:150 views/settings.php:168
 msgid "File Name"
 msgstr ""
 
-#: views/settings.php:9
+#: views/settings.php:30
 msgid "General Settings"
 msgstr "基本设置"
 
-#: views/settings.php:122
+#: views/logs.php:64
+msgid "How many lines to display."
+msgstr ""
+
+#: views/settings.php:149
+msgid "Information"
+msgstr ""
+
+#: views/settings.php:156
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
 
-#: views/settings.php:24
+#: views/settings.php:8
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 
-#: views/settings.php:6
+#: views/logs.php:52
+msgid "Lines"
+msgstr ""
+
+#: views/logs.php:9 assets/js/views/logs.js:24
+msgid "Loading..."
+msgstr ""
+
+#: views/logs.php:21
+msgid "Log File"
+msgstr ""
+
+#: views/settings.php:23
 msgid "Log File Settings"
 msgstr "日志文件设置"
 
-#: views/settings.php:108
+#: views/settings.php:31
 msgid "Log Files"
 msgstr "日志文件"
 
-#: views/settings.php:99
+#: views/settings.php:124
 msgid "Log Queues"
 msgstr "队列日志"
+
+#: views/settings.php:68
+msgid "Log Rotation"
+msgstr ""
 
 #: functions.inc.php:347
 msgid "Log file settings"
 msgstr ""
 
-#: views/settings.php:99
+#: views/settings.php:139
 msgid "Log queue events to a file"
 msgstr ""
 
-#: views/settings.php:57
-msgid "Log rotation"
-msgstr "日志管理方式"
-
-#: views/settings.php:57
-msgid "Log rotation strategy: "
+#: views/settings.php:147
+msgid "Logfile Help"
 msgstr ""
 
-#: views/settings.php:125
+#: views/settings.php:159
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 
-#: views/settings.php:117
+#: views/settings.php:151
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -153,98 +173,83 @@ msgid ""
 "storage) quickly."
 msgstr ""
 
-#: views/settings.php:116
+#: views/settings.php:150
 msgid ""
-"Name of file, relative to TODO!!!!. Use absolute path for a different "
-"location"
+"Name of file, relative to Asterisk logpath. Use absolute path for a "
+"different location"
 msgstr ""
 
-#: views/settings.php:176
-msgid "New Log File"
-msgstr ""
-
-#: views/settings.php:76 views/settings.php:97
+#: views/settings.php:104 views/settings.php:131
 msgid "No"
 msgstr "否"
 
-#: views/settings.php:125
+#: views/settings.php:159 views/settings.php:173
 msgid "Notice"
 msgstr ""
 
-#: views/settings.php:132
-msgid ""
-"Notification of security related events such as authentication attempts."
-msgstr ""
-
-#: views/settings.php:155
+#: views/settings.php:16
 msgid "Off"
 msgstr ""
 
-#: views/settings.php:154
+#: views/settings.php:15
 msgid "On"
 msgstr ""
 
-#: views/settings.php:128
+#: views/settings.php:162
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 
-#: logfiles.i18n.php:4
-msgid "Reports"
+#: Logfiles.class.php:31
+msgid "Reset"
 msgstr ""
 
-#: views/settings.php:43
+#: views/settings.php:75
 msgid "Rotate"
 msgstr "循环"
 
-#: views/settings.php:54
+#: views/settings.php:11
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
 
-#: views/settings.php:179
-msgid "Save"
-msgstr ""
-
-#: views/settings.php:132
+#: views/settings.php:176
 msgid "Security"
 msgstr ""
 
-#: views/settings.php:35
+#: views/settings.php:73
 msgid "Sequential"
 msgstr "依次"
 
-#: views/settings.php:53
+#: views/settings.php:10
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
 
-#: views/logs.php:19
+#: views/logs.php:75 assets/js/views/logs.js:30
 msgid "Show"
 msgstr ""
 
-#: views/settings.php:126
-msgid ""
-"Step-by-step messages of every step of a call flow. Always enable and review "
-"if calls dont flow as expected"
+#: Logfiles.class.php:36
+msgid "Submit"
 msgstr ""
 
-#: views/settings.php:51
+#: views/settings.php:77
 msgid "Timestamp"
 msgstr "时间戳"
 
-#: views/settings.php:56
+#: views/settings.php:12
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
 
-#: views/settings.php:124
+#: views/settings.php:158
 msgid "Transmition and receiving of faxes"
 msgstr ""
 
-#: views/settings.php:126
+#: views/settings.php:160 views/settings.php:174
 msgid "Verbose"
 msgstr ""
 
@@ -252,24 +257,16 @@ msgstr ""
 msgid "View Logs"
 msgstr ""
 
-#: views/settings.php:128
+#: views/settings.php:162 views/settings.php:175
 msgid "Warning"
 msgstr ""
 
-#: views/settings.php:68 views/settings.php:89
+#: views/settings.php:102 views/settings.php:129
 msgid "Yes"
 msgstr "是"
 
 #: install.php:59
 msgid "failed"
-msgstr ""
-
-#: views/settings.php:148
-msgid "file path/name"
-msgstr ""
-
-#: views/logs.php:13
-msgid "lines"
 msgstr ""
 
 #: install.php:53
@@ -283,6 +280,12 @@ msgstr ""
 #: install.php:55
 msgid "removing.."
 msgstr ""
+
+#~ msgid "Asterisk Logfiles"
+#~ msgstr "Asterisk日志文件"
+
+#~ msgid "Log rotation"
+#~ msgstr "日志管理方式"
 
 #~ msgid "%s - last %s lines"
 #~ msgstr "%s - 最后%s行"
