@@ -27,21 +27,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: views/settings.php:221
 msgid "Add Log"
 msgstr ""
 
-#: views/settings.php:78
+#: views/settings.php:97
 msgid "Append Hostname"
 msgstr "Добавьте имя хоста"
 
-#: views/settings.php:78
+#: views/settings.php:112
 msgid "Appends the hostname to the name of the log files"
 msgstr "Добавляет имя хоста с именем лог-файлов"
 
-#: views/logs.php:4
+#: views/logs.php:5
 msgid "Asterisk Log Files"
 msgstr "Файлы журналов Астериска"
 
@@ -49,31 +50,35 @@ msgstr "Файлы журналов Астериска"
 msgid "Choose a log file"
 msgstr ""
 
-#: views/settings.php:123
+#: views/settings.php:157
 msgid "Critical errors and issues"
 msgstr "Критические ошибки и проблемы"
 
 #: views/settings.php:3
-msgid "Customize the display of debug message time stamps. See strftime(3) Linux manual for format specifiers. Note that there is also a fractional second parameter which may be used in this field.  Use %1q for tenths, %2q for hundredths, etc."
+msgid ""
+"Customize the display of debug message time stamps. See strftime(3) Linux "
+"manual for format specifiers. Note that there is also a fractional second "
+"parameter which may be used in this field.  Use %1q for tenths, %2q for "
+"hundredths, etc."
 msgstr ""
 
 #: views/settings.php:156 views/settings.php:170
 msgid "DTMF"
 msgstr ""
 
-#: views/settings.php:19
+#: views/settings.php:44
 msgid "Date Format"
 msgstr "Формат даты"
 
-#: views/settings.php:117
+#: views/settings.php:151 views/settings.php:169
 msgid "Debug"
 msgstr "Отладка"
 
-#: views/settings.php:135
+#: views/settings.php:177
 msgid "Delete"
 msgstr "Удалить"
 
-#: views/settings.php:123
+#: views/settings.php:157 views/settings.php:171
 msgid "Error"
 msgstr "Ошибка"
 
@@ -81,7 +86,7 @@ msgstr "Ошибка"
 msgid "Error parsing log file or file not found!"
 msgstr "Ошибка синтаксического анализа файла журнала или файл не найден!"
 
-#: views/settings.php:124
+#: views/settings.php:158 views/settings.php:172
 msgid "Fax"
 msgstr "Факс"
 
@@ -89,11 +94,11 @@ msgstr "Факс"
 msgid "Field"
 msgstr ""
 
-#: views/settings.php:116
+#: views/settings.php:150 views/settings.php:168
 msgid "File Name"
 msgstr "Имя файла"
 
-#: views/settings.php:9
+#: views/settings.php:30
 msgid "General Settings"
 msgstr "Основные настройки"
 
@@ -105,13 +110,19 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: views/settings.php:122
-msgid "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
-msgstr "Нажатия клавиш, как распознано в Астериск. Полезная информация для отладки IVR и VM."
+#: views/settings.php:156
+msgid ""
+"Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
+msgstr ""
+"Нажатия клавиш, как распознано в Астериск. Полезная информация для отладки "
+"IVR и VM."
 
-#: views/settings.php:24
-msgid "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
-msgstr "Оставьте пустым для выбора по умолчанию: ISO 8601 формат даты yyyy-mm-dd HH:MM:SS (%F %T)"
+#: views/settings.php:8
+msgid ""
+"Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
+msgstr ""
+"Оставьте пустым для выбора по умолчанию: ISO 8601 формат даты yyyy-mm-dd HH:"
+"MM:SS (%F %T)"
 
 #: views/logs.php:52
 msgid "Lines"
@@ -125,15 +136,15 @@ msgstr ""
 msgid "Log File"
 msgstr ""
 
-#: views/settings.php:6
+#: views/settings.php:23
 msgid "Log File Settings"
 msgstr "Настройки файлов журнала"
 
-#: views/settings.php:108
+#: views/settings.php:31
 msgid "Log Files"
 msgstr "Файлы журнала"
 
-#: views/settings.php:99
+#: views/settings.php:124
 msgid "Log Queues"
 msgstr "Журнал очередей"
 
@@ -145,7 +156,7 @@ msgstr ""
 msgid "Log file settings"
 msgstr "Настройки файла журнала"
 
-#: views/settings.php:99
+#: views/settings.php:139
 msgid "Log queue events to a file"
 msgstr "Писать события очереди в файл"
 
@@ -153,16 +164,25 @@ msgstr "Писать события очереди в файл"
 msgid "Logfile Help"
 msgstr ""
 
-#: views/settings.php:125
-msgid "Messages of specific actions, such as a phone registration or call completion"
-msgstr "Сообщения о конкретных действиях, таких как регистрация телефона или завершения вызова"
+#: views/settings.php:159
+msgid ""
+"Messages of specific actions, such as a phone registration or call completion"
+msgstr ""
+"Сообщения о конкретных действиях, таких как регистрация телефона или "
+"завершения вызова"
 
 #: views/settings.php:151
-msgid "Messages used for debuging. Do not report these as error's unless you have a specific issue that you are attempting to debug. Also note that Debug messages are also very verbose and can and do fill up logfiles (and disk storage) quickly."
+msgid ""
+"Messages used for debuging. Do not report these as error's unless you have a "
+"specific issue that you are attempting to debug. Also note that Debug "
+"messages are also very verbose and can and do fill up logfiles (and disk "
+"storage) quickly."
 msgstr ""
 
 #: views/settings.php:150
-msgid "Name of file, relative to Asterisk logpath. Use absolute path for a different location"
+msgid ""
+"Name of file, relative to Asterisk logpath. Use absolute path for a "
+"different location"
 msgstr ""
 
 #: views/settings.php:104 views/settings.php:131
@@ -194,7 +214,9 @@ msgid "Rotate"
 msgstr ""
 
 #: views/settings.php:11
-msgid "Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators)."
+msgid ""
+"Rotate: Rotate all the old files, such that the oldest has the highest "
+"sequence number (expected behavior for Unix administrators)."
 msgstr ""
 
 #: views/settings.php:176
@@ -206,7 +228,9 @@ msgid "Sequential"
 msgstr ""
 
 #: views/settings.php:10
-msgid "Sequential: Rename archived logs in order, such that the newest has the highest sequence number"
+msgid ""
+"Sequential: Rename archived logs in order, such that the newest has the "
+"highest sequence number"
 msgstr ""
 
 #: views/logs.php:75 assets/js/views/logs.js:30
@@ -222,7 +246,9 @@ msgid "Timestamp"
 msgstr ""
 
 #: views/settings.php:12
-msgid "Timestamp: Rename the logfiles using a timestamp instead of a sequence number when \"logger rotate\" is executed."
+msgid ""
+"Timestamp: Rename the logfiles using a timestamp instead of a sequence "
+"number when \"logger rotate\" is executed."
 msgstr ""
 
 #: views/settings.php:158
@@ -261,49 +287,17 @@ msgstr ""
 msgid "removing.."
 msgstr ""
 
-#: logfiles.i18n.php:6
-msgid "Asterisk Logfile Settings"
-msgstr "Настройки логфайлов Астериска"
+#~ msgid "Asterisk Logfile Settings"
+#~ msgstr "Настройки логфайлов Астериска"
 
-#: views/settings.php:169
-msgid "Delete this entry. Click Submit to save changes"
-msgstr "Удалить эту запись. Нажмите Подтвердить, чтобы сохранить изменения"
+#~ msgid "Delete this entry. Click Submit to save changes"
+#~ msgstr "Удалить эту запись. Нажмите Подтвердить, чтобы сохранить изменения"
 
-#: views/settings.php:57
-msgid "Log rotation"
-msgstr "Ротация журнала"
+#~ msgid "Log rotation"
+#~ msgstr "Ротация журнала"
 
-#: views/settings.php:57
-msgid "Log rotation strategy: "
-msgstr "Стратегия ротации журнала: "
-
-#: views/settings.php:116
-msgid "Name of file, relative to TODO!!!!. Use absolute path for a different location"
-msgstr ""
-
-#: views/settings.php:176
-msgid "New Log File"
-msgstr ""
-
-#: views/settings.php:132
-msgid "Notification of security related events such as authentication attempts."
-msgstr ""
-
-#: views/settings.php:179
-msgid "Save"
-msgstr ""
-
-#: views/settings.php:126
-msgid "Step-by-step messages of every step of a call flow. Always enable and review if calls dont flow as expected"
-msgstr ""
-
-#: views/settings.php:148
-msgid "file path/name"
-msgstr ""
-
-#: views/logs.php:13
-msgid "lines"
-msgstr ""
+#~ msgid "Log rotation strategy: "
+#~ msgstr "Стратегия ротации журнала: "
 
 #~ msgid "Asterisk Logfiles"
 #~ msgstr "Логфайлы Asterisk"
