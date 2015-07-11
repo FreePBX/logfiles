@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:40-0500\n"
-"PO-Revision-Date: 2015-05-31 00:46+0200\n"
+"PO-Revision-Date: 2015-07-11 13:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/ru_RU/>\n"
@@ -174,11 +174,11 @@ msgstr ""
 
 #: views/settings.php:76 views/settings.php:97
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: views/settings.php:125
 msgid "Notice"
-msgstr ""
+msgstr "Замечание"
 
 #: views/settings.php:132
 msgid ""
@@ -213,11 +213,11 @@ msgstr ""
 
 #: views/settings.php:179
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: views/settings.php:132
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
 #: views/settings.php:35
 msgid "Sequential"
@@ -263,15 +263,15 @@ msgstr ""
 
 #: views/settings.php:128
 msgid "Warning"
-msgstr ""
+msgstr "Предупреждение"
 
 #: views/settings.php:68 views/settings.php:89
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: install.php:59
 msgid "failed"
-msgstr ""
+msgstr "не удалось"
 
 #: views/settings.php:148
 msgid "file path/name"
@@ -287,7 +287,7 @@ msgstr ""
 
 #: install.php:57
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
