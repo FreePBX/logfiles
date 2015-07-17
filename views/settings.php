@@ -31,9 +31,9 @@ function log_dropdown($name,$value,$i){
 							<li data-name="logfiles_logfiles" class="change-tab"><a href="#logfiles_logfiles" aria-controls="logfiles_logfiles" role="tab" data-toggle="tab"><?php echo _("Log Files")?></a></li>
 						</ul>
 						<form class="fpbx-submit" action="" method="post" id="logfiles-settings">
-						<div class="tab-content display"
-								<input type="hidden" name="action" value="save">
+						<div class="tab-content display">
 								<div id="logfiles_general" class="tab-pane active">
+									<input type="hidden" name="action" value="save">
 									<!--Date Format-->
 									<div class="element-container">
 										<div class="row">
