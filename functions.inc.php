@@ -180,10 +180,21 @@ function logfiles_get_config($engine) {
 			$name = $v['name'];
 			unset($v['name']);
 			foreach ($v as $opt => $set) {
-				if ($set == 'on') {
-					if ($has_security_option || $opt != 'security') {
-						$name_opt[] = $opt;
-					}
+				switch ($opt) {
+					case 'verbose':
+						if (is_numeric($set) || $set == '*') {
+							$name_opt[] = 'verbose(' . $set . ')';
+						} elseif ($set == 'on') {
+							$name_opt[] = $opt;
+						}
+						break;
+					default:
+						if ($set == 'on') {
+							if ($has_security_option || $opt != 'security') {
+								$name_opt[] = $opt;
+							}
+						}
+						break;
 				}
 			}
 			//dbug($name, $name_opt);

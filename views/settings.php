@@ -18,6 +18,18 @@ function log_dropdown($name,$value,$i){
 	return $ret;
 }
 
+function verbose_log_dropdown($name,$value,$i){
+		$ret = '<select class="form-control" name="logfiles['.$name.']['.$i.']">';
+		$ret .= '<option value="on" '.(($value == 'on')?"SELECTED":"").'>'._("On").'</option>';
+		$ret .= '<option value="off" '.(($value == 'off')?"SELECTED":"").'>'._("Off").'</option>';
+		for($i = 0; $i <= 20; $i++) {
+			$ret .= '<option value="'.$i.'" '.(($value == $i)?"SELECTED":"").'>'.$i.'</option>';
+		}
+		$ret .= '<option value="*" '.(($value == '*')?"SELECTED":"").'>*</option>';
+		$ret .=	'</select>';
+	return $ret;
+}
+
 ?>
 <div class="container-fluid">
 	<h1><?php echo _('Log File Settings')?></h1>
@@ -201,7 +213,7 @@ function log_dropdown($name,$value,$i){
 													echo log_dropdown("notice",$log['notice'],$i);
 													echo '</td>';
 													echo '<td>';
-													echo log_dropdown("verbose",$log['verbose'],$i);
+													echo verbose_log_dropdown("verbose",$log['verbose'],$i);
 													echo '</td>';
 													echo '<td>';
 													echo log_dropdown("warning",$log['warning'],$i);
