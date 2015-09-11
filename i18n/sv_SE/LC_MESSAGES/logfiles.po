@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-23 11:26-0400\n"
+"POT-Creation-Date: 2015-09-11 10:55-0700\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -29,15 +29,15 @@ msgstr ""
 "X-Poedit-Language: Sweden\n"
 "X-Poedit-Country: SWEDISH\n"
 
-#: views/settings.php:221
+#: views/settings.php:233
 msgid "Add Log"
 msgstr ""
 
-#: views/settings.php:97
+#: views/settings.php:109
 msgid "Append Hostname"
 msgstr ""
 
-#: views/settings.php:112
+#: views/settings.php:124
 msgid "Appends the hostname to the name of the log files"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr "Asterisk loggfil"
 msgid "Choose a log file"
 msgstr ""
 
-#: views/settings.php:157
+#: views/settings.php:169
 msgid "Critical errors and issues"
 msgstr ""
 
@@ -61,23 +61,23 @@ msgid ""
 "hundredths, etc."
 msgstr ""
 
-#: views/settings.php:156 views/settings.php:170
+#: views/settings.php:168 views/settings.php:182
 msgid "DTMF"
 msgstr ""
 
-#: views/settings.php:44
+#: views/settings.php:56
 msgid "Date Format"
 msgstr ""
 
-#: views/settings.php:151 views/settings.php:169
+#: views/settings.php:163 views/settings.php:181
 msgid "Debug"
 msgstr ""
 
-#: views/settings.php:177
+#: views/settings.php:189
 msgid "Delete"
 msgstr ""
 
-#: views/settings.php:157 views/settings.php:171
+#: views/settings.php:169 views/settings.php:183
 msgid "Error"
 msgstr ""
 
@@ -85,19 +85,19 @@ msgstr ""
 msgid "Error parsing log file or file not found!"
 msgstr ""
 
-#: views/settings.php:158 views/settings.php:172
+#: views/settings.php:170 views/settings.php:184
 msgid "Fax"
 msgstr ""
 
-#: views/settings.php:149
+#: views/settings.php:161
 msgid "Field"
 msgstr ""
 
-#: views/settings.php:150 views/settings.php:168
+#: views/settings.php:162 views/settings.php:180
 msgid "File Name"
 msgstr ""
 
-#: views/settings.php:30
+#: views/settings.php:42
 msgid "General Settings"
 msgstr ""
 
@@ -105,11 +105,11 @@ msgstr ""
 msgid "How many lines to display."
 msgstr ""
 
-#: views/settings.php:149
+#: views/settings.php:161
 msgid "Information"
 msgstr ""
 
-#: views/settings.php:156
+#: views/settings.php:168
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -131,40 +131,40 @@ msgstr ""
 msgid "Log File"
 msgstr ""
 
-#: views/settings.php:23
+#: views/settings.php:35
 msgid "Log File Settings"
 msgstr ""
 
-#: views/settings.php:31
+#: views/settings.php:43
 msgid "Log Files"
 msgstr ""
 
-#: views/settings.php:124
+#: views/settings.php:136
 msgid "Log Queues"
 msgstr ""
 
-#: views/settings.php:68
+#: views/settings.php:80
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:347
+#: functions.inc.php:358
 msgid "Log file settings"
 msgstr ""
 
-#: views/settings.php:139
+#: views/settings.php:151
 msgid "Log queue events to a file"
 msgstr ""
 
-#: views/settings.php:147
+#: views/settings.php:159
 msgid "Logfile Help"
 msgstr ""
 
-#: views/settings.php:159
+#: views/settings.php:171
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 
-#: views/settings.php:151
+#: views/settings.php:163
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -172,29 +172,29 @@ msgid ""
 "storage) quickly."
 msgstr ""
 
-#: views/settings.php:150
+#: views/settings.php:162
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
 
-#: views/settings.php:104 views/settings.php:131
+#: views/settings.php:116 views/settings.php:143
 msgid "No"
 msgstr ""
 
-#: views/settings.php:159 views/settings.php:173
+#: views/settings.php:171 views/settings.php:185
 msgid "Notice"
 msgstr ""
 
-#: views/settings.php:16
+#: views/settings.php:16 views/settings.php:24
 msgid "Off"
 msgstr ""
 
-#: views/settings.php:15
+#: views/settings.php:15 views/settings.php:23
 msgid "On"
 msgstr ""
 
-#: views/settings.php:162
+#: views/settings.php:174
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/settings.php:75
+#: views/settings.php:87
 msgid "Rotate"
 msgstr ""
 
@@ -212,11 +212,11 @@ msgid ""
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
 
-#: views/settings.php:176
+#: views/settings.php:188
 msgid "Security"
 msgstr ""
 
-#: views/settings.php:73
+#: views/settings.php:85
 msgid "Sequential"
 msgstr ""
 
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: views/settings.php:77
+#: views/settings.php:89
 msgid "Timestamp"
 msgstr ""
 
@@ -244,23 +244,23 @@ msgid ""
 "number when \"logger rotate\" is executed."
 msgstr ""
 
-#: views/settings.php:158
+#: views/settings.php:170
 msgid "Transmition and receiving of faxes"
 msgstr ""
 
-#: views/settings.php:160 views/settings.php:174
+#: views/settings.php:172 views/settings.php:186
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:346
+#: functions.inc.php:357
 msgid "View Logs"
 msgstr ""
 
-#: views/settings.php:162 views/settings.php:175
+#: views/settings.php:174 views/settings.php:187
 msgid "Warning"
 msgstr ""
 
-#: views/settings.php:102 views/settings.php:129
+#: views/settings.php:114 views/settings.php:141
 msgid "Yes"
 msgstr ""
 
