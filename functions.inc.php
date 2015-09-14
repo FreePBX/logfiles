@@ -118,25 +118,25 @@ function logfiles_get_logfile($lines = 500, $file) {
 	foreach($log as $l){
 		switch (true) {
 		case strpos($l, 'INFO'):
-			$l = '<span class="beige">' . htmlentities($l) . '</span>';
+			$l = '<span class="beige">' . htmlentities($l,ENT_COMPAT | ENT_HTML401, "UTF-8") . '</span>';
 			break;
 		case strpos($l, 'WARNING'):
-			$l = '<span class="orange">' . htmlentities($l) . '</span>';
+			$l = '<span class="orange">' . htmlentities($l,ENT_COMPAT | ENT_HTML401, "UTF-8") . '</span>';
 			break;
 		case strpos($l, 'DEBUG'):
-			$l = '<span class="green">' . htmlentities($l) . '</span>';
+			$l = '<span class="green">' . htmlentities($l,ENT_COMPAT | ENT_HTML401, "UTF-8") . '</span>';
 			break;
 		case strpos($l, 'UPDATE'):
 		case strpos($l, 'NOTICE'):
-			$l = '<span class="cyan">' . htmlentities($l) . '</span>';
+			$l = '<span class="cyan">' . htmlentities($l,ENT_COMPAT | ENT_HTML401, "UTF-8") . '</span>';
 			break;
 		case strpos($l, 'FATAL'):
 		case strpos($l, 'CRITICAL'):
 		case strpos($l, 'ERROR'):
-			$l = '<span class="red">' . htmlentities($l) . '</span>';
+			$l = '<span class="red">' . htmlentities($l,ENT_COMPAT | ENT_HTML401, "UTF-8") . '</span>';
 			break;
 		default:
-			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES),$channels);
+			$l = logfiles_highlight_asterisk(htmlentities($l, ENT_NOQUOTES,"UTF-8"),$channels);
 			break;
 		}
 		echo $l . '<br />';
