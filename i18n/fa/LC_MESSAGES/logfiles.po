@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-11 10:55-0700\n"
-"PO-Revision-Date: 2015-10-16 06:59+0200\n"
+"PO-Revision-Date: 2015-10-16 07:15+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/fa/>\n"
@@ -67,39 +67,39 @@ msgstr "اشکال زدایی"
 
 #: views/settings.php:189
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/settings.php:169 views/settings.php:183
 msgid "Error"
-msgstr ""
+msgstr "خطا"
 
 #: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
-msgstr ""
+msgstr "خطای لاگ فایل یا عدم وجود فایل!"
 
 #: views/settings.php:170 views/settings.php:184
 msgid "Fax"
-msgstr ""
+msgstr "دورنگار"
 
 #: views/settings.php:161
 msgid "Field"
-msgstr ""
+msgstr "فیلد"
 
 #: views/settings.php:162 views/settings.php:180
 msgid "File Name"
-msgstr ""
+msgstr "نام"
 
 #: views/settings.php:42
 msgid "General Settings"
-msgstr ""
+msgstr "تنظیمات عمومی"
 
 #: views/logs.php:64
 msgid "How many lines to display."
-msgstr ""
+msgstr "تعداد خط نمایشی."
 
 #: views/settings.php:161
 msgid "Information"
-msgstr ""
+msgstr "اطلاعات"
 
 #: views/settings.php:168
 msgid ""
@@ -113,48 +113,48 @@ msgstr ""
 
 #: views/logs.php:52
 msgid "Lines"
-msgstr ""
+msgstr "خطوط"
 
 #: views/logs.php:9 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr ""
+msgstr "درحال لود شدن..."
 
 #: views/logs.php:21
 msgid "Log File"
-msgstr ""
+msgstr "لاگ فایل"
 
 #: views/settings.php:35
 msgid "Log File Settings"
-msgstr ""
+msgstr "تنظیمات لاگ فایل"
 
 #: views/settings.php:43
 msgid "Log Files"
-msgstr ""
+msgstr "لاگ فایل"
 
 #: views/settings.php:136
 msgid "Log Queues"
-msgstr ""
+msgstr "صف لاگ"
 
 #: views/settings.php:80
 msgid "Log Rotation"
-msgstr ""
+msgstr "ورود به سیستم چرخشی"
 
 #: functions.inc.php:358
 msgid "Log file settings"
-msgstr ""
+msgstr "تنظیمات لاگ فایل"
 
 #: views/settings.php:151
 msgid "Log queue events to a file"
-msgstr ""
+msgstr "لاگ صف رویدادهای فایل"
 
 #: views/settings.php:159
 msgid "Logfile Help"
-msgstr ""
+msgstr "راهنما لاگ فایل"
 
 #: views/settings.php:171
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
-msgstr ""
+msgstr "پیام عملکردهای مشخص, مانندثبت تلفن"
 
 #: views/settings.php:163
 msgid ""
@@ -172,19 +172,19 @@ msgstr ""
 
 #: views/settings.php:116 views/settings.php:143
 msgid "No"
-msgstr ""
+msgstr "خیر"
 
 #: views/settings.php:171 views/settings.php:185
 msgid "Notice"
-msgstr ""
+msgstr "توجه"
 
 #: views/settings.php:16 views/settings.php:24
 msgid "Off"
-msgstr ""
+msgstr "خاموش"
 
 #: views/settings.php:15 views/settings.php:23
 msgid "On"
-msgstr ""
+msgstr "روشن"
 
 #: views/settings.php:174
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
@@ -192,11 +192,11 @@ msgstr ""
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr ""
+msgstr "بازنشانی"
 
 #: views/settings.php:87
 msgid "Rotate"
-msgstr ""
+msgstr "چرخشی"
 
 #: views/settings.php:11
 msgid ""
@@ -206,11 +206,11 @@ msgstr ""
 
 #: views/settings.php:188
 msgid "Security"
-msgstr ""
+msgstr "امنیت"
 
 #: views/settings.php:85
 msgid "Sequential"
-msgstr ""
+msgstr "پی در پی"
 
 #: views/settings.php:10
 msgid ""
@@ -220,11 +220,11 @@ msgstr ""
 
 #: views/logs.php:75 assets/js/views/logs.js:30
 msgid "Show"
-msgstr ""
+msgstr "نمایش"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr ""
+msgstr "ثبت"
 
 #: views/settings.php:89
 msgid "Timestamp"
@@ -246,19 +246,19 @@ msgstr ""
 
 #: functions.inc.php:357
 msgid "View Logs"
-msgstr ""
+msgstr "مشاهده لاگ ها"
 
 #: views/settings.php:174 views/settings.php:187
 msgid "Warning"
-msgstr ""
+msgstr "هشدار"
 
 #: views/settings.php:114 views/settings.php:141
 msgid "Yes"
-msgstr ""
+msgstr "بله"
 
 #: install.php:59
 msgid "failed"
-msgstr ""
+msgstr "ناموفق"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
@@ -266,8 +266,8 @@ msgstr ""
 
 #: install.php:57
 msgid "ok"
-msgstr ""
+msgstr "تایید"
 
 #: install.php:55
 msgid "removing.."
-msgstr ""
+msgstr "درحال حذف.."
