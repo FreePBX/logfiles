@@ -10,16 +10,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-11 10:55-0700\n"
-"PO-Revision-Date: 2015-09-11 10:55-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2015-10-16 06:59+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/settings.php:233
 msgid "Add Log"
-msgstr ""
+msgstr "افزودن لاگ"
 
 #: views/settings.php:109
 msgid "Append Hostname"
@@ -31,15 +35,15 @@ msgstr ""
 
 #: views/logs.php:5
 msgid "Asterisk Log Files"
-msgstr ""
+msgstr "لاگ فایل های استریسک"
 
 #: views/logs.php:40
 msgid "Choose a log file"
-msgstr ""
+msgstr "یک لاگ فایل انتخاب کنید"
 
 #: views/settings.php:169
 msgid "Critical errors and issues"
-msgstr ""
+msgstr "خطاها و موارد مهم"
 
 #: views/settings.php:3
 msgid ""
@@ -51,15 +55,15 @@ msgstr ""
 
 #: views/settings.php:168 views/settings.php:182
 msgid "DTMF"
-msgstr ""
+msgstr "DTMF"
 
 #: views/settings.php:56
 msgid "Date Format"
-msgstr ""
+msgstr "فرمت تاریخ"
 
 #: views/settings.php:163 views/settings.php:181
 msgid "Debug"
-msgstr ""
+msgstr "اشکال زدایی"
 
 #: views/settings.php:189
 msgid "Delete"
