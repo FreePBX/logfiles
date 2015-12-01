@@ -313,7 +313,9 @@ function logfiles_put_opts($opts) {
 	unset($data);
 
 	//save log files
-	foreach ($opts['logfiles'] as $item => $values) {
+	$logfiles = isset($opts['logfiles'])?$opts['logfiles']:array();
+	$logfiles = is_array($opts['logfiles'])?$opts['logfiles']:array();
+	foreach ($logfiles as $item => $values) {
 		foreach ($values as $index => $v) {
 			$logs[$index][$item] = $v;
 			if (!$has_security_option) {
