@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.5</version>
+	<version>13.0.6</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.6* FREEPBX-10831 FREEPBX-10922
 		*13.0.5* FREEPBX-10209 htmlentities need to use UTF-8
 		*13.0.4* FREEPBX-8790 Log verbosity level
 		*13.0.3* FREEPBX-9747 Changes made to Logfile Settings in GUI dont get submitted

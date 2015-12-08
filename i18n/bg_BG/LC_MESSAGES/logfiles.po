@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-11 10:55-0700\n"
+"POT-Creation-Date: 2015-12-08 11:53-0800\n"
 "PO-Revision-Date: 2014-07-22 09:55+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/logfiles/"
@@ -50,9 +50,13 @@ msgstr ""
 msgid "Asterisk Log Files"
 msgstr "Астериск Логове"
 
-#: views/logs.php:40
-msgid "Choose a log file"
+#: logfiles.i18n.php:12
+msgid "Asterisk Logfile Settings"
 msgstr ""
+
+#: logfiles.i18n.php:4 logfiles.i18n.php:8
+msgid "Asterisk Logfiles"
+msgstr "Астериск Логове"
 
 #: views/settings.php:169
 msgid "Critical errors and issues"
@@ -98,16 +102,16 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
+#: views/logs.php:18
+msgid "File"
+msgstr ""
+
 #: views/settings.php:162 views/settings.php:180
 msgid "File Name"
 msgstr ""
 
 #: views/settings.php:42
 msgid "General Settings"
-msgstr ""
-
-#: views/logs.php:64
-msgid "How many lines to display."
 msgstr ""
 
 #: views/settings.php:161
@@ -124,16 +128,12 @@ msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 
-#: views/logs.php:52
+#: views/logs.php:43
 msgid "Lines"
 msgstr ""
 
-#: views/logs.php:9 assets/js/views/logs.js:24
+#: views/logs.php:65 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr ""
-
-#: views/logs.php:21
-msgid "Log File"
 msgstr ""
 
 #: views/settings.php:35
@@ -152,7 +152,7 @@ msgstr ""
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:358
+#: functions.inc.php:360
 msgid "Log file settings"
 msgstr ""
 
@@ -203,6 +203,10 @@ msgstr ""
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 
+#: logfiles.i18n.php:6 logfiles.i18n.php:10
+msgid "Reports"
+msgstr "Отчети"
+
 #: Logfiles.class.php:31
 msgid "Reset"
 msgstr ""
@@ -231,7 +235,11 @@ msgid ""
 "highest sequence number"
 msgstr ""
 
-#: views/logs.php:75 assets/js/views/logs.js:30
+#: logfiles.i18n.php:14
+msgid "Settings"
+msgstr ""
+
+#: views/logs.php:55 assets/js/views/logs.js:30
 msgid "Show"
 msgstr ""
 
@@ -257,7 +265,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:357
+#: functions.inc.php:359
 msgid "View Logs"
 msgstr ""
 
@@ -284,12 +292,6 @@ msgstr ""
 #: install.php:55
 msgid "removing.."
 msgstr ""
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "Астериск Логове"
-
-#~ msgid "Reports"
-#~ msgstr "Отчети"
 
 #~ msgid "%s - last %s lines"
 #~ msgstr "%s - последните %s линии"

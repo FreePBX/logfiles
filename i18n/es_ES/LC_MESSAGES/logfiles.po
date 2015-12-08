@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-11 10:55-0700\n"
+"POT-Creation-Date: 2015-12-08 11:53-0800\n"
 "PO-Revision-Date: 2015-03-25 08:37+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -50,9 +50,13 @@ msgstr "Agrega el hostname al final del nombre de los archivos de log"
 msgid "Asterisk Log Files"
 msgstr "Archivos de bitácora de Asterisk"
 
-#: views/logs.php:40
-msgid "Choose a log file"
-msgstr ""
+#: logfiles.i18n.php:12
+msgid "Asterisk Logfile Settings"
+msgstr "Configuración del Logfile de Asterisk"
+
+#: logfiles.i18n.php:4 logfiles.i18n.php:8
+msgid "Asterisk Logfiles"
+msgstr "Archivos de bitácora de Asterisk"
 
 #: views/settings.php:169
 msgid "Critical errors and issues"
@@ -103,6 +107,10 @@ msgstr "Fax"
 msgid "Field"
 msgstr ""
 
+#: views/logs.php:18
+msgid "File"
+msgstr ""
+
 #: views/settings.php:162 views/settings.php:180
 msgid "File Name"
 msgstr "Nombre de Archivo"
@@ -110,10 +118,6 @@ msgstr "Nombre de Archivo"
 #: views/settings.php:42
 msgid "General Settings"
 msgstr "Configuración General"
-
-#: views/logs.php:64
-msgid "How many lines to display."
-msgstr ""
 
 #: views/settings.php:161
 msgid "Information"
@@ -133,16 +137,12 @@ msgstr ""
 "Déjelo en Blanco por defecto. Formato de fecha ISO 8601 yyyy-mm-dd HH:MM:SS "
 "(%F %T)"
 
-#: views/logs.php:52
+#: views/logs.php:43
 msgid "Lines"
 msgstr ""
 
-#: views/logs.php:9 assets/js/views/logs.js:24
+#: views/logs.php:65 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr ""
-
-#: views/logs.php:21
-msgid "Log File"
 msgstr ""
 
 #: views/settings.php:35
@@ -161,7 +161,7 @@ msgstr "Colas de Log"
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:358
+#: functions.inc.php:360
 msgid "Log file settings"
 msgstr "Configuración de Archivos de Log"
 
@@ -221,6 +221,10 @@ msgstr ""
 "Posible problema con sintaxis en el dialplan o flujo de llamada, pero no es "
 "critico."
 
+#: logfiles.i18n.php:6 logfiles.i18n.php:10
+msgid "Reports"
+msgstr "Reportes"
+
 #: Logfiles.class.php:31
 msgid "Reset"
 msgstr ""
@@ -254,7 +258,11 @@ msgstr ""
 "Secuencial. renombra los Logs archivados en orden, como tal el mas nuevo "
 "tiene el numero de secuencia mas alto"
 
-#: views/logs.php:75 assets/js/views/logs.js:30
+#: logfiles.i18n.php:14
+msgid "Settings"
+msgstr ""
+
+#: views/logs.php:55 assets/js/views/logs.js:30
 msgid "Show"
 msgstr "Mostrar"
 
@@ -282,7 +290,7 @@ msgstr "Transmisión y recepción de faxes"
 msgid "Verbose"
 msgstr "Verboso"
 
-#: functions.inc.php:357
+#: functions.inc.php:359
 msgid "View Logs"
 msgstr "Ver Logs"
 
@@ -310,12 +318,6 @@ msgstr "ok"
 msgid "removing.."
 msgstr "removiendo.."
 
-#~ msgid "Asterisk Logfile Settings"
-#~ msgstr "Configuración del Logfile de Asterisk"
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "Archivos de bitácora de Asterisk"
-
 #~ msgid "Delete this entry. Click Submit to save changes"
 #~ msgstr "Borrar esta entrada. Oprima Enviar para salvar los cambiios"
 
@@ -340,9 +342,6 @@ msgstr "removiendo.."
 #~ msgstr ""
 #~ "Notificación de seguridad relacionada a eventos tales como intentos de "
 #~ "autenticación."
-
-#~ msgid "Reports"
-#~ msgstr "Reportes"
 
 #~ msgid "Save"
 #~ msgstr "Salvar"
