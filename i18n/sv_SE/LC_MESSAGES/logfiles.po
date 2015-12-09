@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 11:53-0800\n"
+"POT-Creation-Date: 2015-12-09 09:28-0800\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:360
+#: functions.inc.php:361
 msgid "Log file settings"
 msgstr ""
 
@@ -260,7 +260,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:359
+#: functions.inc.php:360
 msgid "View Logs"
 msgstr ""
 

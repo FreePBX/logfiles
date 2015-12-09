@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 11:53-0800\n"
+"POT-Creation-Date: 2015-12-09 09:28-0800\n"
 "PO-Revision-Date: 2009-04-20 21:48+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:360
+#: functions.inc.php:361
 msgid "Log file settings"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:359
+#: functions.inc.php:360
 msgid "View Logs"
 msgstr ""
 

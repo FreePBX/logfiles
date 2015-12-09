@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 11:53-0800\n"
+"POT-Creation-Date: 2015-12-09 09:28-0800\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
@@ -175,7 +175,7 @@ msgstr "ログキュー"
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:360
+#: functions.inc.php:361
 msgid "Log file settings"
 msgstr "ログファイル設定"
 
@@ -300,7 +300,7 @@ msgstr "FAXの受信・送信"
 msgid "Verbose"
 msgstr "詳細レポート"
 
-#: functions.inc.php:359
+#: functions.inc.php:360
 msgid "View Logs"
 msgstr "ログを表示する"
 
