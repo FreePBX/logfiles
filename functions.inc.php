@@ -315,6 +315,7 @@ function logfiles_put_opts($opts) {
 	//save log files
 	$logfiles = isset($opts['logfiles'])?$opts['logfiles']:array();
 	$logfiles = is_array($opts['logfiles'])?$opts['logfiles']:array();
+	$logs = array();
 	foreach ($logfiles as $item => $values) {
 		foreach ($values as $index => $v) {
 			$logs[$index][$item] = $v;
