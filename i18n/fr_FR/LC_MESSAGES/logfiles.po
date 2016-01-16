@@ -15,18 +15,21 @@
 #
 # Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-09 09:28-0800\n"
-"PO-Revision-Date: 2009-04-20 21:48+0100\n"
-"Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
-"Language-Team: Français <LL@li.org>\n"
+"PO-Revision-Date: 2016-01-16 06:03+0200\n"
+"Last-Translator: Nicolas <forums@riendeau.org>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/settings.php:233
 msgid "Add Log"
@@ -34,15 +37,15 @@ msgstr ""
 
 #: views/settings.php:109
 msgid "Append Hostname"
-msgstr ""
+msgstr "Ajouter le nom d'hôte"
 
 #: views/settings.php:124
 msgid "Appends the hostname to the name of the log files"
-msgstr ""
+msgstr "Ajoute le nom d'hôte au nom des fichiers de journal"
 
 #: views/logs.php:5
 msgid "Asterisk Log Files"
-msgstr "Fichiers de Log d'Asterisk"
+msgstr "Journaux d'Asterisk"
 
 #: logfiles.i18n.php:12
 msgid "Asterisk Logfile Settings"
@@ -50,7 +53,7 @@ msgstr ""
 
 #: logfiles.i18n.php:4 logfiles.i18n.php:8
 msgid "Asterisk Logfiles"
-msgstr "Logs d'Asterisk"
+msgstr "Journaux d'Asterisk"
 
 #: views/settings.php:169
 msgid "Critical errors and issues"
@@ -66,7 +69,7 @@ msgstr ""
 
 #: views/settings.php:168 views/settings.php:182
 msgid "DTMF"
-msgstr ""
+msgstr "DTMF"
 
 #: views/settings.php:56
 msgid "Date Format"
@@ -78,15 +81,15 @@ msgstr ""
 
 #: views/settings.php:189
 msgid "Delete"
-msgstr ""
+msgstr "Supprimer"
 
 #: views/settings.php:169 views/settings.php:183
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
-msgstr ""
+msgstr "Erreur lors de l'analyse du journal ou fichier non trouvé !"
 
 #: views/settings.php:170 views/settings.php:184
 msgid "Fax"
