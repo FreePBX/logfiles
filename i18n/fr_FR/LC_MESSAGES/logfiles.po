@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-09 09:28-0800\n"
-"PO-Revision-Date: 2016-02-01 03:04+0200\n"
+"PO-Revision-Date: 2016-02-01 06:12+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: views/settings.php:233
 msgid "Add Log"
-msgstr ""
+msgstr "Ajouter un journal"
 
 #: views/settings.php:109
 msgid "Append Hostname"
@@ -49,7 +49,7 @@ msgstr "Journaux d'Asterisk"
 
 #: logfiles.i18n.php:12
 msgid "Asterisk Logfile Settings"
-msgstr ""
+msgstr "Paramètres de journalisation d'Asterisk"
 
 #: logfiles.i18n.php:4 logfiles.i18n.php:8
 msgid "Asterisk Logfiles"
@@ -57,7 +57,7 @@ msgstr "Journaux d'Asterisk"
 
 #: views/settings.php:169
 msgid "Critical errors and issues"
-msgstr ""
+msgstr "Erreurs critique et problèmes"
 
 #: views/settings.php:3
 msgid ""
@@ -73,11 +73,11 @@ msgstr "DTMF"
 
 #: views/settings.php:56
 msgid "Date Format"
-msgstr ""
+msgstr "Format de date"
 
 #: views/settings.php:163 views/settings.php:181
 msgid "Debug"
-msgstr ""
+msgstr "Débogage"
 
 #: views/settings.php:189
 msgid "Delete"
@@ -155,11 +155,11 @@ msgstr "Paramètres des fichiers de journal"
 
 #: views/settings.php:151
 msgid "Log queue events to a file"
-msgstr ""
+msgstr "Journaliser les évènements de queue dans un fichier"
 
 #: views/settings.php:159
 msgid "Logfile Help"
-msgstr ""
+msgstr "Aide des fichiers de journal"
 
 #: views/settings.php:171
 msgid ""
@@ -182,19 +182,19 @@ msgstr ""
 
 #: views/settings.php:116 views/settings.php:143
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: views/settings.php:171 views/settings.php:185
 msgid "Notice"
-msgstr ""
+msgstr "Remarque"
 
 #: views/settings.php:16 views/settings.php:24
 msgid "Off"
-msgstr ""
+msgstr "Désactivé"
 
 #: views/settings.php:15 views/settings.php:23
 msgid "On"
-msgstr ""
+msgstr "Activé"
 
 #: views/settings.php:174
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
@@ -202,15 +202,15 @@ msgstr ""
 
 #: logfiles.i18n.php:6 logfiles.i18n.php:10
 msgid "Reports"
-msgstr ""
+msgstr "Rapports"
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr ""
+msgstr "Remise à 0"
 
 #: views/settings.php:87
 msgid "Rotate"
-msgstr ""
+msgstr "Rotation"
 
 #: views/settings.php:11
 msgid ""
@@ -220,11 +220,11 @@ msgstr ""
 
 #: views/settings.php:188
 msgid "Security"
-msgstr ""
+msgstr "Sécurité"
 
 #: views/settings.php:85
 msgid "Sequential"
-msgstr ""
+msgstr "Séquentiel"
 
 #: views/settings.php:10
 msgid ""
@@ -234,25 +234,27 @@ msgstr ""
 
 #: logfiles.i18n.php:14
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #: views/logs.php:55 assets/js/views/logs.js:30
 msgid "Show"
-msgstr ""
+msgstr "Afficher"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: views/settings.php:89
 msgid "Timestamp"
-msgstr ""
+msgstr "Horodatage"
 
 #: views/settings.php:12
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
+"Horodatage : Renomme les journaux en utilisant un horodatage à la place "
+"d'une séquence quand \"logger rotate\" est exécuté."
 
 #: views/settings.php:170
 msgid "Transmition and receiving of faxes"
