@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-09 09:28-0800\n"
-"PO-Revision-Date: 2016-01-16 06:03+0200\n"
-"Last-Translator: Nicolas <forums@riendeau.org>\n"
+"PO-Revision-Date: 2016-02-01 03:04+0200\n"
+"Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
 "Language: fr_FR\n"
@@ -93,27 +93,27 @@ msgstr "Erreur lors de l'analyse du journal ou fichier non trouvé !"
 
 #: views/settings.php:170 views/settings.php:184
 msgid "Fax"
-msgstr ""
+msgstr "Télécopieur"
 
 #: views/settings.php:161
 msgid "Field"
-msgstr ""
+msgstr "Champ"
 
 #: views/logs.php:18
 msgid "File"
-msgstr ""
+msgstr "Fichier"
 
 #: views/settings.php:162 views/settings.php:180
 msgid "File Name"
-msgstr ""
+msgstr "Nom du fichier"
 
 #: views/settings.php:42
 msgid "General Settings"
-msgstr ""
+msgstr "Paramètres généraux"
 
 #: views/settings.php:161
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: views/settings.php:168
 msgid ""
@@ -127,31 +127,31 @@ msgstr ""
 
 #: views/logs.php:43
 msgid "Lines"
-msgstr ""
+msgstr "Lignes"
 
 #: views/logs.php:65 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr ""
+msgstr "Chargement..."
 
 #: views/settings.php:35
 msgid "Log File Settings"
-msgstr ""
+msgstr "Paramètres des fichiers de journal"
 
 #: views/settings.php:43
 msgid "Log Files"
-msgstr ""
+msgstr "Fichiers de journal"
 
 #: views/settings.php:136
 msgid "Log Queues"
-msgstr ""
+msgstr "Queues de journal"
 
 #: views/settings.php:80
 msgid "Log Rotation"
-msgstr ""
+msgstr "Rotation des journaux"
 
 #: functions.inc.php:361
 msgid "Log file settings"
-msgstr ""
+msgstr "Paramètres des fichiers de journal"
 
 #: views/settings.php:151
 msgid "Log queue events to a file"
