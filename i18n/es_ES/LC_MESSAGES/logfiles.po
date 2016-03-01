@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 09:28-0800\n"
+"POT-Creation-Date: 2016-03-01 13:18-0800\n"
 "PO-Revision-Date: 2015-03-25 08:37+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -161,7 +161,7 @@ msgstr "Colas de Log"
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:361
+#: functions.inc.php:365
 msgid "Log file settings"
 msgstr "Configuración de Archivos de Log"
 
@@ -290,7 +290,7 @@ msgstr "Transmisión y recepción de faxes"
 msgid "Verbose"
 msgstr "Verboso"
 
-#: functions.inc.php:360
+#: functions.inc.php:364
 msgid "View Logs"
 msgstr "Ver Logs"
 
