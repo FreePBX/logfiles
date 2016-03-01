@@ -20,5 +20,10 @@ $(document).ready(function(){
 		if(last.find('input[name="logfiles[name][]"]').val() == ''){
 			last.remove();
 		}
+		$('input[name="logfiles[name][]"]').each(function(){
+			if($(this).val() == ''){
+				$(this).closest( 'tr' ).remove();
+			}
+		});
 	});
 });

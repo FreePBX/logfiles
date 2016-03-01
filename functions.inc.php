@@ -294,14 +294,14 @@ function logfiles_put_opts($opts) {
 	//save options
 	foreach ($opts as $k => $v) {
 		switch ($k) {
-		case 'appendhostname':
+			case 'appendhostname':
 			case 'dateformat':
-				case 'queue_log':
-					case 'rotatestrategy':
-						$data[] = array($k, $v);
-						break;
-					default:
-						break; //do nothing
+			case 'queue_log':
+			case 'rotatestrategy':
+				$data[] = array($k, $v);
+		break;
+		default:
+		break; //do nothing
 		}
 	}
 
@@ -327,6 +327,10 @@ function logfiles_put_opts($opts) {
 
 	//ensure the order of our array is correct
 	foreach ($logs as $k => $l) {
+		//Skip empty lines
+		if(trim('foo'.$l['name']) == 'foo'){
+			continue;
+		}
 		$data = array('name' => $l['name'],
 			'debug' => $l['debug'],
 			'dtmf' => $l['dtmf'],

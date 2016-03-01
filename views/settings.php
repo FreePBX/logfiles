@@ -13,7 +13,7 @@ $rotatehelp .= _('Timestamp: Rename the logfiles using a timestamp instead of a 
 function log_dropdown($name,$value,$i){
 		$ret = '<select class="form-control" name="logfiles['.$name.']['.$i.']">';
 		$ret .= '<option value="on" '.(($value == 'on')?"SELECTED":"").'>'._("On").'</option>';
-		$ret .= '<option value="off" '.(($value == 'off')?"SELECTED":"").'>'._("Off").'</option>';
+		$ret .= '<option value="" '.(($value == '')?"SELECTED":"").'>'._("Off").'</option>';
 		$ret .=	'</select>';
 	return $ret;
 }
