@@ -24,7 +24,7 @@ function get_lines(lines) {
 	var txt = _("Loading...");
 	$('#show').text(txt);
 	$('#log_view').html(txt);
-	$.get(window.location.href, {'lines': lines, 'logfile': $('select[name=logfile]').val()}, function(data){
+	$.get(window.location.href, {'lines': lines, 'logfile': $('select[name=logfile]').val(), filter: $('#filter').val()}, function(data){
 		$('#log_view').html(data);
 		$('#show').prop("disabled",false);
 		$('#show').text(_("Show"));

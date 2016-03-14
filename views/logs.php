@@ -1,5 +1,6 @@
 <?php
 $logs = array('1'  => '/var/log/asterisk/full');
+$filter = isset($_REQUEST['filter'])?$_REQUEST['filter']:'';
 ?>
 <div class="container-fluid">
 	<h1><?php echo _('Asterisk Log Files')?></h1>
@@ -51,6 +52,30 @@ $logs = array('1'  => '/var/log/asterisk/full');
 								</div>
 							</div>
 							<!--END Lines-->
+							<!--Filter-->
+							<div class="element-container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="form-group">
+												<div class="col-md-3">
+													<label class="control-label" for="filter"><?php echo _("Filter") ?></label>
+													<i class="fa fa-question-circle fpbx-help-icon" data-for="filter"></i>
+												</div>
+												<div class="col-md-9">
+													<input type="text" class="form-control" id="filter" name="filter" value="<?php echo isset($filter)?$filter:''?>">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<span id="filter-help" class="help-block fpbx-help-block"><?php echo _("Apply PCRE regex filter to the log output. <br/>This filters through the lines specified.")?></span>
+									</div>
+								</div>
+							</div>
+							<!--END Filter-->
 							<br>
 						<button id="show" name="show" class="btn btn-default"><?php echo _("Show")?></button>
 

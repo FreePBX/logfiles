@@ -11,7 +11,8 @@ $getvars = array(
 	'lines'			=> '',
 	'queue_log'		=> '',
 	'rotatestrategy'=> '',
-	'view'			=> ''
+	'view'			=> '',
+	'filter' => false
 );
 
 foreach ($getvars as $k => $v) {
@@ -21,7 +22,6 @@ foreach ($getvars as $k => $v) {
 //sanitize input
 $var['lines'] = preg_replace("/[^0-9]/", "", $var['lines']);
 $var['logfile'] = preg_replace("/[^0-9]/", "", $var['logfile']);
-
 //echo logfiles_rnav();
 
 //respond to ajax requests
@@ -29,7 +29,7 @@ if ($var['lines']) {
 	while (ob_get_level()) {
 		ob_end_clean();
 	}
-	echo logfiles_get_logfile($var['lines'], $var['logfile']);
+	echo logfiles_get_logfile($var['lines'], $var['logfile'],$var['filter']);
 	exit();
 
 }
