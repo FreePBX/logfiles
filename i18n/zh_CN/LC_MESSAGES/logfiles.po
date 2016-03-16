@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-01 13:18-0800\n"
+"POT-Creation-Date: 2016-03-15 17:09-0700\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -42,7 +42,13 @@ msgstr "附带主机名"
 msgid "Appends the hostname to the name of the log files"
 msgstr ""
 
-#: views/logs.php:5
+#: views/logs.php:74
+msgid ""
+"Apply PCRE regex filter to the log output. <br/>This filters through the "
+"lines specified."
+msgstr ""
+
+#: views/logs.php:6
 msgid "Asterisk Log Files"
 msgstr "Asterisk日志文件"
 
@@ -98,12 +104,16 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
-#: views/logs.php:18
+#: views/logs.php:19
 msgid "File"
 msgstr ""
 
 #: views/settings.php:162 views/settings.php:180
 msgid "File Name"
+msgstr ""
+
+#: views/logs.php:62
+msgid "Filter"
 msgstr ""
 
 #: views/settings.php:42
@@ -112,6 +122,10 @@ msgstr "基本设置"
 
 #: views/settings.php:161
 msgid "Information"
+msgstr ""
+
+#: functions.inc.php:121
+msgid "Invalid pattern"
 msgstr ""
 
 #: views/settings.php:168
@@ -124,11 +138,11 @@ msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 
-#: views/logs.php:43
+#: views/logs.php:44
 msgid "Lines"
 msgstr ""
 
-#: views/logs.php:65 assets/js/views/logs.js:24
+#: views/logs.php:90 assets/js/views/logs.js:24
 msgid "Loading..."
 msgstr ""
 
@@ -148,7 +162,7 @@ msgstr "队列日志"
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:365
+#: functions.inc.php:379
 msgid "Log file settings"
 msgstr ""
 
@@ -182,6 +196,10 @@ msgstr ""
 #: views/settings.php:116 views/settings.php:143
 msgid "No"
 msgstr "否"
+
+#: functions.inc.php:129
+msgid "No lines returned"
+msgstr ""
 
 #: views/settings.php:171 views/settings.php:185
 msgid "Notice"
@@ -235,7 +253,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: views/logs.php:55 assets/js/views/logs.js:30
+#: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
 msgstr ""
 
@@ -261,7 +279,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:364
+#: functions.inc.php:378
 msgid "View Logs"
 msgstr ""
 
