@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 17:09-0700\n"
+"POT-Creation-Date: 2016-05-20 12:35-0700\n"
 "PO-Revision-Date: 2016-02-04 23:07+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -31,15 +31,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/settings.php:233
+#: views/settings.php:236
 msgid "Add Log"
 msgstr "Ajouter un journal"
 
-#: views/settings.php:109
+#: views/settings.php:112
 msgid "Append Hostname"
 msgstr "Ajouter le nom d'hôte"
 
-#: views/settings.php:124
+#: views/settings.php:127
 msgid "Appends the hostname to the name of the log files"
 msgstr "Ajoute le nom d'hôte au nom des fichiers de journal"
 
@@ -61,7 +61,7 @@ msgstr "Paramètres de journalisation d'Asterisk"
 msgid "Asterisk Logfiles"
 msgstr "Journaux d'Asterisk"
 
-#: views/settings.php:169
+#: views/settings.php:172
 msgid "Critical errors and issues"
 msgstr "Erreurs critique et problèmes"
 
@@ -78,23 +78,23 @@ msgstr ""
 "utilisé dans ce champ. Utilisez %1q pour des dixièmes, %2q pour des "
 "centièmes, etc."
 
-#: views/settings.php:168 views/settings.php:182
+#: views/settings.php:171 views/settings.php:185
 msgid "DTMF"
 msgstr "DTMF"
 
-#: views/settings.php:56
+#: views/settings.php:59
 msgid "Date Format"
 msgstr "Format de date"
 
-#: views/settings.php:163 views/settings.php:181
+#: views/settings.php:166 views/settings.php:184
 msgid "Debug"
 msgstr "Débogage"
 
-#: views/settings.php:189
+#: views/settings.php:192
 msgid "Delete"
 msgstr "Supprimer"
 
-#: views/settings.php:169 views/settings.php:183
+#: views/settings.php:172 views/settings.php:186
 msgid "Error"
 msgstr "Erreur"
 
@@ -102,11 +102,11 @@ msgstr "Erreur"
 msgid "Error parsing log file or file not found!"
 msgstr "Erreur lors de l'analyse du journal ou fichier non trouvé !"
 
-#: views/settings.php:170 views/settings.php:184
+#: views/settings.php:173 views/settings.php:187
 msgid "Fax"
 msgstr "Télécopieur"
 
-#: views/settings.php:161
+#: views/settings.php:164
 msgid "Field"
 msgstr "Champ"
 
@@ -114,7 +114,7 @@ msgstr "Champ"
 msgid "File"
 msgstr "Fichier"
 
-#: views/settings.php:162 views/settings.php:180
+#: views/settings.php:165 views/settings.php:183
 msgid "File Name"
 msgstr "Nom du fichier"
 
@@ -122,11 +122,11 @@ msgstr "Nom du fichier"
 msgid "Filter"
 msgstr ""
 
-#: views/settings.php:42
+#: views/settings.php:45
 msgid "General Settings"
 msgstr "Paramètres généraux"
 
-#: views/settings.php:161
+#: views/settings.php:164
 msgid "Information"
 msgstr "Information"
 
@@ -134,7 +134,7 @@ msgstr "Information"
 msgid "Invalid pattern"
 msgstr ""
 
-#: views/settings.php:168
+#: views/settings.php:171
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -156,19 +156,19 @@ msgstr "Lignes"
 msgid "Loading..."
 msgstr "Chargement..."
 
-#: views/settings.php:35
+#: views/settings.php:38
 msgid "Log File Settings"
 msgstr "Paramètres des fichiers de journal"
 
-#: views/settings.php:43
+#: views/settings.php:46
 msgid "Log Files"
 msgstr "Fichiers de journal"
 
-#: views/settings.php:136
+#: views/settings.php:139
 msgid "Log Queues"
 msgstr "Queues de journal"
 
-#: views/settings.php:80
+#: views/settings.php:83
 msgid "Log Rotation"
 msgstr "Rotation des journaux"
 
@@ -176,22 +176,22 @@ msgstr "Rotation des journaux"
 msgid "Log file settings"
 msgstr "Paramètres des fichiers de journal"
 
-#: views/settings.php:151
+#: views/settings.php:154
 msgid "Log queue events to a file"
 msgstr "Journaliser les évènements de queue dans un fichier"
 
-#: views/settings.php:159
+#: views/settings.php:162
 msgid "Logfile Help"
 msgstr "Aide des fichiers de journal"
 
-#: views/settings.php:171
+#: views/settings.php:174
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 "Messages d'actions spécifiques comme l'enregistrement d'un téléphone ou la "
 "fin d'un appel"
 
-#: views/settings.php:163
+#: views/settings.php:166
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -203,7 +203,7 @@ msgstr ""
 "que les messages de débogage sont très verbeux et peuvent remplir les "
 "fichiers de journal (et l'espace disque) rapidement."
 
-#: views/settings.php:162
+#: views/settings.php:165
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
@@ -211,7 +211,7 @@ msgstr ""
 "Le nom du fichier relatif au répertoire de journalisation d'Asterisk. "
 "Utilisez un chemin absolu pour un autre endroit"
 
-#: views/settings.php:116 views/settings.php:143
+#: views/settings.php:119 views/settings.php:146
 msgid "No"
 msgstr "Non"
 
@@ -219,19 +219,19 @@ msgstr "Non"
 msgid "No lines returned"
 msgstr ""
 
-#: views/settings.php:171 views/settings.php:185
+#: views/settings.php:174 views/settings.php:188
 msgid "Notice"
 msgstr "Remarque"
 
-#: views/settings.php:16 views/settings.php:24
+#: views/settings.php:16 views/settings.php:26
 msgid "Off"
 msgstr "Désactivé"
 
-#: views/settings.php:15 views/settings.php:23
+#: views/settings.php:15 views/settings.php:27
 msgid "On"
 msgstr "Activé"
 
-#: views/settings.php:174
+#: views/settings.php:177
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "Problèmes potentiels avec la syntaxe du 'dialplan' or du flux d'appel, mais "
@@ -245,7 +245,7 @@ msgstr "Rapports"
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: views/settings.php:87
+#: views/settings.php:90
 msgid "Rotate"
 msgstr "Rotation"
 
@@ -258,11 +258,11 @@ msgstr ""
 "plus vieux ait le plus haut numéro de séquence (comportement attendu par les "
 "administrateurs Unix)."
 
-#: views/settings.php:188
+#: views/settings.php:191
 msgid "Security"
 msgstr "Sécurité"
 
-#: views/settings.php:85
+#: views/settings.php:88
 msgid "Sequential"
 msgstr "Séquentiel"
 
@@ -286,7 +286,7 @@ msgstr "Afficher"
 msgid "Submit"
 msgstr "Soumettre"
 
-#: views/settings.php:89
+#: views/settings.php:92
 msgid "Timestamp"
 msgstr "Horodatage"
 
@@ -298,11 +298,11 @@ msgstr ""
 "Horodatage : Renomme les journaux en utilisant un horodatage à la place "
 "d'une séquence quand \"logger rotate\" est exécuté."
 
-#: views/settings.php:170
+#: views/settings.php:173
 msgid "Transmition and receiving of faxes"
 msgstr "Transmission et réception de télécopies"
 
-#: views/settings.php:172 views/settings.php:186
+#: views/settings.php:175 views/settings.php:189
 msgid "Verbose"
 msgstr "Verbeux"
 
@@ -310,11 +310,11 @@ msgstr "Verbeux"
 msgid "View Logs"
 msgstr "Voir les journaux"
 
-#: views/settings.php:174 views/settings.php:187
+#: views/settings.php:177 views/settings.php:190
 msgid "Warning"
 msgstr "Avertissement"
 
-#: views/settings.php:114 views/settings.php:141
+#: views/settings.php:117 views/settings.php:144
 msgid "Yes"
 msgstr "Oui"
 

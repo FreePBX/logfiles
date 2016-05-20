@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.9</version>
+	<version>13.0.10</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.10* FREEPBX-12181 Change verbose dropdown to be in line with asterisk docs
 		*13.0.9* FREEPBX-11785 Add PCRE Filtering to log page
 		*13.0.8* FREEPBX-11578 Add js and server validation
 		*13.0.7* FREEPBX-10831
