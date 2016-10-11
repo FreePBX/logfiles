@@ -194,6 +194,7 @@ function logfiles_get_config($engine) {
 			$name = $v['name'];
 			unset($v['name']);
 			foreach ($v as $opt => $set) {
+				$name_opt = array();
 				switch ($opt) {
 					case 'verbose':
 						if (is_numeric($set) || $set == '*') {
@@ -211,8 +212,9 @@ function logfiles_get_config($engine) {
 						break;
 				}
 			}
-			//dbug($name, $name_opt);
-			$logfiles_conf->addLoggerLogfiles($name, implode(',', $name_opt));
+			if(!empty($name) && !empty($name_opt)){
+				$logfiles_conf->addLoggerLogfiles($name, implode(',', $name_opt));
+			}
 			if (isset($name_opt)) {
 				unset($name_opt);
 			}
