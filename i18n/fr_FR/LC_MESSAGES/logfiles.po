@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 12:35-0700\n"
+"POT-Creation-Date: 2016-10-11 16:14-0700\n"
 "PO-Revision-Date: 2016-02-04 23:07+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -172,7 +172,7 @@ msgstr "Queues de journal"
 msgid "Log Rotation"
 msgstr "Rotation des journaux"
 
-#: functions.inc.php:379
+#: functions.inc.php:381
 msgid "Log file settings"
 msgstr "Paramètres des fichiers de journal"
 
@@ -306,7 +306,7 @@ msgstr "Transmission et réception de télécopies"
 msgid "Verbose"
 msgstr "Verbeux"
 
-#: functions.inc.php:378
+#: functions.inc.php:380
 msgid "View Logs"
 msgstr "Voir les journaux"
 

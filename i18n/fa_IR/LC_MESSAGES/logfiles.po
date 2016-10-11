@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 12:35-0700\n"
+"POT-Creation-Date: 2016-10-11 16:14-0700\n"
 "PO-Revision-Date: 2016-04-02 16:11+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -158,7 +158,7 @@ msgstr "صف لاگ"
 msgid "Log Rotation"
 msgstr "ورود به سیستم چرخشی"
 
-#: functions.inc.php:379
+#: functions.inc.php:381
 msgid "Log file settings"
 msgstr "تنظیمات لاگ فایل"
 
@@ -282,7 +282,7 @@ msgstr "انتقال و دریافت فکس"
 msgid "Verbose"
 msgstr "بلند"
 
-#: functions.inc.php:378
+#: functions.inc.php:380
 msgid "View Logs"
 msgstr "مشاهده لاگ ها"
 

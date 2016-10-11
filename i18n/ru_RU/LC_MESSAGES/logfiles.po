@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 12:35-0700\n"
+"POT-Creation-Date: 2016-10-11 16:14-0700\n"
 "PO-Revision-Date: 2012-11-02 13:57+0400\n"
 "Last-Translator: root <ceo@postmet.com>\n"
 "Language-Team: Russian\n"
@@ -166,7 +166,7 @@ msgstr "Журнал очередей"
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:379
+#: functions.inc.php:381
 msgid "Log file settings"
 msgstr "Настройки файла журнала"
 
@@ -285,7 +285,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:378
+#: functions.inc.php:380
 msgid "View Logs"
 msgstr ""
 
