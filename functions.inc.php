@@ -177,34 +177,34 @@ function logfiles_get_config($engine) {
 
 		foreach ($opts as $k => $v) {
 			switch ($k) {
-			case 'appendhostname':
+				case 'appendhostname':
 				case 'dateformat':
-					case 'queue_log':
-						case 'rotatestrategy':
-							if ($v) {
-								$logfiles_conf->addLoggerGeneral($k, $v);
-							}
-							break;
-						default:
-							break;
+				case 'queue_log':
+				case 'rotatestrategy':
+					if ($v) {
+						$logfiles_conf->addLoggerGeneral($k, $v);
+					}
+				break;
+				default:
+				break;
 			}
 		}
 
 		foreach ($opts['logfiles'] as $k => $v) {
 			$name = $v['name'];
 			unset($v['name']);
+			$name_opt = array();
 			foreach ($v as $opt => $set) {
-				$name_opt = array();
 				switch ($opt) {
 					case 'verbose':
 						if (is_numeric($set) || $set == '*') {
 							$name_opt[] = 'verbose(' . $set . ')';
-						} elseif ($set == 'on') {
+						} elseif ($set === 'on') {
 							$name_opt[] = $opt;
 						}
 						break;
 					default:
-						if ($set == 'on') {
+						if ($set === 'on') {
 							if ($has_security_option || $opt != 'security') {
 								$name_opt[] = $opt;
 							}
