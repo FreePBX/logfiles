@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.10.1</version>
+	<version>13.0.10.2</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.10.2* FREEPBX-13341 Logfile settings not written correctly
 		*13.0.10.1* FREEPBX-13293 Validate data is NOT empty
 		*13.0.10* FREEPBX-12181 Change verbose dropdown to be in line with asterisk docs
 		*13.0.9* FREEPBX-11785 Add PCRE Filtering to log page
