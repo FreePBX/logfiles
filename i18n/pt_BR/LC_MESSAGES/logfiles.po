@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-11 16:14-0700\n"
-"PO-Revision-Date: 2016-12-13 21:27+0200\n"
-"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"PO-Revision-Date: 2017-03-24 12:30+0200\n"
+"Last-Translator: Luis <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -47,7 +47,7 @@ msgstr "Arquivos de Registro do Asterisk"
 
 #: logfiles.i18n.php:12
 msgid "Asterisk Logfile Settings"
-msgstr "Configurações do Arquivo de Registro do Asterisk"
+msgstr "Configurações de Log do Asterisk"
 
 #: logfiles.i18n.php:4 logfiles.i18n.php:8
 msgid "Asterisk Logfiles"
@@ -149,7 +149,7 @@ msgstr "Carregando..."
 
 #: views/settings.php:38
 msgid "Log File Settings"
-msgstr "Configurações do Arquivo de Registro"
+msgstr "Configurações de Log"
 
 #: views/settings.php:46
 msgid "Log Files"
