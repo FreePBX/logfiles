@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-11 16:14-0700\n"
+"POT-Creation-Date: 2017-06-26 14:05-0400\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Asterisk Log Files"
 msgstr "Asterisk日志文件"
 
-#: logfiles.i18n.php:12
+#: logfiles.i18n.php:10
 msgid "Asterisk Logfile Settings"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 
-#: logfiles.i18n.php:6 logfiles.i18n.php:10
+#: logfiles.i18n.php:6
 msgid "Reports"
 msgstr ""
 
@@ -247,10 +247,6 @@ msgstr "依次"
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
-msgstr ""
-
-#: logfiles.i18n.php:14
-msgid "Settings"
 msgstr ""
 
 #: views/logs.php:80 assets/js/views/logs.js:30
