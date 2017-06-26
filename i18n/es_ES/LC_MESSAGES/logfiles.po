@@ -20,23 +20,23 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-11 16:14-0700\n"
-"PO-Revision-Date: 2015-03-25 08:37+0200\n"
+"PO-Revision-Date: 2016-12-09 08:26+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
-"es_ES/>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: views/settings.php:236
 msgid "Add Log"
-msgstr ""
+msgstr "Añadir registro"
 
 #: views/settings.php:112
 msgid "Append Hostname"
@@ -51,6 +51,8 @@ msgid ""
 "Apply PCRE regex filter to the log output. <br/>This filters through the "
 "lines specified."
 msgstr ""
+"Aplique el filtro regex PCRE a la salida del registro. <br/> Esto filtra a "
+"través de las líneas especificadas."
 
 #: views/logs.php:6
 msgid "Asterisk Log Files"
@@ -111,11 +113,11 @@ msgstr "Fax"
 
 #: views/settings.php:164
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #: views/logs.php:19
 msgid "File"
-msgstr ""
+msgstr "Archivo"
 
 #: views/settings.php:165 views/settings.php:183
 msgid "File Name"
@@ -123,7 +125,7 @@ msgstr "Nombre de Archivo"
 
 #: views/logs.php:62
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: views/settings.php:45
 msgid "General Settings"
@@ -131,11 +133,11 @@ msgstr "Configuración General"
 
 #: views/settings.php:164
 msgid "Information"
-msgstr ""
+msgstr "Información"
 
 #: functions.inc.php:121
 msgid "Invalid pattern"
-msgstr ""
+msgstr "patrón invalido"
 
 #: views/settings.php:171
 msgid ""
@@ -153,11 +155,11 @@ msgstr ""
 
 #: views/logs.php:44
 msgid "Lines"
-msgstr ""
+msgstr "Lineas"
 
 #: views/logs.php:90 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr ""
+msgstr "Cargando..."
 
 #: views/settings.php:38
 msgid "Log File Settings"
@@ -173,7 +175,7 @@ msgstr "Colas de Log"
 
 #: views/settings.php:83
 msgid "Log Rotation"
-msgstr ""
+msgstr "Rotación de Registro"
 
 #: functions.inc.php:381
 msgid "Log file settings"
@@ -185,7 +187,7 @@ msgstr "Registre eventos de colas en un archivo"
 
 #: views/settings.php:162
 msgid "Logfile Help"
-msgstr ""
+msgstr "Ayuda de logfile"
 
 #: views/settings.php:174
 msgid ""
@@ -212,6 +214,8 @@ msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
+"Nombre del archivo, en relación con Asterisk logpath. Usar ruta absoluta "
+"para una ubicación diferente"
 
 #: views/settings.php:119 views/settings.php:146
 msgid "No"
@@ -219,7 +223,7 @@ msgstr "No"
 
 #: functions.inc.php:129
 msgid "No lines returned"
-msgstr ""
+msgstr "No hay líneas devueltas"
 
 #: views/settings.php:174 views/settings.php:188
 msgid "Notice"
@@ -245,7 +249,7 @@ msgstr "Reportes"
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: views/settings.php:90
 msgid "Rotate"
@@ -278,7 +282,7 @@ msgstr ""
 
 #: logfiles.i18n.php:14
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
@@ -286,7 +290,7 @@ msgstr "Mostrar"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: views/settings.php:92
 msgid "Timestamp"

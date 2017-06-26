@@ -1,69 +1,61 @@
 # This file is part of FreePBX.
 #
-#    FreePBX is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 2 of the License, or
-#    (at your option) any later version.
+# For licensing information, please see the file named LICENSE located in the module directory
 #
-#    FreePBX is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
+# FreePBX language template for logfiles
+# Copyright (C) 2008-2016 Sangoma, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-11 16:14-0700\n"
-"PO-Revision-Date: 2017-03-17 01:45+0200\n"
-"Last-Translator: Nicolas <freepbx@riendeau.org>\n"
-"Language-Team: French "
-"<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2017-03-24 12:30+0200\n"
+"Last-Translator: Luis <suporte@kingvoice.com.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
 #: views/settings.php:236
 msgid "Add Log"
-msgstr "Ajouter un journal"
+msgstr "Adicionar Registro"
 
 #: views/settings.php:112
 msgid "Append Hostname"
-msgstr "Ajouter le nom d'hôte"
+msgstr "Anexar Nome do Host"
 
 #: views/settings.php:127
 msgid "Appends the hostname to the name of the log files"
-msgstr "Ajoute le nom d'hôte au nom des fichiers de journal"
+msgstr "Acrescenta o nome do host ao nome dos arquivos de registro"
 
 #: views/logs.php:74
 msgid ""
 "Apply PCRE regex filter to the log output. <br/>This filters through the "
 "lines specified."
 msgstr ""
+"Aplicar o filtro regex PCRE para a saída de registro. <br/>Isso filtra "
+"através das linhas especificadas."
 
 #: views/logs.php:6
 msgid "Asterisk Log Files"
-msgstr "Journaux d'Asterisk"
+msgstr "Arquivos de Registro do Asterisk"
 
 #: logfiles.i18n.php:12
 msgid "Asterisk Logfile Settings"
-msgstr "Paramètres de journalisation d'Asterisk"
+msgstr "Configurações de Log do Asterisk"
 
 #: logfiles.i18n.php:4 logfiles.i18n.php:8
 msgid "Asterisk Logfiles"
-msgstr "Journaux d'Asterisk"
+msgstr "Arquivos de Registro do Asterisk"
 
 #: views/settings.php:172
 msgid "Critical errors and issues"
-msgstr "Erreurs critique et problèmes"
+msgstr "Erros críticos e problemas"
 
 #: views/settings.php:3
 msgid ""
@@ -72,11 +64,10 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
-"Personnaliser l'affichage de l'horodatage des messages de débogage. Voir "
-"strftime(3) dans le manuel de Linux pour les spécificateurs de format. "
-"Prenez note qu'il existe aussi un second paramètre fractionnel qui peut être "
-"utilisé dans ce champ. Utilisez %1q pour des dixièmes, %2q pour des "
-"centièmes, etc."
+"Personalize a exibição de marcadores de tempo de mensagem de depuração. "
+"Consulte o manual do Linux do strftime (3) para especificadores de formato. "
+"Observe que há também um segundo parâmetro fracionário que pode ser usado "
+"neste campo. Use %1q para décimos, %2q para centésimos, etc."
 
 #: views/settings.php:171 views/settings.php:185
 msgid "DTMF"
@@ -84,112 +75,112 @@ msgstr "DTMF"
 
 #: views/settings.php:59
 msgid "Date Format"
-msgstr "Format de date"
+msgstr "Formato de Data"
 
 #: views/settings.php:166 views/settings.php:184
 msgid "Debug"
-msgstr "Débogage"
+msgstr "Depurar"
 
 #: views/settings.php:192
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Apagar"
 
 #: views/settings.php:172 views/settings.php:186
 msgid "Error"
-msgstr "Erreur"
+msgstr "Erro"
 
 #: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
-msgstr "Erreur lors de l'analyse du journal ou fichier non trouvé !"
+msgstr "Erro ao analisar arquivo de registro ou arquivo não encontrado!"
 
 #: views/settings.php:173 views/settings.php:187
 msgid "Fax"
-msgstr "Télécopieur"
+msgstr "Fax"
 
 #: views/settings.php:164
 msgid "Field"
-msgstr "Champ"
+msgstr "Campo"
 
 #: views/logs.php:19
 msgid "File"
-msgstr "Fichier"
+msgstr "Arquivo"
 
 #: views/settings.php:165 views/settings.php:183
 msgid "File Name"
-msgstr "Nom du fichier"
+msgstr "Nome do Arquivo"
 
 #: views/logs.php:62
 msgid "Filter"
-msgstr "Filtre"
+msgstr "Filtro"
 
 #: views/settings.php:45
 msgid "General Settings"
-msgstr "Paramètres généraux"
+msgstr "Configurações Gerais"
 
 #: views/settings.php:164
 msgid "Information"
-msgstr "Information"
+msgstr "Informação"
 
 #: functions.inc.php:121
 msgid "Invalid pattern"
-msgstr ""
+msgstr "Padrão Inválido"
 
 #: views/settings.php:171
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
-"Touches telles qu'interprétées par Asterisk. Utile pour déboguer les "
-"problèmes d'IVR et de messagerie vocale."
+"Pressione a tecla como entendido pelo Asterisk. Útil para depurar problemas "
+"de URA e VM."
 
 #: views/settings.php:8
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
-"Laissé vide pour le défaut : Format de date ISO-8601 yyyy-mm-dd HH:MM:SS (%F "
+"Deixe em branco por padrão: Formato de data ISO 8601 yyyy-mm-dd HH:MM:SS (%F "
 "%T)"
 
 #: views/logs.php:44
 msgid "Lines"
-msgstr "Lignes"
+msgstr "Linhas"
 
 #: views/logs.php:90 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr "Chargement..."
+msgstr "Carregando..."
 
 #: views/settings.php:38
 msgid "Log File Settings"
-msgstr "Paramètres des fichiers de journal"
+msgstr "Configurações de Log"
 
 #: views/settings.php:46
 msgid "Log Files"
-msgstr "Fichiers de journal"
+msgstr "Arquivos de Registro"
 
 #: views/settings.php:139
 msgid "Log Queues"
-msgstr "Queues de journal"
+msgstr "Filas de Registro"
 
 #: views/settings.php:83
 msgid "Log Rotation"
-msgstr "Rotation des journaux"
+msgstr "Rotação de Registro"
 
 #: functions.inc.php:381
 msgid "Log file settings"
-msgstr "Paramètres des fichiers de journal"
+msgstr "Configurações de arquivos de registro"
 
 #: views/settings.php:154
 msgid "Log queue events to a file"
-msgstr "Journaliser les évènements de queue dans un fichier"
+msgstr "Registre eventos de fila em um arquivo"
 
 #: views/settings.php:162
 msgid "Logfile Help"
-msgstr "Aide des fichiers de journal"
+msgstr "Ajuda do Arquivo de Registro"
 
 #: views/settings.php:174
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
-"Messages d'actions spécifiques comme l'enregistrement d'un téléphone ou la "
-"fin d'un appel"
+"Mensagens de ações específicas, como registro de telefone ou conclusão de "
+"chamada"
 
 #: views/settings.php:166
 msgid ""
@@ -198,133 +189,133 @@ msgid ""
 "messages are also very verbose and can and do fill up logfiles (and disk "
 "storage) quickly."
 msgstr ""
-"Messages utilisés pour le débogage. Ne les rapportez pas comme étant des "
-"erreurs à moins d'avoir un problème que vous tentez de déboguer. Prenez note "
-"que les messages de débogage sont très verbeux et peuvent remplir les "
-"fichiers de journal (et l'espace disque) rapidement."
+"Mensagens usadas para depuração. Não relatar esses como erro a menos que "
+"você tenha um problema específico que você esteja tentando depurar. Observe "
+"também que as mensagens de depuração também são muito detalhadas e podem "
+"preencher os arquivos de registro (e armazenamento em disco) rapidamente."
 
 #: views/settings.php:165
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
-"Le nom du fichier relatif au répertoire de journalisation d'Asterisk. "
-"Utilisez un chemin absolu pour un autre endroit"
+"Nome do arquivo, relativo ao logpath do Asterisk. Usar caminho completo para "
+"um local diferente"
 
 #: views/settings.php:119 views/settings.php:146
 msgid "No"
-msgstr "Non"
+msgstr "Não"
 
 #: functions.inc.php:129
 msgid "No lines returned"
-msgstr ""
+msgstr "Nenhuma linha retornada"
 
 #: views/settings.php:174 views/settings.php:188
 msgid "Notice"
-msgstr "Remarque"
+msgstr "Notícia"
 
 #: views/settings.php:16 views/settings.php:26
 msgid "Off"
-msgstr "Désactivé"
+msgstr "Desligado"
 
 #: views/settings.php:15 views/settings.php:27
 msgid "On"
-msgstr "Activé"
+msgstr "Ligado"
 
 #: views/settings.php:177
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
-"Problèmes potentiels avec la syntaxe du 'dialplan' or du flux d'appel, mais "
-"non critiques."
+"Problemas possíveis com a sintaxe do plano de discagem ou fluxo de chamada, "
+"mas não é crítico."
 
 #: logfiles.i18n.php:6 logfiles.i18n.php:10
 msgid "Reports"
-msgstr "Rapports"
+msgstr "Relatórios"
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Reiniciar"
 
 #: views/settings.php:90
 msgid "Rotate"
-msgstr "Rotation"
+msgstr "Rotacionar"
 
 #: views/settings.php:11
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
-"Rotation : Effectue une rotation des anciens fichiers de manière à ce que le "
-"plus vieux ait le plus haut numéro de séquence (comportement attendu par les "
-"administrateurs Unix)."
+"Rotacionar: Rotaciona todos os arquivos antigos, de forma que o mais antigo "
+"tenha o maior número de seqüência (comportamento esperado para "
+"administradores Unix)."
 
 #: views/settings.php:191
 msgid "Security"
-msgstr "Sécurité"
+msgstr "Segurança"
 
 #: views/settings.php:88
 msgid "Sequential"
-msgstr "Séquentiel"
+msgstr "Sequencial"
 
 #: views/settings.php:10
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
-"Séquentiel : Renomme les fichiers archivés en ordre de manière à ce que le "
-"fichier le plus récent ait le plus haut numéro de séquence"
+"Sequencial: Renomeia registros arquivados em ordem, de modo que o mais novo "
+"tenha o maior número de seqüência"
 
 #: logfiles.i18n.php:14
 msgid "Settings"
-msgstr "Paramètres"
+msgstr "Configurações"
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
-msgstr "Afficher"
+msgstr "Mostrar"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "Enviar"
 
 #: views/settings.php:92
 msgid "Timestamp"
-msgstr "Horodatage"
+msgstr "Marca de Tempo"
 
 #: views/settings.php:12
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
-"Horodatage : Renomme les journaux en utilisant un horodatage à la place "
-"d'une séquence quand \"logger rotate\" est exécuté."
+"Marca de Tempo: Renomeia os arquivos de registro usando uma marca de data e "
+"hora em vez de um número de seqüência quando \"rotacionar\" é executado."
 
 #: views/settings.php:173
 msgid "Transmition and receiving of faxes"
-msgstr "Transmission et réception de télécopies"
+msgstr "Transmissão e recepção de fax"
 
 #: views/settings.php:175 views/settings.php:189
 msgid "Verbose"
-msgstr "Verbeux"
+msgstr "Verboso"
 
 #: functions.inc.php:380
 msgid "View Logs"
-msgstr "Voir les journaux"
+msgstr "Visualizar Registros"
 
 #: views/settings.php:177 views/settings.php:190
 msgid "Warning"
-msgstr "Avertissement"
+msgstr "Atenção"
 
 #: views/settings.php:117 views/settings.php:144
 msgid "Yes"
-msgstr "Oui"
+msgstr "Sim"
 
 #: install.php:59
 msgid "failed"
-msgstr "echoué"
+msgstr "falhou"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
-msgstr "logger.conf à un lien sybolique vers le mauvais fichier :"
+msgstr "logger.conf link simbólico para arquivo incorreto:"
 
 #: install.php:57
 msgid "ok"
@@ -332,10 +323,4 @@ msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
-msgstr "Suppression en cours.."
-
-#~ msgid "%s - last %s lines"
-#~ msgstr "%s - dernières %s lignes"
-
-#~ msgid "Redisplay Asterisk Full debug log (last %s lines)"
-#~ msgstr "Réafficher le debug log Complet d'Asterisk (%s dernières lignes)"
+msgstr "removendo..."
