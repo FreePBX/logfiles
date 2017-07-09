@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-26 14:05-0400\n"
-"PO-Revision-Date: 2017-07-08 18:26+0200\n"
+"PO-Revision-Date: 2017-07-08 19:13+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/logfiles/vi/>\n"
@@ -64,10 +64,14 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
+"Tùy chỉnh hiển thị của các time stamp thông báo gỡ lỗi . Xem sổ tay hướng "
+"dẫn strftime (3) Linux để biết thêm về các định dạng. Lưu ý rằng có một tham "
+"số nhị phân có thể được sử dụng trong trường này. Sử dụng% 1q cho một phần "
+"mười,% 2q cho một phần trăm, v.v ..."
 
 #: views/settings.php:171 views/settings.php:185
 msgid "DTMF"
-msgstr ""
+msgstr "DTMF"
 
 #: views/settings.php:59
 msgid "Date Format"
@@ -245,68 +249,72 @@ msgstr ""
 
 #: views/settings.php:191
 msgid "Security"
-msgstr ""
+msgstr "Bảo mật"
 
 #: views/settings.php:88
 msgid "Sequential"
-msgstr ""
+msgstr "Theo thứ tự"
 
 #: views/settings.php:10
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
+"Theo thứ tự: Đổi tên các log được lưu giữ theo thứ tự, sao cho bản ghi mới "
+"nhất có số thứ tự cao nhất"
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
-msgstr ""
+msgstr "Hiển thị"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr ""
+msgstr "Gửi đi"
 
 #: views/settings.php:92
 msgid "Timestamp"
-msgstr ""
+msgstr "Timestamp"
 
 #: views/settings.php:12
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
+"Timestamp: Đổi tên các tệp log sử dụng timestamp thay thế cho số thứ tự khi "
+"thực hiện \"logger rotate\"."
 
 #: views/settings.php:173
 msgid "Transmition and receiving of faxes"
-msgstr ""
+msgstr "Việc truyền và nhận fax"
 
 #: views/settings.php:175 views/settings.php:189
 msgid "Verbose"
-msgstr ""
+msgstr "Rườm rà"
 
 #: functions.inc.php:380
 msgid "View Logs"
-msgstr ""
+msgstr "Xem Log"
 
 #: views/settings.php:177 views/settings.php:190
 msgid "Warning"
-msgstr ""
+msgstr "Cảnh báo"
 
 #: views/settings.php:117 views/settings.php:144
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: install.php:59
 msgid "failed"
-msgstr ""
+msgstr "Không thành công"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
-msgstr ""
+msgstr "Logger.conf được liên kết đến tệp không đúng:"
 
 #: install.php:57
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
-msgstr ""
+msgstr "Đang xóa..."
