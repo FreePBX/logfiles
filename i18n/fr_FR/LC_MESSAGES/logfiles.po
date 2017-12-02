@@ -20,14 +20,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-26 14:05-0400\n"
-"PO-Revision-Date: 2017-03-17 01:45+0200\n"
-"Last-Translator: Nicolas <freepbx@riendeau.org>\n"
-"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/logfiles/"
-"fr_FR/>\n"
+"PO-Revision-Date: 2017-12-01 22:42+0200\n"
+"Last-Translator: CATTAN Jérémie <jeremie@famillecattan.com>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -48,6 +48,8 @@ msgid ""
 "Apply PCRE regex filter to the log output. <br/>This filters through the "
 "lines specified."
 msgstr ""
+"Appliquez le filtre regex PCRE à la sortie du journal. <br/> Ceci filtre à "
+"travers les lignes spécifiées."
 
 #: views/logs.php:6
 msgid "Asterisk Log Files"
@@ -132,7 +134,7 @@ msgstr "Information"
 
 #: functions.inc.php:121
 msgid "Invalid pattern"
-msgstr ""
+msgstr "Motif invalide"
 
 #: views/settings.php:171
 msgid ""
@@ -217,7 +219,7 @@ msgstr "Non"
 
 #: functions.inc.php:129
 msgid "No lines returned"
-msgstr ""
+msgstr "Pas de retour de ligne"
 
 #: views/settings.php:174 views/settings.php:188
 msgid "Notice"
