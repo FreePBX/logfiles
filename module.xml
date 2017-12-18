@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.10.3</version>
+	<version>13.0.10.4</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.10.4* FREEPBX-16386 Verbosity level asterisk does not work 
 		*13.0.10.3* FREEPBX-15162
 		*13.0.10.2* FREEPBX-13341 Logfile settings not written correctly
 		*13.0.10.1* FREEPBX-13293 Validate data is NOT empty
@@ -51,6 +52,6 @@
 	<supported>
 		<version>13.0</version>
 	</supported>
-	<location />
-	<md5sum />
+	<location/>
+	<md5sum/>
 </module>
