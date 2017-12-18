@@ -1,71 +1,61 @@
 # This file is part of FreePBX.
 #
-#    FreePBX is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 2 of the License, or
-#    (at your option) any later version.
+# For licensing information, please see the file named LICENSE located in the module directory
 #
-#    FreePBX is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
+# FreePBX language template for logfiles
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-26 14:05-0400\n"
-"PO-Revision-Date: 2017-12-01 22:42+0200\n"
-"Last-Translator: CATTAN Jérémie <jeremie@famillecattan.com>\n"
-"Language-Team: French "
-"<http://weblate.freepbx.org/projects/freepbx/logfiles/fr_FR/>\n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2017-07-08 19:30+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
 #: views/settings.php:236
 msgid "Add Log"
-msgstr "Ajouter un journal"
+msgstr "Thêm Log"
 
 #: views/settings.php:112
 msgid "Append Hostname"
-msgstr "Ajouter le nom d'hôte"
+msgstr "Kèm thêm Hostname"
 
 #: views/settings.php:127
 msgid "Appends the hostname to the name of the log files"
-msgstr "Ajoute le nom d'hôte au nom des fichiers de journal"
+msgstr "Kèm thêm hostname vào tên của các tệp log"
 
 #: views/logs.php:74
 msgid ""
 "Apply PCRE regex filter to the log output. <br/>This filters through the "
 "lines specified."
 msgstr ""
-"Appliquez le filtre regex PCRE à la sortie du journal. <br/> Ceci filtre à "
-"travers les lignes spécifiées."
+"Áp dụng bộ lọc regex PCRE vào đầu ra bản ghi. <br/> Bộ lọc này thông qua các "
+"đường dây xác định."
 
 #: views/logs.php:6
 msgid "Asterisk Log Files"
-msgstr "Journaux d'Asterisk"
+msgstr "Các tệp log của Asterisk"
 
 #: logfiles.i18n.php:10
 msgid "Asterisk Logfile Settings"
-msgstr "Paramètres de journalisation d'Asterisk"
+msgstr "Cài đặt logfile Asterisk"
 
 #: logfiles.i18n.php:4 logfiles.i18n.php:8
 msgid "Asterisk Logfiles"
-msgstr "Journaux d'Asterisk"
+msgstr "Các tệp Log của Asterisk"
 
 #: views/settings.php:172
 msgid "Critical errors and issues"
-msgstr "Erreurs critique et problèmes"
+msgstr "Các vấn đề và lỗi nghiêm trọng"
 
 #: views/settings.php:3
 msgid ""
@@ -74,11 +64,10 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
-"Personnaliser l'affichage de l'horodatage des messages de débogage. Voir "
-"strftime(3) dans le manuel de Linux pour les spécificateurs de format. "
-"Prenez note qu'il existe aussi un second paramètre fractionnel qui peut être "
-"utilisé dans ce champ. Utilisez %1q pour des dixièmes, %2q pour des "
-"centièmes, etc."
+"Tùy chỉnh hiển thị của các time stamp thông báo gỡ lỗi . Xem sổ tay hướng "
+"dẫn strftime (3) Linux để biết thêm về các định dạng. Lưu ý rằng có một tham "
+"số nhị phân có thể được sử dụng trong trường này. Sử dụng% 1q cho một phần "
+"mười,% 2q cho một phần trăm, v.v ..."
 
 #: views/settings.php:171 views/settings.php:185
 msgid "DTMF"
@@ -86,112 +75,111 @@ msgstr "DTMF"
 
 #: views/settings.php:59
 msgid "Date Format"
-msgstr "Format de date"
+msgstr "Định dạng ngày tháng"
 
 #: views/settings.php:166 views/settings.php:184
 msgid "Debug"
-msgstr "Débogage"
+msgstr "Gỡ"
 
 #: views/settings.php:192
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Xóa"
 
 #: views/settings.php:172 views/settings.php:186
 msgid "Error"
-msgstr "Erreur"
+msgstr "Lỗi"
 
 #: functions.inc.php:112
 msgid "Error parsing log file or file not found!"
-msgstr "Erreur lors de l'analyse du journal ou fichier non trouvé !"
+msgstr "Lỗi phân tích tệp log hoặc không tìm thấy tệp!"
 
 #: views/settings.php:173 views/settings.php:187
 msgid "Fax"
-msgstr "Télécopieur"
+msgstr "Fax"
 
 #: views/settings.php:164
 msgid "Field"
-msgstr "Champ"
+msgstr "Trường"
 
 #: views/logs.php:19
 msgid "File"
-msgstr "Fichier"
+msgstr "Tệp"
 
 #: views/settings.php:165 views/settings.php:183
 msgid "File Name"
-msgstr "Nom du fichier"
+msgstr "Tên tệp"
 
 #: views/logs.php:62
 msgid "Filter"
-msgstr "Filtre"
+msgstr "Bộ lọc"
 
 #: views/settings.php:45
 msgid "General Settings"
-msgstr "Paramètres généraux"
+msgstr "Cài đặt chung"
 
 #: views/settings.php:164
 msgid "Information"
-msgstr "Information"
+msgstr "Thông tin"
 
 #: functions.inc.php:121
 msgid "Invalid pattern"
-msgstr "Motif invalide"
+msgstr "Mẫu ( pattern) không hợp lệ"
 
 #: views/settings.php:171
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
-"Touches telles qu'interprétées par Asterisk. Utile pour déboguer les "
-"problèmes d'IVR et de messagerie vocale."
+"Asterisk sẽ hiểu các nút nhấn. Giups ích cho việc gỡ các vấn đề về IVR và VM."
 
 #: views/settings.php:8
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
-"Laissé vide pour le défaut : Format de date ISO-8601 yyyy-mm-dd HH:MM:SS (%F "
-"%T)"
+"Theo mặc định để trống: ISO 8601 định dạng ngày tháng yyyy-mm-dd HH:MM:SS (%"
+"F %T)"
 
 #: views/logs.php:44
 msgid "Lines"
-msgstr "Lignes"
+msgstr "Các đường dây"
 
 #: views/logs.php:90 assets/js/views/logs.js:24
 msgid "Loading..."
-msgstr "Chargement..."
+msgstr "Đang tải..."
 
 #: views/settings.php:38
 msgid "Log File Settings"
-msgstr "Paramètres des fichiers de journal"
+msgstr "Cài đặt tệp log"
 
 #: views/settings.php:46
 msgid "Log Files"
-msgstr "Fichiers de journal"
+msgstr "Các tệp Log"
 
 #: views/settings.php:139
 msgid "Log Queues"
-msgstr "Queues de journal"
+msgstr "Các hàng log"
 
 #: views/settings.php:83
 msgid "Log Rotation"
-msgstr "Rotation des journaux"
+msgstr "Xoay vòng Log"
 
 #: functions.inc.php:381
 msgid "Log file settings"
-msgstr "Paramètres des fichiers de journal"
+msgstr "Cài đặt tệp Log"
 
 #: views/settings.php:154
 msgid "Log queue events to a file"
-msgstr "Journaliser les évènements de queue dans un fichier"
+msgstr "Các sự kiện hàng Log đến một tệp"
 
 #: views/settings.php:162
 msgid "Logfile Help"
-msgstr "Aide des fichiers de journal"
+msgstr "Trợ giúp logfile"
 
 #: views/settings.php:174
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
-"Messages d'actions spécifiques comme l'enregistrement d'un téléphone ou la "
-"fin d'un appel"
+"Tin nhắn thống báo của các thao tác nhất định, ví dụ đăng ký cuộc gọi hay "
+"hoàn thành cuộc gọi"
 
 #: views/settings.php:166
 msgid ""
@@ -200,129 +188,128 @@ msgid ""
 "messages are also very verbose and can and do fill up logfiles (and disk "
 "storage) quickly."
 msgstr ""
-"Messages utilisés pour le débogage. Ne les rapportez pas comme étant des "
-"erreurs à moins d'avoir un problème que vous tentez de déboguer. Prenez note "
-"que les messages de débogage sont très verbeux et peuvent remplir les "
-"fichiers de journal (et l'espace disque) rapidement."
+"Thông điệp sử dụng cho việc gỡ lỗi. Đừng nên báo cáo các đây là lỗi trừ khi "
+"bạn có một lỗi cụ thể và đang cố gỡ chúng. Cũng lưu ý rằng các thông điệp gỡ "
+"lỗi cũng rất rườm rà và có thể và làm đầy các tệp log (và bộ nhớ đĩa) rất "
+"nhanh."
 
 #: views/settings.php:165
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
-"Le nom du fichier relatif au répertoire de journalisation d'Asterisk. "
-"Utilisez un chemin absolu pour un autre endroit"
+"Tên tệp, liên quan đến đường dẫn Log Asterisk. Sử dụng đường dẫn cho một vị "
+"trí khác"
 
 #: views/settings.php:119 views/settings.php:146
 msgid "No"
-msgstr "Non"
+msgstr "Không"
 
 #: functions.inc.php:129
 msgid "No lines returned"
-msgstr "Pas de retour de ligne"
+msgstr "Không có đường dây nào trở lại"
 
 #: views/settings.php:174 views/settings.php:188
 msgid "Notice"
-msgstr "Remarque"
+msgstr "Lưu ý"
 
 #: views/settings.php:16 views/settings.php:26
 msgid "Off"
-msgstr "Désactivé"
+msgstr "Tắt"
 
 #: views/settings.php:15 views/settings.php:27
 msgid "On"
-msgstr "Activé"
+msgstr "Bật"
 
 #: views/settings.php:177
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
-"Problèmes potentiels avec la syntaxe du 'dialplan' or du flux d'appel, mais "
-"non critiques."
+"Các vấn đề có thể xảy ra với kế hoạch quay số syntaxt  hoặc dòng cuộc gọi, "
+"nhưng không quan trọng."
 
 #: logfiles.i18n.php:6
 msgid "Reports"
-msgstr "Rapports"
+msgstr "Báo cáo"
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Cài đặt lại"
 
 #: views/settings.php:90
 msgid "Rotate"
-msgstr "Rotation"
+msgstr "Xoay vòng"
 
 #: views/settings.php:11
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
-"Rotation : Effectue une rotation des anciens fichiers de manière à ce que le "
-"plus vieux ait le plus haut numéro de séquence (comportement attendu par les "
-"administrateurs Unix)."
+"Xuay vòng: xuay vòng tất cả các tệp cũ, ví dụ như các tệp cũ nhất có số thứ "
+"tự cao nhất ( hành vi mong muốn cho các quản trị viên Unix)."
 
 #: views/settings.php:191
 msgid "Security"
-msgstr "Sécurité"
+msgstr "Bảo mật"
 
 #: views/settings.php:88
 msgid "Sequential"
-msgstr "Séquentiel"
+msgstr "Theo thứ tự"
 
 #: views/settings.php:10
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
-"Séquentiel : Renomme les fichiers archivés en ordre de manière à ce que le "
-"fichier le plus récent ait le plus haut numéro de séquence"
+"Theo thứ tự: Đổi tên các log được lưu giữ theo thứ tự, sao cho bản ghi mới "
+"nhất có số thứ tự cao nhất"
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
-msgstr "Afficher"
+msgstr "Hiển thị"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "Gửi đi"
 
 #: views/settings.php:92
 msgid "Timestamp"
-msgstr "Horodatage"
+msgstr "Dấu thời gian (Timestamp)"
 
 #: views/settings.php:12
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
-"Horodatage : Renomme les journaux en utilisant un horodatage à la place "
-"d'une séquence quand \"logger rotate\" est exécuté."
+"Timestamp: Đổi tên các tệp log sử dụng timestamp thay thế cho số thứ tự khi "
+"thực hiện \"logger rotate\"."
 
 #: views/settings.php:173
 msgid "Transmition and receiving of faxes"
-msgstr "Transmission et réception de télécopies"
+msgstr "Việc truyền và nhận fax"
 
 #: views/settings.php:175 views/settings.php:189
 msgid "Verbose"
-msgstr "Verbeux"
+msgstr "Rườm rà"
 
 #: functions.inc.php:380
 msgid "View Logs"
-msgstr "Voir les journaux"
+msgstr "Xem Log"
 
 #: views/settings.php:177 views/settings.php:190
 msgid "Warning"
-msgstr "Avertissement"
+msgstr "Cảnh báo"
 
 #: views/settings.php:117 views/settings.php:144
 msgid "Yes"
-msgstr "Oui"
+msgstr "Có"
 
 #: install.php:59
 msgid "failed"
-msgstr "echoué"
+msgstr "Không thành công"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
-msgstr "logger.conf à un lien sybolique vers le mauvais fichier :"
+msgstr "Logger.conf được liên kết đến tệp không đúng:"
 
 #: install.php:57
 msgid "ok"
@@ -330,13 +317,4 @@ msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
-msgstr "Suppression en cours.."
-
-#~ msgid "Settings"
-#~ msgstr "Paramètres"
-
-#~ msgid "%s - last %s lines"
-#~ msgstr "%s - dernières %s lignes"
-
-#~ msgid "Redisplay Asterisk Full debug log (last %s lines)"
-#~ msgstr "Réafficher le debug log Complet d'Asterisk (%s dernières lignes)"
+msgstr "Đang xóa..."
