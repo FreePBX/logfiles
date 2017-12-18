@@ -20,7 +20,7 @@ function log_dropdown($name,$value,$i){
 
 function verbose_log_dropdown($name,$value,$i){
 		$value = ($value == 'on')?3:$value;
-		$value = ($value == 0)?'off':$value;
+		$value = ($value === 0)?'off':$value;
 		$value = (is_numeric($value) && $value >= 10)?10:$value;
 		$ret = '<select class="form-control" name="logfiles['.$name.']['.$i.']">';
 		$ret .= '<option value="off" '.(($value == 'off')?"SELECTED":"").'>'._("Off").'</option>';
