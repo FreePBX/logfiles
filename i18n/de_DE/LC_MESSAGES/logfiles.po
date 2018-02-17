@@ -10,14 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-18 17:32-0500\n"
-"PO-Revision-Date: 2017-06-26 14:05-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: \n"
+"PO-Revision-Date: 2018-02-16 18:06+0200\n"
+"Last-Translator: Nils <Nils@heckenkamp.info>\n"
+"Language-Team: German "
+"<http://weblate.freepbx.org/projects/freepbx/logfiles/de_DE/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/settings.php:236
 msgid "Add Log"
@@ -75,7 +77,7 @@ msgstr ""
 
 #: views/settings.php:192
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #: views/settings.php:172 views/settings.php:186
 msgid "Error"
@@ -212,11 +214,11 @@ msgstr ""
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr ""
+msgstr "Zurücksetzen"
 
 #: views/settings.php:90
 msgid "Rotate"
-msgstr ""
+msgstr "Drehen"
 
 #: views/settings.php:11
 msgid ""
@@ -274,7 +276,7 @@ msgstr ""
 
 #: views/settings.php:117 views/settings.php:144
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: install.php:59
 msgid "failed"
