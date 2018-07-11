@@ -285,9 +285,12 @@ function logfiles_get_opts() {
  */
 function logfiles_list() {
 	global $amp_conf;
-
 	$dir = scandirr($amp_conf['ASTLOGDIR'], true);
-
+	//FREEPBX-17752 lets check any files are there in  ASTLOGDIR if no if just create a empty full log file.
+	if(!is_array($dir)) {
+		touch($amp_conf['ASTLOGDIR']."/full");
+		$dir = scandirr($amp_conf['ASTLOGDIR'], true);
+	}
 	//only show files, relative to $amp_conf['ASTLOGDIR']
 	foreach ($dir as $k => $v) {
 		if (!is_file($v)) {
