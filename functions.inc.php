@@ -285,9 +285,10 @@ function logfiles_get_opts() {
  */
 function logfiles_list() {
 	global $amp_conf;
-
 	$dir = scandirr($amp_conf['ASTLOGDIR'], true);
-
+	if(!is_array($dir)) {
+		$dir = array();
+	}
 	//only show files, relative to $amp_conf['ASTLOGDIR']
 	foreach ($dir as $k => $v) {
 		if (!is_file($v)) {
