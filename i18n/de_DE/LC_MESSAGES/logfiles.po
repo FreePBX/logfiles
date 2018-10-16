@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-24 19:16-0400\n"
-"PO-Revision-Date: 2018-08-25 12:01+0000\n"
+"PO-Revision-Date: 2018-10-16 13:51+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/logfiles/de/>\n"
 "Language: de_DE\n"
@@ -63,6 +63,11 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
+"Passen Sie die Darstellung der Zeitstempel in den Debug-Nachrichten an. die "
+"Manpage zu strftime(3) gibt Auskunft über die Formatierungsangaben. Beachten "
+"Sie, dass es einen zweiten Parameter für Bruchteile von Sekunden gibt, der "
+"in diesem Feld verwendet werden kann. Verwenden Sie %1q für Zehntel, %2q für "
+"Hundertstel etc."
 
 #: views/settings.php:171 views/settings.php:185
 msgid "DTMF"
@@ -126,8 +131,8 @@ msgstr "Ungültiges Muster"
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
-"Tastendrücke, wie sie von Asterisk verstanden werden. Nützlich, um IVR- und "
-"VM-Probleme"
+"Tastendrücke, wie sie von Asterisk verstanden werden. Nützlich für die "
+"Fehlersuche bei IVR- und VM-Problemen."
 
 #: views/settings.php:8
 msgid ""
@@ -153,11 +158,11 @@ msgstr "Protokolldateien"
 
 #: views/settings.php:139
 msgid "Log Queues"
-msgstr ""
+msgstr "Warteschlangen überwachen"
 
 #: views/settings.php:83
 msgid "Log Rotation"
-msgstr ""
+msgstr "Protokoll-Rotation"
 
 #: functions.inc.php:382
 msgid "Log file settings"
@@ -165,16 +170,18 @@ msgstr "Protokolldateieinstellungen"
 
 #: views/settings.php:154
 msgid "Log queue events to a file"
-msgstr ""
+msgstr "Warteschlangenereignisse in einer Datei protokollieren"
 
 #: views/settings.php:162
 msgid "Logfile Help"
-msgstr ""
+msgstr "Hilfe zu den Protokolldateien"
 
 #: views/settings.php:174
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
+"Nachrichten zu bestimmten Aktionen wie z.B. Telefonregistrierungen oder "
+"getätigte Anrufe"
 
 #: views/settings.php:166
 msgid ""
@@ -219,6 +226,8 @@ msgstr "An"
 #: views/settings.php:177
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
+"Mögliche aber unkritische Probleme mit der Wählplansyntax oder dem "
+"Anruffluss."
 
 #: logfiles.i18n.php:6
 msgid "Reports"
@@ -230,13 +239,16 @@ msgstr "Zurücksetzen"
 
 #: views/settings.php:90
 msgid "Rotate"
-msgstr "Drehen"
+msgstr "Rotieren"
 
 #: views/settings.php:11
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
+"Rotieren: Rotiere alle alten Dateien so, dass die älteste jeweils die "
+"höchste fortlaufende Nummer hat (erwartetes Verhalten für Unix-"
+"Administratoren)."
 
 #: views/settings.php:191
 msgid "Security"
@@ -251,10 +263,12 @@ msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
+"Aufeinanderfolgend: Benenne die archivierten Protokolle der Reihe nach, so "
+"dass das neuste die höchste fortlaufende Nummer hat"
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
-msgstr ""
+msgstr "Zeigen"
 
 #: Logfiles.class.php:36
 msgid "Submit"
@@ -269,10 +283,12 @@ msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
+"Zeitstempel: Benenne die Protokolle mit einem Zeitstempel statt mit einer "
+"fortlaufenden Nummer, wenn „logger rotate“ ausgeführt wird."
 
 #: views/settings.php:173
 msgid "Transmition and receiving of faxes"
-msgstr ""
+msgstr "Versand und Empfang von Faxen"
 
 #: views/settings.php:175 views/settings.php:189
 msgid "Verbose"
@@ -280,7 +296,7 @@ msgstr "Ausführlich"
 
 #: functions.inc.php:381
 msgid "View Logs"
-msgstr ""
+msgstr "Protokolle ansehen"
 
 #: views/settings.php:177 views/settings.php:190
 msgid "Warning"
