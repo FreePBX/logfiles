@@ -163,7 +163,7 @@ function logfiles_get_logfile($lines = 500, $file, $filter=false) {
 function logfiles_get_config($engine) {
 	global $ext, $amp_conf;
 	$logfiles_conf = logfiles_conf::create();
-
+	$n = \FreePBX::Notifications();
 	$has_security_option = version_compare($amp_conf['ASTVERSION'],'11.0','ge');
 	switch ($engine) {
 	case 'asterisk':
@@ -178,6 +178,9 @@ function logfiles_get_config($engine) {
 		foreach ($opts as $k => $v) {
 			switch ($k) {
 				case 'appendhostname':
+  					if(trim($v) === "yes"){
+						$n->add_warning("Asterisk Logfile", "Warning", _("appendhostname is set to: Yes."), _("Setting this to yes will interfere with log rotation and Intrusion Detection. It is strongly recommended that this setting be set to: no."), "config.php?display=logfiles_settings", true, true);
+					}
 				case 'dateformat':
 				case 'queue_log':
 				case 'rotatestrategy':
