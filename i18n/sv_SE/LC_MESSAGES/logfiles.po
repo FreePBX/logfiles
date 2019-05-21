@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-24 19:16-0400\n"
+"POT-Creation-Date: 2019-05-21 08:50+0530\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -162,7 +162,7 @@ msgstr ""
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:382
+#: functions.inc.php:385
 msgid "Log file settings"
 msgstr ""
 
@@ -249,6 +249,18 @@ msgid ""
 "highest sequence number"
 msgstr ""
 
+#: views/settings.php:127
+msgid ""
+"Setting this to yes will interfere with log rotation and Intrusion "
+"Detection.  It is strongly recommended that this setting be set to 'no'."
+msgstr ""
+
+#: functions.inc.php:182
+msgid ""
+"Setting this to yes will interfere with log rotation and Intrusion "
+"Detection. It is strongly recommended that this setting be set to: no."
+msgstr ""
+
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
 msgstr ""
@@ -275,7 +287,7 @@ msgstr ""
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:381
+#: functions.inc.php:384
 msgid "View Logs"
 msgstr ""
 
@@ -285,6 +297,10 @@ msgstr ""
 
 #: views/settings.php:117 views/settings.php:144
 msgid "Yes"
+msgstr ""
+
+#: functions.inc.php:182
+msgid "appendhostname is set to: Yes."
 msgstr ""
 
 #: install.php:59
