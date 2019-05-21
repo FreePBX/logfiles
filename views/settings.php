@@ -124,7 +124,7 @@ function verbose_log_dropdown($name,$value,$i){
 										</div>
 										<div class="row">
 											<div class="col-md-12">
-												<span id="appendhostname-help" class="help-block fpbx-help-block"><?php echo _("Appends the hostname to the name of the log files")?></span>
+												<span id="appendhostname-help" class="help-block fpbx-help-block"><?php echo _("Appends the hostname to the name of the log files").". "._("Setting this to yes will interfere with log rotation and Intrusion Detection.  It is strongly recommended that this setting be set to 'no'.")?></span>
 											</div>
 										</div>
 									</div>
