@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.10.6</version>
+	<version>13.0.10.7</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.10.7* FREEPBX-18676 Configuration File Link removed(http://freepbx.org/configuration_files) 
 		*13.0.10.6* Bugfix/FREEPBX-19982 problems with enabling append hostname 
 		*13.0.10.5* FREEPBX-17752 Whoops\Exception\ErrorException Invalid argument supplied for foreach() 
 		*13.0.10.4* FREEPBX-16386 Verbosity level asterisk does not work 
