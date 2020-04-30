@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-21 08:50+0530\n"
-"PO-Revision-Date: 2018-10-16 13:51+0000\n"
+"PO-Revision-Date: 2019-06-25 15:58+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/logfiles/de/>\n"
 "Language: de_DE\n"
@@ -271,12 +271,18 @@ msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
+"Wird dies auf 'ja' gestellt, beeinflusst dies die Log-Rotation und die "
+"Eindringungserkennung. Es wird dringend empfohlen, die Einstellung auf "
+"'nein' zu belassen."
 
 #: functions.inc.php:182
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
+"Wird dies auf 'ja' gestellt, beeinflusst dies die Log-Rotation und die "
+"Eindringungserkennung. Es wird dringend empfohlen, die Einstellung auf "
+"'nein' zu belassen."
 
 #: views/logs.php:80 assets/js/views/logs.js:30
 msgid "Show"
@@ -320,7 +326,7 @@ msgstr "Ja"
 
 #: functions.inc.php:182
 msgid "appendhostname is set to: Yes."
-msgstr ""
+msgstr "'appendhostname' steht auf: 'ja'."
 
 #: install.php:59
 msgid "failed"
