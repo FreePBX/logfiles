@@ -5,7 +5,7 @@ $filter = isset($_REQUEST['filter'])?$_REQUEST['filter']:'';
 <div class="container-fluid">
 	<h1><?php echo _('Asterisk Log Files')?></h1>
 	<div class = "display full-border">
-		<div class="row">
+		<div class="row logfiles_header">
 			<div class="col-sm-12">
 				<div class="fpbx-container">
 					<div class="display full-border">
