@@ -3,11 +3,12 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.10.8</version>
+	<version>13.0.10.9</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<changelog>
+		*13.0.10.9* FREEPBX-21474: fix resize "log_view" 
 		*13.0.10.8* Fixing FREEI-1373 Form reset issue 
 		*13.0.10.7* FREEPBX-18676 Configuration File Link removed(http://freepbx.org/configuration_files) 
 		*13.0.10.6* Bugfix/FREEPBX-19982 problems with enabling append hostname 

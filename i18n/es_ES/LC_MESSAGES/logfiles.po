@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 08:50+0530\n"
+"POT-Creation-Date: 2020-05-04 13:38+0530\n"
 "PO-Revision-Date: 2016-12-09 08:26+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Lines"
 msgstr "Lineas"
 
-#: views/logs.php:90 assets/js/views/logs.js:24
+#: views/logs.php:90 assets/js/views/logs.js:30
 msgid "Loading..."
 msgstr "Cargando..."
 
@@ -292,7 +292,7 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/logs.php:80 assets/js/views/logs.js:30
+#: views/logs.php:80 assets/js/views/logs.js:36
 msgid "Show"
 msgstr "Mostrar"
 

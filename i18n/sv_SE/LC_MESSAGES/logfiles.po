@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 08:50+0530\n"
+"POT-Creation-Date: 2020-05-04 13:38+0530\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Lines"
 msgstr ""
 
-#: views/logs.php:90 assets/js/views/logs.js:24
+#: views/logs.php:90 assets/js/views/logs.js:30
 msgid "Loading..."
 msgstr ""
 
@@ -261,7 +261,7 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/logs.php:80 assets/js/views/logs.js:30
+#: views/logs.php:80 assets/js/views/logs.js:36
 msgid "Show"
 msgstr ""
 
