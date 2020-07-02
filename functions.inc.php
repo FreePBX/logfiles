@@ -338,7 +338,7 @@ function logfiles_put_opts($opts) {
 	$logs = array();
 	foreach ($logfiles as $item => $values) {
 		foreach ($values as $index => $v) {
-			$logs[$index][$item] = $v;
+			$logs[$index][$item] = filter_var($v, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 			if (!$has_security_option) {
 				$logs[$index]['security'] = 'off';
 			}
