@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 13:38+0530\n"
+"POT-Creation-Date: 2020-07-23 13:34+0530\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -30,25 +30,44 @@ msgstr ""
 "X-Poedit-Language: Sweden\n"
 "X-Poedit-Country: SWEDISH\n"
 
-#: views/settings.php:236
-msgid "Add Log"
+#: assets/js/views/logs.js:13
+msgid "?"
 msgstr ""
 
-#: views/settings.php:112
+#: views/view.settings.logfiles.php:62
+msgid "Actions"
+msgstr ""
+
+#: Logfiles.class.php:320
+msgid "Add Failed!"
+msgstr ""
+
+#: Logfiles.class.php:316
+msgid "Add Successful"
+msgstr ""
+
+#: views/view.settings.general.php:28
 msgid "Append Hostname"
 msgstr ""
 
-#: views/settings.php:127
+#: views/view.settings.general.php:29
 msgid "Appends the hostname to the name of the log files"
 msgstr ""
 
-#: views/logs.php:74
-msgid ""
-"Apply PCRE regex filter to the log output. <br/>This filters through the "
-"lines specified."
+#: views/view.log.header.php:76
+msgid "Apply Filter"
 msgstr ""
 
-#: views/logs.php:6
+#: views/view.log.header.php:94
+msgid "Apply Highlight"
+msgstr ""
+
+#: assets/js/views/logs.js:24 assets/js/views/settings.js:346
+#, perl-format
+msgid "Are you confirming that you want to remove this file (%s)?"
+msgstr ""
+
+#: views/page.logs.php:2
 msgid "Asterisk Log Files"
 msgstr "Asterisk loggfil"
 
@@ -60,11 +79,43 @@ msgstr ""
 msgid "Asterisk Logfiles"
 msgstr "Asterisk loggfil"
 
-#: views/settings.php:172
+#: views/view.log.header.php:107
+msgid "Auto-Scroll"
+msgstr ""
+
+#: views/view.log.header.php:157
+msgid "Buffer Size"
+msgstr ""
+
+#: assets/js/views/settings.js:230
+msgid "Cancel"
+msgstr ""
+
+#: views/view.log.header.php:79
+msgid "Clean Filter"
+msgstr ""
+
+#: views/view.log.header.php:97
+msgid "Clean Highlight"
+msgstr ""
+
+#: Logfiles.class.php:353
+msgid "Command not found!"
+msgstr ""
+
+#: assets/js/views/logs.js:21
+msgid "Copy to clipboard successful."
+msgstr ""
+
+#: assets/js/views/settings.js:223
+msgid "Create"
+msgstr ""
+
+#: views/view.settings.logfiles.php:25
 msgid "Critical errors and issues"
 msgstr ""
 
-#: views/settings.php:3
+#: views/view.settings.general.php:6
 msgid ""
 "Customize the display of debug message time stamps. See strftime(3) Linux "
 "manual for format specifiers. Note that there is also a fractional second "
@@ -72,114 +123,123 @@ msgid ""
 "hundredths, etc."
 msgstr ""
 
-#: views/settings.php:171 views/settings.php:185
+#: views/view.settings.logfiles.php:18
 msgid "DTMF"
 msgstr ""
 
-#: views/settings.php:59
+#: views/view.settings.general.php:5
 msgid "Date Format"
 msgstr ""
 
-#: views/settings.php:166 views/settings.php:184
+#: views/view.settings.logfiles.php:10
 msgid "Debug"
 msgstr ""
 
-#: views/settings.php:192
-msgid "Delete"
+#: views/view.log.header.php:21
+msgid "Delete File"
 msgstr ""
 
-#: views/settings.php:172 views/settings.php:186
+#: views/view.log.header.php:45 views/view.log.header.php:51
+#: assets/js/views/logs.js:14
+msgid "Disabled"
+msgstr ""
+
+#: views/view.settings.logfiles.php:24
 msgid "Error"
 msgstr ""
 
-#: functions.inc.php:112
-msgid "Error parsing log file or file not found!"
+#: views/view.log.header.php:24
+msgid "Export File"
 msgstr ""
 
-#: views/settings.php:173 views/settings.php:187
+#: Logfiles.class.php:346
+msgid "Failure Removal Process!"
+msgstr ""
+
+#: views/view.settings.logfiles.php:30
 msgid "Fax"
 msgstr ""
 
-#: views/settings.php:164
-msgid "Field"
-msgstr ""
-
-#: views/logs.php:19
-msgid "File"
-msgstr ""
-
-#: views/settings.php:165 views/settings.php:183
+#: views/view.settings.logfiles.php:4
 msgid "File Name"
 msgstr ""
 
-#: views/logs.php:62
+#: Logfiles.class.php:230
+msgid "File clean successfully."
+msgstr ""
+
+#: Logfiles.class.php:226
+msgid "File removed successfully."
+msgstr ""
+
+#: views/view.log.header.php:9
+msgid "Files"
+msgstr ""
+
+#: views/view.log.header.php:73
 msgid "Filter"
 msgstr ""
 
-#: views/settings.php:45
+#: views/page.settings.php:10
 msgid "General Settings"
 msgstr ""
 
-#: views/settings.php:164
-msgid "Information"
+#: views/view.log.header.php:90
+msgid "Highlight"
 msgstr ""
 
-#: functions.inc.php:121
-msgid "Invalid pattern"
+#: Logfiles.class.php:683
+msgid "Invalid pattern to filter!"
 msgstr ""
 
-#: views/settings.php:171
+#: views/view.settings.logfiles.php:19
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
 
-#: views/settings.php:8
+#: views/view.settings.general.php:9
 msgid ""
 "Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
 msgstr ""
 
-#: views/logs.php:44
+#: views/view.log.header.php:34
 msgid "Lines"
 msgstr ""
 
-#: views/logs.php:90 assets/js/views/logs.js:30
+#: views/view.settings.general.php:130
 msgid "Loading..."
 msgstr ""
 
-#: views/settings.php:38
+#: views/page.settings.php:2
 msgid "Log File Settings"
 msgstr ""
 
-#: views/settings.php:46
+#: views/page.settings.php:13
 msgid "Log Files"
 msgstr ""
 
-#: views/settings.php:139
+#: views/view.settings.general.php:38
 msgid "Log Queues"
 msgstr ""
 
-#: views/settings.php:83
+#: views/view.settings.general.php:15
 msgid "Log Rotation"
 msgstr ""
 
-#: functions.inc.php:385
-msgid "Log file settings"
+#: assets/js/views/logs.js:23
+msgid "Log loading completed successfully."
 msgstr ""
 
-#: views/settings.php:154
+#: views/view.settings.general.php:39
 msgid "Log queue events to a file"
 msgstr ""
 
-#: views/settings.php:162
-msgid "Logfile Help"
-msgstr ""
-
-#: views/settings.php:174
+#: views/view.settings.logfiles.php:37
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 
-#: views/settings.php:166
+#: views/view.settings.logfiles.php:11
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -187,136 +247,212 @@ msgid ""
 "storage) quickly."
 msgstr ""
 
-#: views/settings.php:165
+#: Logfiles.class.php:244 Logfiles.class.php:263 Logfiles.class.php:308
+msgid "Missing data!"
+msgstr ""
+
+#: Logfiles.class.php:182 Logfiles.class.php:219
+msgid "Missing file name!"
+msgstr ""
+
+#: Logfiles.class.php:291 Logfiles.class.php:304 Logfiles.class.php:330
+msgid "Missing name!"
+msgstr ""
+
+#: views/view.settings.logfiles.php:5
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
 
-#: views/settings.php:119 views/settings.php:146
+#: views/view.settings.logfiles.php:71
+msgid "New Log"
+msgstr ""
+
+#: views/view.settings.general.php:32 views/view.settings.general.php:42
+#: assets/js/views/logs.js:15 assets/js/views/settings.js:347
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:129
-msgid "No lines returned"
+#: assets/js/views/logs.js:16
+msgid "None"
 msgstr ""
 
-#: views/settings.php:174 views/settings.php:188
+#: views/view.settings.logfiles.php:36
 msgid "Notice"
 msgstr ""
 
-#: views/settings.php:16 views/settings.php:26
-msgid "Off"
-msgstr ""
-
-#: views/settings.php:15 views/settings.php:27
-msgid "On"
-msgstr ""
-
-#: views/settings.php:177
+#: views/view.settings.logfiles.php:50
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
+msgstr ""
+
+#: views/view.log.header.php:42
+msgid "Refresh Interval"
+msgstr ""
+
+#: views/view.settings.general.php:108 views/view.settings.general.php:135
+msgid "Reload"
+msgstr ""
+
+#: views/view.log.header.php:18
+msgid "Reload File"
+msgstr ""
+
+#: views/view.log.header.php:12
+msgid "Reload List"
+msgstr ""
+
+#: assets/js/views/settings.js:115
+msgid "Remove"
 msgstr ""
 
 #: logfiles.i18n.php:6
 msgid "Reports"
 msgstr ""
 
-#: Logfiles.class.php:31
-msgid "Reset"
-msgstr ""
-
-#: views/settings.php:90
+#: views/view.settings.general.php:21
 msgid "Rotate"
 msgstr ""
 
-#: views/settings.php:11
+#: views/view.settings.general.php:17
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
 
-#: views/settings.php:191
+#: views/view.settings.general.php:132 assets/js/views/settings.js:104
+msgid "Save"
+msgstr ""
+
+#: assets/js/views/logs.js:17
+msgid "Searching..."
+msgstr ""
+
+#: views/view.log.header.php:58 assets/js/views/logs.js:18
+msgid "Seconds"
+msgstr ""
+
+#: views/view.settings.logfiles.php:56
 msgid "Security"
 msgstr ""
 
-#: views/settings.php:88
+#: views/view.settings.general.php:20
 msgid "Sequential"
 msgstr ""
 
-#: views/settings.php:10
+#: views/view.settings.general.php:16
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
 
-#: views/settings.php:127
+#: Logfiles.class.php:248 Logfiles.class.php:267
+msgid "Setting not allowed!"
+msgstr ""
+
+#: views/view.settings.general.php:29
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: functions.inc.php:182
+#: Logfiles.class.php:849 Logfiles.class.php:923
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/logs.php:80 assets/js/views/logs.js:36
-msgid "Show"
+#: views/view.log.header.php:131
+msgid "Show Col Line"
 msgstr ""
 
-#: Logfiles.class.php:36
-msgid "Submit"
+#: views/view.log.header.php:144
+msgid "Show Line Spacing"
 msgstr ""
 
-#: views/settings.php:92
+#: views/view.settings.logfiles.php:43
+msgid ""
+"Step-by-step messages of every step of a call flow. Always enable and review "
+"if calls dont flow as expected"
+msgstr ""
+
+#: Logfiles.class.php:342
+msgid "Successful Remove"
+msgstr ""
+
+#: Logfiles.class.php:273
+msgid "Successful Update"
+msgstr ""
+
+#: Logfiles.class.php:595 Logfiles.class.php:650
+msgid "The file was not found!"
+msgstr ""
+
+#: Logfiles.class.php:336
+msgid "The filename not exist!"
+msgstr ""
+
+#: Logfiles.class.php:603 Logfiles.class.php:658
+msgid "The log file does not exist!"
+msgstr ""
+
+#: assets/js/views/logs.js:22
+msgid "The log file has fewer lines, the reload was successful."
+msgstr ""
+
+#: assets/js/views/settings.js:270
+msgid "The name of the file is already in use!"
+msgstr ""
+
+#: Logfiles.class.php:673
+msgid "The specified lines value is not a numeric value!"
+msgstr ""
+
+#: Logfiles.class.php:608 Logfiles.class.php:663
+msgid "The specified name is not from a file!"
+msgstr ""
+
+#: Logfiles.class.php:668
+msgid "There is no permission to read this log file!"
+msgstr ""
+
+#: Logfiles.class.php:613
+msgid "There is no permission to write this log file!"
+msgstr ""
+
+#: views/view.settings.general.php:22
 msgid "Timestamp"
 msgstr ""
 
-#: views/settings.php:12
+#: views/view.settings.general.php:18
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
 
-#: views/settings.php:173
+#: views/view.settings.logfiles.php:31
 msgid "Transmition and receiving of faxes"
 msgstr ""
 
-#: views/settings.php:175 views/settings.php:189
+#: Logfiles.class.php:277
+msgid "Update process failed!"
+msgstr ""
+
+#: views/view.settings.logfiles.php:42
 msgid "Verbose"
 msgstr ""
 
-#: functions.inc.php:384
-msgid "View Logs"
-msgstr ""
-
-#: views/settings.php:177 views/settings.php:190
+#: views/view.settings.logfiles.php:49
 msgid "Warning"
 msgstr ""
 
-#: views/settings.php:117 views/settings.php:144
+#: views/view.settings.general.php:31 views/view.settings.general.php:41
+#: assets/js/views/logs.js:19 assets/js/views/settings.js:347
 msgid "Yes"
 msgstr ""
 
-#: functions.inc.php:182
+#: Logfiles.class.php:849 Logfiles.class.php:923
 msgid "appendhostname is set to: Yes."
-msgstr ""
-
-#: install.php:59
-msgid "failed"
-msgstr ""
-
-#: install.php:53
-msgid "logger.conf symlinked to incorrect file:"
-msgstr ""
-
-#: install.php:57
-msgid "ok"
-msgstr ""
-
-#: install.php:55
-msgid "removing.."
 msgstr ""
 
 #~ msgid "Support"
