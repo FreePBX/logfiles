@@ -12,7 +12,8 @@ require_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
 require_once (dirname(__FILE__) . '/Tail.class.php');
 
 use \FreePBX\modules\Logfiles\Tail;
-use \logfiles_conf;
+use \FreePBX\modules\Logfiles\logfiles_conf;
+
 
 class Logfiles implements \BMO 
 {
@@ -805,28 +806,11 @@ class Logfiles implements \BMO
 		return $line;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	function dialplanHooks_get_configOld($engine)
 	{
 		switch ($engine)
 		{
 			case 'asterisk':
-				dbug ("-----------------INI - dialplanHooks_get_configOld in CLASS--------------------");
-
-
 				$logfiles_conf = logfiles_conf::create();
 				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
 
@@ -903,11 +887,6 @@ class Logfiles implements \BMO
 				break;
 		}
 	}
-
-
-
-
-
 
 	public function disabled__genConfig()
 	{

@@ -1,5 +1,7 @@
 <?php
 
+namespace FreePBX\modules\logfiles;
+
 class logfiles_conf
 {
 	var $_loggergeneral  = array();
