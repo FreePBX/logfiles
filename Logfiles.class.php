@@ -8,8 +8,8 @@
 
 namespace FreePBX\modules;
 
-require_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
-require_once (dirname(__FILE__) . '/Tail.class.php');
+include_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
+include_once (dirname(__FILE__) . '/Tail.class.php');
 
 use \FreePBX\modules\Logfiles\Tail;
 use \FreePBX\modules\Logfiles\logfiles_conf;
@@ -314,11 +314,11 @@ class Logfiles implements \BMO
 					$data = (array) $data;
 					if ( $this->setLogFiles($name, $data) )
 					{
-						$data_return = array("status" => true, "message" => _("Add Successful"));
+						$data_return = array("status" => true, "message" => _("Save Successful"));
 					}
 					else
 					{
-						$data_return = array("status" => false, "message" => _("Add Failed!"));
+						$data_return = array("status" => false, "message" => _("Save Failed!"));
 					}
 				}
 				needreload();
@@ -340,7 +340,7 @@ class Logfiles implements \BMO
 					{
 						if ( $this->destoryLogFiles($name) )
 						{
-							$data_return = array("status" => true, "message" => _("Successful Remove"));
+							$data_return = array("status" => true, "message" => _("Remove Successful"));
 						}
 						else
 						{

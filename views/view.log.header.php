@@ -128,7 +128,7 @@
             <ul class="dropdown-menu dropdown-menu-right">
                 <li>
                     <div class="input-group input-group-radioset">
-                        <span class="input-group-addon"><?php echo _("Show Col Line"); ?></span>
+                        <span class="input-group-addon"><?php echo _("Show Row Numbers"); ?></span>
                         <div class="input-group-btn">
                             <div class="radioset">
                                 <input type="radio" name="show_col_num_line" id="show_col_num_line_on" value="on">

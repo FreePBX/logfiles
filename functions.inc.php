@@ -1,7 +1,11 @@
 <?php
 
-include_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
-
+if (! class_exists('\FreePBX\modules\Logfiles\logfiles_conf')) {
+    include_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
+}
+if (! class_exists('logfiles_conf')) {
+    class_alias('\FreePBX\modules\Logfiles\logfiles_conf', 'logfiles_conf');
+}
 
 /**
  * Generate astierks configs
