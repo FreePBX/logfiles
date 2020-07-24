@@ -4,6 +4,8 @@ if (! class_exists('\FreePBX\modules\Logfiles\logfiles_conf')) {
     include_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
 }
 if (! class_exists('logfiles_conf')) {
+    // We create the alias since "/libraries/BMO/FileHooks.class.php::processOldHooks"
+    // cannot find the class if it has a namespace defined.
     class_alias('\FreePBX\modules\Logfiles\logfiles_conf', 'logfiles_conf');
 }
 
