@@ -8,12 +8,8 @@
 
 namespace FreePBX\modules;
 
-include_once (dirname(__FILE__) . '/Logfiles_conf.class.php');
-include_once (dirname(__FILE__) . '/Tail.class.php');
-
 use \FreePBX\modules\Logfiles\Tail;
 use \FreePBX\modules\Logfiles\logfiles_conf;
-
 
 class Logfiles implements \BMO 
 {
