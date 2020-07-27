@@ -1,6 +1,6 @@
 <?php
 
-namespace FreePBX\modules\logfiles;
+namespace FreePBX\modules\Logfiles;
 
 class logfiles_conf
 {
