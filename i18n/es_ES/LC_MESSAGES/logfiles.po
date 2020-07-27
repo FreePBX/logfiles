@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-23 14:29+0530\n"
+"POT-Creation-Date: 2020-07-27 02:36+0000\n"
 "PO-Revision-Date: 2016-12-09 08:26+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -40,14 +40,6 @@ msgstr ""
 
 #: views/view.settings.logfiles.php:62
 msgid "Actions"
-msgstr ""
-
-#: Logfiles.class.php:321
-msgid "Add Failed!"
-msgstr ""
-
-#: Logfiles.class.php:317
-msgid "Add Successful"
 msgstr ""
 
 #: views/view.settings.general.php:28
@@ -103,7 +95,7 @@ msgstr ""
 msgid "Clean Highlight"
 msgstr ""
 
-#: Logfiles.class.php:354
+#: Logfiles.class.php:350
 msgid "Command not found!"
 msgstr ""
 
@@ -161,7 +153,7 @@ msgstr "Error"
 msgid "Export File"
 msgstr ""
 
-#: Logfiles.class.php:347
+#: Logfiles.class.php:343
 msgid "Failure Removal Process!"
 msgstr ""
 
@@ -173,11 +165,11 @@ msgstr "Fax"
 msgid "File Name"
 msgstr "Nombre de Archivo"
 
-#: Logfiles.class.php:231
+#: Logfiles.class.php:227
 msgid "File clean successfully."
 msgstr ""
 
-#: Logfiles.class.php:227
+#: Logfiles.class.php:223
 msgid "File removed successfully."
 msgstr ""
 
@@ -197,7 +189,7 @@ msgstr "Configuración General"
 msgid "Highlight"
 msgstr ""
 
-#: Logfiles.class.php:684
+#: Logfiles.class.php:680
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -267,15 +259,15 @@ msgstr ""
 "muy detallados y pueden y deben llenar los archivos de registro (y el "
 "almacenamiento en disco) rápidamente."
 
-#: Logfiles.class.php:245 Logfiles.class.php:264 Logfiles.class.php:309
+#: Logfiles.class.php:241 Logfiles.class.php:260 Logfiles.class.php:305
 msgid "Missing data!"
 msgstr ""
 
-#: Logfiles.class.php:183 Logfiles.class.php:220
+#: Logfiles.class.php:179 Logfiles.class.php:216
 msgid "Missing file name!"
 msgstr ""
 
-#: Logfiles.class.php:292 Logfiles.class.php:305 Logfiles.class.php:331
+#: Logfiles.class.php:288 Logfiles.class.php:301 Logfiles.class.php:327
 msgid "Missing name!"
 msgstr ""
 
@@ -330,6 +322,10 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
+#: Logfiles.class.php:339
+msgid "Remove Successful"
+msgstr ""
+
 #: logfiles.i18n.php:6
 msgid "Reports"
 msgstr "Reportes"
@@ -350,6 +346,14 @@ msgstr ""
 #: views/view.settings.general.php:132 assets/js/views/settings.js:104
 msgid "Save"
 msgstr "Salvar"
+
+#: Logfiles.class.php:317
+msgid "Save Failed!"
+msgstr ""
+
+#: Logfiles.class.php:313
+msgid "Save Successful"
+msgstr ""
 
 #: assets/js/views/logs.js:17
 msgid "Searching..."
@@ -375,7 +379,7 @@ msgstr ""
 "Secuencial. renombra los Logs archivados en orden, como tal el mas nuevo "
 "tiene el numero de secuencia mas alto"
 
-#: Logfiles.class.php:249 Logfiles.class.php:268
+#: Logfiles.class.php:245 Logfiles.class.php:264
 msgid "Setting not allowed!"
 msgstr ""
 
@@ -385,18 +389,18 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:833 Logfiles.class.php:902
+#: Logfiles.class.php:829 Logfiles.class.php:898
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:131
-msgid "Show Col Line"
-msgstr ""
-
 #: views/view.log.header.php:144
 msgid "Show Line Spacing"
+msgstr ""
+
+#: views/view.log.header.php:131
+msgid "Show Row Numbers"
 msgstr ""
 
 #: views/view.settings.logfiles.php:43
@@ -407,23 +411,19 @@ msgstr ""
 "Mensajes paso-a-paso de cada paso en el flujo de una llamada. Habilítelo y "
 "revise siempre que el flujo de llamada no sea como se espera"
 
-#: Logfiles.class.php:343
-msgid "Successful Remove"
-msgstr ""
-
-#: Logfiles.class.php:274
+#: Logfiles.class.php:270
 msgid "Successful Update"
 msgstr ""
 
-#: Logfiles.class.php:596 Logfiles.class.php:651
+#: Logfiles.class.php:592 Logfiles.class.php:647
 msgid "The file was not found!"
 msgstr ""
 
-#: Logfiles.class.php:337
+#: Logfiles.class.php:333
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:604 Logfiles.class.php:659
+#: Logfiles.class.php:600 Logfiles.class.php:655
 msgid "The log file does not exist!"
 msgstr ""
 
@@ -435,19 +435,19 @@ msgstr ""
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:674
+#: Logfiles.class.php:670
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:609 Logfiles.class.php:664
+#: Logfiles.class.php:605 Logfiles.class.php:660
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:669
+#: Logfiles.class.php:665
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:614
+#: Logfiles.class.php:610
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -467,7 +467,7 @@ msgstr ""
 msgid "Transmition and receiving of faxes"
 msgstr "Transmisión y recepción de faxes"
 
-#: Logfiles.class.php:278
+#: Logfiles.class.php:274
 msgid "Update process failed!"
 msgstr ""
 
@@ -484,7 +484,7 @@ msgstr "Advertencia"
 msgid "Yes"
 msgstr "Si"
 
-#: Logfiles.class.php:833 Logfiles.class.php:902
+#: Logfiles.class.php:829 Logfiles.class.php:898
 msgid "appendhostname is set to: Yes."
 msgstr ""
 
