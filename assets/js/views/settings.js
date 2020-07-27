@@ -5,6 +5,24 @@
  * @license GPLv3
  */
 
+var module_logfiles_i18n = {
+	'CANCEL'						: _("Cancel"),
+	'CONFIRMING_REMOVE'				: _('Are you confirming that you want to remove this file (%s)?'),
+	'CREATE'						: _("Create"),
+	'DISABLED'						: _("Disabled"),
+	'ENABLED'						: _("Enabled"),
+	'ERROR_FILENAME_ALREADY_EXISTS'	: _("The name of the file is already in use!"),
+	'ERROR_FILENAME_MISSING'		: _("Missing the name of the file!"),
+	'ERROR_UNKNOW'					: _("Unknow error!"),
+	'NAME_NOT_DEFINED'				: _("Name is not defined!"),
+	'NO' 							: _("No"),
+	'OFF'							: _("Off"),
+	'ON'							: _("On"),
+	'REMOVE'						: _("Remove"),
+	'SAVE'							: _("Save"),
+	'YES'							: _("Yes"),
+}
+
 $(document).ready(function()
 {
 
@@ -64,6 +82,16 @@ function show_btn_apply_conf()
 	$('#button_reload').show();
 }
 
+function i18n_mod(find)
+{
+	var return_data = "Not found in i18n!";
+	if ( module_logfiles_i18n.hasOwnProperty(find) )
+	{
+		return_data = module_logfiles_i18n[find];
+	}
+	return return_data;
+}
+
 
 /*
  * INIT > TAB - LOG_FILES
@@ -89,10 +117,30 @@ function logfiles_cell_id(value, row, index, field)
 
 function logfiles_cell_acction(value, row, index)
 {
-	return $('<div/>', {
+	var data_return = $('<div/>', {
+		'role': 'group',
+		'class': 'btn-group btn-group-justified blocks'
+	});
+
+	if (row['readonly'] == "0")
+	{
+		data_return
+		.append(
+			$('<div/>', {
 				'role': 'group',
-				'class': 'btn-group btn-group-justified blocks'
+				'class': 'btn-group'
 			})
+			.append(
+				$('<a/>', {
+					'class': 'btn btn-primary btn-sm logfiles_save',
+					'title': i18n_mod("SAVE")
+				})
+				.append( $('<i/>', { 'class': 'fa fa-floppy-o'}) )
+			)
+		);
+		if (row['permanent'] == "0")
+		{
+			data_return
 			.append(
 				$('<div/>', {
 					'role': 'group',
@@ -100,24 +148,15 @@ function logfiles_cell_acction(value, row, index)
 				})
 				.append(
 					$('<a/>', {
-						'class': 'btn btn-primary btn-sm logfiles_save',
-						'title': _("Save")
-					})
-					.append( $('<i/>', { 'class': 'fa fa-floppy-o'}) )
-				),
-				$('<div/>', {
-					'role': 'group',
-					'class': 'btn-group'
-				})
-				.append(
-					$('<a/>', {
 						'class': 'btn btn-danger btn-sm logfiles_destory',
-						'title': _("Remove")
+						'title': i18n_mod("REMOVE")
 					})
 					.append( $('<i/>', { 'class': 'fa fa-trash'}) )
 				)
-			)
-			.get(0).outerHTML;
+			);
+		}
+	}
+	return data_return.get(0).outerHTML;
 }
 
 function logfiles_cell_dropdown(value, row, index, field)
@@ -136,8 +175,8 @@ function logfiles_cell_dropdown(value, row, index, field)
 			else if(value == 'on') 	{ value = 3; }
 		}
 
-		select.append(new Option('Off', 'off', (value == 0 ? true : false) ));
-		select.append(new Option('On' , '3',   (value == 3 ? true : false) ));
+		select.append(new Option( i18n_mod("OFF"), 'off', (value == 0 ? true : false) ));
+		select.append(new Option( i18n_mod("ON") , 'on',  (value == 3 ? true : false) ));
 		var i;
 		for (i = 4; i <= 10; i++)
 		{
@@ -145,55 +184,23 @@ function logfiles_cell_dropdown(value, row, index, field)
 		}
 		select.append(new Option('*' , '*', (value == '*' ? true : false) ));
 	}
+	else if (field == 'disabled')
+	{
+		select.append(new Option( i18n_mod("DISABLED"), '1', (value == '1' ? true : false) ));
+		select.append(new Option( i18n_mod("ENABLED") , '0', (value != '1' ? true : false) ));
+	}
 	else
 	{
-		select.append(new Option('On' , 'on', (value == 'on' ? true : false) ));
-		select.append(new Option('Off', '',   (value != 'on' ? true : false) ));
+		select.append(new Option( i18n_mod("ON") , 'on',  (value == 'on' ? true : false) ));
+		select.append(new Option( i18n_mod("OFF"), 'off', (value != 'on' ? true : false) ));
 	}
+
+	if ( ( row !== null ) && ( row['readonly'] == "1") )
+	{
+		select.attr('disabled', true);
+	}
+
 	return select.get(0).outerHTML;
-
-	// var html = '';
-	// html += '<select class="form-control" name="' + field + '">';
-
-	// if (field == 'verbose') 
-	// {
-	// 	if ( is_Numeric(value) )
-	// 	{
-	// 		value = parseFloat(value);
-	// 		if (value >= 10 )
-	// 		{
-	// 			value = 10;
-	// 		}
-	// 	}
-	// 	else
-	// 	{
-	// 		if (value == 'off')
-	// 		{
-	// 			value = 0;
-	// 		}
-	// 		else if(value == 'on')
-	// 		{
-	// 			value = 3;
-	// 		}
-	// 	}
-
-	// 	html += '<option value="off" ' + (value == 0 ? 'SELECTED' : '') + '>Off</option>';
-	// 	html += '<option value="3"   ' + (value == 3 ? 'SELECTED' : '') + '>On</option>';
-	// 	var i;
-	// 	for (i = 4; i <= 10; i++)
-	// 	{
-	// 		html += '<option value="' + i + '" ' + (value == i ? 'SELECTED' : '') + '>' + i + '</option>';
-	// 	}
-	// 	html += '<option value="*" ' + (value == '*' ? 'SELECTED' : '') + '>*</option>';
-	// }
-	// else
-	// {
-	// 	html += '<option value="on" ' + (value == 'on' ? 'SELECTED' : '') + '>On</option>';
-	// 	html += '<option value=""   ' + (value != 'on' ? 'SELECTED' : '') + '>Off</option>';
-	// }
-
-	// html += '</select>';
-	// return html;
 }
 
 function logfiles_add_new_line(e) 
@@ -206,13 +213,14 @@ function logfiles_add_new_line(e)
 			$('<tr/>', {})
 			.append(
 				$('<td/>', {'class': 'form-group'}).append( input ),
-				$('<td/>', {}).html( logfiles_cell_dropdown('',	   null, null, 'debug') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown(0,	   null, null, 'disabled') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown('on',  null, null, 'debug') ),
 				$('<td/>', {}).html( logfiles_cell_dropdown('off', null, null, 'dtmf') ),
-				$('<td/>', {}).html( logfiles_cell_dropdown('',    null, null, 'error') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown('on',  null, null, 'error') ),
 				$('<td/>', {}).html( logfiles_cell_dropdown('off', null, null, 'fax') ),
-				$('<td/>', {}).html( logfiles_cell_dropdown('',    null, null, 'notice') ),
-				$('<td/>', {}).html( logfiles_cell_dropdown('',    null, null, 'verbose') ),
-				$('<td/>', {}).html( logfiles_cell_dropdown('',    null, null, 'warning') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown('on',  null, null, 'notice') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown('on',  null, null, 'verbose') ),
+				$('<td/>', {}).html( logfiles_cell_dropdown('on',  null, null, 'warning') ),
 				$('<td/>', {}).html( logfiles_cell_dropdown('off', null, null, 'security') ),
 				$('<td/>', {})
 				.append(
@@ -220,14 +228,14 @@ function logfiles_add_new_line(e)
 					.append(
 						$('<div/>', { 'role': 'group', 'class': 'btn-group'})
 						.append(
-							$('<a/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': _("Create")})
+							$('<a/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': i18n_mod("CREATE") })
 							.append(
 								$('<i/>', { 'class': 'fa fa-check'}),
 							)
 						),
 						$('<div/>', { 'role': 'group', 'class': 'btn-group'})
 						.append(
-							$('<a/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': _("Cancel")})
+							$('<a/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': i18n_mod("CANCEL") })
 							.append(
 								$('<i/>', { 'class': 'fa fa-times'}),
 							)		
@@ -246,7 +254,7 @@ function logfiles_add_new(e)
 	
 	if ( ! process.checkId(false) )
 	{
-		process.errorFilename("Missing the name of the file!");
+		process.errorFilename( i18n_mod("ERROR_FILENAME_MISSING") );
 	}
 	else
 	{
@@ -267,13 +275,13 @@ function logfiles_add_new(e)
 				if (data.exist)
 				{
 					process.setStatusAjax("ERROR_FILENAME_EXIST");
-					process.errorFilename(_("The name of the file is already in use!"));
+					process.errorFilename( i18n_mod("ERROR_FILENAME_ALREADY_EXISTS") );
 				}
 				else { process.setStatusAjax("DONE"); }
 			}
 			else
 			{
-				process.errorFilename( data.message ? data.message : _("Unknow error!") );
+				process.errorFilename( data.message ? data.message : i18n_mod("ERROR_UNKNOW") );
 				process.setStatusAjax("STATUS_FAILED");
 			}
 		})
@@ -295,7 +303,7 @@ function logfiles_save(e, refres_all = false)
 
 	if ( ! process.checkId(false) )
 	{
-		process.errorFilename(_("Missing the name of the file!"));
+		process.errorFilename( i18n_mod("ERROR_FILENAME_MISSING") );
 	}
 	else
 	{
@@ -343,8 +351,8 @@ function logfiles_destory(e)
 	if ( process.checkId(true) )
 	{
 		fpbxConfirm(
-			sprintf(_('Are you confirming that you want to remove this file (%s)?'), process.getId() ),
-			_("Yes"),_("No"),
+			sprintf( i18n_mod("CONFIRMING_REMOVE") , process.getId() ),
+			i18n_mod("YES"), i18n_mod("NO"),
 			function()
 			{
 				var post_data = {
@@ -474,7 +482,7 @@ logfiles_process.prototype = {
 		{
 			if (showmsg)
 			{
-				fpbxToast(_("Name is not defined!"), '', 'error');
+				fpbxToast( i18n_mod("NAME_NOT_DEFINED"), '', 'error');
 			}
 			return false;
 		}

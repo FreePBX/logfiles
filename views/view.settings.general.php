@@ -132,7 +132,7 @@ HTML;
                                 <a href="#" class="btn setting_save" title="<?php echo _("Save"); ?>">
                                     <i class="fa fa-floppy-o"></i>
                                 </a>
-                                <a href="#" class="btn btn-danger setting_realod" title="<?php echo _("Reload"); ?>">
+                                <a href="#" class="btn btn-info setting_realod" title="<?php echo _("Reload"); ?>">
                                     <i class="fa fa-refresh"></i>
                                 </a>
                             </div>

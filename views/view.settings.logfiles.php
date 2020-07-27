@@ -6,6 +6,12 @@
             'class' => 'col-md-2',
             'data-formatter' => 'logfiles_cell_id'
         ],
+        'disabled' => [
+            'title' => _('Status'),
+            'help'  => _('If the file status is disabled it will be skipped during the asterisk configuration files creation process.'),
+            'class' => 'text-center',
+            'data-formatter' => 'logfiles_cell_dropdown'
+        ],
         'debug' => [
             'title' => _('Debug'),
             'help'  => _('Messages used for debuging. '
@@ -66,6 +72,14 @@
         ]
     ];
 ?>
+
+
+
+<div class="alert alert-info" role="alert">
+    <h4 class="alert-heading"><?php echo _("Activate remote log"); ?></h4>
+    <p><?php echo _('To activate the remote log, you must enable the file "syslog.local0" and add the following line in syslog.'); ?></p>
+    <p><b>local0.* action(type="omfwd" target="host|ip" port="514" protocol="tcp")</b></p>
+</div>
 
 <div id="toolbar-grid">
     <a href="#" class="btn btn-default" id="logfiles_add_new_line"><i class="fa fa-plus"></i> <?php echo _("New Log")?></a>

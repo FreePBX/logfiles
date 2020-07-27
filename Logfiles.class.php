@@ -20,17 +20,25 @@ class Logfiles implements \BMO
 		'appendhostname' => 'no'
 	);
 
-	//emptry == on
-	const DEFAULT_LOG_FILES = array(
+	const DEFAULT_LOG_FILES_VALUES = array(
 		'name'		=> '',
-		'debug'		=> '',
+		'permanent' => false,
+		'readonly'	=> false,
+		'disabled'	=> false,
+		'debug'		=> 'on',
 		'dtmf'		=> 'off',
-		'error'		=> '',
+		'error'		=> 'on',
 		'fax'		=> 'off',
-		'notice'	=> '',
-		'verbose'	=> '',
-		'warning'	=> '',
+		'notice'	=> 'on',
+		'verbose'	=> 'on',
+		'warning'	=> 'on',
 		'security'	=> 'off'
+	);
+
+	const DEFAULT_LOG_FILES = array(
+		'full' 			=> array('permanent' => true, 'readonly' => true,  'disabled' => false),
+		'console' 		=> array('permanent' => true, 'readonly' => true,  'disabled' => false),
+		'syslog.local0' => array('permanent' => true, 'readonly' => false, 'disabled' => true),
 	);
 
 	const FILES_ALLOW_ONLY_CLEAN = array(
@@ -63,7 +71,6 @@ class Logfiles implements \BMO
 		$this->path['dir_www'] 		= $this->config->get('AMPWEBROOT');
 		$this->path['dir_logs'] 	= $this->config->get('ASTLOGDIR');
 		$this->path['logger.conf'] 	= $this->path['etc_asterisk'].'/logger.conf';
-
 		
 		// links:
 		// 		/etc/asterisk/logger.conf -> /var/www/html/admin/modules/logfiles/etc/logger.conf
@@ -80,16 +87,8 @@ class Logfiles implements \BMO
 
 	public function install() 
 	{
-		//set some defualts
-		$first_install = $this->db->getOne('SELECT COUNT(*) FROM `logfile_settings`');
-		
-		if (!$first_install) 
-		{
-			//zero count (aka false) is a new install
-			$this->setLogFiles('full');
-			$this->setLogFiles('console');
-		}
-
+		$this->createDefaultLogFiles();
+		$this->updateFixValuesLogFiles();
 		$this->remove_file_link($this->path['logger.conf']);
 	}
 
@@ -268,13 +267,13 @@ class Logfiles implements \BMO
 					if ($this->setSetting($setting, $value))
 					{
 						$data_return = array("status" => true, "message" => _("Successful Update"));
+						needreload();
 					} 
 					else
 					{
 						$data_return = array("status" => false, "message" => _("Update process failed!"));
 					}
 				}
-				needreload();
 				break;
 			
 			case "logfiles_get_all":
@@ -308,16 +307,20 @@ class Logfiles implements \BMO
 				{
 					//convert stdClass to array
 					$data = (array) $data;
-					if ( $this->setLogFiles($name, $data) )
+					if ( ! $this->isAllowEditFile($name) )
+					{
+						$data_return = array("status" => false, "message" => _("Operation not allowed!"));
+					}
+					elseif ( $this->setLogFiles($name, $data) )
 					{
 						$data_return = array("status" => true, "message" => _("Save Successful"));
+						needreload();
 					}
 					else
 					{
 						$data_return = array("status" => false, "message" => _("Save Failed!"));
 					}
 				}
-				needreload();
 				break;
 
 			case "logfiles_destory":
@@ -334,9 +337,14 @@ class Logfiles implements \BMO
 					}
 					else
 					{
-						if ( $this->destoryLogFiles($name) )
+						if ( ! $this->isAllowDestroyFile($name) )
+						{
+							$data_return = array("status" => false, "message" => _("Operation not allowed!"));
+						}
+						elseif ( $this->destoryLogFiles($name) )
 						{
 							$data_return = array("status" => true, "message" => _("Remove Successful"));
+							needreload();
 						}
 						else
 						{
@@ -411,7 +419,60 @@ class Logfiles implements \BMO
 
 
 
+	public function createDefaultLogFiles() 
+	{
+		$default_files = self::DEFAULT_LOG_FILES;
+		foreach ($default_files as $file => $options)
+		{
+			$options_new = $options;
+			if ( $this->isExistLogFiles($file) )
+			{
+				$options_old = $this->getLogFiles($file);
+				unset($options_old['name']);
+				$options_new = array_merge($options_old, $options);
+			}
+			$this->setLogFiles($file, $options_new);
+		}
 
+		// foce create file module sysadmin
+		$this->setLogFiles('fail2ban', array(
+			'permanent' => true, 
+			'readonly' 	=> true,
+			'disabled' 	=> false,
+			'debug'		=> 'off',
+			'dtmf'		=> 'off',
+			'error'		=> 'off',
+			'fax'		=> 'off',
+			'notice'	=> 'on',
+			'verbose'	=> 'off',
+			'warning'	=> 'on',
+			'security'	=> 'on'
+		));
+	}
+	public function updateFixValuesLogFiles()
+	{
+		$all_files = $this->getLogfilesAll();
+		foreach ($all_files as $file)
+		{
+			$fix = false;
+			$name = $file['name'];
+			unset($file['name']);
+
+			foreach ($file as $opt => &$val)
+			{
+				if ( in_array($opt, array('permanent', 'readonly', 'disabled')) ) { continue; }
+
+				// update empty old values by value "on"
+				if ( empty ( $val ) )
+				{
+					$val = "on";
+					$fix = true;
+				}
+			}
+			if ($fix) { $this->setLogFiles($name, $file); }
+		}
+
+	}
 
 	public function countLogFiles()
 	{
@@ -435,24 +496,17 @@ class Logfiles implements \BMO
 		return $ret;
 	}
 
-	public function getLogFiles($name = NULL)
+	public function getLogFiles($name)
 	{
 		$query = $this->db->prepare( 'SELECT * FROM `logfile_logfiles`' . (($name) ? ' where `name` = ?' : '') );
-		if ($name)
-		{
-			$query->execute(array($name));
-		}
-		else
-		{
-			$query->execute();
-		}
-		return $query->fetchAll(PDO::FETCH_ASSOC);
+		$query->execute(array($name));
+		return $query->fetch(\PDO::FETCH_ASSOC);
 	}
 
 	public function setLogFiles($name, $data = array())
 	{
 		$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
-		$default = self::DEFAULT_LOG_FILES;
+		$default = self::DEFAULT_LOG_FILES_VALUES;
 		$data_return = false;
 		
 		if ($name)
@@ -462,6 +516,12 @@ class Logfiles implements \BMO
 			// values to avoid problems with the order of the columns in the table.
 			$columns = "";
 			$arr_val = array ();
+
+			$old_val = array();
+			if ( $this->isExistLogFiles($name) )
+			{
+				$old_val = $this->getLogFiles($name);
+			}
 
 			foreach ($default as $key => $val_default)
 			{
@@ -480,8 +540,27 @@ class Logfiles implements \BMO
 				{
 					$new_val = $data[$key];
 				}
+				else
+				{
+					if ( ! empty( $old_val ) )
+					{
+						// Get old value
+						if ( in_array($key, array('permanent', 'readonly', 'disabled')) )
+						{
+							$new_val = $old_val[$key];
+						}
+					}
+				}
+
+				// convert boolean value to tinyint
+				if ( in_array($key, array('permanent', 'readonly', 'disabled')) )
+				{
+					$new_val = boolval($new_val) ? 1 : 0;
+				}
+
 				array_push($arr_val, $new_val);
 			}
+
 			$sql_args = implode(',', array_fill(0, count($arr_val), '?'));
 			$ret = $this->db->prepare('REPLACE INTO `logfile_logfiles` ('.$columns.') VALUES ('.$sql_args.')')
 							->execute($arr_val);
@@ -508,7 +587,23 @@ class Logfiles implements \BMO
 		return $data_return;
 	}
 
+	public function isAllowEditFile($name)
+	{
+		$data_file = $this->getLogFiles($name);
+		return ! boolval($data_file['readonly']);
+	}
 
+	public function isAllowDestroyFile($name)
+	{
+		$data_file = $this->getLogFiles($name);
+		return ! boolval($data_file['permanent']);
+	}
+
+	public function isDisabledFile($name)
+	{
+		$data_file = $this->getLogFiles($name);
+		return boolval($data_file['disabled']);
+	}
 
 
 
@@ -884,7 +979,7 @@ class Logfiles implements \BMO
 		}
 	}
 
-	public function disabled__genConfig()
+	public function genConfig()
 	{
 		$general = "";
 		foreach (self::DEFAULT_SETTING as $k => $v)
@@ -919,23 +1014,34 @@ class Logfiles implements \BMO
 			unset($v['name']);
 			$name_opt = array();
 
+			if ( $this->isDisabledFile($name) )
+			{
+				continue;
+			}
+
 			foreach ($v as $opt => $set)
 			{
 				switch ($opt)
 				{
+					case 'permanent':
+					case 'readonly':
+					case 'disabled':
+						continue;
+						break;
+					
 					case 'verbose':
 						if (is_numeric($set) || $set == '*')
 						{
 							$name_opt[] = 'verbose(' . $set . ')';
 						}
-						elseif ($set === 'on')
+						elseif ($set == 'on')
 						{
 							$name_opt[] = $opt;
 						}
 						break;
 
 					default:
-						if ($set === 'on')
+						if ($set == 'on')
 						{
 							if ($has_security_option || $opt != 'security')
 							{
@@ -958,7 +1064,7 @@ class Logfiles implements \BMO
 		return $conf;
 	}
 
-	public function disabled__writeConfig($conf)
+	public function writeConfig($conf)
 	{
 		$this->FreePBX->WriteConfig($conf);
 	}
