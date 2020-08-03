@@ -828,6 +828,22 @@ class Logfiles implements \BMO
 		$span_html = '<span class="%s">%s</span>';
 		foreach($lines as $line)
 		{
+			$line_data = explode(":", $line, 2);
+
+			//detect timestamp and convert format.
+			if (count($line_data) == 2)
+			{
+				if (is_numeric ($line_data[0]))
+				{
+					//1587214309: Wall: 'Firewall service now starting.
+					$timestamp 	= gmdate('Y-m-d H:i:s', trim($line_data[0]) );
+					$msg 		= trim($line_data[1]);
+					$line 		= sprintf("[%s] - %s", $timestamp, $msg);
+					unset($timestamp);
+					unset($msg);
+				}
+			}
+
 			$line_html = htmlentities($line, ENT_COMPAT | ENT_HTML401, "UTF-8");
 			switch (true)
 			{
@@ -847,10 +863,15 @@ class Logfiles implements \BMO
 				case strpos($line, 'FATAL'):
 				case strpos($line, 'CRITICAL'):
 				case strpos($line, 'ERROR'):
+				case stripos($line, 'exception'):
 					$line = sprintf($span_html, "red", $line_html);
 					break;
 				case strpos($line, 'SECURITY'):
 					$line = sprintf($span_html, "yellow", $line_html);
+					break;
+				case strpos($line, 'iptables'):
+				case strpos($line, 'ip6tables'):
+					$line = $this->highlight_iptables($line);
 					break;
 				default:
 					$line_html = htmlentities($line, ENT_NOQUOTES, "UTF-8");
@@ -894,6 +915,27 @@ class Logfiles implements \BMO
 		$line = preg_replace('/(?<=\(\").*(?=\"\,)/', $span, $line, 1);
 		$line = preg_replace('/(?<=\,( )\").*(?=\"\))/', $span, $line, 1);
 
+		return $line;
+	}
+
+	public function highlight_iptables($line) 
+	{
+		$span_html = '<span class="%s">%s</span>';
+		$line_html = htmlentities($line, ENT_COMPAT | ENT_HTML401, "UTF-8");
+		switch (true)
+		{
+			case strpos($line, 'ACCEPT'):
+				$line = sprintf($span_html, "green", $line_html);
+				break;
+			case strpos($line, 'REJECT'):
+				$line = sprintf($span_html, "orange", $line_html);
+				break;
+			case strpos($line, 'DROP'):
+				$line = sprintf($span_html, "red", $line_html);
+				break;
+			default:
+				$line = sprintf($span_html, "cyan", $line_html);
+		}
 		return $line;
 	}
 
