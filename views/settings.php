@@ -198,7 +198,7 @@ function verbose_log_dropdown($name,$value,$i){
 												foreach ($logfiles as $log) {;
 													echo '<tr>';
 													echo '<td>';
-													echo '<input type="text" class="form-control" name="logfiles[name][]" value="'.$log['name'].'">';
+													echo '<input type="text" class="form-control" name="logfiles[name][]" value="'.htmlentities($log['name']).'">';
 													echo '</td>';
 													echo '<td>';
 													echo log_dropdown("debug",$log['debug'],$i);
