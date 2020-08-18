@@ -293,8 +293,8 @@ class Logfiles implements \BMO
 				break;
 
 			case "logfiles_set":
-				$name = isset($_REQUEST['namefile']) ? $_REQUEST['namefile'] : NULL;
-				$data = isset($_REQUEST['data']) ? json_decode($_REQUEST['data']) : NULL;
+				$name = isset($_REQUEST['namefile']) ? $this->cleanNameLogFiles($_REQUEST['namefile']) : NULL;
+				$data = isset($_REQUEST['data'])     ? json_decode($_REQUEST['data'])                  : NULL;
 				if ( empty($name))
 				{
 					$data_return = array("status" => false, "message" => _("Missing name!"));
@@ -631,6 +631,11 @@ class Logfiles implements \BMO
 			$data_return = ! $this->isExistLogFiles($name);
 		}
 		return $data_return;
+	}
+	
+	public function cleanNameLogFiles($name)
+	{
+		return str_replace(array('\\', '/', ':', '*', '?', '"', '<', '>', '|'), "", $name);
 	}
 
 	public function isAllowEditFile($name)

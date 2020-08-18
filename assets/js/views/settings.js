@@ -81,7 +81,7 @@ function logfiles_cell_id(value, row, index, field)
 	var html = $('<input/>', { 
 					'type': 'hidden',
 					'name': field,
-					'value': value
+					'value': row.name
 				})
 				.get(0).outerHTML;
 
@@ -325,7 +325,7 @@ function logfiles_destory(e)
 	if ( process.checkId(true) )
 	{
 		fpbxConfirm(
-			sprintf( i18n_mod("CONFIRMING_REMOVE") , process.getId() ),
+			sprintf( i18n_mod("CONFIRMING_REMOVE") , process.getId(true) ),
 			i18n_mod("YES"), i18n_mod("NO"),
 			function()
 			{
@@ -434,9 +434,14 @@ logfiles_process.prototype = {
 			this.getRow().find('a.btn').removeClass('disabled');
 		}
 	},
-	getId: function()
+	getId: function(htmlEncode = false)
 	{
-		return $(this.getRow()).find('input[name="name"]').val();
+		var data_return = $(this.getRow()).find('input[name="name"]').val();
+		if (htmlEncode)
+		{
+			data_return = $('<div/>').text(data_return).html();
+		}
+		return data_return;
 	},
 	getControlsVal: function()
 	{	
