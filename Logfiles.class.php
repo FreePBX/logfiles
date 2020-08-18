@@ -354,6 +354,52 @@ class Logfiles implements \BMO
 				}
 				break;
 
+			case "i18n":
+				$filejs = isset($_REQUEST['filejs']) ? $_REQUEST['filejs'] : NULL;
+				switch( strtolower($filejs) ) 
+				{
+					case "logs":
+						$data_return = array("status" => true, "i18n" => array(
+							'?'			=> _("?"),
+							'DISABLED'	=> _("Disabled"),
+							'NO' 		=> _("No"),
+							'NONE'		=> _("None"),
+							'SEARCHING'	=> _("Searching..."),
+							'SECONDS'	=> _("Seconds"),
+							'YES'		=> _("Yes"),
+		
+							'COPY_CLIPBOARD_OK'				=> _("Copy to clipboard successful."),
+							'LESS_LINES_RELOAD_LOG_OK'		=> _("The log file has fewer lines, the reload was successful."),
+							'LOAD_LOG_OK' 					=> _("Log loading completed successfully."),
+							'QUESTION_CONFIRM_DELETE_FILE'	=> _("Are you confirming that you want to remove this file (%s)?"),
+						));
+						break;
+
+					case "settings":
+						$data_return = array("status" => true, "i18n" => array(
+							'CANCEL'						=> _("Cancel"),
+							'CONFIRMING_REMOVE'				=> _('Are you confirming that you want to remove this file (%s)?'),
+							'CREATE'						=> _("Create"),
+							'DISABLED'						=> _("Disabled"),
+							'ENABLED'						=> _("Enabled"),
+							'ERROR_FILENAME_ALREADY_EXISTS'	=> _("The name of the file is already in use!"),
+							'ERROR_FILENAME_MISSING'		=> _("Missing the name of the file!"),
+							'ERROR_UNKNOW'					=> _("Unknow error!"),
+							'NAME_NOT_DEFINED'				=> _("Name is not defined!"),
+							'NO' 							=> _("No"),
+							'OFF'							=> _("Off"),
+							'ON'							=> _("On"),
+							'REMOVE'						=> _("Remove"),
+							'SAVE'							=> _("Save"),
+							'YES'							=> _("Yes")
+						));
+						break;
+
+					default:
+						$data_return = array("status" => false, "message" => _("File not found!"), "i18n" => array());
+				}
+				break;
+
 			defualt:
 				$data_return = array("status" => false, "message" => _("Command not found!"), "command" => $command);
 			

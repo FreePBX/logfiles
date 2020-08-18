@@ -5,23 +5,7 @@
  * @license GPLv3
  */
 
-var module_logfiles_i18n = {
-	'CANCEL'						: _("Cancel"),
-	'CONFIRMING_REMOVE'				: _('Are you confirming that you want to remove this file (%s)?'),
-	'CREATE'						: _("Create"),
-	'DISABLED'						: _("Disabled"),
-	'ENABLED'						: _("Enabled"),
-	'ERROR_FILENAME_ALREADY_EXISTS'	: _("The name of the file is already in use!"),
-	'ERROR_FILENAME_MISSING'		: _("Missing the name of the file!"),
-	'ERROR_UNKNOW'					: _("Unknow error!"),
-	'NAME_NOT_DEFINED'				: _("Name is not defined!"),
-	'NO' 							: _("No"),
-	'OFF'							: _("Off"),
-	'ON'							: _("On"),
-	'REMOVE'						: _("Remove"),
-	'SAVE'							: _("Save"),
-	'YES'							: _("Yes"),
-}
+var global_module_logfiles_i18n = i18nGet('settings');
 
 $(document).ready(function()
 {
@@ -80,16 +64,6 @@ $(document).ready(function()
 function show_btn_apply_conf()
 {
 	$('#button_reload').show();
-}
-
-function i18n_mod(find)
-{
-	var return_data = "Not found in i18n!";
-	if ( module_logfiles_i18n.hasOwnProperty(find) )
-	{
-		return_data = module_logfiles_i18n[find];
-	}
-	return return_data;
 }
 
 

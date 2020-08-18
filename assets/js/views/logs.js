@@ -5,28 +5,13 @@
  * @license GPLv3
  */
 
-var global_module_logfiles_timeout_resume 	= null;
+var global_module_logfiles_timeout_resume   = null;
 var global_module_logfiles_refresh_interval = null;
-var global_module_logfiles_id_tail			= null;
-
-var module_logfiles_i18n = {
-	'?'			: _("?"),
-	'DISABLED'	: _("Disabled"),
-	'NO' 		: _("No"),
-	'NONE'		: _("None"),
-	'SEARCHING'	: _("Searching..."),
-	'SECONDS'	: _("Seconds"),
-	'YES'		: _("Yes"),
-
-	'COPY_CLIPBOARD_OK'				: _("Copy to clipboard successful."),
-	'LESS_LINES_RELOAD_LOG_OK'		: _("The log file has fewer lines, the reload was successful."),
-	'LOAD_LOG_OK' 					: _("Log loading completed successfully."),
-	'QUESTION_CONFIRM_DELETE_FILE'	: _("Are you confirming that you want to remove this file (%s)?"),
-}
+var global_module_logfiles_id_tail          = null;
+var global_module_logfiles_i18n             = i18nGet('logs');
 
 $(document).ready(function()
 {
-
 	$(window).resize(function() { log_view_resize(); });
 	
 	// Detect when the global banner closes and run resize.
@@ -200,17 +185,6 @@ function delay(ms, fn)
 }
 
 
-function i18n_mod(find)
-{
-	var return_data = "Not found in i18n!";
-	if ( module_logfiles_i18n.hasOwnProperty(find) )
-	{
-		return_data = module_logfiles_i18n[find];
-	}
-	return return_data;
-}
-
-
 
 function log_view_resize()
 {
@@ -254,7 +228,7 @@ function delete_log(toolbar)
 					log_file: name_file
 				};
 				process.begin();
-				$.post(window.FreePBX.ajaxurl, post_data, function(data) 
+				$.post(window.FreePBX.ajaxurl, post_data, function(data)
 				{
 					process.setStatusAjax("AJAX_SEND_QUERY");
 				})
