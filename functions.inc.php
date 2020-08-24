@@ -1,8 +1,5 @@
 <?php
 
-//Disabled get_config
-return;
-
 if (! class_exists('\FreePBX\modules\Logfiles\logfiles_conf')) {
     include_once (dirname(__FILE__) . '/Logfiles_conf.php');
 }
@@ -22,6 +19,9 @@ if (! class_exists('logfiles_conf')) {
  */
 function logfiles_get_config($engine)
 {
-    $lf = \FreePBX::Logfiles();
-    $lf->dialplanHooks_get_configOld($engine);
+    // DISABLED get_config
+    // NOTE: If add return in start the script, we obtain exception when restart freepbx.
+
+    // $lf = \FreePBX::Logfiles();
+    // $lf->dialplanHooks_get_configOld($engine);
 }
