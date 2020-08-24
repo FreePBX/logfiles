@@ -5,28 +5,13 @@
  * @license GPLv3
  */
 
-var global_module_logfiles_timeout_resume 	= null;
+var global_module_logfiles_timeout_resume   = null;
 var global_module_logfiles_refresh_interval = null;
-var global_module_logfiles_id_tail			= null;
-
-var module_logfiles_i18n = {
-	'?'			: _("?"),
-	'DISABLED'	: _("Disabled"),
-	'NO' 		: _("No"),
-	'NONE'		: _("None"),
-	'SEARCHING'	: _("Searching..."),
-	'SECONDS'	: _("Seconds"),
-	'YES'		: _("Yes"),
-
-	'COPY_CLIPBOARD_OK'				: _("Copy to clipboard successful."),
-	'LESS_LINES_RELOAD_LOG_OK'		: _("The log file has fewer lines, the reload was successful."),
-	'LOAD_LOG_OK' 					: _("Log loading completed successfully."),
-	'QUESTION_CONFIRM_DELETE_FILE'	: _("Are you confirming that you want to remove this file (%s)?"),
-}
+var global_module_logfiles_id_tail          = null;
+var global_module_logfiles_i18n             = i18nGet('logs');
 
 $(document).ready(function()
 {
-
 	$(window).resize(function() { log_view_resize(); });
 	
 	// Detect when the global banner closes and run resize.
@@ -104,6 +89,32 @@ $(document).ready(function()
 		process.applyHighlight();
 	});
 
+	$("input:radio[name='show_only_rows_highlight']", toolbar).on("click", function(e)
+	{
+		btn_highlight.click();
+	});
+
+
+	$('.btn-fullscreen', toolbar).on("click", function(e)
+	{
+		e.preventDefault();
+		var process = new read_file_process(toolbar, log_area, true, false);
+		process.fullScreen(true);
+	});
+
+	$(document).keydown(function(event)
+	{
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+		// console.log(keycode);
+		if(keycode == '27')
+		{
+			var process = new read_file_process(toolbar, log_area, true, false);
+			process.fullScreen(false);
+		}
+	});
+	
+
+
 	$(document).on("click", ".copy-line", function(e)
 	{
 		t = e.target || e.srcElement;
@@ -135,11 +146,12 @@ $(document).ready(function()
 
 	//run only once at startup
 	log_view_resize();
-	$("input:radio[name='show_col_num_line']", toolbar).val(["on"]);
-	$("input:radio[name='show_line_spacing']", toolbar).val(["on"]);
-	$("input:radio[name='auto_scroll']", 	   toolbar).val(["on"]);
-	$("input[name='size_buffer']", 	   		   toolbar).val("0");
-	$("input[name='lines_log']", 	   		   toolbar).val("500");
+	$("input:radio[name='show_only_rows_highlight']", toolbar).val(["on"]);
+	$("input:radio[name='show_col_num_line']", 		  toolbar).val(["on"]);
+	$("input:radio[name='show_line_spacing']", 		  toolbar).val(["on"]);
+	$("input:radio[name='auto_scroll']", 	   		  toolbar).val(["on"]);
+	$("input[name='size_buffer']", 	   		   		  toolbar).val("0");
+	$("input[name='lines_log']", 	   		   		  toolbar).val("500");
 	$('.btn-reload-list').click();
 });
 
@@ -170,17 +182,6 @@ function delay(ms, fn)
 		clearTimeout(timer)
 		timer = setTimeout(fn.bind(this, ...args), ms || 0)
 	}
-}
-
-
-function i18n_mod(find)
-{
-	var return_data = "Not found in i18n!";
-	if ( module_logfiles_i18n.hasOwnProperty(find) )
-	{
-		return_data = module_logfiles_i18n[find];
-	}
-	return return_data;
 }
 
 
@@ -227,7 +228,7 @@ function delete_log(toolbar)
 					log_file: name_file
 				};
 				process.begin();
-				$.post(window.FreePBX.ajaxurl, post_data, function(data) 
+				$.post(window.FreePBX.ajaxurl, post_data, function(data)
 				{
 					process.setStatusAjax("AJAX_SEND_QUERY");
 				})
@@ -543,16 +544,17 @@ function read_file_process(toolbar, log_area, resume, stoptimer = true)
 	this.new_line_expire 		  = 60;		// Seconds before newline styles are removed, setting 0 will not remove styles.
 	this.new_line_enabled		  = true;	// TRUE styles are applied to new lines, FALSE styles are not applied.
 
-	this.name_select_filename	  	  = 'filename_log';
-	this.name_input_filter		  	  = 'fileter_log';
-	this.name_input_num_lines	  	  = 'lines_log';
-	this.name_input_highlight	  	  = 'highlight_log';
-	this.name_size_buffer			  = 'size_buffer';
-	this.name_radio_autoscroll	  	  = 'auto_scroll';
-	this.name_radio_show_col_num  	  = 'show_col_num_line';
-	this.name_radio_show_line_spacing = 'show_line_spacing';
-	this.name_txt_refres_interval 	  = '.refresh-interval-time-now';
-	this.name_txt_count_highlight 	  = '.count_highlight';
+	this.name_select_filename				 = 'filename_log';
+	this.name_input_filter					 = 'fileter_log';
+	this.name_input_num_lines				 = 'lines_log';
+	this.name_input_highlight				 = 'highlight_log';
+	this.name_size_buffer					 = 'size_buffer';
+	this.name_radio_autoscroll				 = 'auto_scroll';
+	this.name_radio_show_col_num			 = 'show_col_num_line';
+	this.name_radio_show_line_spacing		 = 'show_line_spacing';
+	this.name_radio_show_only_rows_highlight = 'show_only_rows_highlight';
+	this.name_txt_refres_interval			 = '.refresh-interval-time-now';
+	this.name_txt_count_highlight			 = '.count_highlight';
 	
 
 	this.class_txt_highlight      = 'highlight_log';
@@ -563,6 +565,7 @@ function read_file_process(toolbar, log_area, resume, stoptimer = true)
 	this.class_loading			  = '.ico_loading';
 	this.class_lines_log		  = '.lines_log';
 	this.class_new_line_level	  = 'newline_leve_';
+	this.class_fullscreen		  = 'fullscreenlog';
 
 	this.class_line_spacing		  = 'line_spacing';
 	
@@ -900,6 +903,10 @@ read_file_process.prototype = {
 	},
 	
 
+	isShowOnlyRowsHighlight: function()
+	{
+		return (this.getToolBar().find("[name='"+ this.name_radio_show_only_rows_highlight +"']:checked").val() == "on" ? true : false);
+	},
 	getHighlight: function()
 	{
 		return this.getValByName(this.name_input_highlight);
@@ -911,16 +918,6 @@ read_file_process.prototype = {
 	cleanHighlight: function(update_count = true, show = true)
 	{
 		$(this.getLogAreaLines()).removeHighlight();
-
-		/*
-		 * CODE OLD: Problem with the symbol " (double quotes).
-		
-		this.getLogAreaLines().find('span.' + this.class_txt_highlight).each(function() 
-		{
-			$(this).after($(this).html());
-			$(this).remove();
-		});
-		*/
 
 		if (show) 		  { this.getLogAreaLines().find('div.' + this.class_line_log).show(); }
 		if (update_count) { this.updateCountyHighlight(); }
@@ -956,21 +953,15 @@ read_file_process.prototype = {
 				caseSensitive: false
 			});
 
-			/*
-			 * CODE OLD: Problem with the symbol " (double quotes).
-			
-			var self = this;
-			var regex = new RegExp( this.getHighlight().replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi');
-			$(element_line).find('span.' + this.class_line_log_data).each(function()
+			if ( this.isShowOnlyRowsHighlight() )
 			{
-				$(this).html(
-					$(this).html().replace(regex, function(e) { return sprintf('<span class="%s">%s</span>', self.class_txt_highlight, e); }) 
-				);
-			});
-			*/
-
-			if ( this.isLineHighlight(element_line) ) 	{ $(element_line).show(); }
-			else 										{ $(element_line).hide(); }
+				if ( this.isLineHighlight(element_line) ) 	{ $(element_line).show(); }
+				else 										{ $(element_line).hide(); }
+			}
+			else
+			{
+				$(element_line).show();
+			}
 		}
 		return element_line;
 	},
@@ -1068,6 +1059,27 @@ read_file_process.prototype = {
 	getBufferSize: function()
 	{
 		return this.getValByName(this.name_size_buffer);
+	},
+	
+
+	isFullScreen: function()
+	{
+		return this.getLogArea().hasClass(this.class_fullscreen);
+	},
+	fullScreen: function(new_status)
+	{
+		if ( ( ( new_status ) && ( ! this.isFullScreen() ) ) || ( ( ! new_status) && ( this.isFullScreen() ) ) )
+		{
+			this.getLogArea().toggleClass(this.class_fullscreen);
+			if ( this.isFullScreen() ) 
+			{
+				$("body").css("overflow", "hidden");
+			} 
+			else
+			{
+				$("body").css("overflow", "auto");
+			}
+		}
 	}
 
 }

@@ -25,17 +25,29 @@
 {
 	background-color: 	#0f192a;
 
-	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
-	box-shadow: 		0 0 5px 2px rgba(0, 0, 0, .5);
+	/* -webkit-box-shadow:  5px 5px 10px 2px rgba(0, 0, 0, .5); */
+	/* box-shadow: 			5px 5px 10px 2px rgba(0, 0, 0, .5); */
+	/* margin-bottom: 		10px; */
 	
 	padding: 			10px 10px 0px 10px;
-	border-radius: 		10px;
+	border-radius: 		5px;
 	position: 			relative;
 	min-height: 		100px;
 
 	/* scrollbar-color: rebeccapurple green; */
 	scrollbar-width:  	thin;
 	overflow: 			auto;
+}
+
+.fullscreenlog {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	bottom: 0px !important;
+	right: 0px !important;	
+	z-index: 99999999 !important;
+	max-height: 100% !important;
+	border-radius: 0px !important;
 }
 
 /*
@@ -67,7 +79,6 @@
 	font-family: "Courier New", Courier, monospace;
 	font-size:	 0.85em;
 	color:		 white;
-	text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 
@@ -234,7 +245,12 @@
 	margin: 0px;
 }
 
-
+.toolbar .btn-onlyico i
+{
+	font-size: 1.3em;
+	position: relative; 
+	top: 2px;
+}
 
 
 

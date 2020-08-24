@@ -17,4 +17,5 @@
 	</div>
 </div>
 <script type="text/javascript" src="modules/logfiles/vendor/itay-grudev/jquery.text.highlight/jquery.text.highlight.min.js"></script>
+<script type="text/javascript" src="modules/logfiles/assets/js/views/global.js"></script>
 <script type="text/javascript" src="modules/logfiles/assets/js/views/logs.js"></script>

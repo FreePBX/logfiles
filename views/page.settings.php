@@ -27,4 +27,5 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="modules/logfiles/assets/js/views/global.js"></script>
 <script type="text/javascript" src="modules/logfiles/assets/js/views/settings.js"></script>

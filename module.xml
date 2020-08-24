@@ -32,6 +32,9 @@
 		</table>
 		<table name="logfile_logfiles">
 			<field name="name" type="string" length="25" default="" primarykey="true"/>
+			<field name="permanent" type="boolean" default="0"/>
+			<field name="readonly" type="boolean" default="0"/>
+			<field name="disabled" type="boolean" default="0"/>
 			<field name="debug" type="string" length="25" notnull="false"/>
 			<field name="dtmf" type="string" length="25" notnull="false"/>
 			<field name="error" type="string" length="25" notnull="false"/>

@@ -3,25 +3,25 @@
     <!-- Row First -->
     <div class="row">
         <!-- Block Files -->
-        <div class="col-lg-7">
+        <div class="col-lg-6">
             <div class="input-group">
                 <span class="input-group-addon">
                 <?php echo _("Files"); ?> <span class="label label-primary">(<span class="count_files_in_list">0</span>)</span>
                 </span>
                 <div class="input-group-btn">
-                    <a class="btn btn-default btn-reload-list" title="<?php echo _("Reload List"); ?>">
+                    <a class="btn btn-default btn-onlyico btn-reload-list" title="<?php echo _("Reload List"); ?>">
                         <i class="fa fa-refresh"></i>
                     </a>
                 </div>
                 <select class="form-control" name="filename_log" required="required" disabled></select>
                 <div class="input-group-btn">
-                    <a class="btn btn-default btn-reload-file disabled" title="<?php echo _("Reload File"); ?>">
+                    <a class="btn btn-default btn-onlyico btn-reload-file disabled" title="<?php echo _("Reload File"); ?>">
                         <i class="fa fa-chevron-circle-left"></i>
                     </a>
-                    <a class="btn btn-danger btn-file-delte disabled" title="<?php echo _("Delete File"); ?>">
+                    <a class="btn btn-danger btn-onlyico btn-file-delte disabled" title="<?php echo _("Delete File"); ?>">
                         <i class="fa fa-trash"></i>
                     </a>
-                    <a class="btn btn-default btn-file-export disabled" title="<?php echo _("Export File"); ?>">
+                    <a class="btn btn-default btn-onlyico btn-file-export disabled" title="<?php echo _("Export File"); ?>">
                         <i class="fa fa-download"></i>
                     </a>
                 </div>
@@ -63,6 +63,13 @@
             </div>
         </div>
         <!-- Block Refres Interval -->
+         <!-- Block FullScreen -->
+         <div class="col-lg-1">
+            <button type="button" class="btn btn-default btn-onlyico btn-block btn-fullscreen" title="<?php echo _("Activate full screen mode. Press ESC to exit full screen mode."); ?>" disabled>
+                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- Block FullScreen -->
     </div>
     <!-- Row One -->
     <!-- Row Two -->
@@ -73,10 +80,10 @@
                 <span class="input-group-addon"><?php echo _("Filter"); ?></span>
                 <input type="text" class="form-control" name="fileter_log" placeholder="Text to filter" spellcheck="false" disabled>
                 <div class="input-group-btn">
-                    <a class="btn btn-primary btn-filter-apply disabled" title="<?php echo _("Apply Filter"); ?>">
+                    <a class="btn btn-primary btn-onlyico btn-filter-apply disabled" title="<?php echo _("Apply Filter"); ?>">
                         <i class="fa fa-filter"></i>
                     </a>
-                    <a class="btn btn-danger btn-filter-clean disabled" title="<?php echo _("Clean Filter"); ?>">
+                    <a class="btn btn-danger btn-onlyico btn-filter-clean disabled" title="<?php echo _("Clean Filter"); ?>">
                         <i class="fa fa-eraser"></i>
                     </a>
                 </div>
@@ -91,10 +98,10 @@
                 </span>
                 <input type="text" class="form-control" name="highlight_log" placeholder="Text to Highlight" spellcheck="false" disabled>
                 <div class="input-group-btn">
-                    <a class="btn btn-primary btn-highlight-apply disabled" title="<?php echo _("Apply Highlight"); ?>">
+                    <a class="btn btn-primary btn-onlyico btn-highlight-apply disabled" title="<?php echo _("Apply Highlight"); ?>">
                         <i class="fa fa-filter"></i>
                     </a>
-                    <a class="btn btn-danger btn-highlight-clean disabled" title="<?php echo _("Clean Highlight"); ?>">
+                    <a class="btn btn-danger btn-onlyico btn-highlight-clean disabled" title="<?php echo _("Clean Highlight"); ?>">
                         <i class="fa fa-eraser"></i>
                     </a>
                 </div>
@@ -118,9 +125,8 @@
         <!-- Block Auto-Scroll -->
         <!-- Block More Options -->
         <div class="col-lg-1 box-more-options">
-            <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
                 <span>
-                    <!-- <i class="fa fa-cog" aria-hidden="true"></i> -->
                     <i class="fa fa-cogs" aria-hidden="true"></i>
                 </span>
                 <span class="caret"></span>
@@ -148,6 +154,19 @@
                                 <label for="show_line_spacing_on"><i class="fa fa-check-circle" aria-hidden="true"></i></label>
                                 <input type="radio" name="show_line_spacing" id="show_line_spacing_off" value="off">
                                 <label for="show_line_spacing_off"><i class="fa fa-times-circle" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-group input-group-radioset">
+                        <span class="input-group-addon"><?php echo _("Show Only Row's Highlight"); ?></span>
+                        <div class="input-group-btn">
+                            <div class="radioset">
+                                <input type="radio" name="show_only_rows_highlight" id="show_only_rows_highlight_on" value="on">
+                                <label for="show_only_rows_highlight_on"><i class="fa fa-check-circle" aria-hidden="true"></i></label>
+                                <input type="radio" name="show_only_rows_highlight" id="show_only_rows_highlight_off" value="off">
+                                <label for="show_only_rows_highlight_off"><i class="fa fa-times-circle" aria-hidden="true"></i></label>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,8 @@
 <?php
 
+//Disabled get_config
+return;
+
 if (! class_exists('\FreePBX\modules\Logfiles\logfiles_conf')) {
     include_once (dirname(__FILE__) . '/Logfiles_conf.php');
 }
