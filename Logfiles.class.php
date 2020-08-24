@@ -1119,7 +1119,7 @@ class Logfiles implements \BMO
 					case 'permanent':
 					case 'readonly':
 					case 'disabled':
-						continue;
+						continue 2;
 						break;
 					
 					case 'verbose':
