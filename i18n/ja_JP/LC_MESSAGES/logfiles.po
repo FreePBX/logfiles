@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 02:36+0000\n"
+"POT-Creation-Date: 2020-08-24 07:28+0000\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
@@ -49,12 +49,20 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: assets/js/views/logs.js:13
+#: Logfiles.class.php:363
 msgid "?"
 msgstr ""
 
-#: views/view.settings.logfiles.php:62
+#: views/view.settings.logfiles.php:68
 msgid "Actions"
+msgstr ""
+
+#: views/view.log.header.php:68
+msgid "Activate full screen mode. Press ESC to exit full screen mode."
+msgstr ""
+
+#: views/view.settings.logfiles.php:79
+msgid "Activate remote log"
 msgstr ""
 
 #: views/view.settings.general.php:28
@@ -65,16 +73,16 @@ msgstr "ネーム名を付け加える"
 msgid "Appends the hostname to the name of the log files"
 msgstr "ホストネームをログのファイル名に付け加えます"
 
-#: views/view.log.header.php:76
+#: views/view.log.header.php:83
 msgid "Apply Filter"
 msgstr ""
 
-#: views/view.log.header.php:94
+#: views/view.log.header.php:101
 msgid "Apply Highlight"
 msgstr ""
 
-#: assets/js/views/logs.js:24 assets/js/views/settings.js:346
-#, perl-format
+#: Logfiles.class.php:374 Logfiles.class.php:381
+#, php-format
 msgid "Are you confirming that you want to remove this file (%s)?"
 msgstr ""
 
@@ -82,47 +90,47 @@ msgstr ""
 msgid "Asterisk Log Files"
 msgstr "Asteriskログファイル"
 
-#: logfiles.i18n.php:10
+#: logfiles.i18n.php:12
 msgid "Asterisk Logfile Settings"
 msgstr "Asteriskログファイル設定"
 
-#: logfiles.i18n.php:4 logfiles.i18n.php:8
+#: logfiles.i18n.php:4 logfiles.i18n.php:10
 msgid "Asterisk Logfiles"
 msgstr "Asteriskログファイル"
 
-#: views/view.log.header.php:107
+#: views/view.log.header.php:114
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:157
+#: views/view.log.header.php:176
 msgid "Buffer Size"
 msgstr ""
 
-#: assets/js/views/settings.js:230
+#: Logfiles.class.php:380
 msgid "Cancel"
 msgstr ""
 
-#: views/view.log.header.php:79
+#: views/view.log.header.php:86
 msgid "Clean Filter"
 msgstr ""
 
-#: views/view.log.header.php:97
+#: views/view.log.header.php:104
 msgid "Clean Highlight"
 msgstr ""
 
-#: Logfiles.class.php:350
+#: Logfiles.class.php:404
 msgid "Command not found!"
 msgstr ""
 
-#: assets/js/views/logs.js:21
+#: Logfiles.class.php:371
 msgid "Copy to clipboard successful."
 msgstr ""
 
-#: assets/js/views/settings.js:223
+#: Logfiles.class.php:382
 msgid "Create"
 msgstr ""
 
-#: views/view.settings.logfiles.php:25
+#: views/view.settings.logfiles.php:31
 msgid "Critical errors and issues"
 msgstr "重大なエラーや問題"
 
@@ -137,7 +145,7 @@ msgstr ""
 "は、Linuxのマニュアル strftime(3)をご覧下さい。このフィールドを利用する事で少"
 "数のパラメーターも使用できます 。 10分の1は「%1q」、100分の1は「%2q」、など。"
 
-#: views/view.settings.logfiles.php:18
+#: views/view.settings.logfiles.php:24
 msgid "DTMF"
 msgstr "DTMF"
 
@@ -145,7 +153,7 @@ msgstr "DTMF"
 msgid "Date Format"
 msgstr "日付形式"
 
-#: views/view.settings.logfiles.php:10
+#: views/view.settings.logfiles.php:16
 msgid "Debug"
 msgstr "デバッグ"
 
@@ -153,12 +161,16 @@ msgstr "デバッグ"
 msgid "Delete File"
 msgstr ""
 
-#: views/view.log.header.php:45 views/view.log.header.php:51
-#: assets/js/views/logs.js:14
+#: Logfiles.class.php:364 Logfiles.class.php:383 views/view.log.header.php:45
+#: views/view.log.header.php:51
 msgid "Disabled"
 msgstr ""
 
-#: views/view.settings.logfiles.php:24
+#: Logfiles.class.php:384
+msgid "Enabled"
+msgstr ""
+
+#: views/view.settings.logfiles.php:30
 msgid "Error"
 msgstr "エラー"
 
@@ -166,11 +178,11 @@ msgstr "エラー"
 msgid "Export File"
 msgstr ""
 
-#: Logfiles.class.php:343
+#: Logfiles.class.php:351
 msgid "Failure Removal Process!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:30
+#: views/view.settings.logfiles.php:36
 msgid "Fax"
 msgstr "Fax"
 
@@ -178,11 +190,15 @@ msgstr "Fax"
 msgid "File Name"
 msgstr "ファイル名"
 
-#: Logfiles.class.php:227
+#: Logfiles.class.php:226
 msgid "File clean successfully."
 msgstr ""
 
-#: Logfiles.class.php:223
+#: Logfiles.class.php:399
+msgid "File not found!"
+msgstr ""
+
+#: Logfiles.class.php:222
 msgid "File removed successfully."
 msgstr ""
 
@@ -190,7 +206,7 @@ msgstr ""
 msgid "Files"
 msgstr ""
 
-#: views/view.log.header.php:73
+#: views/view.log.header.php:80
 msgid "Filter"
 msgstr ""
 
@@ -198,15 +214,21 @@ msgstr ""
 msgid "General Settings"
 msgstr "一般設定"
 
-#: views/view.log.header.php:90
+#: views/view.log.header.php:97
 msgid "Highlight"
 msgstr ""
 
-#: Logfiles.class.php:680
+#: views/view.settings.logfiles.php:11
+msgid ""
+"If the file status is disabled it will be skipped during the asterisk "
+"configuration files creation process."
+msgstr ""
+
+#: Logfiles.class.php:826
 msgid "Invalid pattern to filter!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:19
+#: views/view.settings.logfiles.php:25
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -244,7 +266,7 @@ msgstr "ログキュー"
 msgid "Log Rotation"
 msgstr ""
 
-#: assets/js/views/logs.js:23
+#: Logfiles.class.php:373
 msgid "Log loading completed successfully."
 msgstr ""
 
@@ -252,12 +274,12 @@ msgstr ""
 msgid "Log queue events to a file"
 msgstr "ファイルにキューのイベントを書き込みます"
 
-#: views/view.settings.logfiles.php:37
+#: views/view.settings.logfiles.php:43
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr "特定操作のメッセージ。例：電話機の登録、通話終了など"
 
-#: views/view.settings.logfiles.php:11
+#: views/view.settings.logfiles.php:17
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -269,16 +291,28 @@ msgstr ""
 "すぐにログファイルのサイズ（およびディスク容量）が膨大になりますで注意してく"
 "ださい。"
 
-#: Logfiles.class.php:241 Logfiles.class.php:260 Logfiles.class.php:305
+#: Logfiles.class.php:240 Logfiles.class.php:259 Logfiles.class.php:304
 msgid "Missing data!"
 msgstr ""
 
-#: Logfiles.class.php:179 Logfiles.class.php:216
+#: Logfiles.class.php:178 Logfiles.class.php:215
 msgid "Missing file name!"
 msgstr ""
 
-#: Logfiles.class.php:288 Logfiles.class.php:301 Logfiles.class.php:327
+#: Logfiles.class.php:287 Logfiles.class.php:300 Logfiles.class.php:330
 msgid "Missing name!"
+msgstr ""
+
+#: Logfiles.class.php:386
+msgid "Missing the name of the file!"
+msgstr ""
+
+#: views/view.log.header.php:128
+msgid "More Options"
+msgstr ""
+
+#: Logfiles.class.php:388
+msgid "Name is not defined!"
 msgstr ""
 
 #: views/view.settings.logfiles.php:5
@@ -287,24 +321,36 @@ msgid ""
 "different location"
 msgstr ""
 
-#: views/view.settings.logfiles.php:71
+#: views/view.settings.logfiles.php:85
 msgid "New Log"
 msgstr ""
 
+#: Logfiles.class.php:365 Logfiles.class.php:389
 #: views/view.settings.general.php:32 views/view.settings.general.php:42
-#: assets/js/views/logs.js:15 assets/js/views/settings.js:347
 msgid "No"
 msgstr "いいえ"
 
-#: assets/js/views/logs.js:16
+#: Logfiles.class.php:366
 msgid "None"
 msgstr ""
 
-#: views/view.settings.logfiles.php:36
+#: views/view.settings.logfiles.php:42
 msgid "Notice"
 msgstr "通知"
 
-#: views/view.settings.logfiles.php:50
+#: Logfiles.class.php:390
+msgid "Off"
+msgstr "オフ"
+
+#: Logfiles.class.php:391
+msgid "On"
+msgstr "オン"
+
+#: Logfiles.class.php:312 Logfiles.class.php:342
+msgid "Operation not allowed!"
+msgstr ""
+
+#: views/view.settings.logfiles.php:56
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "ダイヤルプランの構文やコールフローにおいて、重大ではありませんが、問題が発生"
@@ -326,11 +372,11 @@ msgstr ""
 msgid "Reload List"
 msgstr ""
 
-#: assets/js/views/settings.js:115
+#: Logfiles.class.php:392
 msgid "Remove"
 msgstr ""
 
-#: Logfiles.class.php:339
+#: Logfiles.class.php:346
 msgid "Remove Successful"
 msgstr ""
 
@@ -350,27 +396,27 @@ msgstr ""
 "循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにし"
 "ます(Unixの管理者はこのような動作を期待するでしょう)。"
 
-#: views/view.settings.general.php:132 assets/js/views/settings.js:104
+#: Logfiles.class.php:393 views/view.settings.general.php:132
 msgid "Save"
 msgstr "保存"
 
-#: Logfiles.class.php:317
+#: Logfiles.class.php:321
 msgid "Save Failed!"
 msgstr ""
 
-#: Logfiles.class.php:313
+#: Logfiles.class.php:316
 msgid "Save Successful"
 msgstr ""
 
-#: assets/js/views/logs.js:17
+#: Logfiles.class.php:367
 msgid "Searching..."
 msgstr ""
 
-#: views/view.log.header.php:58 assets/js/views/logs.js:18
+#: Logfiles.class.php:368 views/view.log.header.php:58
 msgid "Seconds"
 msgstr ""
 
-#: views/view.settings.logfiles.php:56
+#: views/view.settings.logfiles.php:62
 msgid "Security"
 msgstr ""
 
@@ -386,7 +432,7 @@ msgstr ""
 "順次: アーカイブされたログファイルの名前を変更し、最新の物が、最も高い順序に"
 "なる様にします"
 
-#: Logfiles.class.php:245 Logfiles.class.php:264
+#: Logfiles.class.php:244 Logfiles.class.php:263
 msgid "Setting not allowed!"
 msgstr ""
 
@@ -396,21 +442,29 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:829 Logfiles.class.php:898
+#: Logfiles.class.php:1017 Logfiles.class.php:1086
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:144
+#: views/view.log.header.php:150
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:131
+#: views/view.log.header.php:163
+msgid "Show Only Row's Highlight"
+msgstr ""
+
+#: views/view.log.header.php:137
 msgid "Show Row Numbers"
 msgstr ""
 
-#: views/view.settings.logfiles.php:43
+#: views/view.settings.logfiles.php:10
+msgid "Status"
+msgstr ""
+
+#: views/view.settings.logfiles.php:49
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
@@ -418,43 +472,49 @@ msgstr ""
 "コールフローの各ステップごとに、段階的にメッセージが出力されます。常に有効に"
 "しておき、通話のフローが予想通り進まない場合は、内容を確認してください"
 
-#: Logfiles.class.php:270
+#: Logfiles.class.php:269
 msgid "Successful Update"
 msgstr ""
 
-#: Logfiles.class.php:592 Logfiles.class.php:647
+#: logfiles.i18n.php:8
+msgid ""
+"The Asterisk Logfiles Module is an easy way to view portions of the Asterisk "
+"Log."
+msgstr ""
+
+#: Logfiles.class.php:738 Logfiles.class.php:793
 msgid "The file was not found!"
 msgstr ""
 
-#: Logfiles.class.php:333
+#: Logfiles.class.php:336
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:600 Logfiles.class.php:655
+#: Logfiles.class.php:746 Logfiles.class.php:801
 msgid "The log file does not exist!"
 msgstr ""
 
-#: assets/js/views/logs.js:22
+#: Logfiles.class.php:372
 msgid "The log file has fewer lines, the reload was successful."
 msgstr ""
 
-#: assets/js/views/settings.js:270
+#: Logfiles.class.php:385
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:670
+#: Logfiles.class.php:816
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:605 Logfiles.class.php:660
+#: Logfiles.class.php:751 Logfiles.class.php:806
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:665
+#: Logfiles.class.php:811
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:610
+#: Logfiles.class.php:756
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -470,28 +530,38 @@ msgstr ""
 "タイムスタンプ: \"logger rotate\"が実行された場合、連番ではなく、タイムスタン"
 "プを使ってログファイルの名前を変更します。"
 
-#: views/view.settings.logfiles.php:31
+#: views/view.settings.logfiles.php:80
+msgid ""
+"To activate the remote log, you must enable the file \"syslog.local0\" and "
+"add the following line in syslog."
+msgstr ""
+
+#: views/view.settings.logfiles.php:37
 msgid "Transmition and receiving of faxes"
 msgstr "FAXの受信・送信"
+
+#: Logfiles.class.php:387
+msgid "Unknow error!"
+msgstr ""
 
 #: Logfiles.class.php:274
 msgid "Update process failed!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:42
+#: views/view.settings.logfiles.php:48
 msgid "Verbose"
 msgstr "詳細レポート"
 
-#: views/view.settings.logfiles.php:49
+#: views/view.settings.logfiles.php:55
 msgid "Warning"
 msgstr "警告"
 
+#: Logfiles.class.php:369 Logfiles.class.php:394
 #: views/view.settings.general.php:31 views/view.settings.general.php:41
-#: assets/js/views/logs.js:19 assets/js/views/settings.js:347
 msgid "Yes"
 msgstr "はい"
 
-#: Logfiles.class.php:829 Logfiles.class.php:898
+#: Logfiles.class.php:1017 Logfiles.class.php:1086
 msgid "appendhostname is set to: Yes."
 msgstr ""
 
@@ -505,12 +575,6 @@ msgstr ""
 
 #~ msgid "Log file settings"
 #~ msgstr "ログファイル設定"
-
-#~ msgid "Off"
-#~ msgstr "オフ"
-
-#~ msgid "On"
-#~ msgstr "オン"
 
 #~ msgid "Show"
 #~ msgstr "表示"
