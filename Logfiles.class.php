@@ -36,8 +36,8 @@ class Logfiles implements \BMO
 	);
 
 	const DEFAULT_LOG_FILES = array(
-		'full' 			=> array('permanent' => true, 'readonly' => true,  'disabled' => false),
-		'console' 		=> array('permanent' => true, 'readonly' => true,  'disabled' => false),
+		'full' 			=> array('permanent' => true, 'readonly' => false, 'disabled' => false),
+		'console' 		=> array('permanent' => true, 'readonly' => false, 'disabled' => false),
 		'syslog.local0' => array('permanent' => true, 'readonly' => false, 'disabled' => true),
 	);
 
@@ -506,7 +506,18 @@ class Logfiles implements \BMO
 
 			foreach ($file as $opt => &$val)
 			{
-				if ( in_array($opt, array('permanent', 'readonly', 'disabled')) ) { continue; }
+				if ( in_array($opt, array('permanent', 'disabled')) ) { continue; }
+
+				if ( $opt == 'readonly')
+				{
+					// disable the read-only
+					if ( in_array($file, array('full', 'console')) ) 
+					{
+						$val = false;
+						$fix = true;
+					}
+					else { continue; }
+				}
 
 				// update empty old values by value "on"
 				if ( empty ( $val ) )
