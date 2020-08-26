@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 07:28+0000\n"
+"POT-Creation-Date: 2020-08-26 05:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,7 +201,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:826
+#: Logfiles.class.php:837
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:1017 Logfiles.class.php:1086
+#: Logfiles.class.php:1028 Logfiles.class.php:1097
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -443,7 +443,7 @@ msgid ""
 "Log."
 msgstr ""
 
-#: Logfiles.class.php:738 Logfiles.class.php:793
+#: Logfiles.class.php:749 Logfiles.class.php:804
 msgid "The file was not found!"
 msgstr ""
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:746 Logfiles.class.php:801
+#: Logfiles.class.php:757 Logfiles.class.php:812
 msgid "The log file does not exist!"
 msgstr ""
 
@@ -463,19 +463,19 @@ msgstr ""
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:816
+#: Logfiles.class.php:827
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:751 Logfiles.class.php:806
+#: Logfiles.class.php:762 Logfiles.class.php:817
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:811
+#: Logfiles.class.php:822
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:756
+#: Logfiles.class.php:767
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -520,6 +520,6 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: Logfiles.class.php:1017 Logfiles.class.php:1086
+#: Logfiles.class.php:1028 Logfiles.class.php:1097
 msgid "appendhostname is set to: Yes."
 msgstr ""
