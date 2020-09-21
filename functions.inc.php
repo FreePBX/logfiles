@@ -17,11 +17,8 @@ if (! class_exists('logfiles_conf')) {
  * 
  * https://wiki.freepbx.org/pages/viewpage.action?pageId=98701336
  */
-function logfiles_get_config($engine)
-{
-    // DISABLED get_config
-    // NOTE: If add return in start the script, we obtain exception when restart freepbx.
-
-    // $lf = \FreePBX::Logfiles();
-    // $lf->dialplanHooks_get_configOld($engine);
-}
+// function logfiles_get_config($engine)
+// {
+//     $lf = \FreePBX::Logfiles();
+//     $lf->dialplanHooks_get_configOld($engine);
+// }
