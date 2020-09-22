@@ -70,7 +70,9 @@ class Logfiles implements \BMO
 		$this->path['etc_asterisk'] = $this->config->get('ASTETCDIR');
 		$this->path['dir_www'] 		= $this->config->get('AMPWEBROOT');
 		$this->path['dir_logs'] 	= $this->config->get('ASTLOGDIR');
-		$this->path['logger.conf'] 	= $this->path['etc_asterisk'].'/logger.conf';
+
+		$this->path['logger.conf'] 						= $this->path['etc_asterisk'].'/logger.conf';
+		$this->path['logger_logfiles_additional.conf'] 	= $this->path['etc_asterisk'].'/logger_logfiles_additional.conf';
 		
 		// links:
 		// 		/etc/asterisk/logger.conf -> /var/www/html/admin/modules/logfiles/etc/logger.conf
@@ -221,7 +223,7 @@ class Logfiles implements \BMO
 					{
 						$data_return = array("status" => true, "message" => _("File removed successfully."), "file" => $log_file);
 					}
-					else if ($destroy_log['status'] == "OK_CLEAN")
+					elseif ($destroy_log['status'] == "OK_CLEAN")
 					{
 						$data_return = array("status" => true, "message" => _("File clean successfully."), "file" => $log_file);
 					}
@@ -277,7 +279,7 @@ class Logfiles implements \BMO
 				break;
 			
 			case "logfiles_get_all":
-				$data_return = array("status" => true, "data" => $this->getLogfilesAll());
+				$data_return = array("status" => true, "data" => $this->getLogfilesAll(true));
 				break;
 			
 			case "logfiles_is_exist_file_name":
@@ -299,7 +301,7 @@ class Logfiles implements \BMO
 				{
 					$data_return = array("status" => false, "message" => _("Missing name!"));
 				}
-				else if ( empty($data) )
+				elseif ( empty($data) )
 				{
 					$data_return = array("status" => false, "message" => _("Missing data!"));
 				}
@@ -479,21 +481,6 @@ class Logfiles implements \BMO
 			}
 			$this->setLogFiles($file, $options_new);
 		}
-
-		// foce create file module sysadmin
-		$this->setLogFiles('fail2ban', array(
-			'permanent' => true, 
-			'readonly' 	=> true,
-			'disabled' 	=> false,
-			'debug'		=> 'off',
-			'dtmf'		=> 'off',
-			'error'		=> 'off',
-			'fax'		=> 'off',
-			'notice'	=> 'on',
-			'verbose'	=> 'off',
-			'warning'	=> 'on',
-			'security'	=> 'on'
-		));
 	}
 	public function updateFixValuesLogFiles()
 	{
@@ -503,6 +490,15 @@ class Logfiles implements \BMO
 			$fix = false;
 			$name = $file['name'];
 			unset($file['name']);
+
+			// -------
+			//Fix: No need, generate from hook.
+			if ($name == "fail2ban") 
+			{
+				$this->destoryLogFiles($name);
+				continue;
+			}
+			// -------
 
 			foreach ($file as $opt => &$val)
 			{
@@ -543,12 +539,72 @@ class Logfiles implements \BMO
 		return ($count == 1) ? true : false;
 	}
 
-	public function getLogfilesAll()
+	public function getLogfilesAll($files_created_by_hooks = false)
 	{
 		$ret = array();
+		$list_files_db = array();
+
 		$sql = 'SELECT * FROM `logfile_logfiles`';
 		foreach ($this->db->query($sql, DB_FETCHMODE_ASSOC) as $row) {
 			$ret[] = (array)$row;
+			$list_files_db[] = trim($row['name']);
+		}
+
+		if ($files_created_by_hooks)
+		{
+			// Read config file and get files created from hook
+			foreach ($this->read_logfiles_config() as $file => $options)
+			{
+				//ignorer if exist in database
+				if ( in_array($file, $list_files_db) ) 
+				{
+					continue;
+				}
+				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
+				$opt_set = explode(",", $options);
+				$new_row = self::DEFAULT_LOG_FILES_VALUES;
+				
+				foreach ($new_row as $key => $val)
+				{
+					switch($key)
+					{
+						case 'name':
+							$new_row[$key] = $file;
+							break;
+
+						case 'permanent':
+						case 'readonly':
+							// convert boolean value to tinyint
+							$new_row[$key] = boolval(true) ? "1" : "0";
+							break;
+
+						case 'disabled':
+							// convert boolean value to tinyint
+							$new_row[$key] = boolval(false) ? "1" : "0";
+							break;
+
+						case 'security':
+							$new_row[$key] = ( in_array($key , $opt_set) && $has_security_option ) ? 'on' : 'off';
+							break;
+						
+						case 'verbose':
+							if (preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set))
+							{
+								//only number
+								$new_row[$key] = preg_replace('/[^0-9-*]+/', '', implode(preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set)));
+							}
+							else
+							{
+								$new_row[$key] = in_array($key , $opt_set) ? 'on' : 'off';
+							}
+							break;
+
+						default:
+							$new_row[$key] = in_array($key , $opt_set) ? 'on' : 'off';
+					}
+				}
+				$ret[] = $new_row;
+			}
 		}
 		return $ret;
 	}
@@ -756,12 +812,12 @@ class Logfiles implements \BMO
 				$data_return['status'] = "ERROR_FILE_NOT_EXIST";
 				$data_return['error'] = _('The log file does not exist!');
 			}
-			else if ( ! is_file($log_file) )
+			elseif ( ! is_file($log_file) )
 			{
 				$data_return['status'] = "ERROR_IS_NOT_FILE";
 				$data_return['error'] = _('The specified name is not from a file!');
 			}
-			else if ( ! is_writable($log_file) )
+			elseif ( ! is_writable($log_file) )
 			{
 				$data_return['status'] = "ERROR_NO_WRITE_PERMISSION";
 				$data_return['error'] = _('There is no permission to write this log file!');
@@ -811,17 +867,17 @@ class Logfiles implements \BMO
 				$data_return['status'] = "ERROR_FILE_NOT_EXIST";
 				$data_return['error'] = _('The log file does not exist!');
 			}
-			else if ( ! is_file($log_file) )
+			elseif ( ! is_file($log_file) )
 			{
 				$data_return['status'] = "ERROR_IS_NOT_FILE";
 				$data_return['error'] = _('The specified name is not from a file!');
 			}
-			else if ( ! is_readable($log_file) )
+			elseif ( ! is_readable($log_file) )
 			{
 				$data_return['status'] = "ERROR_NO_READING_PERMISSION";
 				$data_return['error'] = _('There is no permission to read this log file!');
 			}
-			else if ( ! is_numeric($lines) )
+			elseif ( ! is_numeric($lines) )
 			{
 				$data_return['status'] = "ERROR_LINES_NOT_IS_NUMBER";
 				$data_return['error'] = _('The specified lines value is not a numeric value!');
@@ -1001,86 +1057,28 @@ class Logfiles implements \BMO
 		return $line;
 	}
 
-	function dialplanHooks_get_configOld($engine)
+
+
+	// Manipulate asterisk configuration files
+	private function read_logfiles_config()
 	{
-		switch ($engine)
+		$file_config = $this->path['logger_logfiles_additional.conf'];
+		$data_return = array();
+		if ( file_exists($file_config) ) 
 		{
-			case 'asterisk':
-				$logfiles_conf = logfiles_conf::create();
-				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
-
-				//set logfile data to be generated
-				//dbug('here', (isset($logfiles_conf) && ($logfiles_conf instanceof logfiles_conf)), 1);
-				if ( ! isset($logfiles_conf) || ! ($logfiles_conf instanceof logfiles_conf) )
+			$lines = file($file_config);
+			foreach ($lines as $nline => $line)
+			{
+				$line = trim($line);
+				if ( (strlen($line) < 1) or (substr($line, 0, 1 ) == ";") )
 				{
-					dbug('NOT GENERATING LOGGER CONFIGS AS $logfiles_conf IS NOT SET!');
-					return false;
+					continue;
 				}
-
-				foreach (self::DEFAULT_SETTING as $k => $v)
-				{
-					$value = $this->getSetting($k);
-					switch ($k)
-					{
-						case 'appendhostname':
-							if ( trim($value) === "yes" )
-							{
-								$this->notifications->add_warning("Asterisk Logfile", "Warning", _("appendhostname is set to: Yes."), _("Setting this to yes will interfere with log rotation and Intrusion Detection. It is strongly recommended that this setting be set to: no."), "config.php?display=logfiles_settings", true, true);
-							}
-						case 'dateformat':
-						case 'queue_log':
-						case 'rotatestrategy':
-							if ($value)
-							{
-								$logfiles_conf->addLoggerGeneral($k, $value);
-							}
-							break;
-
-						default:
-							break;
-					}
-				}
-
-				foreach ($this->getLogfilesAll() as $k => $v)
-				{
-					$name = $v['name'];
-					unset($v['name']);
-					$name_opt = array();
-
-					foreach ($v as $opt => $set)
-					{
-						switch ($opt)
-						{
-							case 'verbose':
-								if (is_numeric($set) || $set == '*')
-								{
-									$name_opt[] = 'verbose(' . $set . ')';
-								}
-								elseif ($set === 'on')
-								{
-									$name_opt[] = $opt;
-								}
-								break;
-
-							default:
-								if ($set === 'on')
-								{
-									if ($has_security_option || $opt != 'security')
-									{
-										$name_opt[] = $opt;
-									}
-								}
-								break;
-						}
-					}
-
-					if( ! empty($name) && ! empty($name_opt) )
-					{
-						$logfiles_conf->addLoggerLogfiles($name, implode(',', $name_opt));
-					}
-				}
-				break;
+				$line_data = explode("=>", $line, 2);
+				$data_return[trim($line_data[0])] = trim($line_data[1]);
+			}
 		}
+		return $data_return;
 	}
 
 	public function genConfig()
@@ -1112,7 +1110,7 @@ class Logfiles implements \BMO
 
 		$logfiles = "";
 		$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
-		foreach ($this->getLogfilesAll() as $k => $v)
+		foreach ($this->getLogfilesAll(true) as $k => $v)
 		{
 			$name = $v['name'];
 			unset($v['name']);
