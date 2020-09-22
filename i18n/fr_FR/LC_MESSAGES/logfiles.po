@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 05:34+0000\n"
+"POT-Creation-Date: 2020-09-22 11:26+0000\n"
 "PO-Revision-Date: 2017-12-01 22:42+0200\n"
 "Last-Translator: CATTAN Jérémie <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -31,7 +31,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Logfiles.class.php:363
+#: Logfiles.class.php:365
 msgid "?"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Apply Highlight"
 msgstr ""
 
-#: Logfiles.class.php:374 Logfiles.class.php:381
+#: Logfiles.class.php:376 Logfiles.class.php:383
 #, php-format
 msgid "Are you confirming that you want to remove this file (%s)?"
 msgstr ""
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Buffer Size"
 msgstr ""
 
-#: Logfiles.class.php:380
+#: Logfiles.class.php:382
 msgid "Cancel"
 msgstr ""
 
@@ -100,15 +100,15 @@ msgstr ""
 msgid "Clean Highlight"
 msgstr ""
 
-#: Logfiles.class.php:404
+#: Logfiles.class.php:406
 msgid "Command not found!"
 msgstr ""
 
-#: Logfiles.class.php:371
+#: Logfiles.class.php:373
 msgid "Copy to clipboard successful."
 msgstr ""
 
-#: Logfiles.class.php:382
+#: Logfiles.class.php:384
 msgid "Create"
 msgstr ""
 
@@ -145,12 +145,12 @@ msgstr "Débogage"
 msgid "Delete File"
 msgstr ""
 
-#: Logfiles.class.php:364 Logfiles.class.php:383 views/view.log.header.php:45
+#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:45
 #: views/view.log.header.php:51
 msgid "Disabled"
 msgstr ""
 
-#: Logfiles.class.php:384
+#: Logfiles.class.php:386
 msgid "Enabled"
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr "Erreur"
 msgid "Export File"
 msgstr ""
 
-#: Logfiles.class.php:351
+#: Logfiles.class.php:353
 msgid "Failure Removal Process!"
 msgstr ""
 
@@ -174,15 +174,15 @@ msgstr "Télécopieur"
 msgid "File Name"
 msgstr "Nom du fichier"
 
-#: Logfiles.class.php:226
+#: Logfiles.class.php:228
 msgid "File clean successfully."
 msgstr ""
 
-#: Logfiles.class.php:399
+#: Logfiles.class.php:401
 msgid "File not found!"
 msgstr ""
 
-#: Logfiles.class.php:222
+#: Logfiles.class.php:224
 msgid "File removed successfully."
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:837
+#: Logfiles.class.php:893
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr "Queues de journal"
 msgid "Log Rotation"
 msgstr "Rotation des journaux"
 
-#: Logfiles.class.php:373
+#: Logfiles.class.php:375
 msgid "Log loading completed successfully."
 msgstr ""
 
@@ -277,19 +277,19 @@ msgstr ""
 "que les messages de débogage sont très verbeux et peuvent remplir les "
 "fichiers de journal (et l'espace disque) rapidement."
 
-#: Logfiles.class.php:240 Logfiles.class.php:259 Logfiles.class.php:304
+#: Logfiles.class.php:242 Logfiles.class.php:261 Logfiles.class.php:306
 msgid "Missing data!"
 msgstr ""
 
-#: Logfiles.class.php:178 Logfiles.class.php:215
+#: Logfiles.class.php:180 Logfiles.class.php:217
 msgid "Missing file name!"
 msgstr ""
 
-#: Logfiles.class.php:287 Logfiles.class.php:300 Logfiles.class.php:330
+#: Logfiles.class.php:289 Logfiles.class.php:302 Logfiles.class.php:332
 msgid "Missing name!"
 msgstr ""
 
-#: Logfiles.class.php:386
+#: Logfiles.class.php:388
 msgid "Missing the name of the file!"
 msgstr ""
 
@@ -297,7 +297,7 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
-#: Logfiles.class.php:388
+#: Logfiles.class.php:390
 msgid "Name is not defined!"
 msgstr ""
 
@@ -313,12 +313,12 @@ msgstr ""
 msgid "New Log"
 msgstr ""
 
-#: Logfiles.class.php:365 Logfiles.class.php:389
+#: Logfiles.class.php:367 Logfiles.class.php:391
 #: views/view.settings.general.php:32 views/view.settings.general.php:42
 msgid "No"
 msgstr "Non"
 
-#: Logfiles.class.php:366
+#: Logfiles.class.php:368
 msgid "None"
 msgstr ""
 
@@ -326,15 +326,15 @@ msgstr ""
 msgid "Notice"
 msgstr "Remarque"
 
-#: Logfiles.class.php:390
+#: Logfiles.class.php:392
 msgid "Off"
 msgstr "Désactivé"
 
-#: Logfiles.class.php:391
+#: Logfiles.class.php:393
 msgid "On"
 msgstr "Activé"
 
-#: Logfiles.class.php:312 Logfiles.class.php:342
+#: Logfiles.class.php:314 Logfiles.class.php:344
 msgid "Operation not allowed!"
 msgstr ""
 
@@ -360,11 +360,11 @@ msgstr ""
 msgid "Reload List"
 msgstr ""
 
-#: Logfiles.class.php:392
+#: Logfiles.class.php:394
 msgid "Remove"
 msgstr ""
 
-#: Logfiles.class.php:346
+#: Logfiles.class.php:348
 msgid "Remove Successful"
 msgstr ""
 
@@ -385,23 +385,23 @@ msgstr ""
 "plus vieux ait le plus haut numéro de séquence (comportement attendu par les "
 "administrateurs Unix)."
 
-#: Logfiles.class.php:393 views/view.settings.general.php:132
+#: Logfiles.class.php:395 views/view.settings.general.php:132
 msgid "Save"
 msgstr ""
 
-#: Logfiles.class.php:321
+#: Logfiles.class.php:323
 msgid "Save Failed!"
 msgstr ""
 
-#: Logfiles.class.php:316
+#: Logfiles.class.php:318
 msgid "Save Successful"
 msgstr ""
 
-#: Logfiles.class.php:367
+#: Logfiles.class.php:369
 msgid "Searching..."
 msgstr ""
 
-#: Logfiles.class.php:368 views/view.log.header.php:58
+#: Logfiles.class.php:370 views/view.log.header.php:58
 msgid "Seconds"
 msgstr ""
 
@@ -421,7 +421,7 @@ msgstr ""
 "Séquentiel : Renomme les fichiers archivés en ordre de manière à ce que le "
 "fichier le plus récent ait le plus haut numéro de séquence"
 
-#: Logfiles.class.php:244 Logfiles.class.php:263
+#: Logfiles.class.php:246 Logfiles.class.php:265
 msgid "Setting not allowed!"
 msgstr ""
 
@@ -431,7 +431,7 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:1028 Logfiles.class.php:1097
+#: Logfiles.class.php:1095
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -459,7 +459,7 @@ msgid ""
 "if calls dont flow as expected"
 msgstr ""
 
-#: Logfiles.class.php:269
+#: Logfiles.class.php:271
 msgid "Successful Update"
 msgstr ""
 
@@ -469,39 +469,39 @@ msgid ""
 "Log."
 msgstr ""
 
-#: Logfiles.class.php:749 Logfiles.class.php:804
+#: Logfiles.class.php:805 Logfiles.class.php:860
 msgid "The file was not found!"
 msgstr ""
 
-#: Logfiles.class.php:336
+#: Logfiles.class.php:338
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:757 Logfiles.class.php:812
+#: Logfiles.class.php:813 Logfiles.class.php:868
 msgid "The log file does not exist!"
 msgstr ""
 
-#: Logfiles.class.php:372
+#: Logfiles.class.php:374
 msgid "The log file has fewer lines, the reload was successful."
 msgstr ""
 
-#: Logfiles.class.php:385
+#: Logfiles.class.php:387
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:827
+#: Logfiles.class.php:883
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:762 Logfiles.class.php:817
+#: Logfiles.class.php:818 Logfiles.class.php:873
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:822
+#: Logfiles.class.php:878
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:767
+#: Logfiles.class.php:823
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -527,11 +527,11 @@ msgstr ""
 msgid "Transmition and receiving of faxes"
 msgstr "Transmission et réception de télécopies"
 
-#: Logfiles.class.php:387
+#: Logfiles.class.php:389
 msgid "Unknow error!"
 msgstr ""
 
-#: Logfiles.class.php:274
+#: Logfiles.class.php:276
 msgid "Update process failed!"
 msgstr ""
 
@@ -543,12 +543,12 @@ msgstr "Verbeux"
 msgid "Warning"
 msgstr "Avertissement"
 
-#: Logfiles.class.php:369 Logfiles.class.php:394
+#: Logfiles.class.php:371 Logfiles.class.php:396
 #: views/view.settings.general.php:31 views/view.settings.general.php:41
 msgid "Yes"
 msgstr "Oui"
 
-#: Logfiles.class.php:1028 Logfiles.class.php:1097
+#: Logfiles.class.php:1095
 msgid "appendhostname is set to: Yes."
 msgstr ""
 
