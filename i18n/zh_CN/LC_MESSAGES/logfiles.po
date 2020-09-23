@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-22 11:26+0000\n"
+"POT-Creation-Date: 2020-09-23 05:01+0000\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -203,7 +203,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:893
+#: Logfiles.class.php:904
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -407,7 +407,7 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:1095
+#: Logfiles.class.php:1106
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -445,7 +445,7 @@ msgid ""
 "Log."
 msgstr ""
 
-#: Logfiles.class.php:805 Logfiles.class.php:860
+#: Logfiles.class.php:816 Logfiles.class.php:871
 msgid "The file was not found!"
 msgstr ""
 
@@ -453,7 +453,7 @@ msgstr ""
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:813 Logfiles.class.php:868
+#: Logfiles.class.php:824 Logfiles.class.php:879
 msgid "The log file does not exist!"
 msgstr ""
 
@@ -465,19 +465,19 @@ msgstr ""
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:883
+#: Logfiles.class.php:894
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:818 Logfiles.class.php:873
+#: Logfiles.class.php:829 Logfiles.class.php:884
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:878
+#: Logfiles.class.php:889
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:823
+#: Logfiles.class.php:834
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -522,7 +522,7 @@ msgstr ""
 msgid "Yes"
 msgstr "是"
 
-#: Logfiles.class.php:1095
+#: Logfiles.class.php:1106
 msgid "appendhostname is set to: Yes."
 msgstr ""
 
