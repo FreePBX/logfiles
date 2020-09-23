@@ -561,7 +561,7 @@ class Logfiles implements \BMO
 					continue;
 				}
 				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
-				$opt_set = explode(",", $options);
+				$opt_set = explode(",", trim($options));
 				$new_row = self::DEFAULT_LOG_FILES_VALUES;
 				
 				foreach ($new_row as $key => $val)
@@ -588,10 +588,11 @@ class Logfiles implements \BMO
 							break;
 						
 						case 'verbose':
-							if (preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set))
+							$verbose_level = preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set);
+							if ($verbose_level)
 							{
 								//only number
-								$new_row[$key] = preg_replace('/[^0-9-*]+/', '', implode(preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set)));
+								$new_row[$key] = preg_replace('/[^0-9-*]+/', '', implode($verbose_level));
 							}
 							else
 							{
@@ -603,6 +604,16 @@ class Logfiles implements \BMO
 							$new_row[$key] = in_array($key , $opt_set) ? 'on' : 'off';
 					}
 				}
+
+				// Third party options. Ex: dpma
+				foreach ($opt_set as $nkey => $key)
+				{
+					if (! array_key_exists($key, $new_row) ) 
+					{
+						$new_row[$key] = 'on';
+					}
+				}
+
 				$ret[] = $new_row;
 			}
 		}
