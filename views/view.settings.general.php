@@ -13,13 +13,15 @@
         array(
             'id'     => 'rotatestrategy',
             'label'  => _("Log Rotation"),
-            'help'   => _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number').'<br/>'
-                      . _('Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators).').'<br/>'
+            'help'   => _('None: Do not perform any log rotation at all.  You should make very sure to set up some external log rotate mechanism as the asterisk logs can get very large, very quickly.').'<br/>'
+                      . _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number').'<br/>'
+                      . _('Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators).').' <strong><i>(Default)</i></strong><br/>'
                       . _('Timestamp: Rename the logfiles using a timestamp instead of a sequence number when "logger rotate" is executed.').'<br/>',
             'input'  => array(
-                array( 'id' => 'rotatestrategysequential', 'value' => 'sequential', 'label' =>  _("Sequential") ),
-                array( 'id' => 'rotatestrategyrotate',     'value' => 'rotate',     'label' =>  _("Rotate") ),
-                array( 'id' => 'rotatestrategytimestamp',  'value' => 'timestamp',  'label' =>  _("Timestamp") )
+                array( 'id' => 'rotatestrategynone',        'value' => 'none',       'label' =>  _("None") ),
+                array( 'id' => 'rotatestrategysequential',  'value' => 'sequential', 'label' =>  _("Sequential") ),
+                array( 'id' => 'rotatestrategyrotate',      'value' => 'rotate',     'label' =>  _("Rotate") ),
+                array( 'id' => 'rotatestrategytimestamp',   'value' => 'timestamp',  'label' =>  _("Timestamp") )
             ),
             'type'  => 'radio'
         ),
