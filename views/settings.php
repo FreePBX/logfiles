@@ -7,8 +7,9 @@ $datehelp = _('Customize the display of debug message time stamps. '
 									. '%2q for hundredths, etc.')
 									. _('Leave blank for default: ISO 8601 date format '
 									. 'yyyy-mm-dd HH:MM:SS (%F %T)');
-$rotatehelp = _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number').'<br/>';
-$rotatehelp .= _('Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators).').'<br/>';
+$rotatehelp  = _('None: Do not perform any log rotation at all.  You should make very sure to set up some external log rotate mechanism as the asterisk logs can get very large, very quickly.').'<br/>';
+$rotatehelp .= _('Sequential: Rename archived logs in order, such that the newest has the highest sequence number').'<br/>';
+$rotatehelp .= _('Rotate: Rotate all the old files, such that the oldest has the highest sequence number (expected behavior for Unix administrators).').' <strong><i>(Default)</i></strong><br/>';
 $rotatehelp .= _('Timestamp: Rename the logfiles using a timestamp instead of a sequence number when "logger rotate" is executed.').'<br/>';
 function log_dropdown($name,$value,$i){
 		$ret = '<select class="form-control" name="logfiles['.$name.']['.$i.']">';
@@ -84,12 +85,14 @@ function verbose_log_dropdown($name,$value,$i){
 															<i class="fa fa-question-circle fpbx-help-icon" data-for="rotatestrategy"></i>
 														</div>
 														<div class="col-md-9 radioset">
-									            <input type="radio" name="rotatestrategy" id="rotatestrategysequential" value="sequential" <?php echo ($rotatestrategy == "sequential"?"CHECKED":"") ?>>
-									            <label for="rotatestrategysequential"><?php echo _("Sequential");?></label>
-									            <input type="radio" name="rotatestrategy" id="rotatestrategyrotate" value="rotate" <?php echo ($rotatestrategy == "rotate"?"CHECKED":"") ?>>
-									            <label for="rotatestrategyrotate"><?php echo _("Rotate");?></label>
-									            <input type="radio" name="rotatestrategy" id="rotatestrategytimestamp" value="timestamp" <?php echo ($rotatestrategy == "timestamp"?"CHECKED":"") ?>>
-									            <label for="rotatestrategytimestamp"><?php echo _("Timestamp");?></label>
+															<input type="radio" name="rotatestrategy" id="rotatestrategynone" value="none" <?php echo ($rotatestrategy == "none"?"CHECKED":"") ?>>
+															<label for="rotatestrategynone"><?php echo _("None");?></label>
+															<input type="radio" name="rotatestrategy" id="rotatestrategysequential" value="sequential" <?php echo ($rotatestrategy == "sequential"?"CHECKED":"") ?>>
+															<label for="rotatestrategysequential"><?php echo _("Sequential");?></label>
+															<input type="radio" name="rotatestrategy" id="rotatestrategyrotate" value="rotate" <?php echo ($rotatestrategy == "rotate"?"CHECKED":"") ?>>
+															<label for="rotatestrategyrotate"><?php echo _("Rotate");?></label>
+															<input type="radio" name="rotatestrategy" id="rotatestrategytimestamp" value="timestamp" <?php echo ($rotatestrategy == "timestamp"?"CHECKED":"") ?>>
+															<label for="rotatestrategytimestamp"><?php echo _("Timestamp");?></label>
 														</div>
 													</div>
 												</div>
