@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 13:38+0530\n"
+"POT-Creation-Date: 2020-09-25 06:21+0000\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
@@ -49,15 +49,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: views/settings.php:236
+#: views/settings.php:239
 msgid "Add Log"
 msgstr ""
 
-#: views/settings.php:112
+#: views/settings.php:115
 msgid "Append Hostname"
 msgstr "ネーム名を付け加える"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid "Appends the hostname to the name of the log files"
 msgstr "ホストネームをログのファイル名に付け加えます"
 
@@ -79,7 +79,7 @@ msgstr "Asteriskログファイル設定"
 msgid "Asterisk Logfiles"
 msgstr "Asteriskログファイル"
 
-#: views/settings.php:172
+#: views/settings.php:175
 msgid "Critical errors and issues"
 msgstr "重大なエラーや問題"
 
@@ -94,23 +94,23 @@ msgstr ""
 "は、Linuxのマニュアル strftime(3)をご覧下さい。このフィールドを利用する事で少"
 "数のパラメーターも使用できます 。 10分の1は「%1q」、100分の1は「%2q」、など。"
 
-#: views/settings.php:171 views/settings.php:185
+#: views/settings.php:174 views/settings.php:188
 msgid "DTMF"
 msgstr "DTMF"
 
-#: views/settings.php:59
+#: views/settings.php:60
 msgid "Date Format"
 msgstr "日付形式"
 
-#: views/settings.php:166 views/settings.php:184
+#: views/settings.php:169 views/settings.php:187
 msgid "Debug"
 msgstr "デバッグ"
 
-#: views/settings.php:192
+#: views/settings.php:195
 msgid "Delete"
 msgstr "削除"
 
-#: views/settings.php:172 views/settings.php:186
+#: views/settings.php:175 views/settings.php:189
 msgid "Error"
 msgstr "エラー"
 
@@ -119,11 +119,11 @@ msgid "Error parsing log file or file not found!"
 msgstr ""
 "ログファイルを解析中にエラーが発生、若しくはファイルが見つかりませんでした。"
 
-#: views/settings.php:173 views/settings.php:187
+#: views/settings.php:176 views/settings.php:190
 msgid "Fax"
 msgstr "Fax"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Field"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: views/settings.php:165 views/settings.php:183
+#: views/settings.php:168 views/settings.php:186
 msgid "File Name"
 msgstr "ファイル名"
 
@@ -139,11 +139,11 @@ msgstr "ファイル名"
 msgid "Filter"
 msgstr ""
 
-#: views/settings.php:45
+#: views/settings.php:46
 msgid "General Settings"
 msgstr "一般設定"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Information"
 msgstr ""
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Invalid pattern"
 msgstr ""
 
-#: views/settings.php:171
+#: views/settings.php:174
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -173,19 +173,19 @@ msgstr ""
 msgid "Loading..."
 msgstr ""
 
-#: views/settings.php:38
+#: views/settings.php:39
 msgid "Log File Settings"
 msgstr "ログファイル設定"
 
-#: views/settings.php:46
+#: views/settings.php:47
 msgid "Log Files"
 msgstr "ログファイル"
 
-#: views/settings.php:139
+#: views/settings.php:142
 msgid "Log Queues"
 msgstr "ログキュー"
 
-#: views/settings.php:83
+#: views/settings.php:84
 msgid "Log Rotation"
 msgstr ""
 
@@ -193,20 +193,20 @@ msgstr ""
 msgid "Log file settings"
 msgstr "ログファイル設定"
 
-#: views/settings.php:154
+#: views/settings.php:157
 msgid "Log queue events to a file"
 msgstr "ファイルにキューのイベントを書き込みます"
 
-#: views/settings.php:162
+#: views/settings.php:165
 msgid "Logfile Help"
 msgstr ""
 
-#: views/settings.php:174
+#: views/settings.php:177
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr "特定操作のメッセージ。例：電話機の登録、通話終了など"
 
-#: views/settings.php:166
+#: views/settings.php:169
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -218,13 +218,13 @@ msgstr ""
 "すぐにログファイルのサイズ（およびディスク容量）が膨大になりますで注意してく"
 "ださい。"
 
-#: views/settings.php:165
+#: views/settings.php:168
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
 
-#: views/settings.php:119 views/settings.php:146
+#: views/settings.php:122 views/settings.php:149
 msgid "No"
 msgstr "いいえ"
 
@@ -232,19 +232,30 @@ msgstr "いいえ"
 msgid "No lines returned"
 msgstr ""
 
-#: views/settings.php:174 views/settings.php:188
+#: views/settings.php:89
+msgid "None"
+msgstr ""
+
+#: views/settings.php:10
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
+msgstr ""
+
+#: views/settings.php:177 views/settings.php:191
 msgid "Notice"
 msgstr "通知"
 
-#: views/settings.php:16 views/settings.php:26
+#: views/settings.php:17 views/settings.php:27
 msgid "Off"
 msgstr "オフ"
 
-#: views/settings.php:15 views/settings.php:27
+#: views/settings.php:16 views/settings.php:28
 msgid "On"
 msgstr "オン"
 
-#: views/settings.php:177
+#: views/settings.php:180
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "ダイヤルプランの構文やコールフローにおいて、重大ではありませんが、問題が発生"
@@ -258,11 +269,11 @@ msgstr "レポート"
 msgid "Reset"
 msgstr ""
 
-#: views/settings.php:90
+#: views/settings.php:93
 msgid "Rotate"
 msgstr "循環"
 
-#: views/settings.php:11
+#: views/settings.php:12
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
@@ -270,15 +281,15 @@ msgstr ""
 "循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにし"
 "ます(Unixの管理者はこのような動作を期待するでしょう)。"
 
-#: views/settings.php:191
+#: views/settings.php:194
 msgid "Security"
 msgstr ""
 
-#: views/settings.php:88
+#: views/settings.php:91
 msgid "Sequential"
 msgstr "順次"
 
-#: views/settings.php:10
+#: views/settings.php:11
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
@@ -286,7 +297,7 @@ msgstr ""
 "順次: アーカイブされたログファイルの名前を変更し、最新の物が、最も高い順序に"
 "なる様にします"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
@@ -306,11 +317,11 @@ msgstr "表示"
 msgid "Submit"
 msgstr ""
 
-#: views/settings.php:92
+#: views/settings.php:95
 msgid "Timestamp"
 msgstr "タイムスタンプ"
 
-#: views/settings.php:12
+#: views/settings.php:13
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
@@ -318,11 +329,11 @@ msgstr ""
 "タイムスタンプ: \"logger rotate\"が実行された場合、連番ではなく、タイムスタン"
 "プを使ってログファイルの名前を変更します。"
 
-#: views/settings.php:173
+#: views/settings.php:176
 msgid "Transmition and receiving of faxes"
 msgstr "FAXの受信・送信"
 
-#: views/settings.php:175 views/settings.php:189
+#: views/settings.php:178 views/settings.php:192
 msgid "Verbose"
 msgstr "詳細レポート"
 
@@ -330,11 +341,11 @@ msgstr "詳細レポート"
 msgid "View Logs"
 msgstr "ログを表示する"
 
-#: views/settings.php:177 views/settings.php:190
+#: views/settings.php:180 views/settings.php:193
 msgid "Warning"
 msgstr "警告"
 
-#: views/settings.php:117 views/settings.php:144
+#: views/settings.php:120 views/settings.php:147
 msgid "Yes"
 msgstr "はい"
 

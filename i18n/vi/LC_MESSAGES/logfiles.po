@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 13:38+0530\n"
+"POT-Creation-Date: 2020-09-25 06:21+0000\n"
 "PO-Revision-Date: 2017-07-08 19:30+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,15 +21,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/settings.php:236
+#: views/settings.php:239
 msgid "Add Log"
 msgstr "Thêm Log"
 
-#: views/settings.php:112
+#: views/settings.php:115
 msgid "Append Hostname"
 msgstr "Kèm thêm Hostname"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid "Appends the hostname to the name of the log files"
 msgstr "Kèm thêm hostname vào tên của các tệp log"
 
@@ -53,7 +53,7 @@ msgstr "Cài đặt logfile Asterisk"
 msgid "Asterisk Logfiles"
 msgstr "Các tệp Log của Asterisk"
 
-#: views/settings.php:172
+#: views/settings.php:175
 msgid "Critical errors and issues"
 msgstr "Các vấn đề và lỗi nghiêm trọng"
 
@@ -69,23 +69,23 @@ msgstr ""
 "số nhị phân có thể được sử dụng trong trường này. Sử dụng% 1q cho một phần "
 "mười,% 2q cho một phần trăm, v.v ..."
 
-#: views/settings.php:171 views/settings.php:185
+#: views/settings.php:174 views/settings.php:188
 msgid "DTMF"
 msgstr "DTMF"
 
-#: views/settings.php:59
+#: views/settings.php:60
 msgid "Date Format"
 msgstr "Định dạng ngày tháng"
 
-#: views/settings.php:166 views/settings.php:184
+#: views/settings.php:169 views/settings.php:187
 msgid "Debug"
 msgstr "Gỡ"
 
-#: views/settings.php:192
+#: views/settings.php:195
 msgid "Delete"
 msgstr "Xóa"
 
-#: views/settings.php:172 views/settings.php:186
+#: views/settings.php:175 views/settings.php:189
 msgid "Error"
 msgstr "Lỗi"
 
@@ -93,11 +93,11 @@ msgstr "Lỗi"
 msgid "Error parsing log file or file not found!"
 msgstr "Lỗi phân tích tệp log hoặc không tìm thấy tệp!"
 
-#: views/settings.php:173 views/settings.php:187
+#: views/settings.php:176 views/settings.php:190
 msgid "Fax"
 msgstr "Fax"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Field"
 msgstr "Trường"
 
@@ -105,7 +105,7 @@ msgstr "Trường"
 msgid "File"
 msgstr "Tệp"
 
-#: views/settings.php:165 views/settings.php:183
+#: views/settings.php:168 views/settings.php:186
 msgid "File Name"
 msgstr "Tên tệp"
 
@@ -113,11 +113,11 @@ msgstr "Tên tệp"
 msgid "Filter"
 msgstr "Bộ lọc"
 
-#: views/settings.php:45
+#: views/settings.php:46
 msgid "General Settings"
 msgstr "Cài đặt chung"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Information"
 msgstr "Thông tin"
 
@@ -125,7 +125,7 @@ msgstr "Thông tin"
 msgid "Invalid pattern"
 msgstr "Mẫu ( pattern) không hợp lệ"
 
-#: views/settings.php:171
+#: views/settings.php:174
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -146,19 +146,19 @@ msgstr "Các đường dây"
 msgid "Loading..."
 msgstr "Đang tải..."
 
-#: views/settings.php:38
+#: views/settings.php:39
 msgid "Log File Settings"
 msgstr "Cài đặt tệp log"
 
-#: views/settings.php:46
+#: views/settings.php:47
 msgid "Log Files"
 msgstr "Các tệp Log"
 
-#: views/settings.php:139
+#: views/settings.php:142
 msgid "Log Queues"
 msgstr "Các hàng log"
 
-#: views/settings.php:83
+#: views/settings.php:84
 msgid "Log Rotation"
 msgstr "Xoay vòng Log"
 
@@ -166,22 +166,22 @@ msgstr "Xoay vòng Log"
 msgid "Log file settings"
 msgstr "Cài đặt tệp Log"
 
-#: views/settings.php:154
+#: views/settings.php:157
 msgid "Log queue events to a file"
 msgstr "Các sự kiện hàng Log đến một tệp"
 
-#: views/settings.php:162
+#: views/settings.php:165
 msgid "Logfile Help"
 msgstr "Trợ giúp logfile"
 
-#: views/settings.php:174
+#: views/settings.php:177
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 "Tin nhắn thống báo của các thao tác nhất định, ví dụ đăng ký cuộc gọi hay "
 "hoàn thành cuộc gọi"
 
-#: views/settings.php:166
+#: views/settings.php:169
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -193,7 +193,7 @@ msgstr ""
 "lỗi cũng rất rườm rà và có thể và làm đầy các tệp log (và bộ nhớ đĩa) rất "
 "nhanh."
 
-#: views/settings.php:165
+#: views/settings.php:168
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
@@ -201,7 +201,7 @@ msgstr ""
 "Tên tệp, liên quan đến đường dẫn Log Asterisk. Sử dụng đường dẫn cho một vị "
 "trí khác"
 
-#: views/settings.php:119 views/settings.php:146
+#: views/settings.php:122 views/settings.php:149
 msgid "No"
 msgstr "Không"
 
@@ -209,19 +209,30 @@ msgstr "Không"
 msgid "No lines returned"
 msgstr "Không có đường dây nào trở lại"
 
-#: views/settings.php:174 views/settings.php:188
+#: views/settings.php:89
+msgid "None"
+msgstr ""
+
+#: views/settings.php:10
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
+msgstr ""
+
+#: views/settings.php:177 views/settings.php:191
 msgid "Notice"
 msgstr "Lưu ý"
 
-#: views/settings.php:16 views/settings.php:26
+#: views/settings.php:17 views/settings.php:27
 msgid "Off"
 msgstr "Tắt"
 
-#: views/settings.php:15 views/settings.php:27
+#: views/settings.php:16 views/settings.php:28
 msgid "On"
 msgstr "Bật"
 
-#: views/settings.php:177
+#: views/settings.php:180
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "Các vấn đề có thể xảy ra với kế hoạch quay số syntaxt  hoặc dòng cuộc gọi, "
@@ -235,11 +246,11 @@ msgstr "Báo cáo"
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: views/settings.php:90
+#: views/settings.php:93
 msgid "Rotate"
 msgstr "Xoay vòng"
 
-#: views/settings.php:11
+#: views/settings.php:12
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
@@ -247,15 +258,15 @@ msgstr ""
 "Xuay vòng: xuay vòng tất cả các tệp cũ, ví dụ như các tệp cũ nhất có số thứ "
 "tự cao nhất ( hành vi mong muốn cho các quản trị viên Unix)."
 
-#: views/settings.php:191
+#: views/settings.php:194
 msgid "Security"
 msgstr "Bảo mật"
 
-#: views/settings.php:88
+#: views/settings.php:91
 msgid "Sequential"
 msgstr "Theo thứ tự"
 
-#: views/settings.php:10
+#: views/settings.php:11
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
@@ -263,7 +274,7 @@ msgstr ""
 "Theo thứ tự: Đổi tên các log được lưu giữ theo thứ tự, sao cho bản ghi mới "
 "nhất có số thứ tự cao nhất"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
@@ -283,11 +294,11 @@ msgstr "Hiển thị"
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: views/settings.php:92
+#: views/settings.php:95
 msgid "Timestamp"
 msgstr "Dấu thời gian (Timestamp)"
 
-#: views/settings.php:12
+#: views/settings.php:13
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
@@ -295,11 +306,11 @@ msgstr ""
 "Timestamp: Đổi tên các tệp log sử dụng timestamp thay thế cho số thứ tự khi "
 "thực hiện \"logger rotate\"."
 
-#: views/settings.php:173
+#: views/settings.php:176
 msgid "Transmition and receiving of faxes"
 msgstr "Việc truyền và nhận fax"
 
-#: views/settings.php:175 views/settings.php:189
+#: views/settings.php:178 views/settings.php:192
 msgid "Verbose"
 msgstr "Rườm rà"
 
@@ -307,11 +318,11 @@ msgstr "Rườm rà"
 msgid "View Logs"
 msgstr "Xem Log"
 
-#: views/settings.php:177 views/settings.php:190
+#: views/settings.php:180 views/settings.php:193
 msgid "Warning"
 msgstr "Cảnh báo"
 
-#: views/settings.php:117 views/settings.php:144
+#: views/settings.php:120 views/settings.php:147
 msgid "Yes"
 msgstr "Có"
 

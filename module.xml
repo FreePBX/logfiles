@@ -3,13 +3,14 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>13.0.10.10</version>
+	<version>13.0.10.11</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   	<description>The Asterisk Logfiles Module is an easy way to view portions of the Asterisk Log.</description>
   	<more-info>https://wiki.freepbx.org/display/F2/Asterisk+Logfiles</more-info>
 	<changelog>
+		*13.0.10.11* FREEI-1863 FreePBX/Asterisk log rotation does not take overflow log files into account 
 		*13.0.10.10* FREEI-1789 
 		*13.0.10.9* FREEPBX-21474: fix resize "log_view" 
 		*13.0.10.8* Fixing FREEI-1373 Form reset issue 

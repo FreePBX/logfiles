@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 13:38+0530\n"
+"POT-Creation-Date: 2020-09-25 06:21+0000\n"
 "PO-Revision-Date: 2020-08-28 23:00+0000\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://*/projects/freepbx/logfiles/es/>\n"
@@ -33,15 +33,15 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: views/settings.php:236
+#: views/settings.php:239
 msgid "Add Log"
 msgstr "Añadir registro"
 
-#: views/settings.php:112
+#: views/settings.php:115
 msgid "Append Hostname"
 msgstr "Agrega al final el Hostname"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid "Appends the hostname to the name of the log files"
 msgstr "Agrega el hostname al final del nombre de los archivos de log"
 
@@ -65,7 +65,7 @@ msgstr "Configuración del Logfile de Asterisk"
 msgid "Asterisk Logfiles"
 msgstr "Archivos de bitácora de Asterisk"
 
-#: views/settings.php:172
+#: views/settings.php:175
 msgid "Critical errors and issues"
 msgstr "Errores críticos y problemas"
 
@@ -82,23 +82,23 @@ msgstr ""
 "que puede ser utilizado en este campo. Use% 1q para décimas,% 2q para "
 "centésimas, etc."
 
-#: views/settings.php:171 views/settings.php:185
+#: views/settings.php:174 views/settings.php:188
 msgid "DTMF"
 msgstr "DTMF"
 
-#: views/settings.php:59
+#: views/settings.php:60
 msgid "Date Format"
 msgstr "Formato de Fecha"
 
-#: views/settings.php:166 views/settings.php:184
+#: views/settings.php:169 views/settings.php:187
 msgid "Debug"
 msgstr "Depurar"
 
-#: views/settings.php:192
+#: views/settings.php:195
 msgid "Delete"
 msgstr "Borrar"
 
-#: views/settings.php:172 views/settings.php:186
+#: views/settings.php:175 views/settings.php:189
 msgid "Error"
 msgstr "Error"
 
@@ -106,11 +106,11 @@ msgstr "Error"
 msgid "Error parsing log file or file not found!"
 msgstr "Error archivo de log  o no se encontró el archivo!"
 
-#: views/settings.php:173 views/settings.php:187
+#: views/settings.php:176 views/settings.php:190
 msgid "Fax"
 msgstr "Fax"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Field"
 msgstr "Campo"
 
@@ -118,7 +118,7 @@ msgstr "Campo"
 msgid "File"
 msgstr "Archivo"
 
-#: views/settings.php:165 views/settings.php:183
+#: views/settings.php:168 views/settings.php:186
 msgid "File Name"
 msgstr "Nombre de Archivo"
 
@@ -126,11 +126,11 @@ msgstr "Nombre de Archivo"
 msgid "Filter"
 msgstr "Filtro"
 
-#: views/settings.php:45
+#: views/settings.php:46
 msgid "General Settings"
 msgstr "Configuración General"
 
-#: views/settings.php:164
+#: views/settings.php:167
 msgid "Information"
 msgstr "Información"
 
@@ -138,7 +138,7 @@ msgstr "Información"
 msgid "Invalid pattern"
 msgstr "patrón invalido"
 
-#: views/settings.php:171
+#: views/settings.php:174
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -160,19 +160,19 @@ msgstr "Lineas"
 msgid "Loading..."
 msgstr "Cargando..."
 
-#: views/settings.php:38
+#: views/settings.php:39
 msgid "Log File Settings"
 msgstr "Configuración de Archivo de Log"
 
-#: views/settings.php:46
+#: views/settings.php:47
 msgid "Log Files"
 msgstr "Archivos de Log"
 
-#: views/settings.php:139
+#: views/settings.php:142
 msgid "Log Queues"
 msgstr "Colas de Log"
 
-#: views/settings.php:83
+#: views/settings.php:84
 msgid "Log Rotation"
 msgstr "Rotación de Registro"
 
@@ -180,22 +180,22 @@ msgstr "Rotación de Registro"
 msgid "Log file settings"
 msgstr "Configuración de Archivos de Log"
 
-#: views/settings.php:154
+#: views/settings.php:157
 msgid "Log queue events to a file"
 msgstr "Registre eventos de colas en un archivo"
 
-#: views/settings.php:162
+#: views/settings.php:165
 msgid "Logfile Help"
 msgstr "Ayuda de logfile"
 
-#: views/settings.php:174
+#: views/settings.php:177
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 "Mensajes de acciones específicas, tal como registro de un teléfono o "
 "compleción de una llamada"
 
-#: views/settings.php:166
+#: views/settings.php:169
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -208,7 +208,7 @@ msgstr ""
 "muy detallados y pueden y deben llenar los archivos de registro (y el "
 "almacenamiento en disco) rápidamente."
 
-#: views/settings.php:165
+#: views/settings.php:168
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
@@ -216,7 +216,7 @@ msgstr ""
 "Nombre del archivo, en relación con Asterisk logpath. Usar ruta absoluta "
 "para una ubicación diferente"
 
-#: views/settings.php:119 views/settings.php:146
+#: views/settings.php:122 views/settings.php:149
 msgid "No"
 msgstr "No"
 
@@ -224,19 +224,30 @@ msgstr "No"
 msgid "No lines returned"
 msgstr "No hay líneas devueltas"
 
-#: views/settings.php:174 views/settings.php:188
+#: views/settings.php:89
+msgid "None"
+msgstr ""
+
+#: views/settings.php:10
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
+msgstr ""
+
+#: views/settings.php:177 views/settings.php:191
 msgid "Notice"
 msgstr "Noticia"
 
-#: views/settings.php:16 views/settings.php:26
+#: views/settings.php:17 views/settings.php:27
 msgid "Off"
 msgstr "Apagado"
 
-#: views/settings.php:15 views/settings.php:27
+#: views/settings.php:16 views/settings.php:28
 msgid "On"
 msgstr "Encendido"
 
-#: views/settings.php:177
+#: views/settings.php:180
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "Posible problema con sintaxis en el dialplan o flujo de llamada, pero no es "
@@ -250,11 +261,11 @@ msgstr "Reportes"
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: views/settings.php:90
+#: views/settings.php:93
 msgid "Rotate"
 msgstr "Rotar"
 
-#: views/settings.php:11
+#: views/settings.php:12
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
@@ -263,15 +274,15 @@ msgstr ""
 "mayor numero de secuencia (comportamiento esperado para administradores "
 "Unix)."
 
-#: views/settings.php:191
+#: views/settings.php:194
 msgid "Security"
 msgstr "Seguridad"
 
-#: views/settings.php:88
+#: views/settings.php:91
 msgid "Sequential"
 msgstr "Secuencial"
 
-#: views/settings.php:10
+#: views/settings.php:11
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
@@ -279,7 +290,7 @@ msgstr ""
 "Secuencial. renombra los Logs archivados en orden, como tal el mas nuevo "
 "tiene el numero de secuencia mas alto"
 
-#: views/settings.php:127
+#: views/settings.php:130
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
@@ -305,11 +316,11 @@ msgstr "Mostrar"
 msgid "Submit"
 msgstr "Enviar"
 
-#: views/settings.php:92
+#: views/settings.php:95
 msgid "Timestamp"
 msgstr "Marca de tiempo"
 
-#: views/settings.php:12
+#: views/settings.php:13
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
@@ -317,11 +328,11 @@ msgstr ""
 "Marca de Tiempo. Renombra los logfiles usando una marca de tiempo en lugar "
 "de una secuencia cuando la \"rotación\" es ejecutada."
 
-#: views/settings.php:173
+#: views/settings.php:176
 msgid "Transmition and receiving of faxes"
 msgstr "Transmisión y recepción de faxes"
 
-#: views/settings.php:175 views/settings.php:189
+#: views/settings.php:178 views/settings.php:192
 msgid "Verbose"
 msgstr "Verboso"
 
@@ -329,11 +340,11 @@ msgstr "Verboso"
 msgid "View Logs"
 msgstr "Ver Logs"
 
-#: views/settings.php:177 views/settings.php:190
+#: views/settings.php:180 views/settings.php:193
 msgid "Warning"
 msgstr "Advertencia"
 
-#: views/settings.php:117 views/settings.php:144
+#: views/settings.php:120 views/settings.php:147
 msgid "Yes"
 msgstr "Si"
 
