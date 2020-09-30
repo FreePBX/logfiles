@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2019-06-25 15:58+0000\n"
+"PO-Revision-Date: 2020-09-30 15:10+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/logfiles/de/>\n"
 "Language: de_DE\n"
@@ -213,7 +213,7 @@ msgstr "Keine Zeilen zurückgeliefert"
 
 #: views/settings.php:89
 msgid "None"
-msgstr ""
+msgstr "Kein*e"
 
 #: views/settings.php:10
 msgid ""
@@ -221,6 +221,9 @@ msgid ""
 "set up some external log rotate mechanism as the asterisk logs can get very "
 "large, very quickly."
 msgstr ""
+"Keine: Es wird keine Log-Rotation durchgeführt. Sie sollten unbedingt "
+"sicherstellen, dass Sie einen externen Mechanismus zur Log-Rotation "
+"verwenden, da die Asterisk-Protokolle sehr schnell sehr groß werden können."
 
 #: views/settings.php:177 views/settings.php:191
 msgid "Notice"
