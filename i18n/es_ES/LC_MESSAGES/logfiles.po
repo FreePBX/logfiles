@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2020-08-28 23:00+0000\n"
+"PO-Revision-Date: 2020-10-01 17:00+0000\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://*/projects/freepbx/logfiles/es/>\n"
 "Language: es_ES\n"
@@ -226,7 +226,7 @@ msgstr "No hay líneas devueltas"
 
 #: views/settings.php:89
 msgid "None"
-msgstr ""
+msgstr "Ninguna"
 
 #: views/settings.php:10
 msgid ""
@@ -234,6 +234,9 @@ msgid ""
 "set up some external log rotate mechanism as the asterisk logs can get very "
 "large, very quickly."
 msgstr ""
+"Ninguna: No realice ninguna rotación de registro. Debe asegurarse de "
+"configurar algún mecanismo de rotación de registro externo, ya que los "
+"registros de asterisk pueden volverse muy grandes rápidamente."
 
 #: views/settings.php:177 views/settings.php:191
 msgid "Notice"
