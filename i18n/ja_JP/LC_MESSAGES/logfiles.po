@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-23 05:01+0000\n"
+"POT-Creation-Date: 2020-10-05 08:49+0000\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
@@ -65,11 +65,11 @@ msgstr ""
 msgid "Activate remote log"
 msgstr ""
 
-#: views/view.settings.general.php:28
+#: views/view.settings.general.php:30
 msgid "Append Hostname"
 msgstr "ネーム名を付け加える"
 
-#: views/view.settings.general.php:29
+#: views/view.settings.general.php:31
 msgid "Appends the hostname to the name of the log files"
 msgstr "ホストネームをログのファイル名に付け加えます"
 
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Lines"
 msgstr ""
 
-#: views/view.settings.general.php:130
+#: views/view.settings.general.php:132
 msgid "Loading..."
 msgstr ""
 
@@ -258,7 +258,7 @@ msgstr "ログファイル設定"
 msgid "Log Files"
 msgstr "ログファイル"
 
-#: views/view.settings.general.php:38
+#: views/view.settings.general.php:40
 msgid "Log Queues"
 msgstr "ログキュー"
 
@@ -270,7 +270,7 @@ msgstr ""
 msgid "Log loading completed successfully."
 msgstr ""
 
-#: views/view.settings.general.php:39
+#: views/view.settings.general.php:41
 msgid "Log queue events to a file"
 msgstr "ファイルにキューのイベントを書き込みます"
 
@@ -326,12 +326,19 @@ msgid "New Log"
 msgstr ""
 
 #: Logfiles.class.php:367 Logfiles.class.php:391
-#: views/view.settings.general.php:32 views/view.settings.general.php:42
+#: views/view.settings.general.php:34 views/view.settings.general.php:44
 msgid "No"
 msgstr "いいえ"
 
-#: Logfiles.class.php:368
+#: Logfiles.class.php:368 views/view.settings.general.php:21
 msgid "None"
+msgstr ""
+
+#: views/view.settings.general.php:16
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
 msgstr ""
 
 #: views/view.settings.logfiles.php:42
@@ -360,7 +367,7 @@ msgstr ""
 msgid "Refresh Interval"
 msgstr ""
 
-#: views/view.settings.general.php:108 views/view.settings.general.php:135
+#: views/view.settings.general.php:110 views/view.settings.general.php:137
 msgid "Reload"
 msgstr ""
 
@@ -384,11 +391,11 @@ msgstr ""
 msgid "Reports"
 msgstr "レポート"
 
-#: views/view.settings.general.php:21
+#: views/view.settings.general.php:23
 msgid "Rotate"
 msgstr "循環"
 
-#: views/view.settings.general.php:17
+#: views/view.settings.general.php:18
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
@@ -396,7 +403,7 @@ msgstr ""
 "循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにし"
 "ます(Unixの管理者はこのような動作を期待するでしょう)。"
 
-#: Logfiles.class.php:395 views/view.settings.general.php:132
+#: Logfiles.class.php:395 views/view.settings.general.php:134
 msgid "Save"
 msgstr "保存"
 
@@ -420,11 +427,11 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
-#: views/view.settings.general.php:20
+#: views/view.settings.general.php:22
 msgid "Sequential"
 msgstr "順次"
 
-#: views/view.settings.general.php:16
+#: views/view.settings.general.php:17
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
@@ -436,7 +443,7 @@ msgstr ""
 msgid "Setting not allowed!"
 msgstr ""
 
-#: views/view.settings.general.php:29
+#: views/view.settings.general.php:31
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
@@ -518,11 +525,11 @@ msgstr ""
 msgid "There is no permission to write this log file!"
 msgstr ""
 
-#: views/view.settings.general.php:22
+#: views/view.settings.general.php:24
 msgid "Timestamp"
 msgstr "タイムスタンプ"
 
-#: views/view.settings.general.php:18
+#: views/view.settings.general.php:19
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
@@ -557,7 +564,7 @@ msgid "Warning"
 msgstr "警告"
 
 #: Logfiles.class.php:371 Logfiles.class.php:396
-#: views/view.settings.general.php:31 views/view.settings.general.php:41
+#: views/view.settings.general.php:33 views/view.settings.general.php:43
 msgid "Yes"
 msgstr "はい"
 

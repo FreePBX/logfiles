@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-23 05:01+0000\n"
+"POT-Creation-Date: 2020-10-05 08:49+0000\n"
 "PO-Revision-Date: 2019-08-13 12:03+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/logfiles/fa/>\n"
@@ -36,11 +36,11 @@ msgstr ""
 msgid "Activate remote log"
 msgstr ""
 
-#: views/view.settings.general.php:28
+#: views/view.settings.general.php:30
 msgid "Append Hostname"
 msgstr "اضافه کردن نام میزبان"
 
-#: views/view.settings.general.php:29
+#: views/view.settings.general.php:31
 msgid "Appends the hostname to the name of the log files"
 msgstr "اضافه کردن نام میزبان به لاگ فایل ها"
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Lines"
 msgstr "خطوط"
 
-#: views/view.settings.general.php:130
+#: views/view.settings.general.php:132
 msgid "Loading..."
 msgstr "درحال لود شدن..."
 
@@ -227,7 +227,7 @@ msgstr "تنظیمات لاگ فایل"
 msgid "Log Files"
 msgstr "لاگ فایل"
 
-#: views/view.settings.general.php:38
+#: views/view.settings.general.php:40
 msgid "Log Queues"
 msgstr "صف لاگ"
 
@@ -239,7 +239,7 @@ msgstr "ورود به سیستم چرخشی"
 msgid "Log loading completed successfully."
 msgstr ""
 
-#: views/view.settings.general.php:39
+#: views/view.settings.general.php:41
 msgid "Log queue events to a file"
 msgstr "لاگ صف رویدادهای فایل"
 
@@ -293,12 +293,19 @@ msgid "New Log"
 msgstr ""
 
 #: Logfiles.class.php:367 Logfiles.class.php:391
-#: views/view.settings.general.php:32 views/view.settings.general.php:42
+#: views/view.settings.general.php:34 views/view.settings.general.php:44
 msgid "No"
 msgstr "خیر"
 
-#: Logfiles.class.php:368
+#: Logfiles.class.php:368 views/view.settings.general.php:21
 msgid "None"
+msgstr ""
+
+#: views/view.settings.general.php:16
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
 msgstr ""
 
 #: views/view.settings.logfiles.php:42
@@ -325,7 +332,7 @@ msgstr "مشکلات احتمالی syntaxt dialplan یا جریان پاسخ، 
 msgid "Refresh Interval"
 msgstr ""
 
-#: views/view.settings.general.php:108 views/view.settings.general.php:135
+#: views/view.settings.general.php:110 views/view.settings.general.php:137
 msgid "Reload"
 msgstr ""
 
@@ -349,11 +356,11 @@ msgstr ""
 msgid "Reports"
 msgstr "گزارش ها"
 
-#: views/view.settings.general.php:21
+#: views/view.settings.general.php:23
 msgid "Rotate"
 msgstr "چرخشی"
 
-#: views/view.settings.general.php:17
+#: views/view.settings.general.php:18
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
@@ -361,7 +368,7 @@ msgstr ""
 "چرخش: چرخش تمام فایل های قدیمی، به طوری که از قدیمی ترین دارای بیشترین تعداد "
 "دنباله (رفتار مورد انتظار برای مدیران یونیکس)."
 
-#: Logfiles.class.php:395 views/view.settings.general.php:132
+#: Logfiles.class.php:395 views/view.settings.general.php:134
 msgid "Save"
 msgstr ""
 
@@ -385,11 +392,11 @@ msgstr ""
 msgid "Security"
 msgstr "امنیت"
 
-#: views/view.settings.general.php:20
+#: views/view.settings.general.php:22
 msgid "Sequential"
 msgstr "پی در پی"
 
-#: views/view.settings.general.php:16
+#: views/view.settings.general.php:17
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
@@ -400,7 +407,7 @@ msgstr ""
 msgid "Setting not allowed!"
 msgstr ""
 
-#: views/view.settings.general.php:29
+#: views/view.settings.general.php:31
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
@@ -484,11 +491,11 @@ msgstr ""
 msgid "There is no permission to write this log file!"
 msgstr ""
 
-#: views/view.settings.general.php:22
+#: views/view.settings.general.php:24
 msgid "Timestamp"
 msgstr "برچسب زمان"
 
-#: views/view.settings.general.php:18
+#: views/view.settings.general.php:19
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
@@ -523,7 +530,7 @@ msgid "Warning"
 msgstr "هشدار"
 
 #: Logfiles.class.php:371 Logfiles.class.php:396
-#: views/view.settings.general.php:31 views/view.settings.general.php:41
+#: views/view.settings.general.php:33 views/view.settings.general.php:43
 msgid "Yes"
 msgstr "بله"
 
