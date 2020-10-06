@@ -560,58 +560,23 @@ class Logfiles implements \BMO
 				{
 					continue;
 				}
-				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
-				$opt_set = explode(",", trim($options));
+
 				$new_row = self::DEFAULT_LOG_FILES_VALUES;
-				
+				$opt_set = explode(",", $options);
+
+				// Optiones default asterisk
 				foreach ($new_row as $key => $val)
 				{
-					switch($key)
-					{
-						case 'name':
-							$new_row[$key] = $file;
-							break;
-
-						case 'permanent':
-						case 'readonly':
-							// convert boolean value to tinyint
-							$new_row[$key] = boolval(true) ? "1" : "0";
-							break;
-
-						case 'disabled':
-							// convert boolean value to tinyint
-							$new_row[$key] = boolval(false) ? "1" : "0";
-							break;
-
-						case 'security':
-							$new_row[$key] = ( in_array($key , $opt_set) && $has_security_option ) ? 'on' : 'off';
-							break;
-						
-						case 'verbose':
-							$verbose_level = preg_grep('/^verbose\([0-9]|\*\)+$/i', $opt_set);
-							if ($verbose_level)
-							{
-								//only number
-								$new_row[$key] = preg_replace('/[^0-9-*]+/', '', implode($verbose_level));
-							}
-							else
-							{
-								$new_row[$key] = in_array($key , $opt_set) ? 'on' : 'off';
-							}
-							break;
-
-						default:
-							$new_row[$key] = in_array($key , $opt_set) ? 'on' : 'off';
-					}
+					$new_row[$key] = $this->parse_option_logfile_get($file, $key, $opt_set);
 				}
-
 				// Third party options. Ex: dpma
 				foreach ($opt_set as $nkey => $key)
 				{
-					if (! array_key_exists($key, $new_row) ) 
+					if (array_key_exists($key, $new_row))
 					{
-						$new_row[$key] = 'on';
+						continue;
 					}
+					$new_row[$key] = $this->parse_option_logfile_get($file, $key, $opt_set);
 				}
 
 				$ret[] = $new_row;
@@ -629,7 +594,6 @@ class Logfiles implements \BMO
 
 	public function setLogFiles($name, $data = array())
 	{
-		$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
 		$default = self::DEFAULT_LOG_FILES_VALUES;
 		$data_return = false;
 		
@@ -650,38 +614,7 @@ class Logfiles implements \BMO
 			foreach ($default as $key => $val_default)
 			{
 				$columns .= sprintf("%s`%s`", (empty($columns) ? '' : ', '), $key);
-
-				$new_val =  $val_default;
-				if ($key == 'name')
-				{
-					$new_val = $name;
-				}
-				elseif ($key == "security" && ! $has_security_option) 
-				{
-					$new_val = 'off';
-				}
-				elseif ( array_key_exists($key, $data) )
-				{
-					$new_val = $data[$key];
-				}
-				else
-				{
-					if ( ! empty( $old_val ) )
-					{
-						// Get old value
-						if ( in_array($key, array('permanent', 'readonly', 'disabled')) )
-						{
-							$new_val = $old_val[$key];
-						}
-					}
-				}
-
-				// convert boolean value to tinyint
-				if ( in_array($key, array('permanent', 'readonly', 'disabled')) )
-				{
-					$new_val = boolval($new_val) ? 1 : 0;
-				}
-
+				$new_val = $this->parse_option_logfile_sql($name, $key, $data, $val_default, $old_val);
 				array_push($arr_val, $new_val);
 			}
 
@@ -1070,7 +1003,8 @@ class Logfiles implements \BMO
 
 
 
-	// Manipulate asterisk configuration files
+
+	//--> Manipulate asterisk configuration files
 	private function read_logfiles_config()
 	{
 		$file_config = $this->path['logger_logfiles_additional.conf'];
@@ -1120,7 +1054,6 @@ class Logfiles implements \BMO
 		}
 
 		$logfiles = "";
-		$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
 		foreach ($this->getLogfilesAll(true) as $k => $v)
 		{
 			$name = $v['name'];
@@ -1134,36 +1067,10 @@ class Logfiles implements \BMO
 
 			foreach ($v as $opt => $set)
 			{
-				switch ($opt)
-				{
-					case 'permanent':
-					case 'readonly':
-					case 'disabled':
-						continue 2;
-						break;
-					
-					case 'verbose':
-						if (is_numeric($set) || $set == '*')
-						{
-							$name_opt[] = 'verbose(' . $set . ')';
-						}
-						elseif ($set == 'on')
-						{
-							$name_opt[] = $opt;
-						}
-						break;
-
-					default:
-						if ($set == 'on')
-						{
-							if ($has_security_option || $opt != 'security')
-							{
-								$name_opt[] = $opt;
-							}
-						}
-						break;
-				}
+				$name_opt[] = $this->parse_option_logfile_set($opt, $set);
 			}
+			//delete empty records
+			$name_opt = array_filter($name_opt);
 
 			if( ! empty($name) && ! empty($name_opt) )
 			{
@@ -1182,4 +1089,160 @@ class Logfiles implements \BMO
 		$this->FreePBX->WriteConfig($conf);
 	}
 
+
+
+
+
+
+
+
+
+
+	/**
+	 * Parses and returns the value that is read from the configuration file
+	 * 
+	 * @access private
+	 * 
+	 * @return string 
+	 * 
+	 * @param string $file file name
+	 * @param string $option option name
+	 * @param array $options_set events that are saved to file
+	 */
+	private function parse_option_logfile_get($file, $option, $options_set)
+	{
+		$data_return = in_array($option , $options_set) ? 'on' : 'off';
+		switch($option)
+		{
+			case 'name':
+				$data_return = $file;
+				break;
+
+			case 'permanent':
+			case 'readonly':
+				// convert boolean value to tinyint
+				$data_return = boolval(true) ? "1" : "0";
+				break;
+
+			case 'disabled':
+				// convert boolean value to tinyint
+				$data_return = boolval(false) ? "1" : "0";
+				break;
+
+			// case 'security':
+			// 	$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
+			// 	$data_return = ( in_array($option , $options_set) && $has_security_option ) ? 'on' : 'off';
+			// 	break;
+
+			case 'verbose':
+				$verbose_level = preg_grep('/^verbose\([0-9]|\*\)+$/i', $options_set);
+				if ($verbose_level)
+				{
+					//only number and *
+					$data_return = preg_replace('/[^0-9-*]+/', '', implode($verbose_level));
+					if ($data_return == "")
+					{
+						$data_return = "off";
+					}
+				}
+				break;
+		}
+		return $data_return;
+	}
+
+	/**
+	 * Parses and returns value that is used to generate the configuration file
+	 * 
+	 * @access private
+	 * 
+	 * @return string 
+	 * 
+	 * @param string $option
+	 * @param string $value
+	 */
+	private function parse_option_logfile_set($option, $value)
+	{
+		$data_return = "";
+		switch($option)
+		{
+			case 'permanent':
+			case 'readonly':
+			case 'disabled':
+				break;
+
+			case 'verbose':
+				if (is_numeric($value) || $value == '*')
+				{
+					$data_return = 'verbose(' . $value . ')';
+				}
+				elseif ($value == 'on')
+				{
+					$data_return = $option;
+				}
+				break;
+			
+			case 'security':
+				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
+				if (($value == 'on') && ($has_security_option))
+				{
+					$data_return = $option;
+				}
+				break;
+			
+			default:
+				if ($value == 'on')
+				{
+					$data_return = $option;
+				}
+		}
+		return $data_return;
+	}
+
+	/**
+	 * Parses and returns value that will be saved in the database.
+	 * 
+	 * @access private
+	 * 
+	 * @return string
+	 * 
+	 * @param string $file file name
+	 * @param string $option option name
+	 * @param array  $data new values
+	 * @param string $default (optional) defaul value
+	 * @param array  $old_val (optional) old values
+	 */
+	private function parse_option_logfile_sql($file, $option, $data, $default = "", $old_val = array())
+	{
+		$data_return = array_key_exists($option, $data) ? $data[$option] : $default;
+		switch($option)
+		{
+			case 'permanent':
+			case 'readonly':
+			case 'disabled':
+				if ( ! array_key_exists($option, $data) )
+				{
+					// Get old value
+					if ( ! empty( $old_val ) && array_key_exists($option, $old_val) )
+					{
+						$data_return = $old_val[$option];
+					}
+				}
+				// convert boolean value to tinyint
+				$data_return = boolval($data_return) ? 1 : 0;
+				break;
+
+			case 'name':
+				$data_return = $file;
+				break;
+
+			case 'security':
+				$has_security_option = version_compare($this->config->get("ASTVERSION"),'11.0','ge');
+				if (! $has_security_option)
+				{
+					$data_return = 'off';
+				}
+				break;
+		}
+		return $data_return;
+	}
 }
