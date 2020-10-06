@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 08:49+0000\n"
+"POT-Creation-Date: 2020-10-06 06:23+0000\n"
 "PO-Revision-Date: 2012-11-02 13:57+0400\n"
 "Last-Translator: root <ceo@postmet.com>\n"
 "Language-Team: Russian\n"
@@ -203,7 +203,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:904
+#: Logfiles.class.php:837
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:1106
+#: Logfiles.class.php:1040
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -458,7 +458,7 @@ msgid ""
 "Log."
 msgstr ""
 
-#: Logfiles.class.php:816 Logfiles.class.php:871
+#: Logfiles.class.php:749 Logfiles.class.php:804
 msgid "The file was not found!"
 msgstr ""
 
@@ -466,7 +466,7 @@ msgstr ""
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:824 Logfiles.class.php:879
+#: Logfiles.class.php:757 Logfiles.class.php:812
 msgid "The log file does not exist!"
 msgstr ""
 
@@ -478,19 +478,19 @@ msgstr ""
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:894
+#: Logfiles.class.php:827
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:829 Logfiles.class.php:884
+#: Logfiles.class.php:762 Logfiles.class.php:817
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:889
+#: Logfiles.class.php:822
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:834
+#: Logfiles.class.php:767
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -535,7 +535,7 @@ msgstr "Предупреждение"
 msgid "Yes"
 msgstr "Да"
 
-#: Logfiles.class.php:1106
+#: Logfiles.class.php:1040
 msgid "appendhostname is set to: Yes."
 msgstr ""
 
