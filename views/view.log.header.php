@@ -6,7 +6,7 @@
         <div class="col-lg-6">
             <div class="input-group">
                 <span class="input-group-addon">
-                <?php echo _("Files"); ?> <span class="label label-primary">(<span class="count_files_in_list">0</span>)</span>
+                    <?php echo _("Files"); ?> <span class="label label-default">(<span class="count_files_in_list">0</span>)</span>
                 </span>
                 <div class="input-group-btn">
                     <a class="btn btn-default btn-onlyico btn-reload-list" title="<?php echo _("Reload List"); ?>">
@@ -80,7 +80,7 @@
                 <span class="input-group-addon"><?php echo _("Filter"); ?></span>
                 <input type="text" class="form-control" name="fileter_log" placeholder="Text to filter" spellcheck="false" disabled>
                 <div class="input-group-btn">
-                    <a class="btn btn-primary btn-onlyico btn-filter-apply disabled" title="<?php echo _("Apply Filter"); ?>">
+                    <a class="btn btn-default btn-onlyico btn-filter-apply disabled" title="<?php echo _("Apply Filter"); ?>">
                         <i class="fa fa-filter"></i>
                     </a>
                     <a class="btn btn-danger btn-onlyico btn-filter-clean disabled" title="<?php echo _("Clean Filter"); ?>">
@@ -94,7 +94,7 @@
         <div class="col-lg-4">
             <div class="input-group">
                 <span class="input-group-addon">
-                    <?php echo _("Highlight"); ?> <span class="label label-primary"> (<span class="count_highlight">0</span>)</span>
+                    <?php echo _("Highlight"); ?> <span class="label label-default"> (<span class="count_highlight">0</span>)</span>
                 </span>
                 <input type="text" class="form-control" name="highlight_log" placeholder="Text to Highlight" spellcheck="false" disabled>
                 <div class="input-group-btn">

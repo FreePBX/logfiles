@@ -82,7 +82,11 @@
 </div>
 
 <div id="toolbar-grid">
-    <a href="#" class="btn btn-default" id="logfiles_add_new_line"><i class="fa fa-plus"></i> <?php echo _("New Log")?></a>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="logfiles_add_new_line">
+            <i class="fa fa-plus">&nbsp;</i><?php echo _("New Log")?>
+        </button>
+    </div>
 </div>
 <table id="logfile_entries" class="table table-condensed table-striped"
 	data-cache="false"
