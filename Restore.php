@@ -10,7 +10,7 @@ class Restore Extends Base\RestoreBase
         $configs = $this->getConfigs();
         if( ! empty($configs['tables']) && is_array($configs['tables']) )
         {
-            $this->importTables($data['tables']);
+            $this->importTables($configs['tables']);
         }
     }
 }
