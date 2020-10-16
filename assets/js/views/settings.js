@@ -102,11 +102,11 @@ function logfiles_cell_acction(value, row, index)
 		.append(
 			$('<div/>', {
 				'role': 'group',
-				'class': 'btn-group'
+				'class': 'btn-group btn-group-success'
 			})
 			.append(
-				$('<a/>', {
-					'class': 'btn btn-primary btn-sm logfiles_save',
+				$('<button/>', {
+					'class': 'btn btn-success btn-sm logfiles_save',
 					'title': i18n_mod("SAVE")
 				})
 				.append( $('<i/>', { 'class': 'fa fa-floppy-o'}) )
@@ -118,10 +118,10 @@ function logfiles_cell_acction(value, row, index)
 			.append(
 				$('<div/>', {
 					'role': 'group',
-					'class': 'btn-group'
+					'class': 'btn-group btn-group-danger'
 				})
 				.append(
-					$('<a/>', {
+					$('<button/>', {
 						'class': 'btn btn-danger btn-sm logfiles_destory',
 						'title': i18n_mod("REMOVE")
 					})
@@ -200,16 +200,16 @@ function logfiles_add_new_line(e)
 				.append(
 					$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-justified blocks'})
 					.append(
-						$('<div/>', { 'role': 'group', 'class': 'btn-group'})
+						$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-success'})
 						.append(
-							$('<a/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': i18n_mod("CREATE") })
+							$('<button/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': i18n_mod("CREATE") })
 							.append(
 								$('<i/>', { 'class': 'fa fa-check'}),
 							)
 						),
-						$('<div/>', { 'role': 'group', 'class': 'btn-group'})
+						$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-danger'})
 						.append(
-							$('<a/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': i18n_mod("CANCEL") })
+							$('<button/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': i18n_mod("CANCEL") })
 							.append(
 								$('<i/>', { 'class': 'fa fa-times'}),
 							)		

@@ -285,3 +285,61 @@
 {
     display: none !important;
 }
+
+
+
+
+
+/* 
+	Fix: New Skin FreePBX breaks the btn-group and input-group-btn
+*/
+
+/* Color Text and Icons */
+.input-group-btn .btn-success,
+.input-group-btn .btn-danger,
+#logfile_entries td:last-child .btn-group .btn,
+#logfile_entries td:last-child .btn-group i.fa {
+	color: #fff !important;
+}
+
+/* Button Colors */
+.input-group-btn .btn-success,
+#logfile_entries td:last-child .btn-group .btn-success {
+	background-color: #5cb85c !important;
+	/* border-color: #5cb85c !important; */
+}
+
+.input-group-btn .btn-success:hover,
+#logfile_entries td:last-child .btn-group .btn-success:hover {
+    background-color: #218838 !important;
+    /* border-color: #1e7e34 !important; */
+}
+
+.input-group-btn .btn-danger,
+#logfile_entries td:last-child .btn-group .btn-danger {
+	background-color: #d9534f !important;
+	/* border-color: #d9534f !important; */
+}
+
+.input-group-btn .btn-danger:hover,
+#logfile_entries td:last-child .btn-group .btn-danger:hover {
+	background-color: #c82333 !important;
+	/* border-color: #bd2130 !important; */
+}
+
+
+
+/* Fix: Remove border added on buttons and radioset. */
+.toolbar .btn {
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label
+{
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label:last-child
+{
+	border-left: 0px !important;
+}

@@ -131,10 +131,10 @@ HTML;
                         <div class="input-group">
                             <input type="text" class="settings_input form-control" id="<?php echo $dateformat['id']; ?>" name="<?php echo $dateformat['id']; ?>" value="<?php echo _("Loading..."); ?>" disabled>
                             <div class="input-group-btn">
-                                <a href="#" class="btn setting_save" title="<?php echo _("Save"); ?>">
+                                <a href="#" class="btn btn-success setting_save" title="<?php echo _("Save"); ?>">
                                     <i class="fa fa-floppy-o"></i>
                                 </a>
-                                <a href="#" class="btn btn-info setting_realod" title="<?php echo _("Reload"); ?>">
+                                <a href="#" class="btn btn-default setting_realod" title="<?php echo _("Reload"); ?>">
                                     <i class="fa fa-refresh"></i>
                                 </a>
                             </div>
