@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 06:23+0000\n"
+"POT-Creation-Date: 2020-10-16 07:11+0000\n"
 "PO-Revision-Date: 2019-08-13 12:03+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/logfiles/fa/>\n"
@@ -288,7 +288,7 @@ msgstr ""
 "نام فیلتر, مرتبط با الگو لاگ استریسک. استفاده از الگو مشخص برای مکان های "
 "متفاوت"
 
-#: views/view.settings.logfiles.php:85
+#: views/view.settings.logfiles.php:87
 msgid "New Log"
 msgstr ""
 

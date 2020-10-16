@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 06:23+0000\n"
+"POT-Creation-Date: 2020-10-16 07:11+0000\n"
 "PO-Revision-Date: 2017-07-08 19:30+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -297,7 +297,7 @@ msgstr ""
 "Tên tệp, liên quan đến đường dẫn Log Asterisk. Sử dụng đường dẫn cho một vị "
 "trí khác"
 
-#: views/view.settings.logfiles.php:85
+#: views/view.settings.logfiles.php:87
 msgid "New Log"
 msgstr ""
 

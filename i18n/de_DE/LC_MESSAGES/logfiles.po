@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 06:23+0000\n"
+"POT-Creation-Date: 2020-10-16 07:11+0000\n"
 "PO-Revision-Date: 2019-06-25 15:58+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/logfiles/de/>\n"
@@ -297,7 +297,7 @@ msgstr ""
 "Dateiname, relativ zum Asterisk-Protokollpfad. Geben sie einen absoluten "
 "Pfad für einen abweichenden Speicherort an"
 
-#: views/view.settings.logfiles.php:85
+#: views/view.settings.logfiles.php:87
 msgid "New Log"
 msgstr ""
 

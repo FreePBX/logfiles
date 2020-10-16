@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 06:23+0000\n"
+"POT-Creation-Date: 2020-10-16 07:11+0000\n"
 "PO-Revision-Date: 2016-12-09 08:26+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -313,7 +313,7 @@ msgstr ""
 "Nombre del archivo, en relación con Asterisk logpath. Usar ruta absoluta "
 "para una ubicación diferente"
 
-#: views/view.settings.logfiles.php:85
+#: views/view.settings.logfiles.php:87
 msgid "New Log"
 msgstr ""
 
