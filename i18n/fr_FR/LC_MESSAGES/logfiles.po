@@ -20,16 +20,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2017-12-01 22:42+0200\n"
-"Last-Translator: CATTAN Jérémie <jeremie@famillecattan.com>\n"
+"PO-Revision-Date: 2021-08-26 12:41+0000\n"
+"Last-Translator: jeremie cattan <freepbx@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/logfiles/"
-"fr_FR/>\n"
+"fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/settings.php:239
 msgid "Add Log"
@@ -223,7 +223,7 @@ msgstr "Pas de retour de ligne"
 
 #: views/settings.php:89
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: views/settings.php:10
 msgid ""
@@ -231,6 +231,9 @@ msgid ""
 "set up some external log rotate mechanism as the asterisk logs can get very "
 "large, very quickly."
 msgstr ""
+"Aucun : n'effectuez aucune rotation des journaux. Vous devez vous assurer de "
+"configurer un mécanisme de rotation des journaux externes, car les journaux "
+"astérisques peuvent devenir très volumineux, très rapidement."
 
 #: views/settings.php:177 views/settings.php:191
 msgid "Notice"
@@ -292,12 +295,18 @@ msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
+"Définir ce paramètre sur oui interférera avec la rotation des journaux et la "
+"détection d'intrusion. Il est fortement recommandé de définir ce paramètre "
+"sur 'non'."
 
 #: functions.inc.php:182
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
+"Définir ce paramètre sur oui interférera avec la rotation des journaux et la "
+"détection d'intrusion. Il est fortement recommandé de définir ce paramètre "
+"sur : non."
 
 #: views/logs.php:80 assets/js/views/logs.js:36
 msgid "Show"
@@ -341,7 +350,7 @@ msgstr "Oui"
 
 #: functions.inc.php:182
 msgid "appendhostname is set to: Yes."
-msgstr ""
+msgstr "appendhostname est défini sur : Oui."
 
 #: install.php:59
 msgid "failed"
