@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2021-11-23 10:00+0000\n"
+"PO-Revision-Date: 2021-12-04 19:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/logfiles/"
 "ru/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: views/settings.php:239
 msgid "Add Log"
-msgstr ""
+msgstr "Добавить лог"
 
 #: views/settings.php:115
 msgid "Append Hostname"
@@ -50,6 +50,8 @@ msgid ""
 "Apply PCRE regex filter to the log output. <br/>This filters through the "
 "lines specified."
 msgstr ""
+"Применить фильтр регулярных выражений PCRE к выводу журнала. <br/>Это "
+"фильтрует по указанным строкам."
 
 #: views/logs.php:6
 msgid "Asterisk Log Files"
@@ -74,10 +76,14 @@ msgid ""
 "parameter which may be used in this field.  Use %1q for tenths, %2q for "
 "hundredths, etc."
 msgstr ""
+"Настройте отображение временных меток отладочных сообщений. Смотрите "
+"руководство strftime(3) Linux для спецификации формата. Обратите внимание, "
+"что в этом поле также может использоваться параметр доли секунды. "
+"Используйте %1q для десятых, %2q для сотых и т.д."
 
 #: views/settings.php:174 views/settings.php:188
 msgid "DTMF"
-msgstr ""
+msgstr "DTMF"
 
 #: views/settings.php:60
 msgid "Date Format"
@@ -105,11 +111,11 @@ msgstr "Факс"
 
 #: views/settings.php:167
 msgid "Field"
-msgstr ""
+msgstr "Поле"
 
 #: views/logs.php:19
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: views/settings.php:168 views/settings.php:186
 msgid "File Name"
@@ -117,7 +123,7 @@ msgstr "Имя файла"
 
 #: views/logs.php:62
 msgid "Filter"
-msgstr ""
+msgstr "Фильтр"
 
 #: views/settings.php:46
 msgid "General Settings"
@@ -125,11 +131,11 @@ msgstr "Основные настройки"
 
 #: views/settings.php:167
 msgid "Information"
-msgstr ""
+msgstr "Информация"
 
 #: functions.inc.php:121
 msgid "Invalid pattern"
-msgstr ""
+msgstr "Недопустимый шаблон"
 
 #: views/settings.php:174
 msgid ""
@@ -147,11 +153,11 @@ msgstr ""
 
 #: views/logs.php:44
 msgid "Lines"
-msgstr ""
+msgstr "Строки"
 
 #: views/logs.php:90 assets/js/views/logs.js:30
 msgid "Loading..."
-msgstr ""
+msgstr "Загрузка..."
 
 #: views/settings.php:39
 msgid "Log File Settings"
@@ -167,7 +173,7 @@ msgstr "Журнал очередей"
 
 #: views/settings.php:84
 msgid "Log Rotation"
-msgstr ""
+msgstr "Ротация лога"
 
 #: functions.inc.php:385
 msgid "Log file settings"
@@ -179,7 +185,7 @@ msgstr "Писать события очереди в файл"
 
 #: views/settings.php:165
 msgid "Logfile Help"
-msgstr ""
+msgstr "Помощь по файлу лога"
 
 #: views/settings.php:177
 msgid ""
@@ -195,12 +201,18 @@ msgid ""
 "messages are also very verbose and can and do fill up logfiles (and disk "
 "storage) quickly."
 msgstr ""
+"Сообщения, используемые для отладки. Не сообщайте об этом как об ошибке, "
+"если у вас нет конкретной проблемы, которую вы пытаетесь отладить. Также "
+"обратите внимание, что отладочные сообщения также очень подробны и могут "
+"быстро заполнять файлы журналов (и дисковое хранилище)."
 
 #: views/settings.php:168
 msgid ""
 "Name of file, relative to Asterisk logpath. Use absolute path for a "
 "different location"
 msgstr ""
+"Имя файла относительно пути к журналу Asterisk. Используйте абсолютный путь "
+"для другого местоположения"
 
 #: views/settings.php:122 views/settings.php:149
 msgid "No"
@@ -208,7 +220,7 @@ msgstr "Нет"
 
 #: functions.inc.php:129
 msgid "No lines returned"
-msgstr ""
+msgstr "Нет строк для возврата"
 
 #: views/settings.php:89
 msgid "None"
