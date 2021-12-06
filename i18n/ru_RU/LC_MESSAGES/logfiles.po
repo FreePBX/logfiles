@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2021-12-04 19:00+0000\n"
+"PO-Revision-Date: 2021-12-06 18:52+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/logfiles/"
 "ru/>\n"
@@ -141,8 +141,7 @@ msgstr "Недопустимый шаблон"
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
-"Нажатия клавиш, как распознано в Астериск. Полезная информация для отладки "
-"IVR и VM."
+"Нажатия клавиш, как распознано в asterisk. Полезно для отладки IVR и VM."
 
 #: views/settings.php:8
 msgid ""
@@ -232,6 +231,9 @@ msgid ""
 "set up some external log rotate mechanism as the asterisk logs can get very "
 "large, very quickly."
 msgstr ""
+"Нет: Вообще не выполнять никакой ротации журнала. Вы должны быть уверены что "
+"настроили какой-то внешний механизм ротации, так как журналы asterisk могут "
+"быть очень большими и очень стремительными."
 
 #: views/settings.php:177 views/settings.php:191
 msgid "Notice"
@@ -239,15 +241,17 @@ msgstr "Замечание"
 
 #: views/settings.php:17 views/settings.php:27
 msgid "Off"
-msgstr ""
+msgstr "Выкл"
 
 #: views/settings.php:16 views/settings.php:28
 msgid "On"
-msgstr ""
+msgstr "Включен"
 
 #: views/settings.php:180
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
+"Возможны проблемы с синтаксисом диалплана или потоком вызовов, но не "
+"критические."
 
 #: logfiles.i18n.php:6
 msgid "Reports"
@@ -255,17 +259,19 @@ msgstr "Отчеты"
 
 #: Logfiles.class.php:31
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: views/settings.php:93
 msgid "Rotate"
-msgstr ""
+msgstr "Ротация"
 
 #: views/settings.php:12
 msgid ""
 "Rotate: Rotate all the old files, such that the oldest has the highest "
 "sequence number (expected behavior for Unix administrators)."
 msgstr ""
+"Ротация: Ротировать все старые файлы так, чтобы самый старый имел самый "
+"высокий порядковый номер (ожидаемое поведение для администраторов Unix)."
 
 #: views/settings.php:194
 msgid "Security"
@@ -273,29 +279,37 @@ msgstr "Безопасность"
 
 #: views/settings.php:91
 msgid "Sequential"
-msgstr ""
+msgstr "Последовательный"
 
 #: views/settings.php:11
 msgid ""
 "Sequential: Rename archived logs in order, such that the newest has the "
 "highest sequence number"
 msgstr ""
+"Последовательный: переименовывать архивированные журналы в таком порядке, "
+"чтобы у самого нового был самый высокий порядковый номер"
 
 #: views/settings.php:130
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
+"Установка этого значения в \"да\" будет препятствовать ротации журнала и "
+"обнаружению вторжений. Настоятельно рекомендуется установить для этого "
+"параметра значение \"нет\"."
 
 #: functions.inc.php:182
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
+"Установка этого значения в \"да\" будет препятствовать ротации журнала и "
+"обнаружению вторжений. Настоятельно рекомендуется установить для этого "
+"параметра значение: нет."
 
 #: views/logs.php:80 assets/js/views/logs.js:36
 msgid "Show"
-msgstr ""
+msgstr "Показать"
 
 #: Logfiles.class.php:36
 msgid "Submit"
@@ -303,25 +317,27 @@ msgstr "Применить"
 
 #: views/settings.php:95
 msgid "Timestamp"
-msgstr ""
+msgstr "Метка времени"
 
 #: views/settings.php:13
 msgid ""
 "Timestamp: Rename the logfiles using a timestamp instead of a sequence "
 "number when \"logger rotate\" is executed."
 msgstr ""
+"Метка времени: переименовать файлы журналов, используя метку времени вместо "
+"порядкового номера, при выполнении \"logger rotate\"."
 
 #: views/settings.php:176
 msgid "Transmition and receiving of faxes"
-msgstr ""
+msgstr "Передача и прием факсов"
 
 #: views/settings.php:178 views/settings.php:192
 msgid "Verbose"
-msgstr ""
+msgstr "Детальность"
 
 #: functions.inc.php:384
 msgid "View Logs"
-msgstr ""
+msgstr "Просмотр журналов"
 
 #: views/settings.php:180 views/settings.php:193
 msgid "Warning"
@@ -333,7 +349,7 @@ msgstr "Да"
 
 #: functions.inc.php:182
 msgid "appendhostname is set to: Yes."
-msgstr ""
+msgstr "appendhostname установлено в: Да."
 
 #: install.php:59
 msgid "failed"
@@ -341,7 +357,7 @@ msgstr "не удалось"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
-msgstr ""
+msgstr "logger.conf символически связан с неправильным файлом:"
 
 #: install.php:57
 msgid "ok"
@@ -349,7 +365,7 @@ msgstr "ok"
 
 #: install.php:55
 msgid "removing.."
-msgstr ""
+msgstr "удаление.."
 
 #~ msgid "Save"
 #~ msgstr "Сохранить"
