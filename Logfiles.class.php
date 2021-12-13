@@ -652,19 +652,19 @@ class Logfiles implements \BMO
 	public function isAllowEditFile($name)
 	{
 		$data_file = $this->getLogFiles($name);
-		return ! boolval($data_file['readonly']);
+		return ! ((is_array($data_file)) ? boolval($data_file['readonly']) : false);
 	}
 
 	public function isAllowDestroyFile($name)
 	{
 		$data_file = $this->getLogFiles($name);
-		return ! boolval($data_file['permanent']);
+		return ! ((is_array($data_file)) ? boolval($data_file['permanent']) : false);
 	}
 
 	public function isDisabledFile($name)
 	{
 		$data_file = $this->getLogFiles($name);
-		return boolval($data_file['disabled']);
+		return (is_array($data_file)) ? boolval($data_file['disabled']) : false;
 	}
 
 
