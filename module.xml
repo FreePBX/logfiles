@@ -3,13 +3,14 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>16.0.2</version>
+	<version>16.0.3</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   	<description>The Asterisk Logfiles Module is an easy way to view portions of the Asterisk Log.</description>
   	<more-info>https://wiki.freepbx.org/display/FPG/Asterisk+Logfiles</more-info>
 	<changelog>
+		*16.0.3* FREEPBX-23139 Trying to access array offset on value of type bool 
 		*16.0.2* Packaging of ver 16.0.2
 		*16.0.1*    16.0 release
 	</changelog>
