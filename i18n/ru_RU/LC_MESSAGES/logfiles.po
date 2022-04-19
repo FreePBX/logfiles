@@ -1,27 +1,13 @@
 # This file is part of FreePBX.
-#
-#    FreePBX is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 2 of the License, or
-#    (at your option) any later version.
-#
-#    FreePBX is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
-#
+# For licensing information, please see the file named LICENSE located in the module directory
 # FreePBX language template for logfiles
-# Copyright (C) 2008, 2009, 2010 Bandwith.com
-#
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Log File Settings\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 06:21+0000\n"
-"PO-Revision-Date: 2021-12-06 18:52+0000\n"
+"POT-Creation-Date: 2020-04-30 15:52+0530\n"
+"PO-Revision-Date: 2022-04-19 05:15+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/logfiles/"
 "ru/>\n"
@@ -35,7 +21,7 @@ msgstr ""
 
 #: views/settings.php:239
 msgid "Add Log"
-msgstr "Добавить лог"
+msgstr "Добавить журнал"
 
 #: views/settings.php:115
 msgid "Append Hostname"
@@ -119,7 +105,7 @@ msgstr "Файл"
 
 #: views/settings.php:168 views/settings.php:186
 msgid "File Name"
-msgstr "Имя файла"
+msgstr "Название файла"
 
 #: views/logs.php:62
 msgid "Filter"
@@ -313,7 +299,7 @@ msgstr "Показать"
 
 #: Logfiles.class.php:36
 msgid "Submit"
-msgstr "Применить"
+msgstr "Принять"
 
 #: views/settings.php:95
 msgid "Timestamp"
@@ -353,7 +339,7 @@ msgstr "appendhostname установлено в: Да."
 
 #: install.php:59
 msgid "failed"
-msgstr "не удалось"
+msgstr "с ошибкой"
 
 #: install.php:53
 msgid "logger.conf symlinked to incorrect file:"
