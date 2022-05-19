@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 07:11+0000\n"
+"POT-Creation-Date: 2022-05-19 07:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr ""
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:176
+#: views/view.log.header.php:188
 msgid "Buffer Size"
 msgstr ""
 
@@ -418,15 +418,15 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:150
+#: views/view.log.header.php:156
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:163
+#: views/view.log.header.php:173
 msgid "Show Only Row's Highlight"
 msgstr ""
 
-#: views/view.log.header.php:137
+#: views/view.log.header.php:139
 msgid "Show Row Numbers"
 msgstr ""
 
