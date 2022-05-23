@@ -59,8 +59,8 @@
 <div class="element-container">
     <div class="row">
         <div class="col-md-12">
-            <div class="">
-                <div class="row form-group">
+            <div class="row">
+                <div class="form-group">
                     <div class="col-md-3">
                         <label class="control-label" for="%%__ID__%%">%%__LABEL__%%</label>
                         <i class="fa fa-question-circle fpbx-help-icon" data-for="%%__ID__%%"></i>
@@ -121,8 +121,8 @@ HTML;
 <div class="element-container">
     <div class="row">
         <div class="col-md-12">
-            <div class="">
-                <div class="row form-group">
+            <div class="row">
+                <div class="form-group">
                     <div class="col-md-3">
                         <label class="control-label" for="<?php echo $dateformat['id']; ?>"><?php echo $dateformat['label']; ?></label>
                         <i class="fa fa-question-circle fpbx-help-icon" data-for="<?php echo $dateformat['id']; ?>"></i>
