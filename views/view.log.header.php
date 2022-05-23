@@ -39,7 +39,7 @@
         <!-- Block Refres Interval -->
         <div class="col-lg-3">
             <div class="input-group">
-                <span class="input-group-addon flex-fill"><?php echo _("Refresh Interval"); ?></span>
+                <span class="input-group-addon"><?php echo _("Refresh Interval"); ?></span>
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="refresh-interval-time-now"><?php echo _("Disabled"); ?></span> <span class="caret"></span>
@@ -111,7 +111,7 @@
         <!-- Block Auto-Scroll -->
         <div class="col-lg-3">
             <div class="input-group box-autoscroll">
-                <span class="input-group-addon flex-fill"><?php echo _("Auto-Scroll"); ?></span>
+                <span class="input-group-addon"><?php echo _("Auto-Scroll"); ?></span>
                 <div class="input-group-btn">
                     <div class="radioset">
                         <input type="radio" name="auto_scroll" id="auto_scroll_on" value="on">
@@ -131,14 +131,10 @@
                 </span>
                 <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right">
                 <li>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <?php echo _("Show Row Numbers"); ?>
-                            </span>
-                        </div>
+                    <div class="input-group input-group-radioset">
+                        <span class="input-group-addon"><?php echo _("Show Row Numbers"); ?></span>
                         <div class="input-group-btn">
                             <div class="radioset">
                                 <input type="radio" name="show_col_num_line" id="show_col_num_line_on" value="on">
@@ -150,12 +146,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <?php echo _("Show Line Spacing"); ?>
-                            </span>
-                        </div>
+                    <div class="input-group input-group-radioset">
+                        <span class="input-group-addon"><?php echo _("Show Line Spacing"); ?></span>
                         <div class="input-group-btn">
                             <div class="radioset">
                                 <input type="radio" name="show_line_spacing" id="show_line_spacing_on" value="on">
@@ -167,12 +159,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <?php echo _("Show Only Row's Highlight"); ?>
-                            </span>
-                        </div>
+                    <div class="input-group input-group-radioset">
+                        <span class="input-group-addon"><?php echo _("Show Only Row's Highlight"); ?></span>
                         <div class="input-group-btn">
                             <div class="radioset">
                                 <input type="radio" name="show_only_rows_highlight" id="show_only_rows_highlight_on" value="on">
@@ -185,7 +173,7 @@
                 </li>
                 <li >
                     <div class="input-group">
-                        <span class="input-group-addon flex-fill"><?php echo _("Buffer Size"); ?></span>
+                        <span class="input-group-addon"><?php echo _("Buffer Size"); ?></span>
                         <input type="number" name="size_buffer" class="form-control" min="0" value="">
                     </div>
                 </li>
