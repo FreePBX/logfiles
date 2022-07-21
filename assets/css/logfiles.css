@@ -142,6 +142,7 @@
 
 
 
+
 .toolbar
 {
     min-height: 50px;
@@ -156,20 +157,6 @@
 	padding: 15px 15px 15px 15px;	
 }
 
-.toolbar .label 
-{
-	padding-top: .3em;
-	position: relative;
-	top: -0.1em;
-}
-
-.toolbar span.caret
-{
-	position: absolute;
-	right: 8px;
-	top: 50%;
-}
-
 .toolbar .row > div
 {
 	margin-bottom: 10px;
@@ -180,69 +167,9 @@
 	margin-bottom: -10px;
 }
 
-.toolbar .input-group-btn .radioset label
+.toolbar .label 
 {
-	border-bottom-left-radius: 0 !important;
-	border-top-left-radius: 0 !important;
-}
-
-.toolbar .box-autoscroll .radioset label
-{
-	font-size: 22px !important;
-	font-weight: normal !important;
-
-	padding: 0px;
-	margin: 0px;
-
-	width: 50% !important;
-	min-height: 34px !important;
-	max-height: 34px !important; 
-}
-
-/* Fix: A space is generated with the button above */
-.toolbar .input-group-btn .btn:last-of-type
-{
-    margin-right: 0px !important;
-}
-
-/* Fix: The buttons and "a" drawn as buttons do not get the correct height, they are 2 pixels less */
-.toolbar .btn
-{
-	height: 34px !important;
-}
-
-.toolbar .dropdown-toggle
-{
-	width: 100%;
-}
-
-.toolbar .box-more-options .btn:first-child
-{
-	font-size: 20px !important;
-	font-weight: normal !important;
-	padding: 0px;
-	margin: 0px;
-}
-
-.toolbar .box-more-options .dropdown-menu li
-{
-	margin: 6px 8px;
-}
-
-.toolbar .box-more-options .dropdown-menu li > .input-group > .input-group-addon,
-.toolbar .box-more-options .dropdown-menu li > .input-group > input
-{
-	font-size: 0.8em;
-}
-
-.toolbar .box-more-options .dropdown-menu li > .input-group-radioset > .input-group-addon
-{
-	width: 100%;
-}
-
-.toolbar .box-more-options .dropdown-menu li > .input-group-radioset .radioset > label
-{
-	margin: 0px;
+   margin-left: 5px;
 }
 
 .toolbar .btn-onlyico i
@@ -252,23 +179,148 @@
 	top: 2px;
 }
 
-
-
-
-
-
-
-/* Fix: Eliminate spaces between the buttons */
-#logfile_entries.table .btn-group-justified 
+.toolbar span.caret
 {
-	border-spacing: 0px;
+	position: absolute;
+	right: 8px;
+	top: 50%;
 }
 
-#logfile_entries.table .btn-group-justified .btn-sm 
+.toolbar .input-group .radioset label
 {
-	/* Use icon small but with a little more padding */
-	padding-top: 5px;
-	padding-bottom: 5px;
+	border-bottom-left-radius: 0 !important;
+	border-top-left-radius: 0 !important;
+}
+.toolbar .box-autoscroll .radioset label
+{
+	font-size: 20px !important;
+	font-weight: normal !important;
+
+	padding: 2px 0px 1px 0px !important;
+
+	width: 50% !important;
+}
+
+.toolbar .dropdown-toggle
+{
+	width: 100%;
+}
+
+.toolbar .dropdown-menu li:not(:nth-child(2))
+{
+	padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.toolbar .dropdown-menu li:hover
+{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+.toolbar .dropdown-menu li a:hover, .toolbar .dropdown-menu li a
+{
+	text-decoration: none;
+    color: #000;
+}
+.toolbar .dropdown-menu li[role="separator"]
+{
+	height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.box-more-options .dropdown-menu
+{
+    width: max-content;
+	left: auto !important;
+    right: 0;
+    transform: none !important;
+    top: 35px !important;
+}
+.box-more-options .dropdown-menu li
+{
+	padding-left: 0px !important;
+}
+.toolbar .box-more-options .dropdown-menu li
+{
+	margin: 6px 8px;
+}
+.toolbar .box-more-options .input-group-text
+{
+	font-size:	11px;
+	text-align:	center;
+	display: 	inline;
+}
+.toolbar .box-more-options .dropdown-menu li > .input-group > .input-group-text,
+.toolbar .box-more-options .dropdown-menu li > .input-group > input
+{
+	font-size: 0.8em;
+}
+
+
+
+/*
+	Fix: Remove border added on buttons and radioset.
+*/
+.toolbar .btn, .toolbar .radioset label {
+	border-color: #ccc !important;
+}
+.toolbar .radioset label:last-child
+{
+	border-left: 0px !important;
+}
+
+
+
+/*
+	Fix: A space is generated with the button above
+*/
+.toolbar .input-group-prepend .btn, .toolbar .input-group-append .btn
+{
+	margin-right: 0px !important;
+}
+
+/* #logfiles_general .input-group-append .btn:not(last-of-type) */
+#logfiles_general .input-group-prepend .btn, #logfiles_general .input-group-append .btn
+{
+    margin-right: 0px !important;
+}
+
+
+/* Fix: The buttons and "a" drawn as buttons do not get the correct height, they are 2 pixels less */
+.toolbar .btn
+{
+	height: 33,5px !important;
+}
+
+
+
+
+
+
+
+
+
+#logfile_entries.table .has-error .form-control-feedback 
+{
+	margin-top: 5px;
+}
+
+#logfiles_logfiles span.pagination-info
+{
+    display: none !important;
+}
+
+#logfile_entries.table th.col-2-fix, #logfile_entries.table td.col-2-fix {
+	width: 16.66667%;
+
+}
+
+/* Fix: Eliminate spaces between the buttons */
+#logfile_entries.table .btn-group
+{
+	border-spacing: 0px;
 }
 
 #logfile_entries.table > tbody > tr > td 
@@ -276,124 +328,41 @@
     vertical-align: middle;
 }
 
-#logfile_entries.table .has-error .form-control-feedback 
+#logfile_entries.table .btn-group .btn-sm 
 {
-	margin-top: 5px;
+	/* Use icon small but with a little more padding */
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
-
-#logfiles_logfiles span.pagination-info 
-{
-    display: none !important;
-}
-
-
-
 
 
 /* 
 	Fix: New Skin FreePBX breaks the btn-group and input-group-btn
 */
-
 /* Color Text and Icons */
-.input-group-btn .btn-success,
-.input-group-btn .btn-danger,
 #logfile_entries td:last-child .btn-group .btn,
-#logfile_entries td:last-child .btn-group i.fa {
+#logfile_entries td:last-child .btn-group i.fa
+{
 	color: #fff !important;
 }
-
 /* Button Colors */
-.input-group-btn .btn-success,
-#logfile_entries td:last-child .btn-group .btn-success {
+#logfile_entries td:last-child .btn-group .btn-success
+{
 	background-color: #5cb85c !important;
 	/* border-color: #5cb85c !important; */
 }
-
-.input-group-btn .btn-success:hover,
-#logfile_entries td:last-child .btn-group .btn-success:hover {
+#logfile_entries td:last-child .btn-group .btn-success:hover
+{
     background-color: #218838 !important;
     /* border-color: #1e7e34 !important; */
 }
-
-.input-group-btn .btn-danger,
-#logfile_entries td:last-child .btn-group .btn-danger {
+#logfile_entries td:last-child .btn-group .btn-danger
+{
 	background-color: #d9534f !important;
 	/* border-color: #d9534f !important; */
 }
-
-.input-group-btn .btn-danger:hover,
-#logfile_entries td:last-child .btn-group .btn-danger:hover {
+#logfile_entries td:last-child .btn-group .btn-danger:hover
+{
 	background-color: #c82333 !important;
 	/* border-color: #bd2130 !important; */
-}
-
-
-
-/* Fix: Remove border added on buttons and radioset. */
-.toolbar .btn {
-	border-color: #ccc !important;
-}
-
-.toolbar .radioset label
-{
-	border-color: #ccc !important;
-}
-
-.toolbar .radioset label:last-child
-{
-	border-left: 0px !important;
-}
-
-#logfiles_toolbar .dropdown-menu li:not(:nth-child(2)){
-	padding-left: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-#logfiles_toolbar .dropdown-menu li:hover{
-    color: #262626;
-    background-color: #f5f5f5;
-}
-
-#logfiles_toolbar .dropdown-menu li a:hover,#logfiles_toolbar .dropdown-menu li a{
-	text-decoration: none;
-    color: #000;
-}
-
-#logfiles_toolbar .dropdown-menu li[role="separator"]{
-	height: 1px;
-    margin: 9px 0;
-    overflow: hidden;
-    background-color: #e5e5e5;
-}
-
-.toolbar .label {
-    align-self: end;
-    margin-left: 5px;
-}
-
-.input-group-addon {
-    border-right: 0;
-    display: flex;
-    align-items: center;
-}
-.box-more-options .input-group-text{
-	min-width: 195px;
-	font-size:11px;
-	text-align:center;
-}
-label[for="auto_scroll_off"]{
-	margin-left: -3px !important;
-}
-
-.box-more-options .dropdown-menu li{
-	padding-left:0px !important;
-
-}
-
-.box-more-options .dropdown-menu{
-    width: max-content;
-	left: auto !important;
-    right: 0;
-    transform: none !important;
-    top: 35px !important;
 }
