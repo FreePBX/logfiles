@@ -279,7 +279,7 @@ class Logfiles implements \BMO
 				break;
 			
 			case "logfiles_get_all":
-				$data_return = array("status" => true, "data" => $this->getLogfilesAll(true));
+				$data_return = $this->getLogfilesAll(true);
 				break;
 			
 			case "logfiles_is_exist_file_name":

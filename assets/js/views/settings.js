@@ -57,7 +57,6 @@ $(document).ready(function()
 		t = e.target || e.srcElement;
 		logfiles_destory(t);
 	});
-
 });
 
 
@@ -93,40 +92,28 @@ function logfiles_cell_acction(value, row, index)
 {
 	var data_return = $('<div/>', {
 		'role': 'group',
-		'class': 'btn-group btn-group-justified blocks'
+		'class': 'btn-group btn-block'
 	});
 
 	if (row['readonly'] == "0")
 	{
 		data_return
 		.append(
-			$('<div/>', {
-				'role': 'group',
-				'class': 'btn-group btn-group-success'
+			$('<button/>', {
+				'class': 'btn btn-success btn-sm logfiles_save',
+				'title': i18n_mod("SAVE")
 			})
-			.append(
-				$('<button/>', {
-					'class': 'btn btn-success btn-sm logfiles_save',
-					'title': i18n_mod("SAVE")
-				})
-				.append( $('<i/>', { 'class': 'fa fa-floppy-o'}) )
-			)
+			.append( $('<i/>', { 'class': 'fa fa-floppy-o'}) )
 		);
 		if (row['permanent'] == "0")
 		{
 			data_return
 			.append(
-				$('<div/>', {
-					'role': 'group',
-					'class': 'btn-group btn-group-danger'
+				$('<button/>', {
+					'class': 'btn btn-danger btn-sm logfiles_destory',
+					'title': i18n_mod("REMOVE")
 				})
-				.append(
-					$('<button/>', {
-						'class': 'btn btn-danger btn-sm logfiles_destory',
-						'title': i18n_mod("REMOVE")
-					})
-					.append( $('<i/>', { 'class': 'fa fa-trash'}) )
-				)
+				.append( $('<i/>', { 'class': 'fa fa-trash'}) )
 			);
 		}
 	}
@@ -198,21 +185,15 @@ function logfiles_add_new_line(e)
 				$('<td/>', {}).html( logfiles_cell_dropdown('off', null, null, 'security') ),
 				$('<td/>', {})
 				.append(
-					$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-justified blocks'})
+					$('<div/>', { 'role': 'group', 'class': 'btn-group btn-block'})
 					.append(
-						$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-success'})
+						$('<button/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': i18n_mod("CREATE") })
 						.append(
-							$('<button/>', {'class': 'btn btn-success btn-sm logfiles_add_new', 'title': i18n_mod("CREATE") })
-							.append(
-								$('<i/>', { 'class': 'fa fa-check'}),
-							)
+							$('<i/>', { 'class': 'fa fa-check'}),
 						),
-						$('<div/>', { 'role': 'group', 'class': 'btn-group btn-group-danger'})
+						$('<button/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': i18n_mod("CANCEL") })
 						.append(
-							$('<button/>', {'class': 'btn btn-danger btn-sm logfiles_add_cancel', 'title': i18n_mod("CANCEL") })
-							.append(
-								$('<i/>', { 'class': 'fa fa-times'}),
-							)		
+							$('<i/>', { 'class': 'fa fa-times'}),
 						),
 					)
 				)
