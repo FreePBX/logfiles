@@ -192,6 +192,9 @@ function log_view_resize()
 	//		detect the offset change, you would have to create a timer that would monitor the offset every x time.
 
 	var new_size = ($(window).height() - $('#footer').height() - $('div.logfiles_header').height() - $('div.logfiles_header').offset().top);
+	if (new_size < 200) {
+		new_size = 200;
+	}
 	$('#log_view.log_area').css({
 		'min-height': new_size,
 		'max-height': new_size
