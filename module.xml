@@ -3,13 +3,14 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>16.0.6</version>
+	<version>16.0.7</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   	<description>The Asterisk Logfiles Module is an easy way to view portions of the Asterisk Log.</description>
   	<more-info>https://wiki.freepbx.org/display/FPG/Asterisk+Logfiles</more-info>
 	<changelog>
+		*16.0.7* FREEPBX-23724 
 		*16.0.6* Reverting Bootstrap and dependent libs fixes 
 		*16.0.5* Packaging of ver 16.0.5
 		*16.0.4* FREEI-4793 
