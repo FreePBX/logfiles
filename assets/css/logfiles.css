@@ -366,3 +366,18 @@
 	background-color: #c82333 !important;
 	/* border-color: #bd2130 !important; */
 }
+
+/* Fix: Remove border added on buttons and radioset. */
+.toolbar .btn {
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label
+{
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label:last-child
+{
+	border-left: 0px !important;
+}

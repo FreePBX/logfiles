@@ -138,7 +138,7 @@
                 </span>
                 <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right">
                 <li>
                     <div class="input-group">
                         <div class="input-group-prepend flex-fill">

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 07:05+0000\n"
+"POT-Creation-Date: 2022-05-23 10:20+0000\n"
 "PO-Revision-Date: 2014-07-22 09:55+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/logfiles/"
@@ -87,7 +87,7 @@ msgstr "Астериск Логове"
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:188
+#: views/view.log.header.php:176
 msgid "Buffer Size"
 msgstr ""
 
@@ -423,15 +423,15 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:156
+#: views/view.log.header.php:150
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:173
+#: views/view.log.header.php:163
 msgid "Show Only Row's Highlight"
 msgstr ""
 
-#: views/view.log.header.php:139
+#: views/view.log.header.php:137
 msgid "Show Row Numbers"
 msgstr ""
 
