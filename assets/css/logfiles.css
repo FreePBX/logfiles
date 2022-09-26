@@ -169,7 +169,9 @@
 
 .toolbar .label 
 {
-   margin-left: 5px;
+	margin-left: 5px;
+	padding-top: 5px;
+		padding-bottom: 5px;
 }
 
 .toolbar .btn-onlyico i
@@ -365,4 +367,23 @@
 {
 	background-color: #c82333 !important;
 	/* border-color: #bd2130 !important; */
+}
+
+/* Fix: Remove border added on buttons and radioset. */
+.toolbar .btn {
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label
+{
+	border-color: #ccc !important;
+}
+
+.toolbar .radioset label:last-child
+{
+	border-left: 0px !important;
+}
+.toolbar .box-autoscroll .input-group-text,
+.refresh__interval .input-group-text {
+	display: block;
 }

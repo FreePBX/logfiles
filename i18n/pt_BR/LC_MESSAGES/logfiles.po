@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 07:05+0000\n"
+"POT-Creation-Date: 2022-05-23 10:20+0000\n"
 "PO-Revision-Date: 2017-03-24 12:30+0200\n"
 "Last-Translator: Luis <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -74,7 +74,7 @@ msgstr "Arquivos de Registro do Asterisk"
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:188
+#: views/view.log.header.php:176
 msgid "Buffer Size"
 msgstr ""
 
@@ -433,15 +433,15 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:156
+#: views/view.log.header.php:150
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:173
+#: views/view.log.header.php:163
 msgid "Show Only Row's Highlight"
 msgstr ""
 
-#: views/view.log.header.php:139
+#: views/view.log.header.php:137
 msgid "Show Row Numbers"
 msgstr ""
 
