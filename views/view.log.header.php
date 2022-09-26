@@ -39,8 +39,8 @@
         <!-- Block Refres Interval -->
         <div class="col-lg-3">
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><?php echo _("Refresh Interval"); ?></span>
+                <div class="input-group-prepend flex-lg-grow-1 refresh__interval">
+                    <span class="input-group-text w-100 text-center"><?php echo _("Refresh Interval"); ?></span>
                 </div>
                 <div class="input-group-append flex-fill">
                     <button type="button" class="btn btn-default dropdown-toggle flex-fill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -115,8 +115,8 @@
         <!-- Block Auto-Scroll -->
         <div class="col-lg-3">
             <div class="input-group box-autoscroll">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><?php echo _("Auto-Scroll"); ?></span>
+                <div class="input-group-prepend flex-lg-grow-1">
+                    <span class="input-group-text w-100 text-center"><?php echo _("Auto-Scroll"); ?></span>
                 </div>
                 
                 <div class="flex-fill">

@@ -169,7 +169,9 @@
 
 .toolbar .label 
 {
-   margin-left: 5px;
+	margin-left: 5px;
+	padding-top: 5px;
+		padding-bottom: 5px;
 }
 
 .toolbar .btn-onlyico i
@@ -380,4 +382,8 @@
 .toolbar .radioset label:last-child
 {
 	border-left: 0px !important;
+}
+.toolbar .box-autoscroll .input-group-text,
+.refresh__interval .input-group-text {
+	display: block;
 }
