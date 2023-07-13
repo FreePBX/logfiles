@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 10:20+0000\n"
+"POT-Creation-Date: 2023-07-13 12:12+0000\n"
 "PO-Revision-Date: 2014-02-25 23:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/logfiles/ja/"
@@ -53,15 +53,15 @@ msgstr ""
 msgid "?"
 msgstr ""
 
-#: views/view.settings.logfiles.php:68
+#: views/view.settings.logfiles.php:78
 msgid "Actions"
 msgstr ""
 
-#: views/view.log.header.php:68
+#: views/view.log.header.php:69
 msgid "Activate full screen mode. Press ESC to exit full screen mode."
 msgstr ""
 
-#: views/view.settings.logfiles.php:79
+#: views/view.settings.logfiles.php:90
 msgid "Activate remote log"
 msgstr ""
 
@@ -73,11 +73,11 @@ msgstr "ネーム名を付け加える"
 msgid "Appends the hostname to the name of the log files"
 msgstr "ホストネームをログのファイル名に付け加えます"
 
-#: views/view.log.header.php:83
+#: views/view.log.header.php:87
 msgid "Apply Filter"
 msgstr ""
 
-#: views/view.log.header.php:101
+#: views/view.log.header.php:105
 msgid "Apply Highlight"
 msgstr ""
 
@@ -98,11 +98,11 @@ msgstr "Asteriskログファイル設定"
 msgid "Asterisk Logfiles"
 msgstr "Asteriskログファイル"
 
-#: views/view.log.header.php:114
+#: views/view.log.header.php:119
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:176
+#: views/view.log.header.php:197
 msgid "Buffer Size"
 msgstr ""
 
@@ -110,11 +110,11 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: views/view.log.header.php:86
+#: views/view.log.header.php:90
 msgid "Clean Filter"
 msgstr ""
 
-#: views/view.log.header.php:104
+#: views/view.log.header.php:108
 msgid "Clean Highlight"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
-#: views/view.settings.logfiles.php:31
+#: views/view.settings.logfiles.php:35
 msgid "Critical errors and issues"
 msgstr "重大なエラーや問題"
 
@@ -145,7 +145,7 @@ msgstr ""
 "は、Linuxのマニュアル strftime(3)をご覧下さい。このフィールドを利用する事で少"
 "数のパラメーターも使用できます 。 10分の1は「%1q」、100分の1は「%2q」、など。"
 
-#: views/view.settings.logfiles.php:24
+#: views/view.settings.logfiles.php:27
 msgid "DTMF"
 msgstr "DTMF"
 
@@ -153,16 +153,16 @@ msgstr "DTMF"
 msgid "Date Format"
 msgstr "日付形式"
 
-#: views/view.settings.logfiles.php:16
+#: views/view.settings.logfiles.php:18
 msgid "Debug"
 msgstr "デバッグ"
 
-#: views/view.log.header.php:21
+#: views/view.log.header.php:19
 msgid "Delete File"
 msgstr ""
 
-#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:45
-#: views/view.log.header.php:51
+#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:47
+#: views/view.log.header.php:52
 msgid "Disabled"
 msgstr ""
 
@@ -170,11 +170,11 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-#: views/view.settings.logfiles.php:30
+#: views/view.settings.logfiles.php:34
 msgid "Error"
 msgstr "エラー"
 
-#: views/view.log.header.php:24
+#: views/view.log.header.php:22
 msgid "Export File"
 msgstr ""
 
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Failure Removal Process!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:36
+#: views/view.settings.logfiles.php:41
 msgid "Fax"
 msgstr "Fax"
 
@@ -206,7 +206,7 @@ msgstr ""
 msgid "Files"
 msgstr ""
 
-#: views/view.log.header.php:80
+#: views/view.log.header.php:83
 msgid "Filter"
 msgstr ""
 
@@ -214,11 +214,11 @@ msgstr ""
 msgid "General Settings"
 msgstr "一般設定"
 
-#: views/view.log.header.php:97
+#: views/view.log.header.php:101
 msgid "Highlight"
 msgstr ""
 
-#: views/view.settings.logfiles.php:11
+#: views/view.settings.logfiles.php:12
 msgid ""
 "If the file status is disabled it will be skipped during the asterisk "
 "configuration files creation process."
@@ -228,7 +228,7 @@ msgstr ""
 msgid "Invalid pattern to filter!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:25
+#: views/view.settings.logfiles.php:28
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -242,7 +242,7 @@ msgstr ""
 "デフォルトのISO 8601形式（yyyy-mm-dd HH:MM:SS （%F %T））を使用するには空にし"
 "てください。"
 
-#: views/view.log.header.php:34
+#: views/view.log.header.php:33
 msgid "Lines"
 msgstr ""
 
@@ -274,12 +274,12 @@ msgstr ""
 msgid "Log queue events to a file"
 msgstr "ファイルにキューのイベントを書き込みます"
 
-#: views/view.settings.logfiles.php:43
+#: views/view.settings.logfiles.php:49
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr "特定操作のメッセージ。例：電話機の登録、通話終了など"
 
-#: views/view.settings.logfiles.php:17
+#: views/view.settings.logfiles.php:19
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -307,7 +307,7 @@ msgstr ""
 msgid "Missing the name of the file!"
 msgstr ""
 
-#: views/view.log.header.php:128
+#: views/view.log.header.php:135
 msgid "More Options"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgid ""
 "different location"
 msgstr ""
 
-#: views/view.settings.logfiles.php:87
+#: views/view.settings.logfiles.php:98
 msgid "New Log"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgid ""
 "large, very quickly."
 msgstr ""
 
-#: views/view.settings.logfiles.php:42
+#: views/view.settings.logfiles.php:48
 msgid "Notice"
 msgstr "通知"
 
@@ -357,25 +357,25 @@ msgstr "オン"
 msgid "Operation not allowed!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:56
+#: views/view.settings.logfiles.php:64
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "ダイヤルプランの構文やコールフローにおいて、重大ではありませんが、問題が発生"
 "している可能性があります。"
 
-#: views/view.log.header.php:42
+#: views/view.log.header.php:43
 msgid "Refresh Interval"
 msgstr ""
 
-#: views/view.settings.general.php:110 views/view.settings.general.php:137
+#: views/view.settings.general.php:110
 msgid "Reload"
 msgstr ""
 
-#: views/view.log.header.php:18
+#: views/view.log.header.php:16
 msgid "Reload File"
 msgstr ""
 
-#: views/view.log.header.php:12
+#: views/view.log.header.php:10
 msgid "Reload List"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgstr ""
 "循環: 全ての古いファイルの順番を変え、最も古い物が最も高い順序になるようにし"
 "ます(Unixの管理者はこのような動作を期待するでしょう)。"
 
-#: Logfiles.class.php:395 views/view.settings.general.php:134
+#: Logfiles.class.php:395
 msgid "Save"
 msgstr "保存"
 
@@ -419,11 +419,11 @@ msgstr ""
 msgid "Searching..."
 msgstr ""
 
-#: Logfiles.class.php:370 views/view.log.header.php:58
+#: Logfiles.class.php:370 views/view.log.header.php:59
 msgid "Seconds"
 msgstr ""
 
-#: views/view.settings.logfiles.php:62
+#: views/view.settings.logfiles.php:71
 msgid "Security"
 msgstr ""
 
@@ -455,23 +455,23 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:150
+#: views/view.log.header.php:163
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:163
+#: views/view.log.header.php:180
 msgid "Show Only Row's Highlight"
 msgstr ""
 
-#: views/view.log.header.php:137
+#: views/view.log.header.php:146
 msgid "Show Row Numbers"
 msgstr ""
 
-#: views/view.settings.logfiles.php:10
+#: views/view.settings.logfiles.php:11
 msgid "Status"
 msgstr ""
 
-#: views/view.settings.logfiles.php:49
+#: views/view.settings.logfiles.php:56
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
@@ -537,13 +537,13 @@ msgstr ""
 "タイムスタンプ: \"logger rotate\"が実行された場合、連番ではなく、タイムスタン"
 "プを使ってログファイルの名前を変更します。"
 
-#: views/view.settings.logfiles.php:80
+#: views/view.settings.logfiles.php:91
 msgid ""
 "To activate the remote log, you must enable the file \"syslog.local0\" and "
 "add the following line in syslog."
 msgstr ""
 
-#: views/view.settings.logfiles.php:37
+#: views/view.settings.logfiles.php:42
 msgid "Transmition and receiving of faxes"
 msgstr "FAXの受信・送信"
 
@@ -555,11 +555,11 @@ msgstr ""
 msgid "Update process failed!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:48
+#: views/view.settings.logfiles.php:55
 msgid "Verbose"
 msgstr "詳細レポート"
 
-#: views/view.settings.logfiles.php:55
+#: views/view.settings.logfiles.php:63
 msgid "Warning"
 msgstr "警告"
 

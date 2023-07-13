@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo logfiles module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 10:20+0000\n"
+"POT-Creation-Date: 2023-07-13 12:12+0000\n"
 "PO-Revision-Date: 2016-12-09 08:26+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/logfiles/"
@@ -38,15 +38,15 @@ msgstr ""
 msgid "?"
 msgstr ""
 
-#: views/view.settings.logfiles.php:68
+#: views/view.settings.logfiles.php:78
 msgid "Actions"
 msgstr ""
 
-#: views/view.log.header.php:68
+#: views/view.log.header.php:69
 msgid "Activate full screen mode. Press ESC to exit full screen mode."
 msgstr ""
 
-#: views/view.settings.logfiles.php:79
+#: views/view.settings.logfiles.php:90
 msgid "Activate remote log"
 msgstr ""
 
@@ -58,11 +58,11 @@ msgstr "Agrega al final el Hostname"
 msgid "Appends the hostname to the name of the log files"
 msgstr "Agrega el hostname al final del nombre de los archivos de log"
 
-#: views/view.log.header.php:83
+#: views/view.log.header.php:87
 msgid "Apply Filter"
 msgstr ""
 
-#: views/view.log.header.php:101
+#: views/view.log.header.php:105
 msgid "Apply Highlight"
 msgstr ""
 
@@ -83,11 +83,11 @@ msgstr "Configuración del Logfile de Asterisk"
 msgid "Asterisk Logfiles"
 msgstr "Archivos de bitácora de Asterisk"
 
-#: views/view.log.header.php:114
+#: views/view.log.header.php:119
 msgid "Auto-Scroll"
 msgstr ""
 
-#: views/view.log.header.php:176
+#: views/view.log.header.php:197
 msgid "Buffer Size"
 msgstr ""
 
@@ -95,11 +95,11 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: views/view.log.header.php:86
+#: views/view.log.header.php:90
 msgid "Clean Filter"
 msgstr ""
 
-#: views/view.log.header.php:104
+#: views/view.log.header.php:108
 msgid "Clean Highlight"
 msgstr ""
 
@@ -115,7 +115,7 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
-#: views/view.settings.logfiles.php:31
+#: views/view.settings.logfiles.php:35
 msgid "Critical errors and issues"
 msgstr "Errores críticos y problemas"
 
@@ -132,7 +132,7 @@ msgstr ""
 "que puede ser utilizado en este campo. Use% 1q para décimas,% 2q para "
 "centésimas, etc."
 
-#: views/view.settings.logfiles.php:24
+#: views/view.settings.logfiles.php:27
 msgid "DTMF"
 msgstr "DTMF"
 
@@ -140,16 +140,16 @@ msgstr "DTMF"
 msgid "Date Format"
 msgstr "Formato de Fecha"
 
-#: views/view.settings.logfiles.php:16
+#: views/view.settings.logfiles.php:18
 msgid "Debug"
 msgstr "Depurar"
 
-#: views/view.log.header.php:21
+#: views/view.log.header.php:19
 msgid "Delete File"
 msgstr ""
 
-#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:45
-#: views/view.log.header.php:51
+#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:47
+#: views/view.log.header.php:52
 msgid "Disabled"
 msgstr ""
 
@@ -157,11 +157,11 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-#: views/view.settings.logfiles.php:30
+#: views/view.settings.logfiles.php:34
 msgid "Error"
 msgstr "Error"
 
-#: views/view.log.header.php:24
+#: views/view.log.header.php:22
 msgid "Export File"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Failure Removal Process!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:36
+#: views/view.settings.logfiles.php:41
 msgid "Fax"
 msgstr "Fax"
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Files"
 msgstr ""
 
-#: views/view.log.header.php:80
+#: views/view.log.header.php:83
 msgid "Filter"
 msgstr "Filtro"
 
@@ -201,11 +201,11 @@ msgstr "Filtro"
 msgid "General Settings"
 msgstr "Configuración General"
 
-#: views/view.log.header.php:97
+#: views/view.log.header.php:101
 msgid "Highlight"
 msgstr ""
 
-#: views/view.settings.logfiles.php:11
+#: views/view.settings.logfiles.php:12
 msgid ""
 "If the file status is disabled it will be skipped during the asterisk "
 "configuration files creation process."
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Invalid pattern to filter!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:25
+#: views/view.settings.logfiles.php:28
 msgid ""
 "Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
 msgstr ""
@@ -229,7 +229,7 @@ msgstr ""
 "Déjelo en Blanco por defecto. Formato de fecha ISO 8601 yyyy-mm-dd HH:MM:SS "
 "(%F %T)"
 
-#: views/view.log.header.php:34
+#: views/view.log.header.php:33
 msgid "Lines"
 msgstr "Lineas"
 
@@ -261,14 +261,14 @@ msgstr ""
 msgid "Log queue events to a file"
 msgstr "Registre eventos de colas en un archivo"
 
-#: views/view.settings.logfiles.php:43
+#: views/view.settings.logfiles.php:49
 msgid ""
 "Messages of specific actions, such as a phone registration or call completion"
 msgstr ""
 "Mensajes de acciones específicas, tal como registro de un teléfono o "
 "compleción de una llamada"
 
-#: views/view.settings.logfiles.php:17
+#: views/view.settings.logfiles.php:19
 msgid ""
 "Messages used for debuging. Do not report these as error's unless you have a "
 "specific issue that you are attempting to debug. Also note that Debug "
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Missing the name of the file!"
 msgstr ""
 
-#: views/view.log.header.php:128
+#: views/view.log.header.php:135
 msgid "More Options"
 msgstr ""
 
@@ -313,7 +313,7 @@ msgstr ""
 "Nombre del archivo, en relación con Asterisk logpath. Usar ruta absoluta "
 "para una ubicación diferente"
 
-#: views/view.settings.logfiles.php:87
+#: views/view.settings.logfiles.php:98
 msgid "New Log"
 msgstr ""
 
@@ -333,7 +333,7 @@ msgid ""
 "large, very quickly."
 msgstr ""
 
-#: views/view.settings.logfiles.php:42
+#: views/view.settings.logfiles.php:48
 msgid "Notice"
 msgstr "Noticia"
 
@@ -349,25 +349,25 @@ msgstr "Encendido"
 msgid "Operation not allowed!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:56
+#: views/view.settings.logfiles.php:64
 msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
 msgstr ""
 "Posible problema con sintaxis en el dialplan o flujo de llamada, pero no es "
 "critico."
 
-#: views/view.log.header.php:42
+#: views/view.log.header.php:43
 msgid "Refresh Interval"
 msgstr ""
 
-#: views/view.settings.general.php:110 views/view.settings.general.php:137
+#: views/view.settings.general.php:110
 msgid "Reload"
 msgstr ""
 
-#: views/view.log.header.php:18
+#: views/view.log.header.php:16
 msgid "Reload File"
 msgstr ""
 
-#: views/view.log.header.php:12
+#: views/view.log.header.php:10
 msgid "Reload List"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 "mayor numero de secuencia (comportamiento esperado para administradores "
 "Unix)."
 
-#: Logfiles.class.php:395 views/view.settings.general.php:134
+#: Logfiles.class.php:395
 msgid "Save"
 msgstr "Salvar"
 
@@ -412,11 +412,11 @@ msgstr ""
 msgid "Searching..."
 msgstr ""
 
-#: Logfiles.class.php:370 views/view.log.header.php:58
+#: Logfiles.class.php:370 views/view.log.header.php:59
 msgid "Seconds"
 msgstr ""
 
-#: views/view.settings.logfiles.php:62
+#: views/view.settings.logfiles.php:71
 msgid "Security"
 msgstr "Seguridad"
 
@@ -448,23 +448,23 @@ msgid ""
 "Detection. It is strongly recommended that this setting be set to: no."
 msgstr ""
 
-#: views/view.log.header.php:150
+#: views/view.log.header.php:163
 msgid "Show Line Spacing"
 msgstr ""
 
-#: views/view.log.header.php:163
+#: views/view.log.header.php:180
 msgid "Show Only Row's Highlight"
 msgstr ""
 
-#: views/view.log.header.php:137
+#: views/view.log.header.php:146
 msgid "Show Row Numbers"
 msgstr ""
 
-#: views/view.settings.logfiles.php:10
+#: views/view.settings.logfiles.php:11
 msgid "Status"
 msgstr ""
 
-#: views/view.settings.logfiles.php:49
+#: views/view.settings.logfiles.php:56
 msgid ""
 "Step-by-step messages of every step of a call flow. Always enable and review "
 "if calls dont flow as expected"
@@ -530,13 +530,13 @@ msgstr ""
 "Marca de Tiempo. Renombra los logfiles usando una marca de tiempo en lugar "
 "de una secuencia cuando la \"rotación\" es ejecutada."
 
-#: views/view.settings.logfiles.php:80
+#: views/view.settings.logfiles.php:91
 msgid ""
 "To activate the remote log, you must enable the file \"syslog.local0\" and "
 "add the following line in syslog."
 msgstr ""
 
-#: views/view.settings.logfiles.php:37
+#: views/view.settings.logfiles.php:42
 msgid "Transmition and receiving of faxes"
 msgstr "Transmisión y recepción de faxes"
 
@@ -548,11 +548,11 @@ msgstr ""
 msgid "Update process failed!"
 msgstr ""
 
-#: views/view.settings.logfiles.php:48
+#: views/view.settings.logfiles.php:55
 msgid "Verbose"
 msgstr "Verboso"
 
-#: views/view.settings.logfiles.php:55
+#: views/view.settings.logfiles.php:63
 msgid "Warning"
 msgstr "Advertencia"
 
