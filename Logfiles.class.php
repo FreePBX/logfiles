@@ -11,6 +11,7 @@ namespace FreePBX\modules;
 use \FreePBX\modules\Logfiles\Tail;
 use \FreePBX\modules\Logfiles\logfiles_conf;
 
+#[\AllowDynamicProperties]
 class Logfiles implements \BMO 
 {
 	const DEFAULT_SETTING = array(
