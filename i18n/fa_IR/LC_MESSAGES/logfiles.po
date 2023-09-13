@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 12:12+0000\n"
+"POT-Creation-Date: 2023-09-13 05:20+0000\n"
 "PO-Revision-Date: 2019-08-13 12:03+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/logfiles/fa/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: Logfiles.class.php:365
+#: Logfiles.class.php:366
 msgid "?"
 msgstr ""
 
@@ -52,21 +52,13 @@ msgstr ""
 msgid "Apply Highlight"
 msgstr ""
 
-#: Logfiles.class.php:376 Logfiles.class.php:383
+#: Logfiles.class.php:377 Logfiles.class.php:384
 #, php-format
 msgid "Are you confirming that you want to remove this file (%s)?"
 msgstr ""
 
 #: views/page.logs.php:2
 msgid "Asterisk Log Files"
-msgstr "لاگ فایل های استریسک"
-
-#: logfiles.i18n.php:12
-msgid "Asterisk Logfile Settings"
-msgstr "تنظیمات لاگ استریسک"
-
-#: logfiles.i18n.php:4 logfiles.i18n.php:10
-msgid "Asterisk Logfiles"
 msgstr "لاگ فایل های استریسک"
 
 #: views/view.log.header.php:119
@@ -77,7 +69,7 @@ msgstr ""
 msgid "Buffer Size"
 msgstr ""
 
-#: Logfiles.class.php:382
+#: Logfiles.class.php:383
 msgid "Cancel"
 msgstr ""
 
@@ -89,15 +81,15 @@ msgstr ""
 msgid "Clean Highlight"
 msgstr ""
 
-#: Logfiles.class.php:406
+#: Logfiles.class.php:407
 msgid "Command not found!"
 msgstr ""
 
-#: Logfiles.class.php:373
+#: Logfiles.class.php:374
 msgid "Copy to clipboard successful."
 msgstr ""
 
-#: Logfiles.class.php:384
+#: Logfiles.class.php:385
 msgid "Create"
 msgstr ""
 
@@ -133,12 +125,12 @@ msgstr "اشکال زدایی"
 msgid "Delete File"
 msgstr ""
 
-#: Logfiles.class.php:366 Logfiles.class.php:385 views/view.log.header.php:47
+#: Logfiles.class.php:367 Logfiles.class.php:386 views/view.log.header.php:47
 #: views/view.log.header.php:52
 msgid "Disabled"
 msgstr ""
 
-#: Logfiles.class.php:386
+#: Logfiles.class.php:387
 msgid "Enabled"
 msgstr ""
 
@@ -150,7 +142,7 @@ msgstr "خطا"
 msgid "Export File"
 msgstr ""
 
-#: Logfiles.class.php:353
+#: Logfiles.class.php:354
 msgid "Failure Removal Process!"
 msgstr ""
 
@@ -162,15 +154,15 @@ msgstr "دورنگار"
 msgid "File Name"
 msgstr "نام"
 
-#: Logfiles.class.php:228
+#: Logfiles.class.php:229
 msgid "File clean successfully."
 msgstr ""
 
-#: Logfiles.class.php:401
+#: Logfiles.class.php:402
 msgid "File not found!"
 msgstr ""
 
-#: Logfiles.class.php:224
+#: Logfiles.class.php:225
 msgid "File removed successfully."
 msgstr ""
 
@@ -196,7 +188,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:837
+#: Logfiles.class.php:838
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -235,7 +227,7 @@ msgstr "صف لاگ"
 msgid "Log Rotation"
 msgstr "ورود به سیستم چرخشی"
 
-#: Logfiles.class.php:375
+#: Logfiles.class.php:376
 msgid "Log loading completed successfully."
 msgstr ""
 
@@ -256,19 +248,19 @@ msgid ""
 "storage) quickly."
 msgstr "پیامهای استفاده شده برای عیب یابی."
 
-#: Logfiles.class.php:242 Logfiles.class.php:261 Logfiles.class.php:306
+#: Logfiles.class.php:243 Logfiles.class.php:262 Logfiles.class.php:307
 msgid "Missing data!"
 msgstr ""
 
-#: Logfiles.class.php:180 Logfiles.class.php:217
+#: Logfiles.class.php:181 Logfiles.class.php:218
 msgid "Missing file name!"
 msgstr ""
 
-#: Logfiles.class.php:289 Logfiles.class.php:302 Logfiles.class.php:332
+#: Logfiles.class.php:290 Logfiles.class.php:303 Logfiles.class.php:333
 msgid "Missing name!"
 msgstr ""
 
-#: Logfiles.class.php:388
+#: Logfiles.class.php:389
 msgid "Missing the name of the file!"
 msgstr ""
 
@@ -276,7 +268,7 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
-#: Logfiles.class.php:390
+#: Logfiles.class.php:391
 msgid "Name is not defined!"
 msgstr ""
 
@@ -292,12 +284,12 @@ msgstr ""
 msgid "New Log"
 msgstr ""
 
-#: Logfiles.class.php:367 Logfiles.class.php:391
+#: Logfiles.class.php:368 Logfiles.class.php:392
 #: views/view.settings.general.php:34 views/view.settings.general.php:44
 msgid "No"
 msgstr "خیر"
 
-#: Logfiles.class.php:368 views/view.settings.general.php:21
+#: Logfiles.class.php:369 views/view.settings.general.php:21
 msgid "None"
 msgstr ""
 
@@ -312,15 +304,15 @@ msgstr ""
 msgid "Notice"
 msgstr "توجه"
 
-#: Logfiles.class.php:392
+#: Logfiles.class.php:393
 msgid "Off"
 msgstr "خاموش"
 
-#: Logfiles.class.php:393
+#: Logfiles.class.php:394
 msgid "On"
 msgstr "روشن"
 
-#: Logfiles.class.php:314 Logfiles.class.php:344
+#: Logfiles.class.php:315 Logfiles.class.php:345
 msgid "Operation not allowed!"
 msgstr ""
 
@@ -344,17 +336,13 @@ msgstr ""
 msgid "Reload List"
 msgstr ""
 
-#: Logfiles.class.php:394
+#: Logfiles.class.php:395
 msgid "Remove"
 msgstr ""
 
-#: Logfiles.class.php:348
+#: Logfiles.class.php:349
 msgid "Remove Successful"
 msgstr ""
-
-#: logfiles.i18n.php:6
-msgid "Reports"
-msgstr "گزارش ها"
 
 #: views/view.settings.general.php:23
 msgid "Rotate"
@@ -368,23 +356,23 @@ msgstr ""
 "چرخش: چرخش تمام فایل های قدیمی، به طوری که از قدیمی ترین دارای بیشترین تعداد "
 "دنباله (رفتار مورد انتظار برای مدیران یونیکس)."
 
-#: Logfiles.class.php:395
+#: Logfiles.class.php:396
 msgid "Save"
 msgstr ""
 
-#: Logfiles.class.php:323
+#: Logfiles.class.php:324
 msgid "Save Failed!"
 msgstr ""
 
-#: Logfiles.class.php:318
+#: Logfiles.class.php:319
 msgid "Save Successful"
 msgstr ""
 
-#: Logfiles.class.php:369
+#: Logfiles.class.php:370
 msgid "Searching..."
 msgstr ""
 
-#: Logfiles.class.php:370 views/view.log.header.php:59
+#: Logfiles.class.php:371 views/view.log.header.php:59
 msgid "Seconds"
 msgstr ""
 
@@ -403,7 +391,7 @@ msgid ""
 msgstr ""
 "ترتیبی: تغییر نام آرشیو لاگ، به طوری که، جدید ترین دارای بیشترین تعداد دنباله"
 
-#: Logfiles.class.php:246 Logfiles.class.php:265
+#: Logfiles.class.php:247 Logfiles.class.php:266
 msgid "Setting not allowed!"
 msgstr ""
 
@@ -415,7 +403,7 @@ msgstr ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to 'no'."
 
-#: Logfiles.class.php:1040
+#: Logfiles.class.php:1041
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -445,49 +433,43 @@ msgid ""
 "if calls dont flow as expected"
 msgstr ""
 
-#: Logfiles.class.php:271
+#: Logfiles.class.php:272
 msgid "Successful Update"
 msgstr ""
 
-#: logfiles.i18n.php:8
-msgid ""
-"The Asterisk Logfiles Module is an easy way to view portions of the Asterisk "
-"Log."
-msgstr ""
-
-#: Logfiles.class.php:749 Logfiles.class.php:804
+#: Logfiles.class.php:750 Logfiles.class.php:805
 msgid "The file was not found!"
 msgstr ""
 
-#: Logfiles.class.php:338
+#: Logfiles.class.php:339
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:757 Logfiles.class.php:812
+#: Logfiles.class.php:758 Logfiles.class.php:813
 msgid "The log file does not exist!"
 msgstr ""
 
-#: Logfiles.class.php:374
+#: Logfiles.class.php:375
 msgid "The log file has fewer lines, the reload was successful."
 msgstr ""
 
-#: Logfiles.class.php:387
+#: Logfiles.class.php:388
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:827
+#: Logfiles.class.php:828
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:762 Logfiles.class.php:817
+#: Logfiles.class.php:763 Logfiles.class.php:818
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:822
+#: Logfiles.class.php:823
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:767
+#: Logfiles.class.php:768
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -513,11 +495,11 @@ msgstr ""
 msgid "Transmition and receiving of faxes"
 msgstr "انتقال و دریافت فکس"
 
-#: Logfiles.class.php:389
+#: Logfiles.class.php:390
 msgid "Unknow error!"
 msgstr ""
 
-#: Logfiles.class.php:276
+#: Logfiles.class.php:277
 msgid "Update process failed!"
 msgstr ""
 
@@ -529,14 +511,23 @@ msgstr "بلند"
 msgid "Warning"
 msgstr "هشدار"
 
-#: Logfiles.class.php:371 Logfiles.class.php:396
+#: Logfiles.class.php:372 Logfiles.class.php:397
 #: views/view.settings.general.php:33 views/view.settings.general.php:43
 msgid "Yes"
 msgstr "بله"
 
-#: Logfiles.class.php:1040
+#: Logfiles.class.php:1041
 msgid "appendhostname is set to: Yes."
 msgstr "appendhostname is set to : Yes."
+
+#~ msgid "Asterisk Logfile Settings"
+#~ msgstr "تنظیمات لاگ استریسک"
+
+#~ msgid "Asterisk Logfiles"
+#~ msgstr "لاگ فایل های استریسک"
+
+#~ msgid "Reports"
+#~ msgstr "گزارش ها"
 
 #~ msgid "Add Log"
 #~ msgstr "افزودن لاگ"
