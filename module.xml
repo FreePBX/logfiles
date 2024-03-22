@@ -16,7 +16,7 @@
 	<category>Reports</category>
 	<menuitems>
 		<logfiles>Asterisk Logfiles</logfiles>
-		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
+		<logfiles_settings category="Settings">System Logfile Settings</logfiles_settings>
 	</menuitems>
 	<supported>
 		<version>17.0</version>
