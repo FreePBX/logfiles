@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 05:20+0000\n"
+"POT-Creation-Date: 2024-03-22 02:30-0400\n"
 "PO-Revision-Date: 2017-07-08 19:30+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -61,6 +61,10 @@ msgstr ""
 #: views/page.logs.php:2
 msgid "Asterisk Log Files"
 msgstr "Các tệp log của Asterisk"
+
+#: logfiles.i18n.php:4 logfiles.i18n.php:10
+msgid "Asterisk Logfiles"
+msgstr "Các tệp Log của Asterisk"
 
 #: views/view.log.header.php:119
 msgid "Auto-Scroll"
@@ -355,6 +359,10 @@ msgstr ""
 msgid "Remove Successful"
 msgstr ""
 
+#: logfiles.i18n.php:6
+msgid "Reports"
+msgstr "Báo cáo"
+
 #: views/view.settings.general.php:23
 msgid "Rotate"
 msgstr "Xoay vòng"
@@ -445,6 +453,16 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
+#: logfiles.i18n.php:12
+msgid "System Logfile Settings"
+msgstr ""
+
+#: logfiles.i18n.php:8
+msgid ""
+"The Asterisk Logfiles Module is an easy way to view portions of the Asterisk "
+"Log."
+msgstr ""
+
 #: Logfiles.class.php:750 Logfiles.class.php:805
 msgid "The file was not found!"
 msgstr ""
@@ -530,12 +548,6 @@ msgstr ""
 
 #~ msgid "Asterisk Logfile Settings"
 #~ msgstr "Cài đặt logfile Asterisk"
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "Các tệp Log của Asterisk"
-
-#~ msgid "Reports"
-#~ msgstr "Báo cáo"
 
 #~ msgid "Add Log"
 #~ msgstr "Thêm Log"

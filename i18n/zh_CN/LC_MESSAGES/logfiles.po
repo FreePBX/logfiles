@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 05:20+0000\n"
+"POT-Creation-Date: 2024-03-22 02:30-0400\n"
 "PO-Revision-Date: 2009-01-31 23:03+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -70,6 +70,10 @@ msgstr ""
 
 #: views/page.logs.php:2
 msgid "Asterisk Log Files"
+msgstr "Asterisk日志文件"
+
+#: logfiles.i18n.php:4 logfiles.i18n.php:10
+msgid "Asterisk Logfiles"
 msgstr "Asterisk日志文件"
 
 #: views/view.log.header.php:119
@@ -348,6 +352,10 @@ msgstr ""
 msgid "Remove Successful"
 msgstr ""
 
+#: logfiles.i18n.php:6
+msgid "Reports"
+msgstr ""
+
 #: views/view.settings.general.php:23
 msgid "Rotate"
 msgstr "循环"
@@ -434,6 +442,16 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
+#: logfiles.i18n.php:12
+msgid "System Logfile Settings"
+msgstr ""
+
+#: logfiles.i18n.php:8
+msgid ""
+"The Asterisk Logfiles Module is an easy way to view portions of the Asterisk "
+"Log."
+msgstr ""
+
 #: Logfiles.class.php:750 Logfiles.class.php:805
 msgid "The file was not found!"
 msgstr ""
@@ -514,9 +532,6 @@ msgstr "是"
 #: Logfiles.class.php:1041
 msgid "appendhostname is set to: Yes."
 msgstr ""
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "Asterisk日志文件"
 
 #~ msgid "Log rotation"
 #~ msgstr "日志管理方式"

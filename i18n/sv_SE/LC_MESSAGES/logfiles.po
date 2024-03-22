@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX logfiles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 05:20+0000\n"
+"POT-Creation-Date: 2024-03-22 02:30-0400\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -69,6 +69,10 @@ msgstr ""
 
 #: views/page.logs.php:2
 msgid "Asterisk Log Files"
+msgstr "Asterisk loggfil"
+
+#: logfiles.i18n.php:4 logfiles.i18n.php:10
+msgid "Asterisk Logfiles"
 msgstr "Asterisk loggfil"
 
 #: views/view.log.header.php:119
@@ -347,6 +351,10 @@ msgstr ""
 msgid "Remove Successful"
 msgstr ""
 
+#: logfiles.i18n.php:6
+msgid "Reports"
+msgstr ""
+
 #: views/view.settings.general.php:23
 msgid "Rotate"
 msgstr ""
@@ -433,6 +441,16 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
+#: logfiles.i18n.php:12
+msgid "System Logfile Settings"
+msgstr ""
+
+#: logfiles.i18n.php:8
+msgid ""
+"The Asterisk Logfiles Module is an easy way to view portions of the Asterisk "
+"Log."
+msgstr ""
+
 #: Logfiles.class.php:750 Logfiles.class.php:805
 msgid "The file was not found!"
 msgstr ""
@@ -513,9 +531,6 @@ msgstr ""
 #: Logfiles.class.php:1041
 msgid "appendhostname is set to: Yes."
 msgstr ""
-
-#~ msgid "Asterisk Logfiles"
-#~ msgstr "Asterisk loggfil"
 
 #~ msgid "Support"
 #~ msgstr "Support"
