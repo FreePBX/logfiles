@@ -16,7 +16,7 @@ class Logfiles implements \BMO
 {
 	const DEFAULT_SETTING = array(
 		'dateformat' 	 => '%F %T',
-		'rotatestrategy' => 'none',
+		'rotatestrategy' => 'rotate',
 		'queue_log' 	 => 'yes',
 		'appendhostname' => 'no'
 	);
