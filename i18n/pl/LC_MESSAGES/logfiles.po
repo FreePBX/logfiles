@@ -1,0 +1,334 @@
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for logfiles
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-25 06:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: views/settings.php:239
+msgid "Add Log"
+msgstr ""
+
+#: views/settings.php:115
+msgid "Append Hostname"
+msgstr ""
+
+#: views/settings.php:130
+msgid "Appends the hostname to the name of the log files"
+msgstr ""
+
+#: views/logs.php:74
+msgid ""
+"Apply PCRE regex filter to the log output. <br/>This filters through the "
+"lines specified."
+msgstr ""
+
+#: views/logs.php:6
+msgid "Asterisk Log Files"
+msgstr ""
+
+#: logfiles.i18n.php:10
+msgid "Asterisk Logfile Settings"
+msgstr ""
+
+#: logfiles.i18n.php:4
+#: logfiles.i18n.php:8
+msgid "Asterisk Logfiles"
+msgstr ""
+
+#: views/settings.php:175
+msgid "Critical errors and issues"
+msgstr ""
+
+#: views/settings.php:3
+msgid ""
+"Customize the display of debug message time stamps. See strftime(3) Linux "
+"manual for format specifiers. Note that there is also a fractional second "
+"parameter which may be used in this field.  Use %1q for tenths, %2q for "
+"hundredths, etc."
+msgstr ""
+
+#: views/settings.php:174
+#: views/settings.php:188
+msgid "DTMF"
+msgstr ""
+
+#: views/settings.php:60
+msgid "Date Format"
+msgstr ""
+
+#: views/settings.php:169
+#: views/settings.php:187
+msgid "Debug"
+msgstr ""
+
+#: views/settings.php:195
+msgid "Delete"
+msgstr ""
+
+#: views/settings.php:175
+#: views/settings.php:189
+msgid "Error"
+msgstr ""
+
+#: functions.inc.php:112
+msgid "Error parsing log file or file not found!"
+msgstr ""
+
+#: views/settings.php:176
+#: views/settings.php:190
+msgid "Fax"
+msgstr ""
+
+#: views/settings.php:167
+msgid "Field"
+msgstr ""
+
+#: views/logs.php:19
+msgid "File"
+msgstr ""
+
+#: views/settings.php:168
+#: views/settings.php:186
+msgid "File Name"
+msgstr ""
+
+#: views/logs.php:62
+msgid "Filter"
+msgstr ""
+
+#: views/settings.php:46
+msgid "General Settings"
+msgstr ""
+
+#: views/settings.php:167
+msgid "Information"
+msgstr ""
+
+#: functions.inc.php:121
+msgid "Invalid pattern"
+msgstr ""
+
+#: views/settings.php:174
+msgid ""
+"Keypresses as understood by asterisk. Usefull for debuging IVR and VM issues."
+msgstr ""
+
+#: views/settings.php:8
+msgid ""
+"Leave blank for default: ISO 8601 date format yyyy-mm-dd HH:MM:SS (%F %T)"
+msgstr ""
+
+#: views/logs.php:44
+msgid "Lines"
+msgstr ""
+
+#: views/logs.php:90
+#: assets/js/views/logs.js:30
+msgid "Loading..."
+msgstr ""
+
+#: views/settings.php:39
+msgid "Log File Settings"
+msgstr ""
+
+#: views/settings.php:47
+msgid "Log Files"
+msgstr ""
+
+#: views/settings.php:142
+msgid "Log Queues"
+msgstr ""
+
+#: views/settings.php:84
+msgid "Log Rotation"
+msgstr ""
+
+#: functions.inc.php:385
+msgid "Log file settings"
+msgstr ""
+
+#: views/settings.php:157
+msgid "Log queue events to a file"
+msgstr ""
+
+#: views/settings.php:165
+msgid "Logfile Help"
+msgstr ""
+
+#: views/settings.php:177
+msgid ""
+"Messages of specific actions, such as a phone registration or call completion"
+msgstr ""
+
+#: views/settings.php:169
+msgid ""
+"Messages used for debuging. Do not report these as error's unless you have a "
+"specific issue that you are attempting to debug. Also note that Debug "
+"messages are also very verbose and can and do fill up logfiles (and disk "
+"storage) quickly."
+msgstr ""
+
+#: views/settings.php:168
+msgid ""
+"Name of file, relative to Asterisk logpath. Use absolute path for a "
+"different location"
+msgstr ""
+
+#: views/settings.php:122
+#: views/settings.php:149
+msgid "No"
+msgstr ""
+
+#: functions.inc.php:129
+msgid "No lines returned"
+msgstr ""
+
+#: views/settings.php:89
+msgid "None"
+msgstr ""
+
+#: views/settings.php:10
+msgid ""
+"None: Do not perform any log rotation at all.  You should make very sure to "
+"set up some external log rotate mechanism as the asterisk logs can get very "
+"large, very quickly."
+msgstr ""
+
+#: views/settings.php:177
+#: views/settings.php:191
+msgid "Notice"
+msgstr ""
+
+#: views/settings.php:17
+#: views/settings.php:27
+msgid "Off"
+msgstr ""
+
+#: views/settings.php:16
+#: views/settings.php:28
+msgid "On"
+msgstr ""
+
+#: views/settings.php:180
+msgid "Possible issues with dialplan syntaxt or call flow, but not critical."
+msgstr ""
+
+#: logfiles.i18n.php:6
+msgid "Reports"
+msgstr ""
+
+#: Logfiles.class.php:31
+msgid "Reset"
+msgstr ""
+
+#: views/settings.php:93
+msgid "Rotate"
+msgstr ""
+
+#: views/settings.php:12
+msgid ""
+"Rotate: Rotate all the old files, such that the oldest has the highest "
+"sequence number (expected behavior for Unix administrators)."
+msgstr ""
+
+#: views/settings.php:194
+msgid "Security"
+msgstr ""
+
+#: views/settings.php:91
+msgid "Sequential"
+msgstr ""
+
+#: views/settings.php:11
+msgid ""
+"Sequential: Rename archived logs in order, such that the newest has the "
+"highest sequence number"
+msgstr ""
+
+#: views/settings.php:130
+msgid ""
+"Setting this to yes will interfere with log rotation and Intrusion "
+"Detection.  It is strongly recommended that this setting be set to 'no'."
+msgstr ""
+
+#: functions.inc.php:182
+msgid ""
+"Setting this to yes will interfere with log rotation and Intrusion "
+"Detection. It is strongly recommended that this setting be set to: no."
+msgstr ""
+
+#: views/logs.php:80
+#: assets/js/views/logs.js:36
+msgid "Show"
+msgstr ""
+
+#: Logfiles.class.php:36
+msgid "Submit"
+msgstr ""
+
+#: views/settings.php:95
+msgid "Timestamp"
+msgstr ""
+
+#: views/settings.php:13
+msgid ""
+"Timestamp: Rename the logfiles using a timestamp instead of a sequence "
+"number when \"logger rotate\" is executed."
+msgstr ""
+
+#: views/settings.php:176
+msgid "Transmition and receiving of faxes"
+msgstr ""
+
+#: views/settings.php:178
+#: views/settings.php:192
+msgid "Verbose"
+msgstr ""
+
+#: functions.inc.php:384
+msgid "View Logs"
+msgstr ""
+
+#: views/settings.php:180
+#: views/settings.php:193
+msgid "Warning"
+msgstr ""
+
+#: views/settings.php:120
+#: views/settings.php:147
+msgid "Yes"
+msgstr ""
+
+#: functions.inc.php:182
+msgid "appendhostname is set to: Yes."
+msgstr ""
+
+#: install.php:59
+msgid "failed"
+msgstr ""
+
+#: install.php:53
+msgid "logger.conf symlinked to incorrect file:"
+msgstr ""
+
+#: install.php:57
+msgid "ok"
+msgstr ""
+
+#: install.php:55
+msgid "removing.."
+msgstr ""
