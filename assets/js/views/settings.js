@@ -146,11 +146,11 @@ function logfiles_cell_dropdown(value, row, index, field)
 		else
 		{
 			if (value == 'off') 	{ value = 0; }
-			else if(value == 'on') 	{ value = 3; }
+			else if(value == 'on') 	{ value = 2; }
 		}
 
 		select.append(new Option( i18n_mod("OFF"), 'off', (value == 0 ? true : false) ));
-		select.append(new Option( i18n_mod("ON") , 'on',  (value == 3 ? true : false) ));
+		select.append(new Option( i18n_mod("ON") , 'on',  (value == 2 ? true : false) ));
 		var i;
 		for (i = 3; i <= 10; i++)
 		{
