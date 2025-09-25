@@ -152,7 +152,7 @@ function logfiles_cell_dropdown(value, row, index, field)
 		select.append(new Option( i18n_mod("OFF"), 'off', (value == 0 ? true : false) ));
 		select.append(new Option( i18n_mod("ON") , 'on',  (value == 3 ? true : false) ));
 		var i;
-		for (i = 4; i <= 10; i++)
+		for (i = 3; i <= 10; i++)
 		{
 			select.append(new Option(i, i, (value == i ? true : false) ));
 		}
