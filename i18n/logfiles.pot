@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for logfiles
-# Copyright (C) 2008-2025 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2026 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 09:20-0400\n"
+"POT-Creation-Date: 2026-02-25 07:08-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,7 +189,7 @@ msgid ""
 "configuration files creation process."
 msgstr ""
 
-#: Logfiles.class.php:838
+#: Logfiles.class.php:849
 msgid "Invalid pattern to filter!"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgid ""
 "Detection.  It is strongly recommended that this setting be set to 'no'."
 msgstr ""
 
-#: Logfiles.class.php:1041
+#: Logfiles.class.php:1052
 msgid ""
 "Setting this to yes will interfere with log rotation and Intrusion "
 "Detection. It is strongly recommended that this setting be set to: no."
@@ -457,8 +457,8 @@ msgid ""
 "Log."
 msgstr ""
 
-#: Logfiles.class.php:750
-#: Logfiles.class.php:805
+#: Logfiles.class.php:761
+#: Logfiles.class.php:816
 msgid "The file was not found!"
 msgstr ""
 
@@ -466,8 +466,8 @@ msgstr ""
 msgid "The filename not exist!"
 msgstr ""
 
-#: Logfiles.class.php:758
-#: Logfiles.class.php:813
+#: Logfiles.class.php:769
+#: Logfiles.class.php:824
 msgid "The log file does not exist!"
 msgstr ""
 
@@ -479,20 +479,20 @@ msgstr ""
 msgid "The name of the file is already in use!"
 msgstr ""
 
-#: Logfiles.class.php:828
+#: Logfiles.class.php:839
 msgid "The specified lines value is not a numeric value!"
 msgstr ""
 
-#: Logfiles.class.php:763
-#: Logfiles.class.php:818
+#: Logfiles.class.php:774
+#: Logfiles.class.php:829
 msgid "The specified name is not from a file!"
 msgstr ""
 
-#: Logfiles.class.php:823
+#: Logfiles.class.php:834
 msgid "There is no permission to read this log file!"
 msgstr ""
 
-#: Logfiles.class.php:768
+#: Logfiles.class.php:779
 msgid "There is no permission to write this log file!"
 msgstr ""
 
@@ -539,6 +539,6 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: Logfiles.class.php:1041
+#: Logfiles.class.php:1052
 msgid "appendhostname is set to: Yes."
 msgstr ""

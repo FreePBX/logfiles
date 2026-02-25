@@ -284,7 +284,7 @@ class Logfiles implements \BMO
 				break;
 			
 			case "logfiles_is_exist_file_name":
-				$name = isset($_REQUEST['namefile']) ? $_REQUEST['namefile'] : NULL;
+				$name = isset($_REQUEST['namefile']) ? $this->cleanNameLogFiles($_REQUEST['namefile']) : NULL;
 				if ( empty($name) )
 				{
 					$data_return = array("status" => false, "message" => _("Missing name!"));
@@ -327,7 +327,7 @@ class Logfiles implements \BMO
 				break;
 
 			case "logfiles_destory":
-				$name = isset($_REQUEST['namefile']) ? $_REQUEST['namefile'] : NULL;
+				$name = isset($_REQUEST['namefile']) ? $this->cleanNameLogFiles($_REQUEST['namefile']) : NULL;
 				if ( empty($name) )
 				{
 					$data_return = array("status" => false, "message" => _("Missing name!"));
@@ -536,7 +536,9 @@ class Logfiles implements \BMO
 
 	public function isExistLogFiles($name)
 	{
-		$count = $this->db->getOne("SELECT COUNT(*) FROM `logfile_logfiles` WHERE `name` = '".$name."'");
+		$stmt = $this->db->prepare("SELECT COUNT(*) FROM `logfile_logfiles` WHERE `name` = ?");
+		$stmt->execute([$name]);
+		$count = $stmt->fetchColumn();
 		return ($count == 1) ? true : false;
 	}
 
@@ -600,6 +602,7 @@ class Logfiles implements \BMO
 		
 		if ($name)
 		{
+			$name = substr($name, 0, 25);
 			$name = strtolower($name);
 			// Two arrays are generated, one with the columns and the other with the
 			// values to avoid problems with the order of the columns in the table.
@@ -647,7 +650,15 @@ class Logfiles implements \BMO
 	
 	public function cleanNameLogFiles($name)
 	{
-		return str_replace(array('\\', '/', ':', '*', '?', '"', '<', '>', '|'), "", $name);
+		// Remove dangerous characters including SQL injection characters
+		$name = str_replace(array('\\', '/', ':', '*', '?', '"', '<', '>', '|', "'", ';', '--', '/*', '*/', '=','(',')'), "", $name);
+		// Remove any SQL keywords and commands
+		$name = preg_replace('/\b(SELECT|UNION|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|EXECUTE|SCRIPT|JAVASCRIPT|EXTRACTVALUE|CONCAT|VERSION|DATABASE|USER|SLEEP)\b/i', '', $name);
+		// Limit length to prevent database errors (max 255 chars for safety)
+		$name = substr($name, 0, 255);
+		// Trim whitespace
+		$name = trim($name);
+		return $name;
 	}
 
 	public function isAllowEditFile($name)
