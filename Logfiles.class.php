@@ -173,7 +173,8 @@ class Logfiles implements \BMO
 					$log_lines = 500;
 				}
 				$log_resume = ( strtolower($log_resume) == "true" ? false : true);
-				$log_filter = ( empty($log_filter) ? false : $log_filter);
+				// Limit the filter length to mitigate ReDoS (catastrophic backtracking).
+				$log_filter = ( empty($log_filter) ? false : substr($log_filter, 0, 250) );
 
 				if ( empty($log_file) )
 				{
@@ -256,7 +257,8 @@ class Logfiles implements \BMO
 				$setting = isset($_REQUEST['setting']) ? $_REQUEST['setting'] : NULL;
 				$value 	 = isset($_REQUEST['val'])     ? $_REQUEST['val'] : NULL;
 
-				if ( empty($setting) || empty($value) )
+				// Use strlen instead of empty() so a literal "0" is accepted as a valid value.
+				if ( empty($setting) || $value === NULL || strlen($value) === 0 )
 				{
 					$data_return = array("status" => false, "message" => _("Missing data!"));
 				}
@@ -402,7 +404,7 @@ class Logfiles implements \BMO
 				}
 				break;
 
-			defualt:
+			default:
 				$data_return = array("status" => false, "message" => _("Command not found!"), "command" => $command);
 			
 		}
@@ -435,8 +437,10 @@ class Logfiles implements \BMO
 		if (self::isSettingAllowed($setting))
 		{
 			$setting = strtolower($setting);
-			$sql = sprintf("SELECT `value` FROM `logfile_settings` WHERE `key` = '%s'", $setting);
-			$result = $this->db->getOne($sql);
+			$sql = 'SELECT `value` FROM `logfile_settings` WHERE `key` = ?';
+			$stmt = $this->db->prepare($sql);
+			$stmt->execute(array($setting));
+			$result = $stmt->fetchColumn();
 			if ($result)
 			{
 				$return_date = $result;
@@ -457,7 +461,9 @@ class Logfiles implements \BMO
 		$data_return = false;
 		if (self::isSettingAllowed($setting))
 		{
-			$setting = strtolower($setting);	
+			$setting = strtolower($setting);
+			// Strip CR/LF to prevent injecting extra directives into the generated logger config.
+			$value = str_replace(array("\r", "\n"), "", $value);
 			$ret = $this->db->prepare('REPLACE INTO `logfile_settings` (`key`, `value`) VALUES (?, ?)')->execute( [$setting, $value] );
 			$data_return = ! db_e($ret);
 		}
@@ -841,8 +847,9 @@ class Logfiles implements \BMO
 			{
 				if ( $filter )
 				{
-					$regex_check = @preg_match('/'.$filter.'/', null);
-					if ( $regex_check !== 0 )
+					// preg_match returns FALSE only when the pattern itself is invalid.
+					$regex_check = @preg_match('/'.$filter.'/', '');
+					if ( $regex_check === false )
 					{
 						$data_return['status'] = "ERROR_FILTER_INVALID";
 						$data_return['error'] = _('Invalid pattern to filter!');
@@ -875,7 +882,16 @@ class Logfiles implements \BMO
 			if ( $filter )
 			{
 				$data_return['status'] = "APPLY_FILTER";
+				// Cap PCRE backtracking to mitigate ReDoS from a user supplied pattern.
+				$backtrack_limit_old = ini_get('pcre.backtrack_limit');
+				ini_set('pcre.backtrack_limit', '100000');
 				$out_log = preg_grep('/'.$filter.'/', $out_log);
+				if ( ! is_array($out_log) )
+				{
+					// preg_grep returns false if the backtrack limit is hit.
+					$out_log = array();
+				}
+				ini_set('pcre.backtrack_limit', $backtrack_limit_old);
 			}
 
 			$data_return['status'] = "APPLY_HIGHLIGHT";
