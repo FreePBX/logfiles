@@ -153,7 +153,7 @@ class Tail
 		$out_log = array();
 		if ($num_lines_read > 0) 
 		{
-			$cmd = sprintf("%s -n -%d %s", fpbx_which('tail'), $num_lines_read, $this->file);
+			$cmd = sprintf("%s -n -%d %s", fpbx_which('tail'), $num_lines_read, escapeshellarg($this->file));
 			exec($cmd, $out_log);
 		}
 
