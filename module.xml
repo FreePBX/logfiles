@@ -3,19 +3,14 @@
 	<repo>standard</repo>
 	<name>Asterisk Logfiles</name>
 	<canuninstall>no</canuninstall>
-	<version>17.0.5</version>
+	<version>18.0.1</version>
 	<publisher>Schmooze Com. Inc.</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   	<description>The Asterisk Logfiles Module is an easy way to view portions of the Asterisk Log.</description>
   	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/26673201/Asterisk+Logfiles</more-info>
 	<changelog>
-		*17.0.5* Packaging of ver 17.0.5
-		*17.0.4* FREEI-2715: prevent authenticated SQL injection in Logfiles module
-		*17.0.3.5* Packaging of ver 17.0.3.5
-		*17.0.3.4* Github Issue #865 
-		*17.0.2* Packaging of ver 17.0.2
-		*17.0.1*    17.0 release
+		*18.0.1* initial release
 	</changelog>
 	<category>Reports</category>
 	<menuitems>
@@ -23,7 +18,7 @@
 		<logfiles_settings category="Settings">Asterisk Logfile Settings</logfiles_settings>
 	</menuitems>
 	<supported>
-		<version>17.0</version>
+		<version>18.0</version>
 	</supported>
 	<location/>
 	<md5sum/>
