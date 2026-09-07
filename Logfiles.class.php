@@ -11,9 +11,16 @@ namespace FreePBX\modules;
 use \FreePBX\modules\Logfiles\Tail;
 use \FreePBX\modules\Logfiles\logfiles_conf;
 
-#[\AllowDynamicProperties]
 class Logfiles implements \BMO 
 {
+	// Injected by the BMO autoloader, which passes whichever object requested
+	// this module, so these are not restricted to a single class.
+	public $FreePBX;
+	public $db;
+	public $config;
+	public $notifications;
+	public array $path = [];
+
 	const DEFAULT_SETTING = array(
 		'dateformat' 	 => '%F %T',
 		'rotatestrategy' => 'rotate',
@@ -67,7 +74,6 @@ class Logfiles implements \BMO
 		$this->config 		 = $freepbx->Config;
 		$this->notifications = $freepbx->Notifications;
 
-		$this->path = array();
 		$this->path['etc_asterisk'] = $this->config->get('ASTETCDIR');
 		$this->path['dir_www'] 		= $this->config->get('AMPWEBROOT');
 		$this->path['dir_logs'] 	= $this->config->get('ASTLOGDIR');
@@ -152,7 +158,7 @@ class Logfiles implements \BMO
 	public function ajaxHandler()
 	{
 		// throw new Exception('Test Error!');
-		$command = isset($_REQUEST['command']) ? trim($_REQUEST['command']) : '';
+		$command = trim((string)($_REQUEST['command'] ?? ''));
 		switch ($command)
 		{
 			case "log_files":
@@ -162,11 +168,11 @@ class Logfiles implements \BMO
 				break;
 
 			case "log_file_read":
-				$log_file    = isset($_REQUEST['log_file'])    ? trim($_REQUEST['log_file'])    : NULL;
-				$log_lines   = isset($_REQUEST['log_lines'])   ? trim($_REQUEST['log_lines'])   : NULL;
-				$log_filter  = isset($_REQUEST['log_filter'])  ? trim($_REQUEST['log_filter'])  : NULL;
-				$log_resume  = isset($_REQUEST['log_resume'])  ? trim($_REQUEST['log_resume'])  : NULL;
-				$log_session = isset($_REQUEST['log_session']) ? trim($_REQUEST['log_session']) : NULL;
+				$log_file    = trim((string)($_REQUEST['log_file'] ?? ''));
+				$log_lines   = trim((string)($_REQUEST['log_lines'] ?? ''));
+				$log_filter  = trim((string)($_REQUEST['log_filter'] ?? ''));
+				$log_resume  = trim((string)($_REQUEST['log_resume'] ?? ''));
+				$log_session = trim((string)($_REQUEST['log_session'] ?? ''));
 
 				$log_lines = preg_replace("/[^0-9]/", "", $log_lines);
 				if( ! is_numeric($log_lines) || $log_lines <= 0 )
@@ -202,7 +208,7 @@ class Logfiles implements \BMO
 				break;
 
 			case "log_file_export":
-				$log_file   = isset($_REQUEST['log_file']) ? trim($_REQUEST['log_file']) : NULL;
+				$log_file = trim((string)($_REQUEST['log_file'] ?? ''));
 				if ( empty($log_file) || ! $this->exportFileLog($log_file) )
 				{
 					http_response_code(404);
@@ -212,7 +218,7 @@ class Logfiles implements \BMO
 				break;
 
 			case "log_file_destory":
-				$log_file   = isset($_REQUEST['log_file']) ? trim($_REQUEST['log_file']) : NULL;
+				$log_file = trim((string)($_REQUEST['log_file'] ?? ''));
 				if ( empty($log_file) )
 				{
 					$data_return = array("status" => false, "message" => _("Missing file name!"));
@@ -358,7 +364,7 @@ class Logfiles implements \BMO
 				break;
 
 			case "i18n":
-				$filejs = isset($_REQUEST['filejs']) ? $_REQUEST['filejs'] : NULL;
+				$filejs = (string)($_REQUEST['filejs'] ?? '');
 				switch( strtolower($filejs) ) 
 				{
 					case "logs":
@@ -403,7 +409,7 @@ class Logfiles implements \BMO
 				}
 				break;
 
-			defualt:
+			default:
 				$data_return = array("status" => false, "message" => _("Command not found!"), "command" => $command);
 			
 		}
@@ -842,8 +848,8 @@ class Logfiles implements \BMO
 			{
 				if ( $filter )
 				{
-					$regex_check = @preg_match('/'.$filter.'/', null);
-					if ( $regex_check !== 0 )
+					$regex_check = @preg_match('/'.$filter.'/', '');
+					if ( $regex_check === false )
 					{
 						$data_return['status'] = "ERROR_FILTER_INVALID";
 						$data_return['error'] = _('Invalid pattern to filter!');
@@ -876,7 +882,14 @@ class Logfiles implements \BMO
 			if ( $filter )
 			{
 				$data_return['status'] = "APPLY_FILTER";
-				$out_log = preg_grep('/'.$filter.'/', $out_log);
+				$filtered_log = @preg_grep('/'.$filter.'/', $out_log);
+				if ($filtered_log === false)
+				{
+					$data_return['status'] = "ERROR_FILTER_INVALID";
+					$data_return['error'] = _('Invalid pattern to filter!');
+					return $data_return;
+				}
+				$out_log = $filtered_log;
 			}
 
 			$data_return['status'] = "APPLY_HIGHLIGHT";
@@ -892,7 +905,10 @@ class Logfiles implements \BMO
 	{
 		$data_return = array();
 		
-		@session_start();
+		if (session_status() === PHP_SESSION_NONE)
+		{
+			session_start();
+		}
 		if ( ! isset($_SESSION['mod_logfiles_read_log_channels']) )
 		{
 			$_SESSION['mod_logfiles_read_log_channels'] = array();
@@ -1032,6 +1048,10 @@ class Logfiles implements \BMO
 					continue;
 				}
 				$line_data = explode("=>", $line, 2);
+				if (count($line_data) !== 2)
+				{
+					continue;
+				}
 				$data_return[trim($line_data[0])] = trim($line_data[1]);
 			}
 		}

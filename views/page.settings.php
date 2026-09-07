@@ -7,10 +7,10 @@
 					<div class="display full-border">
 						<ul class="nav nav-tabs" role="tablist">
 							<li data-name="logfiles_general" class="change-tab active">
-								<a href="#logfiles_general" aria-controls="logfiles_general" role="tab" data-toggle="tab"><?php echo _("General Settings")?></a>
+								<a href="#logfiles_general" aria-controls="logfiles_general" role="tab" data-toggle="tab" data-bs-toggle="tab"><?php echo _("General Settings")?></a>
 							</li>
 							<li data-name="logfiles_logfiles" class="change-tab">
-								<a href="#logfiles_logfiles" aria-controls="logfiles_logfiles" role="tab" data-toggle="tab"><?php echo _("Log Files")?></a>
+								<a href="#logfiles_logfiles" aria-controls="logfiles_logfiles" role="tab" data-toggle="tab" data-bs-toggle="tab"><?php echo _("Log Files")?></a>
 							</li>
 						</ul>
 						<div class="tab-content display">

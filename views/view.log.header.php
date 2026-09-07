@@ -43,7 +43,7 @@
                     <span class="input-group-text w-100 text-center"><?php echo _("Refresh Interval"); ?></span>
                 </div>
                 <div class="input-group-append flex-fill">
-                    <button type="button" class="btn btn-default dropdown-toggle flex-fill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-default dropdown-toggle flex-fill" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="refresh-interval-time-now"><?php echo _("Disabled"); ?></span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
@@ -132,7 +132,7 @@
         <!-- Block Auto-Scroll -->
         <!-- Block More Options -->
         <div class="col-lg-1 box-more-options">
-            <button type="button" class="btn btn-default btn-block dropdown-toggle btn-onlyico" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
+            <button type="button" class="btn btn-default btn-block dropdown-toggle btn-onlyico" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
                 <span>
                     <i class="fa fa-cogs" aria-hidden="true"></i>
                 </span>
