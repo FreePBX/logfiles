@@ -37,7 +37,10 @@ class Tail
 
 	private function init()
 	{
-		@session_start();
+		if (session_status() === PHP_SESSION_NONE)
+		{
+			session_start();
+		}
 		$this->create_array_session();
 		$this->clean_session();
 		$this->reset_out();
@@ -64,7 +67,11 @@ class Tail
 		//We count the number of lines in the file
 		//We don't use file() since it consumes a lot of memory with large files.
 		$num_lines_file = 0;
-		$fp = fopen($this->file, "r");
+		$fp = @fopen($this->file, "r");
+		if ($fp === false)
+		{
+			return 0;
+		}
 		while ( ! feof($fp) )
 		{
 			fgets($fp);
